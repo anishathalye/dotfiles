@@ -1,6 +1,6 @@
 # Set custom prompt
 autoload -U colors && colors
-PS1=$'%{$fg[green]%}%6(c:...:)%5c %{$fg[blue]%}\xe2\x9d\xb1 %{$reset_color%}'
+PS1=$'%{$fg[green]%}%6(c:.../:)%5c %{$fg[blue]%}\xe2\x9d\xb1 %{$reset_color%}'
 PROMPTINFO="%(!.%{$fg[red]%}.%{$fg[cyan]%})%n%{$fg[magenta]%} at %{$fg[yellow]%}%m%{$reset_color%}"
 
 # Initialize completion

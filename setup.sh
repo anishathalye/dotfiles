@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 # Script to link all the files in dotfiles to the home directory
 
-BASEDIR=$(dirname $0)
-echo $BASEDIR
+BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# ln -s ${BASEDIR}/.conf.file ~
-
+# tmux
 ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
+
+# vim
+ln -s ${BASEDIR}/vimrc ~/.vimrc
+ln -s ${BASEDIR}/vim ~/.vim

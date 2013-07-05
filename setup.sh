@@ -8,4 +8,9 @@ ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
 
 # vim
 ln -s ${BASEDIR}/vimrc ~/.vimrc
-ln -s ${BASEDIR}/vim ~/.vim
+ln -s ${BASEDIR}/vim/ ~/.vim
+
+# zsh
+ln -s ${BASEDIR}/zshrc ~/.zshrc
+ln -s ${BASEDIR}/zshenv ~/.zshenv
+ln -s ${BASEDIR}/zsh/ ~/.zsh

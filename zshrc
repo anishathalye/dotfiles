@@ -24,6 +24,12 @@ export SAVEHIST=$HISTSIZE
 # Use vim as the editor
 export EDITOR=vi
 
+# Use emacs mode in vim
+bindkey -e
+
+# Use incremental search
+bindkey "^R" history-incremental-search-backward
+
 # Jump to directory containing file
 function jump() {
   cd "(dirname ${1})"

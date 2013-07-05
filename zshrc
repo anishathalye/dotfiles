@@ -17,7 +17,7 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
 # Nicer history
-export HISTSIZE=100000
+export HISTSIZE=4096
 export HISTFILE="$HOME/.zsh_history"
 export SAVEHIST=$HISTSIZE
 

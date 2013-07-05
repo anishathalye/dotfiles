@@ -10,9 +10,16 @@ autoload -Uz compinit && compinit
 set autocd
 
 # Colorize terminal
-alias ls='ls -G'
-alias ll='ls -lG'
-alias la='ls -laG'
+UNAMESTR=`uname`
+if [[ "UNAMESTR" == 'Darwin' ]]; then
+  alias ls='ls -G'
+  alias ll='ls -lG'
+  alias la='ls -laG'
+elif [[ "UNAMESTR" == 'Linux' ]]; then
+  alias ls='ls --color'
+  alias ll='ls -l --color'
+  alias la='ls -la --color'
+fi
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 

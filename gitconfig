@@ -1,0 +1,26 @@
+[user]
+	name = Anish Athalye
+	email = aathalye@me.com
+
+[diff]
+
+[color]
+  ui = auto
+
+[alias]
+  st = status
+  aa = add --all
+  ci = commit -v
+  ca = commit --amend
+  co = checkout
+  di = diff
+  dc = diff --cached
+  ff = merge --ff-only
+  pullff = pull --ff-only
+
+[merge]
+	tool = vimdiff
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+  path = .gitconfig_local

@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-Clone this repo and run `setup.sh` to configure your development environment.
+Clone this repo and run `install.bash` to configure your development environment.

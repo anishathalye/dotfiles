@@ -11,11 +11,11 @@ set autocd
 
 # Colorize terminal
 UNAMESTR=`uname`
-if [[ "UNAMESTR" == 'Darwin' ]]; then
+if [[ "$UNAMESTR" == 'Darwin' ]]; then
   alias ls='ls -G'
   alias ll='ls -lG'
   alias la='ls -laG'
-elif [[ "UNAMESTR" == 'Linux' ]]; then
+elif [[ "$UNAMESTR" == 'Linux' ]]; then
   alias ls='ls --color'
   alias ll='ls -l --color'
   alias la='ls -la --color'

@@ -56,6 +56,10 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+"--------------------
+" Misc configurations
+"--------------------
+
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
@@ -65,3 +69,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+"---------------------
+" Local customizations
+"---------------------
+
+let LOCALFILE=expand("~/.vimrc_local")
+if filereadable(LOCALFILE)
+  exe "source " . LOCALFILE
+endif

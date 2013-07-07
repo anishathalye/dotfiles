@@ -22,6 +22,9 @@
 [merge]
 	tool = vimdiff
 
+[push]
+  default = upstream
+
 [core]
 	excludesfile = /Users/anish/.gitignore_global
 

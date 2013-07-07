@@ -61,11 +61,11 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Misc configurations
 "--------------------
 
-" Open new split panes to right and bottom, which feels more natural
+" open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
 
-" Quicker window movement
+" quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
@@ -75,6 +75,7 @@ nnoremap <C-l> <C-w>l
 " Local customizations
 "---------------------
 
+" local customizations in ~/.vimrc_local
 let $LOCALFILE=expand("~/.vimrc_local")
 if filereadable($LOCALFILE)
   source $LOCALFILE

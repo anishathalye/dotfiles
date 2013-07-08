@@ -13,12 +13,17 @@
   ci = commit -v
   ca = commit --amend
   co = checkout
-  di = diff
-  dc = diff --cached
-  dh = diff HEAD~1
+  di = diff --color-words
+  dc = diff --color-words --cached
+  dh = diff --color-words HEAD~1
   ff = merge --ff-only
   pullff = pull --ff-only
-  count = diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904
+  count = diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 # hash of empty tree
+  gr = log --graph --format=rainbow
+  gra = log --graph --format=rainbow --all
+
+[pretty]
+  rainbow = "%C(magenta)[%C(red)%h%C(magenta)] %C(white)%s %C(yellow)by %C(cyan)%an %C(magenta)(%C(green)%ae%C(magenta)) %C(yellow)%ar"
 
 [merge]
 	tool = vimdiff

@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-Clone this repo and run `install.bash` to configure your development environment.
+Clone this repo and run `install.py` to configure your development environment.
 
 making local customizations
 ---------------------------

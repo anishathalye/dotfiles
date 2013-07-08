@@ -1,6 +1,6 @@
 [user]
-	name = Anish Athalye
-	email = aathalye@me.com
+  name = Anish Athalye
+  email = aathalye@me.com
 
 [diff]
 
@@ -26,13 +26,13 @@
   rainbow = "%C(magenta)[%C(red)%h%C(magenta)] %C(white)%s %C(yellow)by %C(cyan)%an %C(magenta)(%C(green)%ae%C(magenta)) %C(yellow)%ar"
 
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 
 [push]
   default = upstream
 
 [core]
-	excludesfile = /Users/anish/.gitignore_global
+  excludesfile = /Users/anish/.gitignore_global
 
 # Allow local customizations in the .gitconfig_local file
 [include]

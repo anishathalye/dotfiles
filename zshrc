@@ -16,9 +16,9 @@ if [[ "$UNAMESTR" == 'Darwin' ]]; then
   alias ll='ls -lG'
   alias la='ls -laG'
 elif [[ "$UNAMESTR" == 'Linux' ]]; then
-  alias ls='ls --color'
-  alias ll='ls -l --color'
-  alias la='ls -la --color'
+  alias ls='ls --color=auto'
+  alias ll='ls -l --color=auto'
+  alias la='ls -la --color=auto'
 fi
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"

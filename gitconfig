@@ -9,6 +9,7 @@
 
 [alias]
   st = status
+  br = branch -vv
   aa = add --all
   ci = commit -v
   ca = commit --amend

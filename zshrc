@@ -45,6 +45,33 @@ function jump() {
   cd "(dirname ${1})"
 }
 
+# cd replacement for screen to track cwd (like tmux)
+scr_cd()
+{
+  builtin cd $1
+  screen -X chdir $PWD
+}
+
+if [[ "$TERM" == 'screen.rxvt' ]]; then
+  alias cd=scr_cd
+fi
+
+# Go up [n] directories
+up()
+{
+  if [[ "${1}" == "" ]]; then
+    cd ..
+  elif ! [[ "${1}" =~ ^[0-9]+$ ]]; then
+    echo "Error: argument must be a number"
+  elif ! [[ "${1}" -gt "0" ]]; then
+    echo "Error: argument must be positive"
+  else
+    for i in {1..${1}}; do
+      cd ..
+    done
+  fi
+}
+
 # Mirror a website
 alias mirrorsite='wget -m -k -K -E -e robots=off'
 

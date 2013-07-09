@@ -7,6 +7,9 @@ syntax on " turn on syntax highlighting
 set showmatch " show matching braces when text indicator is over them
 set cursorline " highlight current line
 
+" vim can autodetect this based on $TERM (e.g. 'xterm-256color')
+" but it can be set to force 256 colors
+" set t_Co=256
 colorscheme womprat
 
 filetype plugin indent on " enable file type detection

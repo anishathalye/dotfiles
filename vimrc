@@ -7,7 +7,7 @@ syntax on " turn on syntax highlighting
 set showmatch " show matching braces when text indicator is over them
 set cursorline " highlight current line
 
-colorscheme grb256
+colorscheme womprat
 
 filetype plugin indent on " enable file type detection
 set autoindent

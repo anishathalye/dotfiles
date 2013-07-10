@@ -7,7 +7,7 @@ PROMPTINFO="%(!.%{$fg[red]%}.%{$fg[cyan]%})%n%{$fg[magenta]%} at %{$fg[yellow]%}
 autoload -Uz compinit && compinit
 
 # Set automatic cd (typing directory name with no 'cd')
-set autocd
+setopt autocd
 
 # Colorize terminal
 UNAMESTR=`uname`

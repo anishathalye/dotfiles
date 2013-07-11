@@ -1,7 +1,6 @@
 # Set custom prompt
 
 # User customizable options
-# PR_COLOR=(white, grey, yellow, red, blue, cyan orange) - color of the prompt
 # RPR_SHOW_USER=(true, false)
 # RPR_SHOW_HOST=(true, false) - show host in rhs prompt
 
@@ -18,11 +17,8 @@ if [[ "$(tput colors)" == "256" ]]; then
   fg[red]=$FG[131] # red
   fg[orange]=$FG[173]
   fg[yellow]=$FG[186]
-  fg[white]=$FG[252]
-  fg[grey]=$FG[246]
 else
   fg[orange]=$fg[magenta]
-  fg[grey]=$fg[white]
 fi
 
 # Current directory, truncated to 3 path elements (or 4 when one of them is "~")
@@ -233,10 +229,8 @@ git_prompt_string() {
   [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[red]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
 }
 
-PR_COLOR="white"
-
 # Set the right-hand prompt
-RPS1='$(RPR_INFO)$(git_prompt_string)%{$fg[${PR_COLOR}]%}'
+RPS1='$(RPR_INFO)$(git_prompt_string)'
 
 # Allow local customizations in the ~/.zshrc_local file
 if [ -f ~/.zshrc_local ]; then

@@ -1,6 +1,7 @@
 # Set custom prompt
 
 # User customizable options
+# PR_COLOR=(white, grey, yellow, red, blue, cyan orange) - color of the prompt
 # RPR_SHOW_USER=(true, false)
 # RPR_SHOW_HOST=(true, false) - show host in rhs prompt
 
@@ -10,6 +11,18 @@ autoload -U colors && colors
 # Make using 256 colors easier
 if [[ "$(tput colors)" == "256" ]]; then
   source ~/.zsh/functions/spectrum.zsh
+  # change default colors
+  fg[green]=$FG[113] # light green
+  fg[blue]=$FG[111] # light blue
+  fg[blue]=$FG[074] # blue
+  fg[red]=$FG[131] # red
+  fg[orange]=$FG[173]
+  fg[yellow]=$FG[186]
+  fg[white]=$FG[252]
+  fg[grey]=$FG[246]
+else
+  fg[orange]=$fg[magenta]
+  fg[grey]=$fg[white]
 fi
 
 # Current directory, truncated to 3 path elements (or 4 when one of them is "~")
@@ -38,24 +51,24 @@ function PR_DIR() {
     last=${last[2,-1]} # take substring
   fi
 
-  echo "%{$fg[green]%}${truncated}%{$fg[yellow]%}${last}%{$reset_color%}"
+  echo "%{$fg[blue]%}${truncated}%{$fg[green]%}%B${last}%b%{$reset_color%}"
 }
 
 # The arrow symbol that looks like > that is used in the prompt
 PR_ARROW_CHAR=$(echo '\xe2\x9d\xb1')
 
-# The arrow in red (for root) or cyan (for regular user)
-PR_ARROW="%(!.%{$fg[red]%}.%{$fg[cyan]%})${PR_ARROW_CHAR}%{$reset_color%}"
+# The arrow in red (for root) or blue (for regular user)
+PR_ARROW="%(!.%{$fg[red]%}.%{$fg[blue]%})${PR_ARROW_CHAR}%{$reset_color%}"
 
 # Build the prompt
 PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
 
 # Set custom rhs prompt
-# User in red (for root) or cyan (for regular user)
+# User in red (for root) or blue (for regular user)
 RPR_SHOW_USER=true # Set to false to disable user in rhs prompt
 function RPR_USER() {
   if $RPR_SHOW_USER; then
-    echo "%(!.%{$fg[red]%}.%{$fg[cyan]%})%n%{$reset_color%}"
+    echo "%(!.%{$fg[red]%}.%{$fg[blue]%})%n%{$reset_color%}"
   fi
 }
 
@@ -67,10 +80,10 @@ function RPR_HOST() {
   fi
 }
 
-# ' at ' in magenta outputted only if both user and host enabled
+# ' at ' in orange outputted only if both user and host enabled
 function RPR_AT() {
   if $RPR_SHOW_USER && $RPR_SHOW_HOST; then
-    echo "%{$fg[magenta]%} at %{$reset_color%}"
+    echo "%(!.%{$fg[blue]%}.%{$fg[orange]%}) at %{$reset_color%}"
   fi
 }
 
@@ -91,12 +104,12 @@ if [[ "$UNAMESTR" == 'Darwin' ]]; then
   alias ls='ls -G'
   alias ll='ls -lG'
   alias la='ls -laG'
+  export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd" # Linux-like
 elif [[ "$UNAMESTR" == 'Linux' ]]; then
   alias ls='ls --color=auto'
   alias ll='ls -l --color=auto'
   alias la='ls -la --color=auto'
 fi
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
 # Nicer history
@@ -162,13 +175,13 @@ setopt prompt_subst
 GIT_PROMPT_SYMBOL=""
 GIT_PROMPT_PREFIX="%{$fg[green]%}(%{$reset_color%}"
 GIT_PROMPT_SUFFIX="%{$fg[green]%})%{$reset_color%}"
-GIT_PROMPT_AHEAD="%{$fg[red]%}ANUM%{$reset_color%}"
-GIT_PROMPT_BEHIND="%{$fg[cyan]%}BNUM%{$reset_color%}"
+GIT_PROMPT_AHEAD="%{$fg[red]%}%BANUM%b%{$reset_color%}"
+GIT_PROMPT_BEHIND="%{$fg[blue]%}%BBNUM%b%{$reset_color%}"
 LIGHTNING="\xe2\x9a\xa1\xef\xb8\x8e"
-GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}${LIGHTNING}%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}*%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}*%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg_bold[green]%}*%{$reset_color%}"
+GIT_PROMPT_MERGING="%{$fg[orange]%}%B${LIGHTNING}%b%{$reset_color%}"
+GIT_PROMPT_UNTRACKED="%{$fg[red]%}%B*%b%{$reset_color%}"
+GIT_PROMPT_MODIFIED="%{$fg[yellow]%}%B*%b%{$reset_color%}"
+GIT_PROMPT_STAGED="%{$fg[green]%}%B*%b%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head
 parse_git_branch() {
@@ -217,11 +230,13 @@ parse_git_state() {
 # If inside a Git repository, print its branch and state
 git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
+  [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[red]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
 }
 
+PR_COLOR="white"
+
 # Set the right-hand prompt
-RPS1='$(RPR_INFO)$(git_prompt_string)'
+RPS1='$(RPR_INFO)$(git_prompt_string)%{$fg[${PR_COLOR}]%}'
 
 # Allow local customizations in the ~/.zshrc_local file
 if [ -f ~/.zshrc_local ]; then

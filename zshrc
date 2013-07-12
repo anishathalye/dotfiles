@@ -68,7 +68,7 @@ PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
 RPR_SHOW_USER=true # Set to false to disable user in rhs prompt
 function RPR_USER() {
   if $RPR_SHOW_USER; then
-    echo "%(!.%{$fg[darkred]%}.%{$fg[blue]%})%(!.%B.)%n%(!.%b.)%{$reset_color%}"
+    echo "%(!.%{$fg[darkred]%}.%{$fg[blue]%})%B%n%b%{$reset_color%}"
   fi
 }
 
@@ -173,8 +173,8 @@ setopt prompt_subst
 # Modify the colors and symbols in these variables as desired.
 # GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
 GIT_PROMPT_SYMBOL=""
-GIT_PROMPT_PREFIX="%{$fg[green]%}(%{$reset_color%}"
-GIT_PROMPT_SUFFIX="%{$fg[green]%})%{$reset_color%}"
+GIT_PROMPT_PREFIX="%{$fg[green]%}%B(%b%{$reset_color%}"
+GIT_PROMPT_SUFFIX="%{$fg[green]%}%B)%b%{$reset_color%}"
 GIT_PROMPT_AHEAD="%{$fg[red]%}%BANUM%b%{$reset_color%}"
 GIT_PROMPT_BEHIND="%{$fg[blue]%}%BBNUM%b%{$reset_color%}"
 LIGHTNING="\xe2\x9a\xa1\xef\xb8\x8e"
@@ -230,7 +230,7 @@ parse_git_state() {
 # If inside a Git repository, print its branch and state
 git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[red]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
+  [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[red]%}%B${git_where#(refs/heads/|tags/)}%b$GIT_PROMPT_SUFFIX"
 }
 
 # Set the right-hand prompt

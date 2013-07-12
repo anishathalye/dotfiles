@@ -20,9 +20,21 @@ for color in {000..255}; do
 done
 
 # Show all 256 colors with color number
-function spectrum_ls() {
+function spectrum() {
+  local cols=4
+  if [[ "${1}" != "" ]]; then
+    cols=${1}
+  fi
+  local ctr=1
   for code in {000..255}; do
-    print -P -- "$code: %F{$code}Test%f"
+    print -P -n -- "$code: %F{$code}Test%f"
+    if [[ "$(expr ${ctr} % ${cols})" == "0" ]]; then
+      print # newline
+    else
+      print -n -- " " # gap
+    fi
+    ctr=$(expr ${ctr} + 1)
   done
+  print # newline
 }
 

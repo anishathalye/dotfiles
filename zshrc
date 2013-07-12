@@ -12,13 +12,17 @@ if [[ "$(tput colors)" == "256" ]]; then
   source ~/.zsh/functions/spectrum.zsh
   # change default colors
   fg[green]=$FG[113] # light green
-  fg[blue]=$FG[111] # light blue
+  # fg[blue]=$FG[111] # light blue
   fg[blue]=$FG[074] # blue
   fg[red]=$FG[131] # red
+  fg[darkred]=$FG[196]
   fg[orange]=$FG[173]
   fg[yellow]=$FG[186]
+  fg[magenta]=$FG[165]
 else
+  fg[darkred]=$fg[red]
   fg[orange]=$fg[magenta]
+  fg[blue]=$fg[cyan] # little bit better color
 fi
 
 # Current directory, truncated to 3 path elements (or 4 when one of them is "~")
@@ -54,7 +58,7 @@ function PR_DIR() {
 PR_ARROW_CHAR=$(echo '\xe2\x9d\xb1')
 
 # The arrow in red (for root) or blue (for regular user)
-PR_ARROW="%(!.%{$fg[red]%}.%{$fg[blue]%})${PR_ARROW_CHAR}%{$reset_color%}"
+PR_ARROW="%(!.%{$fg[darkred]%}.%{$fg[blue]%})${PR_ARROW_CHAR}%{$reset_color%}"
 
 # Build the prompt
 PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
@@ -64,7 +68,7 @@ PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
 RPR_SHOW_USER=true # Set to false to disable user in rhs prompt
 function RPR_USER() {
   if $RPR_SHOW_USER; then
-    echo "%(!.%{$fg[red]%}.%{$fg[blue]%})%n%{$reset_color%}"
+    echo "%(!.%{$fg[darkred]%}.%{$fg[blue]%})%(!.%B.)%n%(!.%b.)%{$reset_color%}"
   fi
 }
 
@@ -231,6 +235,33 @@ git_prompt_string() {
 
 # Set the right-hand prompt
 RPS1='$(RPR_INFO)$(git_prompt_string)'
+
+# Syntax highlighting
+source ~/.zsh/plugins/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+if [[ "$(tput colors)" == "256" ]]; then
+  ZSH_HIGHLIGHT_STYLES[default]=none
+  ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=131
+  ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=192 #,standout
+  ZSH_HIGHLIGHT_STYLES[alias]=fg=113,bold
+  ZSH_HIGHLIGHT_STYLES[builtin]=fg=113,bold
+  ZSH_HIGHLIGHT_STYLES[function]=fg=113,bold
+  ZSH_HIGHLIGHT_STYLES[command]=fg=113,bold
+  ZSH_HIGHLIGHT_STYLES[precommand]=fg=113,underline
+  ZSH_HIGHLIGHT_STYLES[commandseparator]=none
+  ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=131
+  ZSH_HIGHLIGHT_STYLES[path]=fg=173,underline
+  ZSH_HIGHLIGHT_STYLES[globbing]=fg=074
+  ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=white,underline
+  ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=165,bold
+  ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=165,bold
+  ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
+  ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=186
+  ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=186
+  ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=131
+  ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=131
+  ZSH_HIGHLIGHT_STYLES[assign]=none
+fi
 
 # Allow local customizations in the ~/.zshrc_local file
 if [ -f ~/.zshrc_local ]; then

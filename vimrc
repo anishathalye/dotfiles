@@ -11,9 +11,14 @@ set cursorline " highlight current line
 " but it can be set to force 256 colors
 " set t_Co=256
 " colorscheme womprat
-set background=dark
-let g:solarized_termcolors=256 " instead of 16 color with mapping in terminal
-colorscheme solarized
+if &t_Co < 256
+  colorscheme default
+  set nocursorline " looks bad in this mode
+else
+  set background=dark
+  let g:solarized_termcolors=256 " instead of 16 color with mapping in terminal
+  colorscheme solarized
+endif
 
 filetype plugin indent on " enable file type detection
 set autoindent

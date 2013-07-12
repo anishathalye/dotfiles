@@ -53,8 +53,9 @@ class LinkingException(Exception):
 def link(source, link_name):
   source = os.path.join(self_path(), source)
   if not exists(link_name) and islink(link_name):
-    raise LinkingException('%s already exists but points to nonexistant %s' %
-      (link_name, linkdest(link_name)))
+    print '[!] %s already exists but points to nonexistant %s' % \
+      (link_name, linkdest(link_name))
+    raise LinkingException()
   elif not exists(link_name):
     print '[*] creating link %s -> %s' % (link_name, source)
     os.symlink(source, os.path.expanduser(link_name))
@@ -62,7 +63,8 @@ def link(source, link_name):
     print '[!] %s already exists but is a regular file' % link_name
     raise LinkingException()
   elif not (linkdest(link_name) == source):
-    print '%s already exists but points to the wrong file %s' % (link_name, linkdest(link_name))
+    print '[!] %s already exists but points to the wrong file %s' % \
+      (link_name, linkdest(link_name))
     raise LinkingException()
   else:
     print '[ ] link already exists from %s -> %s' % (link_name, source)

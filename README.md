@@ -3,6 +3,23 @@ dotfiles
 
 Clone this repo and run `install.py` to configure your development environment.
 
+programs used
+-------------
+
+Here is a list of the main programs used:
+
+* `brew` (for mac)
+* `aptitude` (for linux)
+* `zsh`
+* `tmux`
+* `vim`
+* `git`
+* `autojump`
+
+* `sbt`
+* `python3`
+* `g++`
+
 installing binaries
 -------------------
 

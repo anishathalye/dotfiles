@@ -49,8 +49,8 @@ set smartcase
 set wildmode=longest,list
 set wildmenu
 " highlight over length (80 columns) in dark red
-highlight OverLength ctermbg=52 ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=52 ctermfg=white guibg=#592929
+" match OverLength /\%81v.\+/
 
 "---------------------
 " Multipurpose tab key

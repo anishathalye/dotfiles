@@ -18,18 +18,17 @@ autoload -U colors && colors
 if [[ "$(tput colors)" == "256" ]]; then
   source ~/.zsh/functions/spectrum.zsh
   # change default colors
-  fg[green]=$FG[113] # light green
-  # fg[blue]=$FG[111] # light blue
-  fg[blue]=$FG[074] # blue
-  fg[red]=$FG[131] # red
-  fg[darkred]=$FG[196]
-  fg[orange]=$FG[173]
-  fg[yellow]=$FG[186]
-  fg[magenta]=$FG[165]
+  fg[green]=$FG[064]
+  fg[cyan]=$FG[037]
+  fg[blue]=$FG[033]
+  fg[red]=$FG[160]
+  fg[orange]=$FG[166]
+  fg[yellow]=$FG[136]
+  fg[magenta]=$FG[125]
+  fg[violet]=$FG[061]
 else
-  fg[darkred]=$fg[red]
   fg[orange]=$fg[magenta]
-  fg[blue]=$fg[cyan] # little bit better color
+  fg[violet]=$fg[magenta]
 fi
 
 # Current directory, truncated to 3 path elements (or 4 when one of them is "~")
@@ -58,14 +57,14 @@ function PR_DIR() {
     last=${last[2,-1]} # take substring
   fi
 
-  echo "%{$fg[blue]%}${truncated}%{$fg[green]%}%B${last}%b%{$reset_color%}"
+  echo "%{$fg[green]%}${truncated}%{$fg[orange]%}%B${last}%b%{$reset_color%}"
 }
 
 # The arrow symbol that looks like > that is used in the prompt
 PR_ARROW_CHAR=$(echo '\xe2\x9d\xb1')
 
 # The arrow in red (for root) or blue (for regular user)
-PR_ARROW="%(!.%{$fg[darkred]%}.%{$fg[blue]%})${PR_ARROW_CHAR}%{$reset_color%}"
+PR_ARROW="%(!.%{$fg[red]%}.%{$fg[violet]%})${PR_ARROW_CHAR}%{$reset_color%}"
 
 # Build the prompt
 PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
@@ -75,7 +74,7 @@ PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
 RPR_SHOW_USER=true # Set to false to disable user in rhs prompt
 function RPR_USER() {
   if $RPR_SHOW_USER; then
-    echo "%(!.%{$fg[darkred]%}.%{$fg[blue]%})%B%n%b%{$reset_color%}"
+    echo "%(!.%{$fg[red]%}.%{$fg[violet]%})%B%n%b%{$reset_color%}"
   fi
 }
 
@@ -90,7 +89,7 @@ function RPR_HOST() {
 # ' at ' in orange outputted only if both user and host enabled
 function RPR_AT() {
   if $RPR_SHOW_USER && $RPR_SHOW_HOST; then
-    echo "%(!.%{$fg[blue]%}.%{$fg[orange]%}) at %{$reset_color%}"
+    echo "%{$fg[blue]%} at %{$reset_color%}"
   fi
 }
 
@@ -243,25 +242,25 @@ source ~/.zsh/plugins/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 if [[ "$(tput colors)" == "256" ]]; then
   ZSH_HIGHLIGHT_STYLES[default]=none
-  ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=131
-  ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=192 #,standout
-  ZSH_HIGHLIGHT_STYLES[alias]=fg=113,bold
-  ZSH_HIGHLIGHT_STYLES[builtin]=fg=113,bold
-  ZSH_HIGHLIGHT_STYLES[function]=fg=113,bold
-  ZSH_HIGHLIGHT_STYLES[command]=fg=113,bold
-  ZSH_HIGHLIGHT_STYLES[precommand]=fg=113,underline
+  ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=160
+  ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=061 #,standout
+  ZSH_HIGHLIGHT_STYLES[alias]=fg=064,bold
+  ZSH_HIGHLIGHT_STYLES[builtin]=fg=064,bold
+  ZSH_HIGHLIGHT_STYLES[function]=fg=064,bold
+  ZSH_HIGHLIGHT_STYLES[command]=fg=064,bold
+  ZSH_HIGHLIGHT_STYLES[precommand]=fg=064,underline
   ZSH_HIGHLIGHT_STYLES[commandseparator]=none
-  ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=131
-  ZSH_HIGHLIGHT_STYLES[path]=fg=173,underline
-  ZSH_HIGHLIGHT_STYLES[globbing]=fg=074
+  ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=037
+  ZSH_HIGHLIGHT_STYLES[path]=fg=166,underline
+  ZSH_HIGHLIGHT_STYLES[globbing]=fg=033
   ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=white,underline
-  ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=165,bold
-  ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=165,bold
+  ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=125,bold
+  ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=125,bold
   ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
-  ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=186
-  ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=186
-  ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=131
-  ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=131
+  ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=136
+  ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=136
+  ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=136
+  ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=136
   ZSH_HIGHLIGHT_STYLES[assign]=none
 fi
 

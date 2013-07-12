@@ -1,3 +1,10 @@
+# Source high-priority local file
+
+# Allow local customizations in the ~/.zshrc_local_first file
+if [ -f ~/.zshrc_local_first ]; then
+  source ~/.zshrc_local_first
+fi
+
 # Set custom prompt
 
 # User customizable options
@@ -98,17 +105,12 @@ autoload -Uz compinit && compinit
 # Set automatic cd (typing directory name with no 'cd')
 setopt autocd
 
-# Colorize terminal
-UNAMESTR=`uname`
-if [[ "$UNAMESTR" == 'Darwin' ]]; then
-  alias ls='ls -G'
-  alias ll='ls -lG'
-  alias la='ls -laG'
-  export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd" # Linux-like
-elif [[ "$UNAMESTR" == 'Linux' ]]; then
-  alias ls='ls --color=auto'
-  alias ll='ls -l --color=auto'
-  alias la='ls -la --color=auto'
+# Use colors in coreutils utilities output
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -la --color=auto'
+if [[ "$(tput colors)" == "256" ]]; then
+  eval $(dircolors ~/.zsh/other/dircolors.256dark)
 fi
 export GREP_OPTIONS="--color"
 

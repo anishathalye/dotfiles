@@ -1,8 +1,6 @@
-# Source high-priority local file
-
-# Allow local customizations in the ~/.zshrc_local_first file
-if [ -f ~/.zshrc_local_first ]; then
-  source ~/.zshrc_local_first
+# Allow local customizations in the ~/.zshrc_local_before file (executed first)
+if [ -f ~/.zshrc_local_before ]; then
+  source ~/.zshrc_local_before
 fi
 
 # Set custom prompt
@@ -63,14 +61,14 @@ function PR_DIR() {
 # The arrow symbol that looks like > that is used in the prompt
 PR_ARROW_CHAR=$(echo '\xe2\x9d\xb1')
 
-# The arrow in red (for root) or blue (for regular user)
+# The arrow in red (for root) or violet (for regular user)
 PR_ARROW="%(!.%{$fg[red]%}.%{$fg[violet]%})${PR_ARROW_CHAR}%{$reset_color%}"
 
 # Build the prompt
 PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
 
 # Set custom rhs prompt
-# User in red (for root) or blue (for regular user)
+# User in red (for root) or violet (for regular user)
 RPR_SHOW_USER=true # Set to false to disable user in rhs prompt
 function RPR_USER() {
   if $RPR_SHOW_USER; then
@@ -264,7 +262,7 @@ if [[ "$(tput colors)" == "256" ]]; then
   ZSH_HIGHLIGHT_STYLES[assign]=none
 fi
 
-# Allow local customizations in the ~/.zshrc_local file
-if [ -f ~/.zshrc_local ]; then
-  source ~/.zshrc_local
+# Allow local customizations in the ~/.zshrc_local_after file
+if [ -f ~/.zshrc_local_after ]; then
+  source ~/.zshrc_local_after
 fi

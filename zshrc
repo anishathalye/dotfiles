@@ -33,18 +33,18 @@ fi
 
 # Current directory, truncated to 3 path elements (or 4 when one of them is "~")
 function PR_DIR() {
-  local full=$(print -P "%d")
-  local relfull=$(print -P "%~")
-  local shorter=$(print -P "%4~")
-  local current=$(print -P "%4(~:.../:)%3~")
-  local last=$(print -P "%1~")
+  local full="$(print -P "%d")"
+  local relfull="$(print -P "%~")"
+  local shorter="$(print -P "%4~")"
+  local current="$(print -P "%4(~:.../:)%3~")"
+  local last="$(print -P "%1~")"
 
   # Longer path for '~/...'
   if [[ "${shorter}" == \~/* ]]; then
     current=${shorter}
   fi
 
-  local truncated=$(echo "${current%/*}/")
+  local truncated="$(echo "${current%/*}/")"
 
   # Handle special case of directory '/' or '~something'
   if [[ "${truncated}" == "/" || "${relfull[1,-2]}" != */* ]]; then
@@ -243,7 +243,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 if [[ "$(tput colors)" == "256" ]]; then
   ZSH_HIGHLIGHT_STYLES[default]=none
   ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=160
-  ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=061 #,standout
+  ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=037,bold #,standout
   ZSH_HIGHLIGHT_STYLES[alias]=fg=064,bold
   ZSH_HIGHLIGHT_STYLES[builtin]=fg=064,bold
   ZSH_HIGHLIGHT_STYLES[function]=fg=064,bold

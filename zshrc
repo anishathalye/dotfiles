@@ -259,7 +259,7 @@ if [[ "$(tput colors)" == "256" ]]; then
   ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=136
   ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=136
   ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=136
-  ZSH_HIGHLIGHT_STYLES[assign]=none
+  ZSH_HIGHLIGHT_STYLES[assign]=fg=037
 fi
 
 # Allow local customizations in the ~/.zshrc_local_after file

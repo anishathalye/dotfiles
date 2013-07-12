@@ -6,23 +6,23 @@
 # target names are relative with respect to this python script
 # target directories should have a trailing '/'
 links = {
-  # tmux
-  '~/.tmux.conf': 'tmux.conf',
-  
-  # screen
-  '~/.screenrc': 'screenrc',
+    # tmux
+    '~/.tmux.conf': 'tmux.conf',
+    
+    # screen
+    '~/.screenrc': 'screenrc',
 
-  # vim
-  '~/.vimrc': 'vimrc',
-  '~/.vim': 'vim/',
+    # vim
+    '~/.vimrc': 'vimrc',
+    '~/.vim': 'vim/',
 
-  # zsh
-  '~/.zshrc': 'zshrc',
-  '~/.zsh': 'zsh/',
+    # zsh
+    '~/.zshrc': 'zshrc',
+    '~/.zsh': 'zsh/',
 
-  # git
-  '~/.gitconfig': 'gitconfig',
-  '~/.gitignore_global': 'gitignore_global'
+    # git
+    '~/.gitconfig': 'gitconfig',
+    '~/.gitignore_global': 'gitignore_global'
 }
 
 ####################
@@ -30,58 +30,58 @@ links = {
 import os
 
 def self_path():
-  return os.path.dirname(os.path.realpath(__file__))
+    return os.path.dirname(os.path.realpath(__file__))
 
 def exists(path):
-  '''Returns true iff the path exists'''
-  path = os.path.expanduser(path)
-  return os.path.exists(path)
+    '''Returns true iff the path exists'''
+    path = os.path.expanduser(path)
+    return os.path.exists(path)
 
 def islink(path):
-  '''Returns true iff the path is a symlink'''
-  return os.path.islink(os.path.expanduser(path))
+    '''Returns true iff the path is a symlink'''
+    return os.path.islink(os.path.expanduser(path))
 
 def linkdest(path):
-  '''Returns the absolute path to the destination of the symlink'''
-  path = os.path.expanduser(path)
-  reldest = os.readlink(path)
-  return os.path.join(os.path.dirname(path), reldest)
+    '''Returns the absolute path to the destination of the symlink'''
+    path = os.path.expanduser(path)
+    reldest = os.readlink(path)
+    return os.path.join(os.path.dirname(path), reldest)
 
 class LinkingException(Exception):
-  pass
+    pass
 
 def link(source, link_name):
-  source = os.path.join(self_path(), source)
-  if not exists(link_name) and islink(link_name):
-    print '[!] %s already exists but points to nonexistant %s' % \
-      (link_name, linkdest(link_name))
-    raise LinkingException()
-  elif not exists(link_name):
-    print '[*] creating link %s -> %s' % (link_name, source)
-    os.symlink(source, os.path.expanduser(link_name))
-  elif exists(link_name) and not islink(link_name):
-    print '[!] %s already exists but is a regular file' % link_name
-    raise LinkingException()
-  elif not (linkdest(link_name) == source):
-    print '[!] %s already exists but points to the wrong file %s' % \
-      (link_name, linkdest(link_name))
-    raise LinkingException()
-  else:
-    print '[ ] link already exists from %s -> %s' % (link_name, source)
+    source = os.path.join(self_path(), source)
+    if not exists(link_name) and islink(link_name):
+        print '[!] %s already exists but points to nonexistant %s' % \
+            (link_name, linkdest(link_name))
+        raise LinkingException()
+    elif not exists(link_name):
+        print '[*] creating link %s -> %s' % (link_name, source)
+        os.symlink(source, os.path.expanduser(link_name))
+    elif exists(link_name) and not islink(link_name):
+        print '[!] %s already exists but is a regular file' % link_name
+        raise LinkingException()
+    elif not (linkdest(link_name) == source):
+        print '[!] %s already exists but points to the wrong file %s' % \
+            (link_name, linkdest(link_name))
+        raise LinkingException()
+    else:
+        print '[ ] link already exists from %s -> %s' % (link_name, source)
 
 def main():
-  unsuccessful = []
-  for link_name in links:
-    try:
-      link(links[link_name], link_name)
-    except LinkingException:
-      unsuccessful.append(link_name)
-  print '' # newline
-  if unsuccessful:
-    print 'ERROR: some links were not successfully set up:'
-    print '\n'.join(['* %s' % i for i in unsuccessful])
-  else:
-    print 'SUCCESS: all links have been set up'
+    unsuccessful = []
+    for link_name in links:
+        try:
+            link(links[link_name], link_name)
+        except LinkingException:
+            unsuccessful.append(link_name)
+    print '' # newline
+    if unsuccessful:
+        print 'ERROR: some links were not successfully set up:'
+        print '\n'.join(['* %s' % i for i in unsuccessful])
+    else:
+        print 'SUCCESS: all links have been set up'
 
 if __name__ == '__main__':
-  main()
+    main()

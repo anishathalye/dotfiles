@@ -12,12 +12,12 @@ set cursorline " highlight current line
 " set t_Co=256
 " colorscheme womprat
 if &t_Co < 256
-  colorscheme default
-  set nocursorline " looks bad in this mode
+    colorscheme default
+    set nocursorline " looks bad in this mode
 else
-  set background=dark
-  let g:solarized_termcolors=256 " instead of 16 color with mapping in terminal
-  colorscheme solarized
+    set background=dark
+    let g:solarized_termcolors=256 " instead of 16 color with mapping in terminal
+    colorscheme solarized
 endif
 
 filetype plugin indent on " enable file type detection
@@ -56,12 +56,12 @@ set wildmenu
 " Multipurpose tab key
 "---------------------
 function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
@@ -95,5 +95,5 @@ nnoremap <C-l> <C-w>l
 " local customizations in ~/.vimrc_local
 let $LOCALFILE=expand("~/.vimrc_local")
 if filereadable($LOCALFILE)
-  source $LOCALFILE
+    source $LOCALFILE
 endif

@@ -22,6 +22,9 @@
 [merge]
 	tool = vimdiff
 
+[core]
+	excludesfile = /Users/anish/.gitignore_global
+
 # Allow local customizations in the .gitconfig_local file
 [include]
   path = .gitconfig_local

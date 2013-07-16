@@ -20,6 +20,7 @@ set incsearch " incremental search (as string is being typed)
 set hls " highlight search
 set lbr " line break
 set ruler " show current position in file
+set laststatus=2 " always show 2 line status bar
 set backspace=indent,eol,start " allow backspacing over everything
 set timeout timeoutlen=1000 ttimeoutlen=100 " fix slow O inserts
 set autochdir " automatically set current directory to directory of last opened file

@@ -20,14 +20,17 @@
     dh = diff --color-words HEAD~1
     ff = merge --ff-only
     pullff = pull --ff-only
-    count = diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 # hash empty tree
+    count = diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 # hash of empty tree
     lg = log -p
-    gr = log --graph --format=rainbow
-    gra = log --graph --format=rainbow --all
-    cleanall = clean -f -d -x # this is dangerous, so it's intentionally long
+    gr = log --graph --format=colorshort # graph
+    gra = log --graph --format=colorshort --all # graph all
+    grad = log --graph --format=detail --all # graph all in detail
+    cleanall = clean -f -d -x # this is dangerous, so it's intentionally long to type
 
 [pretty]
-    rainbow = "%C(auto)%h%d %s %C(yellow)by %C(cyan)%an %C(yellow)%ar"
+    colorline = "%C(auto)%h%d %s %C(yellow)by %C(cyan)%an %C(yellow)%ar"
+    colorshort = "%C(auto)%h %s %C(yellow)%ar%n %C(auto)%d%n"
+    detail = "%C(auto)%h %s %C(yellow)%ar%n  %C(yellow)by %C(cyan)%an %C(magenta)<%ae>%n %C(auto)%d%n"
 
 [merge]
     tool = vimdiff

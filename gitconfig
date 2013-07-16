@@ -32,8 +32,8 @@
   default = upstream
 
 [core]
-  excludesfile = /Users/anish/.gitignore_global
+  excludesfile = ~/.gitignore_global
 
 # Allow local customizations in the .gitconfig_local file
 [include]
-  path = .gitconfig_local
+  path = ~/.gitconfig_local

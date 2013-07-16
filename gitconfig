@@ -21,6 +21,7 @@
     ff = merge --ff-only
     pullff = pull --ff-only
     count = diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 # hash empty tree
+    lg = log -p
     gr = log --graph --format=rainbow
     gra = log --graph --format=rainbow --all
     cleanall = clean -f -d -x # this is dangerous, so it's intentionally long

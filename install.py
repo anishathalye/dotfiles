@@ -18,6 +18,7 @@ links = {
 
   # zsh
   '~/.zshrc': 'zshrc',
+  '~/.zsh': 'zsh/',
 
   # git
   '~/.gitconfig': 'gitconfig',

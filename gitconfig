@@ -15,6 +15,7 @@
   co = checkout
   di = diff
   dc = diff --cached
+  dh = diff HEAD~1
   ff = merge --ff-only
   pullff = pull --ff-only
 

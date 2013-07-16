@@ -22,3 +22,4 @@ ln -s ${BASEDIR}/zshrc ~/.zshrc
 
 # git
 ln -s ${BASEDIR}/gitconfig ~/.gitconfig
+ln -s ${BASEDIR}/gitignore_global ~/.gitignore_global

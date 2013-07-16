@@ -10,6 +10,7 @@
 [alias]
   st = status
   br = branch -vv
+  bra = branch -vv --all
   aa = add --all
   ci = commit -v
   ca = commit --amend

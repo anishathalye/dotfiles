@@ -1,7 +1,83 @@
 # Set custom prompt
+
+# User customizable options
+# RPR_SHOW_USER=(true, false)
+# RPR_SHOW_HOST=(true, false) - show host in rhs prompt
+
+# Load color variables to make it easier to color prompt
 autoload -U colors && colors
-PS1=$'%{$fg[green]%}%4(c:.../:)%3c %(!.%{$fg[red]%}.%{$fg[cyan]%})\xe2\x9d\xb1 %{$reset_color%}'
-PROMPTINFO="%(!.%{$fg[red]%}.%{$fg[cyan]%})%n%{$fg[magenta]%} at %{$fg[yellow]%}%m%{$reset_color%}"
+
+# Make using 256 colors easier
+if [[ "$(tput colors)" == "256" ]]; then
+  source ~/.zsh/functions/spectrum.zsh
+fi
+
+# Current directory, truncated to 3 path elements (or 4 when one of them is "~")
+function PR_DIR() {
+  local full=$(print -P "%d")
+  local relfull=$(print -P "%~")
+  local shorter=$(print -P "%4~")
+  local current=$(print -P "%4(~:.../:)%3~")
+  local last=$(print -P "%1~")
+
+  # Longer path for '~/...'
+  if [[ "${shorter}" == \~/* ]]; then
+    current=${shorter}
+  fi
+
+  local truncated=$(echo "${current%/*}/")
+
+  # Handle special case of directory '/' or '~something'
+  if [[ "${truncated}" == "/" || "${relfull[1,-2]}" != */* ]]; then
+    truncated=""
+  fi
+
+  # Handle special case of last being '/...' one directory down
+  if [[ "${full[2,-1]}" != "" && "${full[2,-1]}" != */* ]]; then
+    truncated="/"
+    last=${last[2,-1]} # take substring
+  fi
+
+  echo "%{$fg[green]%}${truncated}%{$fg[yellow]%}${last}%{$reset_color%}"
+}
+
+# The arrow symbol that looks like > that is used in the prompt
+PR_ARROW_CHAR=$(echo '\xe2\x9d\xb1')
+
+# The arrow in red (for root) or cyan (for regular user)
+PR_ARROW="%(!.%{$fg[red]%}.%{$fg[cyan]%})${PR_ARROW_CHAR}%{$reset_color%}"
+
+# Build the prompt
+PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
+
+# Set custom rhs prompt
+# User in red (for root) or cyan (for regular user)
+RPR_SHOW_USER=true # Set to false to disable user in rhs prompt
+function RPR_USER() {
+  if $RPR_SHOW_USER; then
+    echo "%(!.%{$fg[red]%}.%{$fg[cyan]%})%n%{$reset_color%}"
+  fi
+}
+
+# Host in yellow
+RPR_SHOW_HOST=true # Set to false to disable host in rhs prompt
+function RPR_HOST() {
+  if $RPR_SHOW_HOST; then
+    echo "%{$fg[yellow]%}%m%{$reset_color%}"
+  fi
+}
+
+# ' at ' in magenta outputted only if both user and host enabled
+function RPR_AT() {
+  if $RPR_SHOW_USER && $RPR_SHOW_HOST; then
+    echo "%{$fg[magenta]%} at %{$reset_color%}"
+  fi
+}
+
+# Build the rhs prompt
+function RPR_INFO() {
+  echo "$(RPR_USER)$(RPR_AT)$(RPR_HOST)"
+}
 
 # Initialize completion
 autoload -Uz compinit && compinit
@@ -145,7 +221,7 @@ git_prompt_string() {
 }
 
 # Set the right-hand prompt
-RPS1='${PROMPTINFO}$(git_prompt_string)'
+RPS1='$(RPR_INFO)$(git_prompt_string)'
 
 # Allow local customizations in the ~/.zshrc_local file
 if [ -f ~/.zshrc_local ]; then

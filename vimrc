@@ -22,6 +22,7 @@ set lbr " line break
 set ruler " show current position in file
 set backspace=indent,eol,start " allow backspacing over everything
 set timeout timeoutlen=1000 ttimeoutlen=100 " fix slow O inserts
+set autochdir " automatically set current directory to directory of last opened file
 " use 2 spaces instead of tabs during formatting
 set expandtab
 set tabstop=2

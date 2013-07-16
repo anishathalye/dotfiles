@@ -74,7 +74,7 @@ nnoremap <C-l> <C-w>l
 " Local customizations
 "---------------------
 
-let LOCALFILE=expand("~/.vimrc_local")
-if filereadable(LOCALFILE)
-  exe "source " . LOCALFILE
+let $LOCALFILE=expand("~/.vimrc_local")
+if filereadable($LOCALFILE)
+  source $LOCALFILE
 endif

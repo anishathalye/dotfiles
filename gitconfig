@@ -1,46 +1,46 @@
 [user]
-    name = Anish Athalye
-    email = aathalye@me.com
+	name = Anish Athalye
+	email = aathalye@me.com
 
 [diff]
 
 [color]
-    ui = auto
+	ui = auto
 
 [alias]
-    st = status
-    br = branch -vv
-    bra = branch -vv --all
-    aa = add --all :/
-    ci = commit -v
-    ca = commit --amend
-    co = checkout
-    di = diff --color-words
-    dc = diff --color-words --cached
-    dh = diff --color-words HEAD~1
-    ff = merge --ff-only
-    pullff = pull --ff-only
-    count = diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 # hash of empty tree
-    lg = log -p
-    gr = log --graph --format=colorshort # graph
-    gra = log --graph --format=colorshort --all # graph all
-    grad = log --graph --format=detail --all # graph all in detail
-    cleanall = clean -f -d -x # this is dangerous, so it's intentionally long to type
+	st = status
+	br = branch -vv
+	bra = branch -vv --all
+	aa = add --all :/
+	ci = commit -v
+	ca = commit --amend
+	co = checkout
+	di = diff --color-words
+	dc = diff --color-words --cached
+	dh = diff --color-words HEAD~1
+	ff = merge --ff-only
+	pullff = pull --ff-only
+	count = diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 # hash of empty tree
+	lg = log -p
+	gr = log --graph --format=colorshort # graph
+	gra = log --graph --format=colorshort --all # graph all
+	grad = log --graph --format=detail --all # graph all in detail
+	cleanall = clean -f -d -x # this is dangerous, so it's intentionally long to type
 
 [pretty]
-    colorline = "%C(auto)%h%d %s %C(yellow)by %C(cyan)%an %C(yellow)%ar"
-    colorshort = "%C(auto)%h %s %C(yellow)%ar%n %C(auto)%d%n"
-    detail = "%C(auto)%h %s %C(yellow)%ar%n  %C(yellow)by %C(cyan)%an %C(magenta)<%ae>%n %C(auto)%d%n"
+	colorline = "%C(auto)%h%d %s %C(yellow)by %C(cyan)%an %C(yellow)%ar"
+	colorshort = "%C(auto)%h %s %C(yellow)%ar%n %C(auto)%d%n"
+	detail = "%C(auto)%h %s %C(yellow)%ar%n  %C(yellow)by %C(cyan)%an %C(magenta)<%ae>%n %C(auto)%d%n"
 
 [merge]
-    tool = vimdiff
+	tool = vimdiff
 
 [push]
-    default = upstream
+	default = upstream
 
 [core]
-    excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
 # Allow local customizations in the .gitconfig_local file
 [include]
-    path = ~/.gitconfig_local
+	path = ~/.gitconfig_local

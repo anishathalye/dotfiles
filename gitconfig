@@ -13,7 +13,7 @@
 	bra = branch -vv --all
 	aa = add --all :/
 	ci = commit -v
-	ca = commit --amend
+	ca = commit --amend -v
 	co = checkout
 	di = diff --color-words
 	dc = diff --color-words --cached

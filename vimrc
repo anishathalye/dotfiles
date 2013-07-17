@@ -53,6 +53,11 @@ set mouse=a " enable mouse mode (scrolling, selection, etc)
 " highlight OverLength ctermbg=52 ctermfg=white guibg=#592929
 " match OverLength /\%81v.\+/
 
+"-------------
+" Disable keys
+"-------------
+cabbrev X echoe "You probably don't want to encrypt that file"<CR>
+
 "---------------------
 " Multipurpose tab key
 "---------------------

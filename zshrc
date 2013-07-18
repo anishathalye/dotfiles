@@ -21,7 +21,7 @@ alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -la --color=auto'
 if [[ "$(tput colors)" == "256" ]]; then
-    eval $(dircolors ~/.zsh/other/dircolors.256dark)
+    eval $(dircolors ~/.zsh/other/dircolors-solarized/dircolors.256dark)
 fi
 export GREP_OPTIONS="--color"
 
@@ -264,7 +264,7 @@ function tog() {
 }
     
 # Syntax highlighting
-source ~/.zsh/plugins/zsh-syntax-highlighting.zsh
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 if [[ "$(tput colors)" == "256" ]]; then
     ZSH_HIGHLIGHT_STYLES[default]=none

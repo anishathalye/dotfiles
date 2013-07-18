@@ -1,5 +1,12 @@
 set nocompatible " not vi compatible
 
+"--------------
+" Load pathogen
+"--------------
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
+
 "------------------
 " Syntax and indent
 "------------------
@@ -18,6 +25,7 @@ else
     set background=dark
     let g:solarized_termcolors=256 " instead of 16 color with mapping in terminal
     colorscheme solarized
+    highlight SignColumn ctermbg=234
 endif
 
 filetype plugin indent on " enable file type detection

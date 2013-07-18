@@ -1,12 +1,18 @@
 dotfiles
 ========
 
-Clone this repo and run `install.py` to configure your development environment.
+After cloning this repo, run
+`git pull --recurse-submodules && git submodule update --init --recursive`
+to get all the submodules. Then run `install.py` to automatically set up
+the development environment.
+
+To keep submodules up-to-date, you can run `git update-submodules` (that is
+not a vanilla git command, but the alias will be set up by the installer).
 
 programs used
 -------------
 
-Here is a list of the main programs used:
+### command line tools
 
 * `brew` (for mac)
 * `aptitude` (for linux)
@@ -16,9 +22,11 @@ Here is a list of the main programs used:
 * `git`
 * `autojump`
 
-* `sbt`
+### development software
+
+* `g++` / `build-essential` package
 * `python3`
-* `g++`
+* `sbt`
 
 installing binaries
 -------------------
@@ -32,6 +40,7 @@ making local customizations
 ---------------------------
 
 You can make local customizations for some programs by editing these files:
+
 * `vim` : `~/.vimrc_local`
 * `zsh` : `~/.zshrc_local_before` run before `.zshrc`
 * `zsh` : `~/.zshrc_local_after` run after `.zshrc`

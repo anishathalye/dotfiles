@@ -26,6 +26,7 @@
 	gra = log --graph --format=colorshort --all # graph all
 	grad = log --graph --format=detail --all # graph all in detail
 	cleanall = clean -f -d -x # this is dangerous, so it's intentionally long to type
+	update-submodules = ! git pull --recurse-submodules && git submodule update --init --recursive
 
 [pretty]
 	colorline = "%C(auto)%h%d %s %C(yellow)by %C(cyan)%an %C(yellow)%ar"

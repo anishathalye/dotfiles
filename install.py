@@ -22,7 +22,10 @@ links = {
 
     # git
     '~/.gitconfig': 'gitconfig',
-    '~/.gitignore_global': 'gitignore_global'
+    '~/.gitignore_global': 'gitignore_global',
+
+    # sbt
+    '~/.sbt': 'sbt/'
 }
 
 ####################

@@ -84,7 +84,7 @@ def main():
         print 'ERROR: some links were not successfully set up:'
         print '\n'.join(['* %s' % i for i in unsuccessful])
     else:
-        print 'SUCCESS: all links have been set up'
+        print 'FAILURE: all links have been set up'
 
 if __name__ == '__main__':
     main()

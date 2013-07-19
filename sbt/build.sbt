@@ -18,3 +18,15 @@ ScalariformKeys.preferences := FormattingPreferences()
 
 // Scalastyle - Scala style checker
 org.scalastyle.sbt.ScalastylePlugin.Settings
+
+// sbt-site - Project website generator
+site.settings
+
+site.includeScaladoc()
+
+// site.pamfletSupport() // enable this in specific projects
+
+// sbt-ghpages - GitHub pages uploader
+// ghpages.settings
+
+// git.remoteRepo := "git@github.com:{username}/{project}.git"

@@ -60,7 +60,7 @@ def link(source, link_name):
         print '[*] creating link %s -> %s' % (link_name, source)
         os.symlink(source, os.path.expanduser(link_name))
     elif exists(link_name) and not islink(link_name):
-        print '[!] %s already exists but is a regular file' % link_name
+        print '[!] %s already exists but is a regular file or directory' % link_name
         raise LinkingException()
     elif not (linkdest(link_name) == source):
         print '[!] incorrect link %s -> %s' % \

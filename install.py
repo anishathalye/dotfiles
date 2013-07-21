@@ -28,9 +28,19 @@ links = {
     '~/.sbt': 'sbt/'
 }
 
+# shell commands (array of (msg, cmd))
+
+# shell commands to run before linking
+precmds = []
+
+# shell commands to run after linking
+postcmds = [
+    ('Installing/updating submodules', 'git update-submodules')
+]
+
 ####################
 
-import os
+import sys, os, subprocess
 
 def self_path():
     return os.path.dirname(os.path.realpath(__file__))
@@ -72,7 +82,7 @@ def link(source, link_name):
     else:
         print '[ ] link exists %s -> %s' % (link_name, source)
 
-def main():
+def process_links():
     unsuccessful = []
     for link_name in links:
         try:
@@ -85,6 +95,37 @@ def main():
         print '\n'.join(['* %s' % i for i in unsuccessful])
     else:
         print 'SUCCESS: all links have been set up'
+    return bool(unsuccessful)
+
+def process_shell(cmds):
+    if not cmds:
+        return False
+    unsuccessful = False
+    for msg, cmd in cmds:
+        print '%s [%s]...' % (msg, cmd), # comma to avoid newline
+        sys.stdout.flush() # force printing of above line
+        ret = subprocess.call(cmd, shell = True, stdout = subprocess.PIPE,
+            stderr = subprocess.PIPE)
+        print '%s!' % ('SUCCESS' if ret == 0 else 'FAILURE')
+        if ret != 0: unsuccessful = True
+    print '' # newline
+    if unsuccessful:
+        print 'FAILURE: some tasks were not run successfully'
+    else:
+        print 'SUCCESS: all tasks executed'
+
+
+def main():
+    pre_fail = process_shell(precmds)
+    if precmds: print '' # newline
+    link_fail = process_links()
+    if postcmds: print '' # newline
+    post_fail = process_shell(postcmds)
+    print '' # newline
+    if any((pre_fail, link_fail, post_fail)):
+        print 'FAILURE: environment has not been set up successfully'
+    else:
+        print 'SUCCESS: environment has been set up'
 
 if __name__ == '__main__':
     main()

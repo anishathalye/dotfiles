@@ -81,10 +81,10 @@ def main():
             unsuccessful.append(link_name)
     print '' # newline
     if unsuccessful:
-        print 'ERROR: some links were not successfully set up:'
+        print 'FAILURE: some links were not successfully set up:'
         print '\n'.join(['* %s' % i for i in unsuccessful])
     else:
-        print 'FAILURE: all links have been set up'
+        print 'SUCCESS: all links have been set up'
 
 if __name__ == '__main__':
     main()

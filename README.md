@@ -2,10 +2,7 @@ dotfiles
 ========
 
 After cloning this repo, run `install.py` to automatically set up the
-development environment. Then run `git update-submodules` to install
-the latest versions of all submodules. Note that the install script
-must be run before updating submodules (because `update-submodules`
-is not a vanilla git command but an alias set up by the installer).
+development environment.
 
 To keep submodules up-to-date, you can re-run `git update-submodules`
 at any time.

@@ -44,3 +44,9 @@ You can make local customizations for some programs by editing these files:
 * `zsh` : `~/.zshrc_local_after` run after `.zshrc`
 * `git` : `~/.gitconfig_local`
 * `tmux` : `~/.tmux_local.conf`
+
+license
+-------
+
+Everything in here is released under the
+[MIT License](http://anish.mit-license.org/).

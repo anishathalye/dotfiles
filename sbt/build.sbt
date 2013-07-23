@@ -23,6 +23,9 @@ ScalariformKeys.preferences := FormattingPreferences()
 // Scalastyle - Scala style checker
 org.scalastyle.sbt.ScalastylePlugin.Settings
 
+// sbt-dependency-graph - Dependency graph generator
+net.virtualvoid.sbt.graph.Plugin.graphSettings
+
 // sbt-site - Project website generator
 site.settings
 

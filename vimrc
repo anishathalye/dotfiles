@@ -46,7 +46,7 @@ set backspace=indent,eol,start " allow backspacing over everything
 set timeout timeoutlen=1000 ttimeoutlen=100 " fix slow O inserts
 set autochdir " automatically set current directory to directory of last opened file
 set hidden " allow auto-hiding of edited buffers
-set history=512 " more history
+set history=4096 " more history
 " use 2 spaces instead of tabs during formatting
 set expandtab
 set tabstop=4

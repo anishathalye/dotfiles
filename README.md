@@ -1,16 +1,17 @@
-dotfiles
+Dotfiles
 ========
 
 After cloning this repo, run `install.py` to automatically set up the
-development environment.
+development environment. Note that the install script is idempotent -
+running it multiple times has no effect.
 
 To keep submodules up-to-date, you can re-run `git update-submodules`
 at any time.
 
-programs used
+Programs Used
 -------------
 
-### command line tools
+### Command Line Tools
 
 * `brew` (for mac)
 * `aptitude` (for linux)
@@ -20,13 +21,13 @@ programs used
 * `git`
 * `autojump`
 
-### development software
+### Development Software
 
 * `g++` / `build-essential` package
 * `python3`
 * `sbt`
 
-installing binaries
+Installing Binaries
 -------------------
 
 Use `aptitude` or whatever package manager on Linux. Use `brew` on Mac.
@@ -34,7 +35,7 @@ Use `aptitude` or whatever package manager on Linux. Use `brew` on Mac.
 To replace coreutils with GNU coreutils on a Mac, do `brew install coreutils`
 and follow the instructions to use the commands with their normal names.
 
-making local customizations
+Making Local Customizations
 ---------------------------
 
 You can make local customizations for some programs by editing these files:
@@ -45,8 +46,7 @@ You can make local customizations for some programs by editing these files:
 * `git` : `~/.gitconfig_local`
 * `tmux` : `~/.tmux_local.conf`
 
-license
+License
 -------
 
-Everything in here is released under the
-[MIT License](http://anish.mit-license.org/).
+Released under the [MIT License](http://anish.mit-license.org/).

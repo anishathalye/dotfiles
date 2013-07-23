@@ -42,6 +42,26 @@ postcmds = [
 
 import sys, os, subprocess
 
+# colors
+class colors:
+    __tty = sys.stdout.isatty()
+    NONE = '' if __tty else ''
+    MAGENTA = '\033[95m' if __tty else ''
+    YELLOW = '\033[93m' if __tty else ''
+    BLUE = '\033[94m' if __tty else ''
+    GREEN = '\033[92m' if __tty else ''
+    RED = '\033[91m' if __tty else ''
+    RESET = '\033[0m' if __tty else ''
+
+    INFO = NONE
+    OK = BLUE
+    SUCCESS = GREEN
+    WARNING = MAGENTA
+    DETAIL = YELLOW
+    FAIL = RED
+    ENDC = RESET
+
+
 def self_path():
     return os.path.dirname(os.path.realpath(__file__))
 
@@ -66,21 +86,26 @@ class LinkingException(Exception):
 def link(source, link_name):
     source = os.path.join(self_path(), source)
     if not exists(link_name) and islink(link_name):
-        print '[!] invalid link %s -> %s' % \
-            (link_name, linkdest(link_name))
+        print colors.WARNING + \
+            '[!] invalid link %s -> %s' % (link_name, linkdest(link_name)) + \
+            colors.ENDC
         raise LinkingException()
     elif not exists(link_name):
-        print '[*] creating link %s -> %s' % (link_name, source)
+        print colors.OK + \
+            '[*] creating link %s -> %s' % (link_name, source) + colors.ENDC
         os.symlink(source, os.path.expanduser(link_name))
     elif exists(link_name) and not islink(link_name):
-        print '[!] %s already exists but is a regular file or directory' % link_name
+        print colors.WARNING + \
+            '[!] %s already exists but is a regular file or directory' % \
+            link_name + colors.ENDC
         raise LinkingException()
     elif not (linkdest(link_name) == source):
-        print '[!] incorrect link %s -> %s' % \
-            (link_name, linkdest(link_name))
+        print colors.WARNING + '[!] incorrect link %s -> %s' % \
+            (link_name, linkdest(link_name)) + colors.ENDC
         raise LinkingException()
     else:
-        print '[ ] link exists %s -> %s' % (link_name, source)
+        print colors.INFO + '[ ] link exists %s -> %s' % \
+            (link_name, source) + colors.ENDC
 
 def process_links():
     unsuccessful = []
@@ -91,10 +116,15 @@ def process_links():
             unsuccessful.append(link_name)
     print '' # newline
     if unsuccessful:
-        print 'FAILURE: some links were not successfully set up:'
-        print '\n'.join(['* %s' % i for i in unsuccessful])
+        print colors.FAIL + \
+            'FAILURE: some links were not successfully set up' + colors.ENDC
+        # print colors.FAIL + \
+        #    'FAILURE: some links were not successfully set up:' + colors.ENDC
+        # print colors.WARNING + '\n'.join(['* %s' % i for i in unsuccessful]) + \
+        #    colors.ENDC
     else:
-        print 'SUCCESS: all links have been set up'
+        print colors.SUCCESS + 'SUCCESS: all links have been set up' + \
+            colors.ENDC
     return bool(unsuccessful)
 
 def process_shell(cmds):
@@ -102,17 +132,21 @@ def process_shell(cmds):
         return False
     unsuccessful = False
     for msg, cmd in cmds:
-        print '%s [%s]...' % (msg, cmd), # comma to avoid newline
+        print colors.INFO + '%s [%s]...' % (msg,
+            colors.DETAIL + cmd + colors.ENDC) + \
+            colors.ENDC, # comma to avoid newline
         sys.stdout.flush() # force printing of above line
         ret = subprocess.call(cmd, shell = True, stdout = subprocess.PIPE,
             stderr = subprocess.PIPE)
-        print '%s!' % ('SUCCESS' if ret == 0 else 'FAILURE')
+        print '%s!' % (colors.OK + 'SUCCESS' if ret == 0 else
+            colors.WARNING + 'FAILURE') + colors.ENDC
         if ret != 0: unsuccessful = True
     print '' # newline
     if unsuccessful:
-        print 'FAILURE: some tasks were not run successfully'
+        print colors.FAIL + 'FAILURE: some tasks were not run successfully' + \
+            colors.ENDC
     else:
-        print 'SUCCESS: all tasks executed'
+        print colors.SUCCESS + 'SUCCESS: all tasks executed' + colors.ENDC
 
 
 def main():
@@ -123,9 +157,11 @@ def main():
     post_fail = process_shell(postcmds)
     print '' # newline
     if any((pre_fail, link_fail, post_fail)):
-        print 'FAILURE: environment has not been set up successfully'
+        print colors.FAIL + \
+            'FAILURE: environment has not been set up successfully' + \
+            colors.ENDC
     else:
-        print 'SUCCESS: environment has been set up'
+        print colors.SUCCESS + 'SUCCESS: environment has been set up' + colors.ENDC
 
 if __name__ == '__main__':
     main()

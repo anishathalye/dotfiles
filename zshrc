@@ -31,7 +31,7 @@ export HISTFILE="$HOME/.zsh_history"
 export SAVEHIST=$HISTSIZE
 
 # Use vim as the editor
-export EDITOR=vi
+export EDITOR=vim
 
 # Use emacs mode in vim
 bindkey -e

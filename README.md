@@ -2,11 +2,11 @@ Dotfiles
 ========
 
 After cloning this repo, run `install.py` to automatically set up the
-development environment. Note that the install script is idempotent -
-running it multiple times has no effect.
+development environment. Note that the install script is idempotent - running
+it multiple times has no effect.
 
-To keep submodules up-to-date, you can re-run `git update-submodules`
-at any time.
+To keep submodules up-to-date, you can re-run `git update-submodules` at any
+time.
 
 Programs Used
 -------------

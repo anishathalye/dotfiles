@@ -1,6 +1,6 @@
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
 	ignore = untracked
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
@@ -30,12 +30,13 @@
 	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 	ignore = untracked
-[submodule "misc/solarized-sublimetext2"]
-	path = misc/solarized-sublimetext2
-	url = https://github.com/mybuddymichael/solarized-sublimetext2.git
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+	ignore = untracked
+[submodule "misc/solarized-sublimetext2"]
+	path = misc/solarized-sublimetext2
+	url = https://github.com/mybuddymichael/solarized-sublimetext2.git
 [submodule "zsh/other/dircolors-solarized"]
 	path = zsh/other/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

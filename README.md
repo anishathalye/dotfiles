@@ -49,7 +49,9 @@ You can make local customizations for some programs by editing these files:
 License
 -------
 
-Released under the [MIT License](http://anish.mit-license.org/).
+With the exception of the content in directories that contain special
+`LICENSE.md` files, all content is released under the
+[MIT License](http://anish.mit-license.org/).
 
 ---
 

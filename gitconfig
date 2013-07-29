@@ -27,6 +27,7 @@
 	grad = log --graph --format=detail --all # graph all in detail
 	cleanall = clean -fdx :/ # this is dangerous, so it's intentionally long to type
 	update-submodules = ! git pull --recurse-submodules && git submodule update --init --recursive
+	root = rev-parse --show-toplevel
 
 [pretty]
 	colorline = "%C(auto)%h%d %s %C(yellow)by %C(cyan)%an %C(yellow)%ar"

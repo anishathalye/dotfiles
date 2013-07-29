@@ -40,7 +40,7 @@ bindkey -e
 bindkey "^R" history-incremental-search-backward
 
 # cd to git root directory
-alias git-root='cd "$(git rev-parse --show-toplevel)"'
+alias cdgr='cd "$(git root)"'
 
 # Jump to directory containing file
 function jump() {

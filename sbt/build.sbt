@@ -4,10 +4,6 @@
 
 import scalariform.formatter.preferences._
 
-// Custom settings
-
-cancelable := true
-
 // Scalariform - source code formatter
 
 // disable automatic reformat on compile

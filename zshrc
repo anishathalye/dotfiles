@@ -245,21 +245,29 @@ RPS1='$(RPR_INFO)$(git_prompt_string)'
 
 # Alternative prompt.
 ALT_PS1='$(PR_DIR 2) ${PR_ARROW} ' # space at the end
-ALT_RPS1=""
+ALT_RPS1=''
+
+# Minimal prompt.
+MIN_PS1='${PR_ARROW} '
+MIN_RPS1=""
 
 # Function to toggle between the main prompt and a minimal prompt.
-TOGGLED_PROMPT=false
-PS1_SAVED=${PS1}
-RPS1_SAVED=${RPS1}
+PROMPT_STATE=0
+ORIG_PS1=${PS1}
+ORIG_RPS1=${RPS1}
 function tog() {
-    if ${TOGGLED_PROMPT}; then
-        PS1=${PS1_SAVED}
-        RPS1=${RPS1_SAVED}
-        TOGGLED_PROMPT=false
-    else
+    if [[ "${PROMPT_STATE}" == 0 ]]; then
         PS1=${ALT_PS1}
         RPS1=${ALT_RPS1}
-        TOGGLED_PROMPT=true
+        PROMPT_STATE=1
+    elif [[ "${PROMPT_STATE}" == 1 ]]; then
+        PS1=${MIN_PS1}
+        RPS1=${MIN_RPS1}
+        PROMPT_STATE=2
+    else
+        PS1=${ORIG_PS1}
+        RPS1=${ORIG_RPS1}
+        PROMPT_STATE=0
     fi
 }
     

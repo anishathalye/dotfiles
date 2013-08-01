@@ -15,9 +15,9 @@
 	ci = commit -v
 	ca = commit --amend -v
 	co = checkout
-	di = diff --color-words
-	dc = diff --color-words --cached
-	dh = diff --color-words HEAD~1
+	di = diff
+	dc = diff --cached
+	dh = diff HEAD~1
 	ff = merge --ff-only
 	noff = merge --no-ff
 	fa = fetch --all

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Script to link all the files in the dotfiles to the home directory
+# Script to automatically set up the environment
 
 # link names are absolute (with '~' allowed, which will be expanded)
 # target names are relative with respect to this python script
@@ -45,7 +45,7 @@ import sys, os, subprocess
 # colors
 class colors:
     __tty = sys.stdout.isatty()
-    NONE = '' if __tty else ''
+    NONE = ''
     MAGENTA = '\033[95m' if __tty else ''
     YELLOW = '\033[93m' if __tty else ''
     BLUE = '\033[94m' if __tty else ''
@@ -53,14 +53,18 @@ class colors:
     RED = '\033[91m' if __tty else ''
     RESET = '\033[0m' if __tty else ''
 
-    INFO = NONE
-    OK = BLUE
-    SUCCESS = GREEN
-    WARNING = MAGENTA
-    DETAIL = YELLOW
-    FAIL = RED
-    ENDC = RESET
+def make_color_printer(color = colors.NONE):
+    def color_print(msg, end='\n'):
+        sys.stdout.write(color + msg + colors.RESET + end)
+    return color_print
 
+INFO = make_color_printer(colors.NONE)
+DETAIL = make_color_printer(colors.YELLOW)
+OK = make_color_printer(colors.BLUE)
+SUCC = make_color_printer(colors.GREEN)
+WARN = make_color_printer(colors.MAGENTA)
+FAIL = make_color_printer(colors.RED)
+NEWLINE = lambda: sys.stdout.write('\n')
 
 def self_path():
     return os.path.dirname(os.path.realpath(__file__))
@@ -80,88 +84,71 @@ def linkdest(path):
     reldest = os.readlink(path)
     return os.path.join(os.path.dirname(path), reldest)
 
-class LinkingException(Exception):
-    pass
-
 def link(source, link_name):
+    '''Returns true iff linking was unsuccessful'''
+    unsuccessful = False
     source = os.path.join(self_path(), source)
     if not exists(link_name) and islink(link_name):
-        print colors.WARNING + \
-            '[!] invalid link %s -> %s' % (link_name, linkdest(link_name)) + \
-            colors.ENDC
-        raise LinkingException()
+        WARN('[!] invalid link %s -> %s' % (link_name, linkdest(link_name)))
+        unsuccessful = True
     elif not exists(link_name):
-        print colors.OK + \
-            '[*] creating link %s -> %s' % (link_name, source) + colors.ENDC
+        OK('[*] creating link %s -> %s' % (link_name, source))
         os.symlink(source, os.path.expanduser(link_name))
     elif exists(link_name) and not islink(link_name):
-        print colors.WARNING + \
-            '[!] %s already exists but is a regular file or directory' % \
-            link_name + colors.ENDC
-        raise LinkingException()
+        WARN('[!] %s already exists but is a regular file or directory' %
+            link_name)
+        unsuccessful = True
     elif not (linkdest(link_name) == source):
-        print colors.WARNING + '[!] incorrect link %s -> %s' % \
-            (link_name, linkdest(link_name)) + colors.ENDC
-        raise LinkingException()
+        WARN('[!] incorrect link %s -> %s' % (link_name, linkdest(link_name)))
+        unsuccessful = True
     else:
-        print colors.INFO + '[ ] link exists %s -> %s' % \
-            (link_name, source) + colors.ENDC
+        INFO('[ ] link exists %s -> %s' % (link_name, source))
+    return unsuccessful
 
 def process_links():
-    unsuccessful = []
+    unsuccessful = False
     for link_name in links:
-        try:
-            link(links[link_name], link_name)
-        except LinkingException:
-            unsuccessful.append(link_name)
-    print '' # newline
+        if link(links[link_name], link_name):
+            unsuccessful = True
+    NEWLINE()
     if unsuccessful:
-        print colors.FAIL + \
-            'FAILURE: some links were not successfully set up' + colors.ENDC
-        # print colors.FAIL + \
-        #    'FAILURE: some links were not successfully set up:' + colors.ENDC
-        # print colors.WARNING + '\n'.join(['* %s' % i for i in unsuccessful]) + \
-        #    colors.ENDC
+        FAIL('FAILURE: some links were not successfully set up')
     else:
-        print colors.SUCCESS + 'SUCCESS: all links have been set up' + \
-            colors.ENDC
-    return bool(unsuccessful)
+        SUCC('SUCCESS: all links have been set up')
+    return unsuccessful
 
 def process_shell(cmds):
     if not cmds:
         return False
     unsuccessful = False
     for msg, cmd in cmds:
-        print colors.INFO + '%s [%s]...' % (msg,
-            colors.DETAIL + cmd + colors.ENDC) + \
-            colors.ENDC, # comma to avoid newline
+        INFO('%s ' % msg, end='')
+        DETAIL('[%s]... ' % cmd, end='')
         sys.stdout.flush() # force printing of above line
         ret = subprocess.call(cmd, shell = True, stdout = subprocess.PIPE,
             stderr = subprocess.PIPE)
-        print '%s!' % (colors.OK + 'SUCCESS' if ret == 0 else
-            colors.WARNING + 'FAILURE') + colors.ENDC
-        if ret != 0: unsuccessful = True
-    print '' # newline
+        OK('SUCCESS') if ret == 0 else FAIL('FAILURE')
+        if ret != 0:
+            unsuccessful = True
+    NEWLINE()
     if unsuccessful:
-        print colors.FAIL + 'FAILURE: some tasks were not run successfully' + \
-            colors.ENDC
+        FAIL('FAILURE: some tasks were not run successfully')
     else:
-        print colors.SUCCESS + 'SUCCESS: all tasks executed' + colors.ENDC
-
+        SUCC('SUCCESS: all tasks executed')
 
 def main():
     pre_fail = process_shell(precmds)
-    if precmds: print '' # newline
+    if precmds:
+        NEWLINE()
     link_fail = process_links()
-    if postcmds: print '' # newline
+    if postcmds:
+        NEWLINE()
     post_fail = process_shell(postcmds)
-    print '' # newline
+    NEWLINE()
     if any((pre_fail, link_fail, post_fail)):
-        print colors.FAIL + \
-            'FAILURE: environment has not been set up successfully' + \
-            colors.ENDC
+        FAIL('FAILURE: environment has not been set up successfully')
     else:
-        print colors.SUCCESS + 'SUCCESS: environment has been set up' + colors.ENDC
+        SUCC('SUCCESS: environment has been set up')
 
 if __name__ == '__main__':
     main()

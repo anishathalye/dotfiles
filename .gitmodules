@@ -34,6 +34,10 @@
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
 	ignore = untracked
+[submodule "vim/bundle/vim-ruby"]
+	path = vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+	ignore = untracked
 [submodule "zsh/other/dircolors-solarized"]
 	path = zsh/other/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

@@ -8,7 +8,7 @@
 	ui = auto
 
 [alias]
-	st = status
+	st = status -sb
 	br = branch -vv
 	bra = branch -vv --all
 	aa = add --all :/

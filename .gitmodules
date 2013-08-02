@@ -42,6 +42,10 @@
 	path = vim/bundle/vim-haml
 	url = https://github.com/tpope/vim-haml
 	ignore = untracked
+[submodule "vim/bundle/vim-coffee-script"]
+	path = vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script
+	ignore = untracked
 [submodule "zsh/other/dircolors-solarized"]
 	path = zsh/other/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

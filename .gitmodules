@@ -38,6 +38,10 @@
 	path = vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
 	ignore = untracked
+[submodule "vim/bundle/vim-haml"]
+	path = vim/bundle/vim-haml
+	url = https://github.com/tpope/vim-haml
+	ignore = untracked
 [submodule "misc/solarized-sublimetext2"]
 	path = misc/solarized-sublimetext2
 	url = https://github.com/mybuddymichael/solarized-sublimetext2.git

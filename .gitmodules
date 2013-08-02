@@ -38,6 +38,10 @@
 	path = vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
 	ignore = untracked
+[submodule "vim/bundle/vim-haml"]
+	path = vim/bundle/vim-haml
+	url = https://github.com/tpope/vim-haml
+	ignore = untracked
 [submodule "zsh/other/dircolors-solarized"]
 	path = zsh/other/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

@@ -63,11 +63,6 @@ set mouse=a " enable mouse mode (scrolling, selection, etc)
 " highlight OverLength ctermbg=52 ctermfg=white guibg=#592929
 " match OverLength /\%81v.\+/
 
-"-------------------------
-" Filetype specific config
-"-------------------------
-let g:vim_markdown_folding_disabled=1 " disable auto-folding markdown files
-
 "-------------
 " Disable keys
 "-------------

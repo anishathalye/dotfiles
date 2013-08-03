@@ -18,6 +18,7 @@ links = {
 
     # zsh
     '~/.zshrc': 'zshrc',
+    '~/.zlogin': 'zlogin',
     '~/.zsh': 'zsh/',
 
     # git
@@ -25,7 +26,13 @@ links = {
     '~/.gitignore_global': 'gitignore_global',
 
     # sbt
-    '~/.sbt': 'sbt/'
+    '~/.sbt': 'sbt/',
+
+    # rbenv
+    '~/.rbenv': 'rbenv/',
+
+    # rubygems
+    '~/.gemrc': 'gemrc'
 }
 
 # shell commands (array of (msg, cmd))

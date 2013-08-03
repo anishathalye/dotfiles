@@ -18,7 +18,6 @@ links = {
 
     # zsh
     '~/.zshrc': 'zshrc',
-    '~/.zlogin': 'zlogin',
     '~/.zsh': 'zsh/',
 
     # git

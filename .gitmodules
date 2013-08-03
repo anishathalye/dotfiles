@@ -59,3 +59,9 @@
 [submodule "zsh/plugins/zsh-syntax-highlighting"]
 	path = zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "rbenv/plugins/ruby-build"]
+	path = rbenv/plugins/ruby-build
+	url = https://github.com/sstephenson/ruby-build.git
+[submodule "rbenv/plugins/rbenv-gem-rehash"]
+	path = rbenv/plugins/rbenv-gem-rehash
+	url = https://github.com/sstephenson/rbenv-gem-rehash.git

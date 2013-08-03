@@ -26,6 +26,12 @@ Programs Used
 * `g++` / `build-essential` package
 * `python3`
 * `sbt`
+* `rbenv`
+
+#### Ruby Gems
+
+* `bundler`
+* `rails`
 
 Installing Binaries
 -------------------

@@ -53,8 +53,8 @@
 [submodule "misc/solarized-sublimetext2"]
 	path = misc/solarized-sublimetext2
 	url = https://github.com/mybuddymichael/solarized-sublimetext2.git
-[submodule "zsh/other/dircolors-solarized"]
-	path = zsh/other/dircolors-solarized
+[submodule "zsh/plugins/dircolors-solarized"]
+	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git
 [submodule "zsh/zsh-syntax-highlighting"]
 	path = zsh/zsh-syntax-highlighting

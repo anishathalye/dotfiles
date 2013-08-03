@@ -26,6 +26,7 @@ Programs Used
 * `g++` / `build-essential` package
 * `python3`
 * `sbt`
+* `node`
 * `rbenv`
 
 #### Ruby Gems

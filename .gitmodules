@@ -38,6 +38,10 @@
 	path = vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
 	ignore = untracked
+[submodule "vim/bundle/vim-rdoc"]
+	path = vim/bundle/vim-rdoc
+	url = https://github.com/depuracao/vim-rdoc.git
+	ignore = untracked
 [submodule "vim/bundle/vim-haml"]
 	path = vim/bundle/vim-haml
 	url = https://github.com/tpope/vim-haml

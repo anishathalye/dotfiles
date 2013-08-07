@@ -28,6 +28,15 @@ else
     " customized colors
     highlight SignColumn ctermbg=234
     highlight StatusLine cterm=bold ctermfg=245 ctermbg=none
+    highlight StatusLineNC cterm=bold ctermfg=245 ctermbg=none
+    let g:NeatStatusLine_color_normal='ctermfg=64 ctermbg=0 cterm=bold'
+    let g:NeatStatusLine_color_insert='ctermfg=136 ctermbg=0 cterm=bold'
+    let g:NeatStatusLine_color_replace='ctermfg=160 ctermbg=0 cterm=bold'
+    let g:NeatStatusLine_color_visual='ctermfg=33 ctermbg=0 cterm=bold'
+    let g:NeatStatusLine_color_position='ctermfg=245 ctermbg=0 cterm=bold'
+    let g:NeatStatusLine_color_modified='ctermfg=166 ctermbg=0 cterm=bold'
+    let g:NeatStatusLine_color_line='ctermfg=61 ctermbg=0 cterm=bold'
+    let g:NeatStatusLine_color_filetype='ctermfg=37 ctermbg=0 cterm=bold'
 endif
 
 filetype plugin indent on " enable file type detection
@@ -41,7 +50,7 @@ set incsearch " incremental search (as string is being typed)
 set hls " highlight search
 set lbr " line break
 set ruler " show current position in file
-set laststatus=2 " always show 2 line status bar
+set noshowmode " hide mode
 set backspace=indent,eol,start " allow backspacing over everything
 set timeout timeoutlen=1000 ttimeoutlen=100 " fix slow O inserts
 set autochdir " automatically set current directory to directory of last opened file

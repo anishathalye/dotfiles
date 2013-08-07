@@ -77,3 +77,6 @@
 [submodule "rbenv/plugins/rbenv-gem-rehash"]
 	path = rbenv/plugins/rbenv-gem-rehash
 	url = https://github.com/sstephenson/rbenv-gem-rehash.git
+[submodule "rbenv/plugins/rbenv-bundler"]
+	path = rbenv/plugins/rbenv-bundler
+	url = https://github.com/carsomyr/rbenv-bundler.git

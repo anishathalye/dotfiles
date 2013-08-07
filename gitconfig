@@ -9,6 +9,7 @@
 	st = status -sb
 	br = branch -vv
 	bra = branch -vv --all
+	bed = branch --edit-description
 	aa = add --all :/
 	ci = commit -v
 	ca = commit --amend -v

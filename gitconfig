@@ -28,7 +28,8 @@
 	gra = log --graph --format=compact --all # graph all
 	grad = log --graph --format=detail --all # graph all in detail
 	cleanall = clean -fdx :/ # this is dangerous, so it's intentionally long to type
-	update-submodules = ! git pull --recurse-submodules && git submodule update --init --recursive
+	update-submodules = submodule update --init --recursive
+	upgrade-submodules = submodule foreach 'git checkout master && git pull && cd \"$toplevel\" && git add \":/$path\"'
 	root = rev-parse --show-toplevel
 
 [pretty]

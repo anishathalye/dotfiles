@@ -60,7 +60,7 @@ class colors:
     RESET = '\033[0m' if __tty else ''
 
 def make_color_printer(color = colors.NONE):
-    def color_print(msg, end='\n'):
+    def color_print(msg, end = '\n'):
         sys.stdout.write(color + msg + colors.RESET + end)
     return color_print
 
@@ -128,8 +128,9 @@ def process_shell(cmds):
         return False
     unsuccessful = False
     for msg, cmd in cmds:
-        INFO('%s ' % msg, end='')
-        DETAIL('[%s]... ' % cmd, end='')
+        INFO('%s [' % msg, end = '')
+        DETAIL('%s' % cmd, end = '')
+        INFO(']... ', end = '')
         sys.stdout.flush() # force printing of above line
         ret = subprocess.call(cmd, shell = True, stdout = subprocess.PIPE,
             stderr = subprocess.PIPE)

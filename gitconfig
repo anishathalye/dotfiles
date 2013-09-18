@@ -26,6 +26,7 @@
 	gr = log --graph --format=compact # graph
 	grl = log --graph --format=line # graph line
 	gra = log --graph --format=compact --all # graph all
+	gral = log --graph --format=line --all # graph all line
 	grad = log --graph --format=detail --all # graph all in detail
 	cleanall = clean -fdx :/ # this is dangerous, so it's intentionally long to type
 	update-submodules = submodule update --init --recursive

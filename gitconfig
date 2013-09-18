@@ -35,7 +35,7 @@
 [pretty]
 	line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"
 	compact = "%C(auto)%h %s %C(green)%ar%n %C(auto)%d%n"
-	detail = "%C(auto)%h %s %C(green)%ar%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae>%n %C(auto)%d%n"
+	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> %C(green)%ar%n %C(auto)%d%n"
 
 [merge]
 	tool = vimdiff

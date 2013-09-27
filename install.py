@@ -31,7 +31,11 @@ links = {
     '~/.rbenv': 'rbenv/',
 
     # rubygems
-    '~/.gemrc': 'gemrc'
+    '~/.gemrc': 'gemrc',
+
+    # rtorrent
+    '~/.rtorrent.rc': 'rtorrent.rc',
+    '~/.rtorrent': 'rtorrent/'
 }
 
 # shell commands (array of (msg, cmd))

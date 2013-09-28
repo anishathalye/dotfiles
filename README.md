@@ -8,6 +8,11 @@ it multiple times has no effect.
 To keep submodules up-to-date, you can re-run `git update-submodules` at any
 time.
 
+Screenshot
+----------
+
+![screenshot][2]
+
 Programs Used
 -------------
 
@@ -59,5 +64,8 @@ License
 -------
 
 With the exception of the content in directories that contain special
-`LICENSE.md` files, all content is released under the
-[MIT License](http://anish.mit-license.org/). See `LICENSE.md` for details.
+`LICENSE.md` files, all content is released under the [MIT License][1]. See
+`LICENSE.md` for details.
+
+[1]: http://anish.mit-license.org/
+[2]: https://github.com/anishathalye/dotfiles/raw/master/misc/screenshots/2013-09-28.png

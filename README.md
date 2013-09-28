@@ -20,6 +20,8 @@ Programs Used
 * `vim`
 * `git`
 * `autojump`
+* `axel`
+* `rtorrent`
 
 ### Development Software
 

@@ -35,6 +35,7 @@
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule foreach 'git checkout master && git pull && cd \"$toplevel\" && git add \":/$path\"'
 	root = rev-parse --show-toplevel
+	expand = ! "exp() { echo git $(git config --get alias.${1}) ${@:2}; }; exp"
 
 [pretty]
 	line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"

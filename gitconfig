@@ -15,10 +15,13 @@
 	ca = commit --amend -v
 	co = checkout
 	di = diff
+	dis = diff --stat
 	diw = diff --color-words
 	dc = diff --cached
+	dcs = diff --cached --stat
 	dcw = diff --cached --color-words
 	dh = diff HEAD~1
+	dhs = diff HEAD~1 --stat
 	dhw = diff HEAD~1 --color-words
 	ff = merge --ff-only
 	noff = merge --no-ff
@@ -28,9 +31,11 @@
 	lg = log -p
 	gr = log --graph --format=compact # graph
 	grl = log --graph --format=line # graph line
+	grd = log --graph --format=detail # graph detail
 	gra = log --graph --format=compact --all # graph all
 	gral = log --graph --format=line --all # graph all line
 	grad = log --graph --format=detail --all # graph all in detail
+	sf = show --format=full
 	cleanall = clean -fdx :/ # this is dangerous, so it's intentionally long to type
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule foreach 'git checkout master && git pull && cd \"$toplevel\" && git add \":/$path\"'

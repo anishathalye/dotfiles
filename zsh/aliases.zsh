@@ -7,6 +7,11 @@ if [[ "$(tput colors)" == "256" ]]; then
 fi
 export GREP_OPTIONS="--color"
 
+# Use pip without requiring virtualenv
+function syspip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
 # cd to git root directory
 alias cdgr='cd "$(git root)"'
 

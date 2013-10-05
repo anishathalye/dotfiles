@@ -9,6 +9,9 @@ source ~/.zsh/settings.zsh
 # Bootstrap
 source ~/.zsh/bootstrap.zsh
 
+# External Settings
+source ~/.zsh/external.zsh
+
 # Aliases
 source ~/.zsh/aliases.zsh
 

@@ -8,6 +8,8 @@ it multiple times has no effect.
 To keep submodules up-to-date, you can re-run `git update-submodules` at any
 time.
 
+##### Note: You should edit `~/.gitconfig` to include your name and email.
+
 Screenshot
 ----------
 

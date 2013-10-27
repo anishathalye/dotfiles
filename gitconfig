@@ -6,6 +6,7 @@
 	ui = auto
 
 [alias]
+	exec = ! "exec"
 	st = status -sb
 	br = branch -vv
 	bra = branch -vv --all

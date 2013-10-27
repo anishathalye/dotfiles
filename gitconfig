@@ -42,6 +42,9 @@
 	upgrade-submodules = submodule foreach 'git checkout master && git pull && cd \"$toplevel\" && git add \":/$path\"'
 	root = rev-parse --show-toplevel
 	expand = ! "exp() { echo git $(git config --get alias.${1}) ${@:2}; }; exp"
+	tar = ! "tar() { git archive --format tar --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; tar"
+	targz = ! "targz() { git archive --format tar.gz --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; targz"
+	zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; zip"
 
 [pretty]
 	line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"

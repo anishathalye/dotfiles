@@ -39,7 +39,7 @@
 	sf = show --format=full
 	cleanall = clean -fdx :/ # this is dangerous, so it's intentionally long to type
 	update-submodules = submodule update --init --recursive
-	upgrade-submodules = submodule foreach 'git checkout master && git pull && cd \"$toplevel\" && git add \":/$path\"'
+	upgrade-submodules = submodule foreach "git checkout master && git pull && cd \"$toplevel\" && git add \":/$path\""
 	root = rev-parse --show-toplevel
 	expand = ! "exp() { if [ ! -z \"$(git config --get alias.${1})\" ]; then echo git $(git config --get alias.${1}) ${@:2}; else echo Nonexistant alias; fi }; exp"
 	tar = ! "tar() { git archive --format tar --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; tar"

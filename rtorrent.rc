@@ -23,10 +23,13 @@ encryption = require,require_RC4,allow_incoming,try_outgoing,enable_retry
 # Note: do not run multiple instances of rtorrent using the same session directory
 session = ~/.rtorrent/session
 
-# Watch a directory for new torrents, and stop those that have been
-# deleted.
-# schedule = watch_directory, 5, 5, load_start = ~/watch/*.torrent
-# schedule = untied_directory, 5, 5, stop_untied =
+# Watch a directory for new torrents, restart torrents that have been
+# copied back and stop those that have been deleted.
+
+schedule = watch_directory,10,10,load_start=~/.rtorrent/watch/*.torrent
+schedule = tied_directory,10,10,start_tied=
+schedule = untied_directory,10,10,close_untied=
+
 
 # Close torrents when disk space is low
 schedule = low_diskspace,5,60,close_low_diskspace=5120M

@@ -17,7 +17,7 @@ max_uploads = 15
 encryption = require,require_RC4,allow_incoming,try_outgoing,enable_retry
 
 # Default directory to save the downloaded torrents
-# directory = ~/downloads
+directory = ~/.rtorrent/downloads
 
 # Default session directory
 # Note: do not run multiple instances of rtorrent using the same session directory

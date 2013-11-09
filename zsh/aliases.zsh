@@ -2,9 +2,6 @@
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -la --color=auto'
-if [[ "$(tput colors)" == "256" ]]; then
-    eval $(dircolors ~/.zsh/plugins/dircolors-solarized/dircolors.256dark)
-fi
 export GREP_OPTIONS="--color"
 
 # Use pip without requiring virtualenv

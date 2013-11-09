@@ -26,7 +26,7 @@ if [[ "$(tput colors)" == "256" ]]; then
     fg[brown]=$FG[094]
     fg[neon]=$FG[112]
     fg[pink]=$FG[183]
-    fg[darkred]=$FG[052]
+    fg[darkred]=$FG[088]
 else
     fg[teal]=$fg[blue]
     fg[orange]=$fg[yellow]

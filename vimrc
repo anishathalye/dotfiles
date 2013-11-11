@@ -75,7 +75,7 @@ set mouse=a " enable mouse mode (scrolling, selection, etc)
 "-------------
 " Disable keys
 "-------------
-cabbrev X echoe "You probably don't want to encrypt that file"<CR>
+cabbrev X echoe "You probably don't want to encrypt this file"<CR>
 
 "---------------------
 " Multipurpose tab key

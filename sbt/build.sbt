@@ -16,9 +16,6 @@ ScalariformKeys.preferences := FormattingPreferences()
   .setPreference(DoubleIndentClassDeclaration, true)
   .setPreference(PreserveDanglingCloseParenthesis, true)
 
-// Scalastyle - Scala style checker
-org.scalastyle.sbt.ScalastylePlugin.Settings
-
 // sbt-dependency-graph - Dependency graph generator
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 

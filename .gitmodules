@@ -66,6 +66,10 @@
 	path = vim/bundle/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
 	ignore = untracked
+[submodule "vim/bundle/vim-autoclose"]
+	path = vim/bundle/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose.git
+	ignore = untracked
 [submodule "misc/solarized-sublimetext2"]
 	path = misc/solarized-sublimetext2
 	url = https://github.com/mybuddymichael/solarized-sublimetext2.git

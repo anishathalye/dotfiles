@@ -41,12 +41,12 @@ links = {
 # shell commands (array of (msg, cmd))
 
 # shell commands to run before linking
-precmds = []
+precmds = {}
 
 # shell commands to run after linking
-postcmds = [
-    ('Installing/updating submodules', 'git update-submodules')
-]
+postcmds = {
+    'git update-submodules': 'Installing/updating submodules'
+}
 
 ####################
 
@@ -117,8 +117,8 @@ def link(source, link_name):
 
 def process_links():
     unsuccessful = False
-    for link_name in links:
-        if link(links[link_name], link_name):
+    for dest, source in links.items():
+        if link(source, dest):
             unsuccessful = True
     NEWLINE()
     if unsuccessful:
@@ -131,7 +131,7 @@ def process_shell(cmds):
     if not cmds:
         return False
     unsuccessful = False
-    for msg, cmd in cmds:
+    for cmd, msg in cmds.items():
         INFO('%s [' % msg, end = '')
         DETAIL('%s' % cmd, end = '')
         INFO(']... ', end = '')

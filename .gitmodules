@@ -66,10 +66,6 @@
 	path = vim/bundle/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
 	ignore = untracked
-[submodule "vim/bundle/vim-autoclose"]
-	path = vim/bundle/vim-autoclose
-	url = https://github.com/Townk/vim-autoclose.git
-	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

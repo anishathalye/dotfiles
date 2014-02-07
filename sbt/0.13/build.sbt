@@ -10,7 +10,7 @@ import scalariform.formatter.preferences._
 // instead use 'scalariform-format' command in sbt
 defaultScalariformSettings // instead of scalariformSettings
 
-// list of preferences available at https://github.com/sbt/sbt-scalariform
+// list of preferences available at http://mdr.github.io/scalariform/
 ScalariformKeys.preferences := FormattingPreferences()
   .setPreference(AlignSingleLineCaseStatements, true)
   .setPreference(DoubleIndentClassDeclaration, true)

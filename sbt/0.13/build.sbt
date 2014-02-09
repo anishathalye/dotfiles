@@ -1,8 +1,10 @@
-// Global build settings
-
 // Imports
 
 import scalariform.formatter.preferences._
+
+// Global build settings
+
+fork := true
 
 // Scalariform - source code formatter
 

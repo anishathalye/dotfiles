@@ -113,6 +113,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" tagbar
+nnoremap <C-\> :TagbarToggle<CR>
+
 "---------------------
 " Local customizations
 "---------------------

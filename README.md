@@ -20,6 +20,7 @@ Programs Used
 * `zsh`
 * `tmux`
 * `vim`
+* `ctags` (exuberant)
 * `git`
 * `autojump`
 * `axel`

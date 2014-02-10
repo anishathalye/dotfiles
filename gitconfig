@@ -41,6 +41,7 @@
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule foreach "git checkout master && git pull && cd \"$toplevel\" && git add \":/$path\""
 	root = rev-parse --show-toplevel
+	ctags = ! "ctg() { trap \"rm -f .git/tags.$$\" EXIT; ctags --tag-relative -Rf.git/tags.$$ --exclude=.git; mv .git/tags.$$ .git/tags; }; ctg"
 	expand = ! "exp() { if [ ! -z \"$(git config --get alias.${1})\" ]; then echo git $(git config --get alias.${1}) ${@:2}; else echo Nonexistant alias; fi }; exp"
 	tar = ! "tar() { git archive --format tar --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; tar"
 	targz = ! "targz() { git archive --format tar.gz --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; targz"

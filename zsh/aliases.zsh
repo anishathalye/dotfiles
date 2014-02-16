@@ -14,7 +14,7 @@ alias cdgr='cd "$(git root)"'
 
 # Jump to directory containing file
 function jump() {
-    cd "(dirname ${1})"
+    cd "$(dirname ${1})"
 }
 
 # cd replacement for screen to track cwd (like tmux)

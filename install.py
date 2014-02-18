@@ -35,7 +35,10 @@ links = {
 
     # rtorrent
     '~/.rtorrent.rc': 'rtorrent.rc',
-    '~/.rtorrent': 'rtorrent/'
+    '~/.rtorrent': 'rtorrent/',
+
+    # axel
+    '~/.axelrc': 'axelrc'
 }
 
 # shell commands (array of (msg, cmd))

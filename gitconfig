@@ -57,6 +57,9 @@
 [merge]
 	tool = vimdiff
 
+[mergetool]
+	keepBackup = false
+
 [push]
 	default = upstream
 

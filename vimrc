@@ -68,9 +68,6 @@ set smartcase
 set wildmode=longest,list
 set wildmenu
 set mouse=a " enable mouse mode (scrolling, selection, etc)
-" (disabled) highlight over length (80 columns) in dark red
-" highlight OverLength ctermbg=52 ctermfg=white guibg=#592929
-" match OverLength /\%81v.\+/
 
 "-------------
 " Disable keys

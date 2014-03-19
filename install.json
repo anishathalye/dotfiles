@@ -1,0 +1,22 @@
+{
+    "links": {
+        "~/.tmux.conf": "tmux.conf",
+        "~/.screenrc": "screenrc",
+        "~/.vimrc": "vimrc",
+        "~/.vim": "vim/",
+        "~/.zshrc": "zshrc",
+        "~/.zsh": "zsh/",
+        "~/.gitconfig": "gitconfig",
+        "~/.gitignore_global": "gitignore_global",
+        "~/.sbt": "sbt/",
+        "~/.rbenv": "rbenv/",
+        "~/.gemrc": "gemrc",
+        "~/.rtorrent.rc": "rtorrent.rc",
+        "~/.rtorrent": "rtorrent/",
+        "~/.axelrc": "axelrc"
+    },
+    "precmds": [],
+    "postcmds": [
+        ["git update-submodules", "Installing/updating submodules"]
+    ]
+}

@@ -1,5 +1,6 @@
 {
     "links": {
+        "~/.dotfiles": "",
         "~/.tmux.conf": "tmux.conf",
         "~/.screenrc": "screenrc",
         "~/.vimrc": "vimrc",

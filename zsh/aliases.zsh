@@ -4,6 +4,13 @@ alias ll='ls -l --color=auto'
 alias la='ls -la --color=auto'
 export GREP_OPTIONS="--color"
 
+# Update dotfiles
+function dfu() {
+    (
+        cd ~/.dotfiles && git pullff && ./install.py
+    )
+}
+
 # Use pip without requiring virtualenv
 function syspip() {
     PIP_REQUIRE_VIRTUALENV="" pip "$@"

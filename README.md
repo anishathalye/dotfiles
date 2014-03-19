@@ -71,4 +71,4 @@ With the exception of the content in directories that contain special
 `LICENSE.md` for details.
 
 [1]: http://anish.mit-license.org/
-[2]: https://github.com/anishathalye/dotfiles/raw/master/misc/screenshots/2013-09-28.png
+[2]: https://github.com/anishathalye/dotfiles/raw/master/misc/screenshots/2014-03-18.png

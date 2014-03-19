@@ -140,7 +140,7 @@ def process_shell(cmds):
         INFO(']... ', end = '')
         sys.stdout.flush() # force printing of above line
         ret = subprocess.call(cmd, shell = True, stdout = subprocess.PIPE,
-            stderr = subprocess.PIPE)
+            stderr = subprocess.PIPE, cwd = self_path())
         OK('SUCCESS') if ret == 0 else FAIL('FAILURE')
         if ret != 0:
             unsuccessful = True

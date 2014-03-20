@@ -61,6 +61,4 @@ You can make local customizations for some programs by editing these files:
 License
 -------
 
-Released under the [MIT License][1]. See `LICENSE.md` for details.
-
-[1]: http://anish.mit-license.org/
+Released under the MIT License. See `LICENSE.md` for details.

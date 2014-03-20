@@ -7,7 +7,7 @@ export GREP_OPTIONS="--color"
 # Update dotfiles
 function dfu() {
     (
-        cd ~/.dotfiles && git pullff && ./install.py
+        cd ~/.dotfiles && git pullff && ./install -q
     )
 }
 

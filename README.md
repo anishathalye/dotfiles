@@ -1,12 +1,14 @@
 Dotfiles
 ========
 
-After cloning this repo, run `install.py` to automatically set up the
+After cloning this repo, run `install` to automatically set up the
 development environment. Note that the install script is idempotent - running
 it multiple times has no effect.
 
 To keep submodules up-to-date, you can re-run `git update-submodules` at any
 time.
+
+Dotfiles uses [Dotbot][1] for installation.
 
 ##### Note: You should edit `~/.gitconfig` to include your name and email.
 
@@ -62,3 +64,5 @@ License
 -------
 
 Released under the MIT License. See `LICENSE.md` for details.
+
+[1]: https://github.com/anishathalye/dotbot

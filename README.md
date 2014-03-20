@@ -13,7 +13,7 @@ time.
 Screenshot
 ----------
 
-![screenshot][2]
+![screenshot][1]
 
 Programs Used
 -------------
@@ -67,8 +67,7 @@ License
 -------
 
 With the exception of the content in directories that contain special
-`LICENSE.md` files, all content is released under the [MIT License][1]. See
+`LICENSE.md` files, all content is released under the MIT License. See
 `LICENSE.md` for details.
 
-[1]: http://anish.mit-license.org/
-[2]: https://github.com/anishathalye/dotfiles/raw/master/misc/screenshots/2014-03-18.png
+[1]: https://github.com/anishathalye/dotfiles/raw/master/misc/screenshots/2014-03-18.png

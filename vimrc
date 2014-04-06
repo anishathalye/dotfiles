@@ -104,9 +104,6 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Misc configurations
 "--------------------
 
-" save read-only files
-cnoremap sudow w !sudo tee % >/dev/null
-
 " open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright

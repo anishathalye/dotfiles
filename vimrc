@@ -50,6 +50,7 @@ set incsearch " incremental search (as string is being typed)
 set hls " highlight search
 set lbr " line break
 set ruler " show current position in file
+set scrolloff=5 " show lines above and below cursor (when possible)
 set noshowmode " hide mode
 set backspace=indent,eol,start " allow backspacing over everything
 set timeout timeoutlen=1000 ttimeoutlen=100 " fix slow O inserts

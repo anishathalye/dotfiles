@@ -30,6 +30,7 @@
 	pullff = pull --ff-only
 	count = diff --stat "4b825dc642cb6eb9a060e54bf8d69288fbee4904" # hash of empty tree
 	credit = ! "cdt() { git shortlog -sn | awk '{ for (i = 2; i < NF; i++) printf $i \" \"; print $NF }' | while read name; do echo \"$(git log --format=\"%h\" --author=\"${name}\" | wc -l)\\t${name}\\t$(git log --numstat --pretty=\"%h\" --author=\"${name}\" | awk 'NF == 3 { plus += $1; minus += $2 } END { printf(\"[+%d, -%d]\", plus, minus) }')\"; done | column -t -s \"$(printf \"\\t\")\"; }; cdt"
+	linecredit = ! "lc() { git ls-tree --name-only -z -r HEAD | xargs -0 -n1 git diff --no-index --numstat /dev/null 2>/dev/null | grep -v '^-' | cut -f 3- | cut -d ' ' -f 3- | xargs -n1 git blame --line-porcelain | grep '^author ' | cut -d ' ' -f 2- | sort | uniq -c | sort -nr; }; lc"
 	lg = log -p
 	gr = log --graph --format=compact # graph
 	grl = log --graph --format=line # graph line

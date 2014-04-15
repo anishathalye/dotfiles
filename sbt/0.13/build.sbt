@@ -4,6 +4,10 @@ import scalariform.formatter.preferences._
 
 import de.johoop.findbugs4sbt.FindBugs._
 
+import de.johoop.jacoco4sbt._
+
+import JacocoPlugin._
+
 // Global build settings
 
 fork := true
@@ -31,3 +35,7 @@ findbugsPriority := de.johoop.findbugs4sbt.Priority.Low
 findbugsEffort := de.johoop.findbugs4sbt.Effort.Maximum
 
 findbugsReportPath := Some(crossTarget.value / "findbugs" / "report.html")
+
+// JacocoPlugin settings
+
+jacoco.settings

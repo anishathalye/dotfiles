@@ -10,8 +10,6 @@ import JacocoPlugin._
 
 // Global build settings
 
-fork := true
-
 // Scalariform - source code formatter
 
 // disable automatic reformat on compile

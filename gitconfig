@@ -57,6 +57,7 @@
 	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> %C(green)%ar%n %C(auto)%d%n"
 
 [merge]
+	defaultToUpstream = true
 	tool = vimdiff
 
 [mergetool]

@@ -81,6 +81,14 @@
 	path = vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json
 	ignore = untracked
+[submodule "vim/bundle/webapi-vim"]
+	path = vim/bundle/webapi-vim
+	url = https://github.com/mattn/webapi-vim
+	ignore = untracked
+[submodule "vim/bundle/gist-vim"]
+	path = vim/bundle/gist-vim
+	url = https://github.com/mattn/gist-vim.git
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

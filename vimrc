@@ -48,6 +48,8 @@ set autoindent
 set nu " number lines
 set incsearch " incremental search (as string is being typed)
 set hls " highlight search
+exec "set listchars=tab:\uBB\uBB,nbsp:~"
+set list
 set lbr " line break
 set ruler " show current position in file
 set scrolloff=5 " show lines above and below cursor (when possible)

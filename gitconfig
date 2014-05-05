@@ -66,6 +66,9 @@
 [push]
 	default = upstream
 
+[github]
+	user = anishathalye
+
 [core]
 	excludesfile = ~/.gitignore_global
 

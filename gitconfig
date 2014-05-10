@@ -66,6 +66,9 @@
 [push]
 	default = upstream
 
+[grep]
+	lineNumber = true
+
 [github]
 	user = anishathalye
 

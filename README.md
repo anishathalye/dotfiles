@@ -5,10 +5,7 @@ After cloning this repo, run `install` to automatically set up the
 development environment. Note that the install script is idempotent - running
 it multiple times has no effect.
 
-To keep submodules up-to-date, you can re-run `git update-submodules` at any
-time.
-
-Dotfiles uses [Dotbot][1] for installation.
+Dotfiles uses [Dotbot][dotbot] for installation.
 
 ##### Note: You should edit `~/.gitconfig` to include your name and email.
 
@@ -17,8 +14,8 @@ Programs Used
 
 ### Command Line Tools
 
-* `brew` (for mac)
-* `aptitude` (for linux)
+* `brew` (for Mac)
+* `aptitude` (for Linux)
 * `zsh`
 * `tmux`
 * `vim`
@@ -33,7 +30,7 @@ Programs Used
 * `g++` / `build-essential` package
 * `python3`
 * `sbt`
-* `node`
+* `virtualenv`
 * `rbenv`
 
 #### Ruby Gems
@@ -65,4 +62,4 @@ License
 
 Released under the MIT License. See `LICENSE.md` for details.
 
-[1]: https://github.com/anishathalye/dotbot
+[dotbot]: https://github.com/anishathalye/dotbot

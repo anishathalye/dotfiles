@@ -60,6 +60,7 @@ You can make local customizations for some programs by editing these files:
 License
 -------
 
-Released under the MIT License. See `LICENSE.md` for details.
+Copyright (c) 2014 Anish Athalye. Released under the MIT License. See
+`LICENSE.md` for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot

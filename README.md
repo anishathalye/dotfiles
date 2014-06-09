@@ -65,8 +65,7 @@ You can make local customizations for some programs by editing these files:
 License
 -------
 
-With the exception of the content in directories that contain special
-`LICENSE.md` files, all content is released under the MIT License. See
+Copyright (c) 2014 Anish Athalye. Released under the MIT License. See
 `LICENSE.md` for details.
 
 [screenshot]: https://github.com/anishathalye/dotfiles/raw/master/misc/screenshots/2014-03-20.png

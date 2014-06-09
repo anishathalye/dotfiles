@@ -79,7 +79,7 @@ endif
 "-------------
 " Disable keys
 "-------------
-cabbrev X echoe "You probably don't want to encrypt this file"<CR>
+cnoreabbrev X echoe "You probably don't want to encrypt this file"<CR>
 
 "---------------------
 " Multipurpose tab key
@@ -106,6 +106,9 @@ nnoremap <Down> :echoe "Use j"<CR>
 "--------------------
 " Misc configurations
 "--------------------
+
+" save read-only files
+cnoreabbrev sudow w !sudo tee % >/dev/null
 
 " open new split panes to right and bottom, which feels more natural
 set splitbelow

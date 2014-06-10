@@ -36,12 +36,6 @@ Programs Used
 * `python3`
 * `sbt`
 * `virtualenv`
-* `rbenv`
-
-#### Ruby Gems
-
-* `bundler`
-* `rails`
 
 Installing Binaries
 -------------------

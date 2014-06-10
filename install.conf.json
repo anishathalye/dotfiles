@@ -14,8 +14,6 @@
             "~/.gitconfig": "gitconfig",
             "~/.gitignore_global": "gitignore_global",
             "~/.sbt": "sbt/",
-            "~/.rbenv": "rbenv/",
-            "~/.gemrc": "gemrc",
             "~/.rtorrent.rc": "rtorrent.rc",
             "~/.rtorrent": "rtorrent/",
             "~/.axelrc": "axelrc"

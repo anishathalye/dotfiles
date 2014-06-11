@@ -85,7 +85,7 @@ PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
 # User in red (for root) or violet (for regular user)
 RPR_SHOW_USER=true # Set to false to disable user in rhs prompt
 function RPR_USER() {
-    if $RPR_SHOW_USER; then
+    if [[ "${RPR_SHOW_USER}" == "true" ]]; then
         echo "%(!.%{$fg[red]%}.%{$fg[violet]%})%B%n%b%{$reset_color%}"
     fi
 }
@@ -97,14 +97,14 @@ function RPR_HOST() {
     colors=(yellow pink darkred brown neon teal)
     local index=$(python -c "print(hash('$(hostname)') % ${#colors} + 1)")
     local color=$colors[index]
-    if $RPR_SHOW_HOST; then
+    if [[ "${RPR_SHOW_HOST}" == "true" ]]; then
         echo "%{$fg[$color]%}%m%{$reset_color%}"
     fi
 }
 
 # ' at ' in orange outputted only if both user and host enabled
 function RPR_AT() {
-    if $RPR_SHOW_USER && $RPR_SHOW_HOST; then
+    if [[ "${RPR_SHOW_USER}" == "true" ]] && [[ "${RPR_SHOW_HOST}" == "true" ]]; then
         echo "%{$fg[blue]%} at %{$reset_color%}"
     fi
 }

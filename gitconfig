@@ -46,6 +46,7 @@
 	cleanall = clean -fdx :/ # this is dangerous, so it's intentionally long to type
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule foreach 'git checkout master && git pull && cd "${toplevel}" && git add ":/${path}"'
+	empty-tree-hash = ! "eth() { echo \"4b825dc642cb6eb9a060e54bf8d69288fbee4904\"; }; eth"
 	root = rev-parse --show-toplevel
 	ctags = ! "ctg() { trap \"rm -f .git/tags.$$\" EXIT; ctags --tag-relative -Rf.git/tags.$$ --exclude=.git; mv .git/tags.$$ .git/tags; }; ctg"
 	explain = ! "exp() { if git config --get alias.${1} >/dev/null 2>&1; then echo git $(git config --get alias.${1}) ${@:2}; else echo Nonexistant alias; fi }; exp"

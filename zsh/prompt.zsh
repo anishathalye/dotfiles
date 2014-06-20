@@ -122,15 +122,15 @@ function RPR_INFO() {
 # Modify the colors and symbols in these variables as desired.
 # GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
 GIT_PROMPT_SYMBOL=""
-GIT_PROMPT_PREFIX="%{$fg[green]%}%B(%b%{$reset_color%}"
-GIT_PROMPT_SUFFIX="%{$fg[green]%}%B)%b%{$reset_color%}"
-GIT_PROMPT_AHEAD="%{$fg[red]%}%B+NUM%b%{$reset_color%}"
-GIT_PROMPT_BEHIND="%{$fg[blue]%}%B-NUM%b%{$reset_color%}"
+GIT_PROMPT_PREFIX="%{$fg[violet]%}%B(%b%{$reset_color%}"
+GIT_PROMPT_SUFFIX="%{$fg[violet]%}%B)%b%{$reset_color%}"
+GIT_PROMPT_AHEAD="%{$fg[teal]%}%B+NUM%b%{$reset_color%}"
+GIT_PROMPT_BEHIND="%{$fg[orange]%}%B-NUM%b%{$reset_color%}"
 LIGHTNING="\xe2\x9a\xa1"
 GIT_PROMPT_MERGING="%{$fg[orange]%}%B${LIGHTNING}%b%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg[red]%}%B*%b%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg[yellow]%}%B*%b%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg[green]%}%B*%b%{$reset_color%}"
+GIT_PROMPT_UNTRACKED="%{$fg[red]%}%B-%b%{$reset_color%}"
+GIT_PROMPT_MODIFIED="%{$fg[yellow]%}%B-%b%{$reset_color%}"
+GIT_PROMPT_STAGED="%{$fg[green]%}%B-%b%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head
 function parse_git_branch() {

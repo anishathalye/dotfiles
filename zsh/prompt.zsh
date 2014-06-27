@@ -126,15 +126,21 @@ GIT_PROMPT_PREFIX="%{$fg[violet]%}%B(%b%{$reset_color%}"
 GIT_PROMPT_SUFFIX="%{$fg[violet]%}%B)%b%{$reset_color%}"
 GIT_PROMPT_AHEAD="%{$fg[teal]%}%B+NUM%b%{$reset_color%}"
 GIT_PROMPT_BEHIND="%{$fg[orange]%}%B-NUM%b%{$reset_color%}"
-LIGHTNING="\xe2\x9a\xa1"
-GIT_PROMPT_MERGING="%{$fg[orange]%}%B${LIGHTNING}%b%{$reset_color%}"
+GIT_PROMPT_MERGING="%{$fg[orange]%}%Bx%b%{$reset_color%}"
 GIT_PROMPT_UNTRACKED="%{$fg[red]%}%B-%b%{$reset_color%}"
 GIT_PROMPT_MODIFIED="%{$fg[yellow]%}%B-%b%{$reset_color%}"
 GIT_PROMPT_STAGED="%{$fg[green]%}%B-%b%{$reset_color%}"
+GIT_PROMPT_DETACHED="%{$fg[neon]%}%B!%b%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head
 function parse_git_branch() {
     (git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD) 2> /dev/null
+}
+
+function parse_git_detached() {
+    if ! git symbolic-ref HEAD >/dev/null 2>&1; then
+        echo "${GIT_PROMPT_DETACHED}"
+    fi
 }
 
 # Show different symbols as appropriate for various Git repository states
@@ -177,7 +183,8 @@ function parse_git_state() {
 # If inside a Git repository, print its branch and state
 function git_prompt_string() {
     local git_where="$(parse_git_branch)"
-    [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[magenta]%}%B${git_where#(refs/heads/|tags/)}%b$GIT_PROMPT_SUFFIX"
+    local git_detached="$(parse_git_detached)"
+    [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[magenta]%}%B${git_where#(refs/heads/|tags/)}%b$git_detached$GIT_PROMPT_SUFFIX"
 }
 
 # Set the right-hand prompt

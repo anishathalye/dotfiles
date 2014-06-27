@@ -72,6 +72,9 @@
 [grep]
 	lineNumber = true
 
+[advice]
+	detachedHead = false
+
 [github]
 	user = anishathalye
 

@@ -40,7 +40,7 @@
 	gra = log --graph --format=compact --all # graph all
 	gral = log --graph --format=line --all # graph all line
 	grad = log --graph --format=detail --all # graph all in detail
-	sf = show --format=full
+	sf = show --format=fuller
 	sfs = show --format=full --stat
 	info = ! "inf() { if git rev-parse ${1} >/dev/null 2>&1; then git cat-file -p $(git rev-parse ${1}); else echo Invalid object; fi }; inf"
 	cleanall = clean -fdx :/ # this is dangerous, so it's intentionally long to type

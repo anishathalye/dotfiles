@@ -123,6 +123,9 @@ nnoremap <C-l> <C-w>l
 " tagbar
 nnoremap <C-\> :TagbarToggle<CR>
 
+" gundo
+nnoremap <F5> :GundoToggle<CR>
+
 "---------------------
 " Local customizations
 "---------------------

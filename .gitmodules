@@ -89,6 +89,10 @@
 	path = vim/bundle/gist-vim
 	url = https://github.com/mattn/gist-vim.git
 	ignore = untracked
+[submodule "vim/bundle/gundo.vim"]
+	path = vim/bundle/gundo.vim
+	url = https://github.com/sjl/gundo.vim
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

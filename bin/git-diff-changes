@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+git diff --no-index =(git show --format=fuller ${1}) =(git show --format=fuller ${2})

@@ -1,8 +1,11 @@
 # Use colors in coreutils utilities output
 alias ls='ls --color=auto'
-alias ll='ls -l --color=auto'
-alias la='ls -la --color=auto'
 export GREP_OPTIONS="--color"
+
+# ls aliases
+alias ll='ls -la'
+alias la='ls -A'
+alias l='ls'
 
 # Update dotfiles
 function dfu() {

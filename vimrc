@@ -107,6 +107,10 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Misc configurations
 "--------------------
 
+" buffer navigation
+nnoremap <C-n> :MBEbp<CR>
+nnoremap <C-m> :MBEbn<CR>
+
 " save read-only files
 cnoreabbrev sudow w !sudo tee % >/dev/null
 

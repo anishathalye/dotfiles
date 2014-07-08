@@ -126,6 +126,9 @@ nnoremap <C-\> :TagbarToggle<CR>
 " gundo
 nnoremap <F5> :GundoToggle<CR>
 
+" minibufexpl
+map <Leader>f :MBEFocus<CR>
+
 "---------------------
 " Local customizations
 "---------------------

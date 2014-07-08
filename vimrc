@@ -124,7 +124,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-\> :TagbarToggle<CR>
 
 " gundo
-nnoremap <F5> :GundoToggle<CR>
+map <Leader>u :GundoToggle<CR>
 
 " minibufexpl
 map <Leader>f :MBEFocus<CR>

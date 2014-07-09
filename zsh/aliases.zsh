@@ -54,5 +54,12 @@ function up()
     fi
 }
 
+# Execute a command in a specific directory
+function in() {
+    (
+        cd ${1} && shift && ${@}
+    )
+}
+
 # Mirror a website
 alias mirrorsite='wget -m -k -K -E -e robots=off'

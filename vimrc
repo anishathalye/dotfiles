@@ -108,8 +108,8 @@ nnoremap <Down> :echoe "Use j"<CR>
 "--------------------
 
 " buffer navigation
-nnoremap <C-n> :MBEbp<CR>
-nnoremap <C-m> :MBEbn<CR>
+nnoremap <Leader>n :MBEbn<CR>
+nnoremap <Leader>N :MBEbp<CR>
 
 " save read-only files
 cnoreabbrev sudow w !sudo tee % >/dev/null
@@ -128,10 +128,10 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-\> :TagbarToggle<CR>
 
 " gundo
-map <Leader>u :GundoToggle<CR>
+nnoremap <Leader>u :GundoToggle<CR>
 
 " minibufexpl
-map <Leader>f :MBEFocus<CR>
+nnoremap <Leader>f :MBEFocus<CR>
 
 "---------------------
 " Local customizations

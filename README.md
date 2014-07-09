@@ -7,8 +7,6 @@ it multiple times has no effect.
 
 Dotfiles uses [Dotbot][dotbot] for installation.
 
-##### Note: You should edit `~/.gitconfig` to include your name and email.
-
 Screenshot
 ----------
 

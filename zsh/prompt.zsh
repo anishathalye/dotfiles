@@ -72,8 +72,8 @@ function PR_DIR() {
     echo "%{$fg[green]%}${truncated}%{$fg[orange]%}%B${last}%b%{$reset_color%}"
 }
 
-# The arrow symbol that looks like > that is used in the prompt
-PR_ARROW_CHAR=$(echo '\xe2\x9d\xb1')
+# The arrow symbol that is used in the prompt
+PR_ARROW_CHAR=">"
 
 # The arrow in red (for root) or violet (for regular user)
 PR_ARROW="%(!.%{$fg[red]%}.%{$fg[violet]%})${PR_ARROW_CHAR}%{$reset_color%}"

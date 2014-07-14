@@ -60,5 +60,5 @@ License
 Copyright (c) 2014 Anish Athalye. Released under the MIT License. See
 `LICENSE.md` for details.
 
-[screenshot]: https://github.com/anishathalye/dotfiles/raw/master/misc/screenshots/2014-03-20.png
+[screenshot]: misc/screenshots/2014-07-13.png
 [dotbot]: https://github.com/anishathalye/dotbot

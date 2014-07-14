@@ -1,4 +1,5 @@
 # User customizable options
+# PR_ARROW_CHAR="[some character]"
 # RPR_SHOW_USER=(true, false)
 # RPR_SHOW_HOST=(true, false) - show host in rhs prompt
 
@@ -76,10 +77,12 @@ function PR_DIR() {
 PR_ARROW_CHAR=">"
 
 # The arrow in red (for root) or violet (for regular user)
-PR_ARROW="%(!.%{$fg[red]%}.%{$fg[violet]%})${PR_ARROW_CHAR}%{$reset_color%}"
+function PR_ARROW() {
+    echo "%(!.%{$fg[red]%}.%{$fg[violet]%})${PR_ARROW_CHAR}%{$reset_color%}"
+}
 
 # Build the prompt
-PS1='$(PR_DIR) ${PR_ARROW} ' # space at the end
+PS1='$(PR_DIR) $(PR_ARROW) ' # space at the end
 
 # Set custom rhs prompt
 # User in red (for root) or violet (for regular user)

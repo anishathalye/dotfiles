@@ -119,17 +119,16 @@ function RPR_INFO() {
 # Found at http://blog.joshdick.net/2012/12/30/my_git_prompt_for_zsh.html
 # Adapted from code found at <https://gist.github.com/1712320>.
 
-# Modify the colors and symbols in these variables as desired.
-# GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
+EN_DASH="\xe2\x80\x93"
 GIT_PROMPT_SYMBOL=""
 GIT_PROMPT_PREFIX="%{$fg[violet]%}%B(%b%{$reset_color%}"
 GIT_PROMPT_SUFFIX="%{$fg[violet]%}%B)%b%{$reset_color%}"
 GIT_PROMPT_AHEAD="%{$fg[teal]%}%B+NUM%b%{$reset_color%}"
 GIT_PROMPT_BEHIND="%{$fg[orange]%}%B-NUM%b%{$reset_color%}"
 GIT_PROMPT_MERGING="%{$fg[cyan]%}%Bx%b%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg[red]%}%B-%b%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg[yellow]%}%B-%b%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg[green]%}%B-%b%{$reset_color%}"
+GIT_PROMPT_UNTRACKED="%{$fg[red]%}%B$EN_DASH%b%{$reset_color%}"
+GIT_PROMPT_MODIFIED="%{$fg[yellow]%}%B$EN_DASH%b%{$reset_color%}"
+GIT_PROMPT_STAGED="%{$fg[green]%}%B$EN_DASH%b%{$reset_color%}"
 GIT_PROMPT_DETACHED="%{$fg[neon]%}%B!%b%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head

@@ -12,7 +12,7 @@ source ~/.zsh/settings.zsh
 # Bootstrap
 source ~/.zsh/bootstrap.zsh
 
-# External Settings
+# External settings
 source ~/.zsh/external.zsh
 
 # Aliases

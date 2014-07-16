@@ -206,11 +206,11 @@ RPS1='$(RPR_INFO)$(git_prompt_string)'
 # Alternative minimal prompt.
 
 # Alternative prompt.
-ALT_PS1='$(PR_DIR 2) ${PR_ARROW} ' # space at the end
+ALT_PS1='$(PR_DIR 2) $(PR_ARROW) ' # space at the end
 ALT_RPS1=''
 
 # Minimal prompt.
-MIN_PS1='${PR_ARROW} '
+MIN_PS1='$(PR_ARROW) '
 MIN_RPS1=""
 
 # Function to toggle between the main prompt and a minimal prompt.

@@ -12,7 +12,13 @@ call pathogen#helptags()
 "------------------
 syntax on " turn on syntax highlighting
 set showmatch " show matching braces when text indicator is over them
-set cursorline " highlight current line
+
+" highlight current line, but only in active window
+augroup CursorLineOnlyInActiveWindow
+    autocmd!
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+augroup END
 
 " vim can autodetect this based on $TERM (e.g. 'xterm-256color')
 " but it can be set to force 256 colors

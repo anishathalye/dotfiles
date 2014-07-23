@@ -53,6 +53,7 @@ License
 -------
 
 Copyright (c) 2014 Anish Athalye. Released under the MIT License. See
-`LICENSE.md` for details.
+[LICENSE.md][license] for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot
+[license]: LICENSE.md

@@ -114,7 +114,7 @@ nnoremap <Down> :echoe "Use j"<CR>
 " buffer management and navigation
 nnoremap <Leader>n :MBEbn<CR>
 nnoremap <Leader>N :MBEbp<CR>
-nnoremap <Leader>X :MBEbd<CR>
+nnoremap <Leader>x :MBEbd<CR>
 
 " open new split panes to right and bottom, which feels more natural
 set splitbelow

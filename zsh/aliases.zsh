@@ -34,7 +34,7 @@ function scr_cd()
     screen -X chdir $PWD
 }
 
-if [[ "$TERM" == 'screen.rxvt' ]]; then
+if [[ -n $STY ]]; then
     alias cd=scr_cd
 fi
 

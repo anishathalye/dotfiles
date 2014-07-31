@@ -3,6 +3,11 @@
         "clean": ["~"]
     },
     {
+        "shell": [
+            ["mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads", "Creating rtorrent directories"]
+        ]
+    },
+    {
         "link": {
             "~/.dotfiles": "",
             "~/.tmux.conf": "tmux.conf",
@@ -15,7 +20,6 @@
             "~/.gitignore_global": "gitignore_global",
             "~/.sbt": "sbt/",
             "~/.rtorrent.rc": "rtorrent.rc",
-            "~/.rtorrent": "rtorrent/",
             "~/.axelrc": "axelrc"
         }
     },

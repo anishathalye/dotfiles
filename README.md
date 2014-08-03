@@ -30,7 +30,7 @@ Programs Used
 
 ### Development Software
 
-* `g++` / `build-essential` package
+* `gcc` / `build-essential` package
 * `python3`
 * `sbt`
 * `virtualenv`

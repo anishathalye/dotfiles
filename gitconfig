@@ -71,9 +71,6 @@
 [advice]
 	detachedHead = false
 
-[github]
-	user = anishathalye
-
 [core]
 	excludesfile = ~/.gitignore_global
 

@@ -73,6 +73,11 @@ function PR_DIR() {
     echo "%{$fg[green]%}${truncated}%{$fg[orange]%}%B${last}%b%{$reset_color%}"
 }
 
+# An exclamation point if the previous command did not complete successfully
+function PR_ERROR() {
+    echo "%(?..%(!.%{$fg[violet]%}.%{$fg[red]%})%B!%b%{$reset_color%} )"
+}
+
 # The arrow symbol that is used in the prompt
 PR_ARROW_CHAR=">"
 
@@ -82,7 +87,7 @@ function PR_ARROW() {
 }
 
 # Build the prompt
-PS1='$(PR_DIR) $(PR_ARROW) ' # space at the end
+PS1='$(PR_DIR) $(PR_ERROR)$(PR_ARROW) ' # space at the end
 
 # Set custom rhs prompt
 # User in red (for root) or violet (for regular user)

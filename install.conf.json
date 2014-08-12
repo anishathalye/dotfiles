@@ -4,6 +4,7 @@
     },
     {
         "shell": [
+            ["mkdir -p ~/.sbt/0.13 ~/.sbt/0.13/plugins", "Creating sbt directories"],
             ["mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads", "Creating rtorrent directories"]
         ]
     },
@@ -18,7 +19,8 @@
             "~/.zsh": "zsh/",
             "~/.gitconfig": "gitconfig",
             "~/.gitignore_global": "gitignore_global",
-            "~/.sbt": "sbt/",
+            "~/.sbt/0.13/build.sbt": "sbt/0.13/build.sbt",
+            "~/.sbt/0.13/plugins/plugins.sbt": "sbt/0.13/plugins/plugins.sbt",
             "~/.rtorrent.rc": "rtorrent.rc",
             "~/.axelrc": "axelrc"
         }

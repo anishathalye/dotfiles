@@ -65,10 +65,6 @@
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
 	ignore = untracked
-[submodule "vim/bundle/vim-smartinput"]
-	path = vim/bundle/vim-smartinput
-	url = https://github.com/kana/vim-smartinput
-	ignore = untracked
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround

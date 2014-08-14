@@ -11,12 +11,15 @@
 	di = diff
 	dis = diff --stat
 	diw = diff --color-words
+	dic = diff --color-words=.
 	dc = diff --cached
 	dcs = diff --cached --stat
 	dcw = diff --cached --color-words
-	dh = diff HEAD~1
-	dhs = diff HEAD~1 --stat
-	dhw = diff HEAD~1 --color-words
+	dcc = diff --cached --color-words=.
+	dh = diff HEAD~
+	dhs = diff HEAD~ --stat
+	dhw = diff HEAD~ --color-words
+	dhc = diff HEAD~ --color-words=.
 	ff = merge --ff-only
 	noff = merge --no-ff
 	fa = fetch --all --prune

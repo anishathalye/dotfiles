@@ -4,6 +4,9 @@ autoload -Uz compinit && compinit
 # Set automatic cd (typing directory name with no 'cd')
 setopt autocd
 
+# Enable interactive comments (# on the command line)
+setopt interactivecomments
+
 # Nicer history
 export HISTSIZE=16384
 export HISTFILE="$HOME/.zsh_history"

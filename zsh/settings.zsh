@@ -8,9 +8,12 @@ setopt autocd
 setopt interactivecomments
 
 # Nicer history
-export HISTSIZE=16384
-export HISTFILE="$HOME/.zsh_history"
-export SAVEHIST=$HISTSIZE
+HISTSIZE=16384
+HISTFILE="$HOME/.zsh_history"
+SAVEHIST=$HISTSIZE
+
+# Time to wait for additional characters in a sequence
+KEYTIMEOUT=1 # corresponds to 10ms
 
 # Use vim as the editor
 export EDITOR=vim

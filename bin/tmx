@@ -1,9 +1,6 @@
 #!/bin/bash
 
 # tmux launcher
-#
-# Modified from a script found at:
-#     http://github.com/brandur/tmux-extra
 
 DEFAULT_SESSION_NAME="default"
 

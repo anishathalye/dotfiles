@@ -122,11 +122,7 @@ function RPR_INFO() {
     echo "$(RPR_USER)$(RPR_AT)$(RPR_HOST)"
 }
 
-
 # Set RHS prompt for git repositories
-# Found at http://blog.joshdick.net/2012/12/30/my_git_prompt_for_zsh.html
-# Adapted from code found at <https://gist.github.com/1712320>.
-
 EN_DASH="\xe2\x80\x93"
 GIT_PROMPT_SYMBOL=""
 GIT_PROMPT_PREFIX="%{$fg[violet]%}%B(%b%{$reset_color%}"
@@ -208,9 +204,7 @@ function git_prompt_string() {
 # Set the right-hand prompt
 RPS1='$(RPR_INFO)$(git_prompt_string)'
 
-# Alternative minimal prompt.
-
-# Alternative prompt.
+# Shorter prompt.
 ALT_PS1='$(PR_DIR 2) $(PR_ARROW) ' # space at the end
 ALT_RPS1=''
 

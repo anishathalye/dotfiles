@@ -7,6 +7,10 @@ alias ll='ls -la'
 alias la='ls -A'
 alias l='ls'
 
+# Aliases to protect against overwriting
+alias cp='cp -i'
+alias mv='mv -i'
+
 # Update dotfiles
 function dfu() {
     (

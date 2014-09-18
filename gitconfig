@@ -20,6 +20,7 @@
 	dhs = diff HEAD~ --stat
 	dhw = diff HEAD~ --color-words
 	dhc = diff HEAD~ --color-words=.
+	grp = grep -C 1
 	ff = merge --ff-only
 	noff = merge --no-ff
 	fa = fetch --all --prune
@@ -52,6 +53,15 @@
 
 [color]
 	ui = auto
+
+[color "grep"]
+	match = cyan bold
+	selected = blue
+	context = normal
+	filename = magenta
+	linenumber = green
+	separator = yellow
+	function = blue
 
 [pretty]
 	line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"

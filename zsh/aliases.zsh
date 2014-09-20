@@ -26,6 +26,11 @@ function syspip() {
 # cd to git root directory
 alias cdgr='cd "$(git root)"'
 
+# Create a directory and cd into it
+function mcd() {
+    mkdir "${1}" && cd "${1}"
+}
+
 # Jump to directory containing file
 function jump() {
     cd "$(dirname ${1})"

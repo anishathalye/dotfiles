@@ -117,6 +117,7 @@ nnoremap <Leader>u :GundoToggle<CR>
 
 " minibufexpl
 nnoremap <Leader>f :MBEFocus<CR>
+let g:miniBufExplBuffersNeeded = 0
 
 "---------------------
 " Local customizations

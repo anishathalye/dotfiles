@@ -78,6 +78,9 @@
 [push]
 	default = upstream
 
+[credential]
+	helper = cache --timeout=3600
+
 [grep]
 	lineNumber = true
 

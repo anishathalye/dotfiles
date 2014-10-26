@@ -2,7 +2,7 @@
 
 # tmux launcher
 
-DEFAULT_SESSION_NAME="default"
+DEFAULT_SESSION_NAME="0"
 
 # Works because bash automatically trims by assigning to variables and by 
 # passing arguments

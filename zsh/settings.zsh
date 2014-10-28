@@ -8,7 +8,7 @@ setopt autocd
 setopt interactivecomments
 
 # Nicer history
-HISTSIZE=16384
+HISTSIZE=1048576
 HISTFILE="$HOME/.zsh_history"
 SAVEHIST=$HISTSIZE
 setopt appendhistory

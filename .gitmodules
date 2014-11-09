@@ -101,6 +101,10 @@
 	path = vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
 	ignore = untracked
+[submodule "vim/bundle/rust.vim"]
+	path = vim/bundle/rust.vim
+	url = https://github.com/wting/rust.vim
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

@@ -1,6 +1,9 @@
 # Initialize completion
 autoload -Uz compinit && compinit
 
+# Initialize editing command line
+autoload -U edit-command-line && zle -N edit-command-line
+
 # Set automatic cd (typing directory name with no 'cd')
 setopt autocd
 
@@ -29,6 +32,8 @@ bindkey -a 'G' end-of-buffer-or-history
 # Undo
 bindkey -a 'u' undo
 bindkey -a '^R' redo
+# Edit line
+bindkey -a '^V' edit-command-line
 # Backspace
 bindkey '^?' backward-delete-char
 bindkey '^H' backward-delete-char

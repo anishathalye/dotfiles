@@ -109,6 +109,10 @@
 	path = vim/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade
 	ignore = untracked
+[submodule "vim/bundle/vim-stylus"]
+	path = vim/bundle/vim-stylus
+	url = https://github.com/wavded/vim-stylus
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

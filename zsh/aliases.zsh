@@ -77,5 +77,14 @@ function in() {
     )
 }
 
+# Check if a file is all ascii characters
+function ascii() {
+    if LC_ALL=C grep -q '[^[:print:][:space:]]' ${1}; then
+        echo "File contains non-ascii characters"
+    else
+        echo "File contains only ascii characters"
+    fi
+}
+
 # Mirror a website
 alias mirrorsite='wget -m -k -K -E -e robots=off'

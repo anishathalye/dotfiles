@@ -64,7 +64,8 @@ set timeout timeoutlen=1000 ttimeoutlen=100 " fix slow O inserts
 set autochdir " automatically set current directory to directory of last opened file
 set hidden " allow auto-hiding of edited buffers
 set history=8192 " more history
-" use 2 spaces instead of tabs during formatting
+set nojoinspaces " suppress inserting two spaces between sentences
+" use 4 spaces instead of tabs during formatting
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -81,22 +82,9 @@ if &term =~ '^screen'
     set ttymouse=xterm2
 endif
 
-"-------------------
-" Disable arrow keys
-"-------------------
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 "--------------------
 " Misc configurations
 "--------------------
-
-" buffer management and navigation
-nnoremap <Leader>n :MBEbn<CR>
-nnoremap <Leader>N :MBEbp<CR>
-nnoremap <Leader>x :MBEbd<CR>
 
 " open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -108,6 +96,16 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Disable arrow keys
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+"---------------------
+" Plugin configuration
+"---------------------
+
 " tagbar
 nnoremap <C-\> :TagbarToggle<CR>
 
@@ -115,6 +113,9 @@ nnoremap <C-\> :TagbarToggle<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 
 " minibufexpl
+nnoremap <Leader>n :MBEbn<CR>
+nnoremap <Leader>N :MBEbp<CR>
+nnoremap <Leader>x :MBEbd<CR>
 nnoremap <Leader>f :MBEFocus<CR>
 let g:miniBufExplBuffersNeeded = 0
 

@@ -20,6 +20,9 @@
     ~/.zshrc: zshrc
 
 - shell:
-  - [mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads,
-      Creating rtorrent directories]
-  - [git update-submodules, Installing/updating submodules]
+  -
+    - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads
+    - Creating rtorrent directories
+  -
+    - git update-submodules
+    - Installing/updating submodules

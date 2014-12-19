@@ -7,37 +7,6 @@ times has no effect.
 
 Dotfiles uses [Dotbot][dotbot] for installation.
 
-Programs Used
--------------
-
-### Command Line Tools
-
-* `brew` (for Mac)
-* `aptitude` (for Linux)
-* `zsh`
-* `tmux`
-* `vim`
-* `ctags` (exuberant)
-* `git`
-* `autojump`
-* `axel`
-* `rtorrent`
-
-### Development Software
-
-* `gcc` / `build-essential` package
-* `python3`
-* `sbt`
-* `virtualenv`
-
-Installing Binaries
--------------------
-
-Use `aptitude` or whatever package manager on Linux. Use `brew` on Mac.
-
-To replace coreutils with GNU coreutils on a Mac, do `brew install coreutils`
-and follow the instructions to use the commands with their normal names.
-
 Making Local Customizations
 ---------------------------
 

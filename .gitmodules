@@ -113,6 +113,14 @@
 	path = vim/bundle/vim-fireplace
 	url = https://github.com/tpope/vim-fireplace
 	ignore = untracked
+[submodule "vim/bundle/vimbufsync"]
+	path = vim/bundle/vimbufsync
+	url = https://github.com/def-lkb/vimbufsync
+	ignore = untracked
+[submodule "vim/bundle/coquille"]
+	path = vim/bundle/coquille
+	url = https://github.com/the-lambda-church/coquille
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

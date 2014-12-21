@@ -112,12 +112,8 @@ nnoremap <C-\> :TagbarToggle<CR>
 " gundo
 nnoremap <Leader>u :GundoToggle<CR>
 
-" minibufexpl
-nnoremap <Leader>n :MBEbn<CR>
-nnoremap <Leader>N :MBEbp<CR>
-nnoremap <Leader>x :MBEbd<CR>
-nnoremap <Leader>f :MBEFocus<CR>
-let g:miniBufExplBuffersNeeded = 0
+" ctrlp
+nnoremap ; :CtrlPBuffer<CR>
 
 "---------------------
 " Local customizations

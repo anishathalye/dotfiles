@@ -85,10 +85,6 @@
 	path = vim/bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim
 	ignore = untracked
-[submodule "vim/bundle/minibufexpl.vim"]
-	path = vim/bundle/minibufexpl.vim
-	url = https://github.com/fholgado/minibufexpl.vim
-	ignore = untracked
 [submodule "vim/bundle/vim-liquid"]
 	path = vim/bundle/vim-liquid
 	url = https://github.com/tpope/vim-liquid

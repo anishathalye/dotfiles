@@ -23,7 +23,6 @@ augroup END
 " vim can autodetect this based on $TERM (e.g. 'xterm-256color')
 " but it can be set to force 256 colors
 " set t_Co=256
-" colorscheme womprat
 if &t_Co < 256
     colorscheme default
     set nocursorline " looks bad in this mode
@@ -59,6 +58,7 @@ set lbr " line break
 set ruler " show current position in file
 set scrolloff=5 " show lines above and below cursor (when possible)
 set noshowmode " hide mode
+set laststatus=2
 set backspace=indent,eol,start " allow backspacing over everything
 set timeout timeoutlen=1000 ttimeoutlen=100 " fix slow O inserts
 set autochdir " automatically set current directory to directory of last opened file

@@ -115,6 +115,7 @@ nnoremap <Leader>u :GundoToggle<CR>
 " ctrlp
 nnoremap ; :CtrlPBuffer<CR>
 let g:ctrlp_switch_buffer = 0
+let g:ctrlp_show_hidden = 1
 
 "---------------------
 " Local customizations

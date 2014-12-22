@@ -120,6 +120,7 @@
 [submodule "vim/bundle/coquille"]
 	path = vim/bundle/coquille
 	url = https://github.com/the-lambda-church/coquille
+	branch = pathogen-bundle
 	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized

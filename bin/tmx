@@ -4,7 +4,7 @@
 
 DEFAULT_SESSION_NAME="0"
 
-# Works because bash automatically trims by assigning to variables and by 
+# Works because bash automatically trims by assigning to variables and by
 # passing arguments
 trim() { echo $1; }
 
@@ -30,7 +30,7 @@ else
 
         # Session is is date and time to prevent conflict
         session_id=`date +%Y%m%d%H%M%S`
-        # Create a new session (without attaching it) and link to base session 
+        # Create a new session (without attaching it) and link to base session
         # to share windows
         tmux new-session -d -t $base_session -s $session_id
         # Attach to the new session
@@ -38,5 +38,4 @@ else
         # When we detach from it, kill the session
         tmux kill-session -t $session_id
     fi
-fi 
-
+fi

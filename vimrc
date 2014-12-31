@@ -51,6 +51,7 @@ set autoindent
 " Basic editing config
 "---------------------
 set nu " number lines
+set rnu " relative line numbering
 set incsearch " incremental search (as string is being typed)
 set hls " highlight search
 exec "set listchars=tab:>>,nbsp:~"
@@ -96,11 +97,14 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Disable arrow keys
+" disable arrow keys
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+
+" toggle relative numbering
+nnoremap <C-n> :set rnu!<CR>
 
 "---------------------
 " Plugin configuration

@@ -1,7 +1,8 @@
 # User customizable options
 # PR_ARROW_CHAR="[some character]"
-# RPR_SHOW_USER=(true, false)
+# RPR_SHOW_USER=(true, false) - show username in rhs prompt
 # RPR_SHOW_HOST=(true, false) - show host in rhs prompt
+# RPR_SHOW_GIT=(true, false) - show git status in rhs prompt
 
 # Set custom prompt
 
@@ -195,10 +196,13 @@ function parse_git_state() {
 }
 
 # If inside a Git repository, print its branch and state
+RPR_SHOW_GIT=true # Set to false to disable git status in rhs prompt
 function git_prompt_string() {
-    local git_where="$(parse_git_branch)"
-    local git_detached="$(parse_git_detached)"
-    [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[magenta]%}%B${git_where#(refs/heads/|tags/)}%b$git_detached$GIT_PROMPT_SUFFIX"
+    if [[ "${RPR_SHOW_GIT}" == "true" ]]; then
+        local git_where="$(parse_git_branch)"
+        local git_detached="$(parse_git_detached)"
+        [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[magenta]%}%B${git_where#(refs/heads/|tags/)}%b$git_detached$GIT_PROMPT_SUFFIX"
+    fi
 }
 
 # Set the right-hand prompt

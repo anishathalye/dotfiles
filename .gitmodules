@@ -122,6 +122,10 @@
 	url = https://github.com/the-lambda-church/coquille
 	branch = pathogen-bundle
 	ignore = untracked
+[submodule "vim/bundle/vim-tmux"]
+	path = vim/bundle/vim-tmux
+	url = https://github.com/tmux-plugins/vim-tmux
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

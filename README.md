@@ -21,7 +21,7 @@ You can make local customizations for some programs by editing these files:
 License
 -------
 
-Copyright (c) 2014 Anish Athalye. Released under the MIT License. See
+Copyright (c) 2013-2015 Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot

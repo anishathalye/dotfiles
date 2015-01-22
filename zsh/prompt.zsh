@@ -209,12 +209,12 @@ function git_prompt_string() {
 RPS1='$(RPR_INFO)$(git_prompt_string)'
 
 # Shorter prompt.
-ALT_PS1='$(PR_DIR 2) $(PR_ARROW) ' # space at the end
-ALT_RPS1=''
+ALT_PS1='$(PR_DIR 1) $(PR_ARROW) ' # space at the end
+ALT_RPS1='$(git_prompt_string)'
 
 # Minimal prompt.
 MIN_PS1='$(PR_ARROW) '
-MIN_RPS1=""
+MIN_RPS1=''
 
 # Function to toggle between the main prompt and a minimal prompt.
 PROMPT_STATE=0

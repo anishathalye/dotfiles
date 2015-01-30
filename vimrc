@@ -106,6 +106,11 @@ nnoremap <Down> :echoe "Use j"<CR>
 " toggle relative numbering
 nnoremap <C-n> :set rnu!<CR>
 
+" move cursor by display lines
+"
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+
 "---------------------
 " Plugin configuration
 "---------------------

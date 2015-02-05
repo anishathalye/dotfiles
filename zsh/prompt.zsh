@@ -239,4 +239,38 @@ function RCMD() {
     fi
 }
 
-RPROMPT='$(RCMD)'
+ASYNC_PROC=0
+function precmd() {
+    function async() {
+        local rp
+        rp=$(RCMD)
+
+        # save to temp file
+        printf "%s" $rp > /tmp/prompt.txt.$$
+
+        # signal parent
+        kill -s USR2 $$
+    }
+
+    # do not clear RPROMPT, let it persist
+
+    # kill child if necessary
+    if [[ "${ASYNC_PROC}" != 0 ]]; then
+        kill -s HUP $ASYNC_PROC >/dev/null 2>&1 || :
+    fi
+    async &!
+    ASYNC_PROC=$!
+}
+
+function TRAPUSR2() {
+    # read from temp file
+    RPROMPT="$(cat /tmp/prompt.txt.$$)"
+
+    # reset proc number
+    ASYNC_PROC=0
+
+    # redisplay
+    zle && zle reset-prompt
+}
+
+RPROMPT='' # set asynchronously and dynamically

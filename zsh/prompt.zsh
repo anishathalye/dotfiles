@@ -87,9 +87,6 @@ function PR_ARROW() {
     echo "%(!.%{$fg[red]%}.%{$fg[violet]%})${PR_ARROW_CHAR}%{$reset_color%}"
 }
 
-# Build the prompt
-PS1='$(PR_DIR) $(PR_ERROR)$(PR_ARROW) ' # space at the end
-
 # Set custom rhs prompt
 # User in red (for root) or violet (for regular user)
 RPR_SHOW_USER=true # Set to false to disable user in rhs prompt
@@ -205,33 +202,41 @@ function git_prompt_string() {
     fi
 }
 
-# Set the right-hand prompt
-RPS1='$(RPR_INFO)$(git_prompt_string)'
+PROMPT_MODE=0
 
-# Shorter prompt.
-ALT_PS1='$(PR_DIR 1) $(PR_ARROW) ' # space at the end
-ALT_RPS1='$(git_prompt_string)'
-
-# Minimal prompt.
-MIN_PS1='$(PR_ARROW) '
-MIN_RPS1=''
-
-# Function to toggle between the main prompt and a minimal prompt.
-PROMPT_STATE=0
-ORIG_PS1=${PS1}
-ORIG_RPS1=${RPS1}
+# Function to toggle between prompt modes
 function tog() {
-    if [[ "${PROMPT_STATE}" == 0 ]]; then
-        PS1=${ALT_PS1}
-        RPS1=${ALT_RPS1}
-        PROMPT_STATE=1
-    elif [[ "${PROMPT_STATE}" == 1 ]]; then
-        PS1=${MIN_PS1}
-        RPS1=${MIN_RPS1}
-        PROMPT_STATE=2
+    if [[ "${PROMPT_MODE}" == 0 ]]; then
+        PROMPT_MODE=1
+    elif [[ "${PROMPT_MODE}" == 1 ]]; then
+        PROMPT_MODE=2
     else
-        PS1=${ORIG_PS1}
-        RPS1=${ORIG_RPS1}
-        PROMPT_STATE=0
+        PROMPT_MODE=0
     fi
 }
+
+# Prompt
+function PCMD() {
+    if [[ "${PROMPT_MODE}" == 0 ]]; then
+        echo "$(PR_DIR) $(PR_ERROR)$(PR_ARROW) " # space at the end
+    elif [[ "${PROMPT_MODE}" == 1 ]]; then
+        echo "$(PR_DIR 1) $(PR_ARROW) " # space at the end
+    else
+        echo "$(PR_ARROW) " # space at the end
+    fi
+}
+
+PROMPT='$(PCMD)'
+
+# Right-hand prompt
+function RCMD() {
+    if [[ "${PROMPT_MODE}" == 0 ]]; then
+        echo "$(RPR_INFO)$(git_prompt_string)"
+    elif [[ "${PROMPT_MODE}" == 1 ]]; then
+        echo "$(git_prompt_string)"
+    else
+        echo ""
+    fi
+}
+
+RPROMPT='$(RCMD)'

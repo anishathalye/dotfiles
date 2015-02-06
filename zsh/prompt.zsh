@@ -246,7 +246,7 @@ function precmd() {
         rp=$(RCMD)
 
         # save to temp file
-        printf "%s" $rp > /tmp/prompt.txt.$$
+        printf "%s" $rp > /tmp/zsh.prompt.txt
 
         # signal parent
         kill -s USR2 $$
@@ -264,7 +264,7 @@ function precmd() {
 
 function TRAPUSR2() {
     # read from temp file
-    RPROMPT="$(cat /tmp/prompt.txt.$$)"
+    RPROMPT="$(cat /tmp/zsh.prompt.txt)"
 
     # reset proc number
     ASYNC_PROC=0

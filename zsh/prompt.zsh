@@ -220,9 +220,9 @@ function PCMD() {
     if [[ "${PROMPT_MODE}" == 0 ]]; then
         echo "$(PR_DIR) $(PR_ERROR)$(PR_ARROW) " # space at the end
     elif [[ "${PROMPT_MODE}" == 1 ]]; then
-        echo "$(PR_DIR 1) $(PR_ARROW) " # space at the end
+        echo "$(PR_DIR 1) $(PR_ERROR)$(PR_ARROW) " # space at the end
     else
-        echo "$(PR_ARROW) " # space at the end
+        echo "$(PR_ERROR)$(PR_ARROW) " # space at the end
     fi
 }
 

@@ -249,7 +249,7 @@ function precmd() {
         printf "%s" $rp > "${HOME}/.zsh_tmp_prompt"
 
         # signal parent
-        kill -s USR2 $$
+        kill -s USR1 $$
     }
 
     # do not clear RPROMPT, let it persist
@@ -262,7 +262,7 @@ function precmd() {
     ASYNC_PROC=$!
 }
 
-function TRAPUSR2() {
+function TRAPUSR1() {
     # read from temp file
     RPROMPT="$(cat ${HOME}/.zsh_tmp_prompt)"
 

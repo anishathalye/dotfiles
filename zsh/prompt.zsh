@@ -226,7 +226,8 @@ function PCMD() {
     fi
 }
 
-PROMPT='$(PCMD)'
+PROMPT='$(PCMD)' # single quotes to prevent immediate execution
+RPROMPT='' # set asynchronously and dynamically
 
 # Right-hand prompt
 function RCMD() {
@@ -242,11 +243,8 @@ function RCMD() {
 ASYNC_PROC=0
 function precmd() {
     function async() {
-        local rp
-        rp=$(RCMD)
-
         # save to temp file
-        printf "%s" $rp > "${HOME}/.zsh_tmp_prompt"
+        printf "%s" "$(RCMD)" > "${HOME}/.zsh_tmp_prompt"
 
         # signal parent
         kill -s USR1 $$
@@ -258,6 +256,8 @@ function precmd() {
     if [[ "${ASYNC_PROC}" != 0 ]]; then
         kill -s HUP $ASYNC_PROC >/dev/null 2>&1 || :
     fi
+
+    # start background computation
     async &!
     ASYNC_PROC=$!
 }
@@ -272,5 +272,3 @@ function TRAPUSR1() {
     # redisplay
     zle && zle reset-prompt
 }
-
-RPROMPT='' # set asynchronously and dynamically

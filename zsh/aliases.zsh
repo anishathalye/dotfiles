@@ -77,8 +77,8 @@ function in() {
     )
 }
 
-# Check if a file is all ascii characters
-function ascii() {
+# Check if a file contains non-ascii characters
+function nonascii() {
     LC_ALL=C grep -n '[^[:print:][:space:]]' ${1}
 }
 

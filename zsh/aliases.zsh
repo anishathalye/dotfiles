@@ -79,7 +79,7 @@ function in() {
 
 # Check if a file is all ascii characters
 function ascii() {
-    LC_ALL=C grep '[^[:print:][:space:]]' ${1}
+    LC_ALL=C grep -n '[^[:print:][:space:]]' ${1}
 }
 
 # Mirror a website

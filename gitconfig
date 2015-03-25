@@ -7,6 +7,7 @@
 	aa = add --all :/
 	ci = commit -v
 	ca = commit --amend -v
+	save = commit -a -m "Save"
 	co = checkout
 	di = diff
 	dis = diff --stat

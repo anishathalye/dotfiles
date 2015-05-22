@@ -16,6 +16,7 @@ You can make local customizations for some programs by editing these files:
 * `zsh` : `~/.zshrc_local_before` run before `.zshrc`
 * `zsh` : `~/.zshrc_local_after` run after `.zshrc`
 * `git` : `~/.gitconfig_local`
+* `hg` : `~/.hgrc_local`
 * `tmux` : `~/.tmux_local.conf`
 
 License

@@ -1,0 +1,5 @@
+[extensions]
+color =
+
+# Allow local customizations
+%include ~/.hgrc_local

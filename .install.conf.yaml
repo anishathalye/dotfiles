@@ -5,6 +5,7 @@
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
+    ~/.hgrc: hgrc
     ~/.rtorrent.rc: rtorrent.rc
     ~/.sbt/0.13/build.sbt:
       create: true

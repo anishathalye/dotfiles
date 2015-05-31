@@ -96,7 +96,7 @@ function RPR_USER() {
     fi
 }
 
-# Host in yellow
+# Host in a deterministically chosen color
 RPR_SHOW_HOST=true # Set to false to disable host in rhs prompt
 function RPR_HOST() {
     local colors

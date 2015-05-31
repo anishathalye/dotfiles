@@ -25,6 +25,8 @@
 	ff = merge --ff-only
 	noff = merge --no-ff
 	fa = fetch --all
+	deleted = remote prune --dry-run
+	prunable = ! "pr() { git remote | xargs -L 1 git deleted; }; pr"
 	pullff = pull --ff-only
 	mirror-remote = ! "mr() { git push \"${2}\" \"refs/remotes/${1}/*:refs/heads/*\" && git remote set-head \"${2}\" -a; }; mr"
 	count = diff --stat "4b825dc642cb6eb9a060e54bf8d69288fbee4904" # hash of empty tree

@@ -127,6 +127,7 @@ let g:ctrlp_show_hidden = 1
 
 " ag
 let g:ag_mapping_message=0
+command -nargs=+ Gag :Gcd | :Ag! <args>
 
 "---------------------
 " Local customizations

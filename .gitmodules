@@ -138,6 +138,10 @@
 	path = vim/bundle/haskell-vim
 	url = https://github.com/raichoo/haskell-vim
 	ignore = untracked
+[submodule "vim/bundle/ag.vim"]
+	path = vim/bundle/ag.vim
+	url = https://github.com/rking/ag.vim
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

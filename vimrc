@@ -110,10 +110,6 @@ nnoremap <C-n> :set rnu!<CR>
 command W update
 command Q qa
 
-" move cursor by display lines
-nnoremap <expr> j v:count ? 'j' : 'gj'
-nnoremap <expr> k v:count ? 'k' : 'gk'
-
 "---------------------
 " Plugin configuration
 "---------------------

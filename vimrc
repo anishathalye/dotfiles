@@ -106,10 +106,6 @@ nnoremap <Down> :echoe "Use j"<CR>
 " toggle relative numbering
 nnoremap <C-n> :set rnu!<CR>
 
-" command aliases
-command W update
-command Q qa
-
 "---------------------
 " Plugin configuration
 "---------------------

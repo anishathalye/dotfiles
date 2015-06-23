@@ -106,6 +106,9 @@ nnoremap <Down> :echoe "Use j"<CR>
 " toggle relative numbering
 nnoremap <C-n> :set rnu!<CR>
 
+" save read-only files
+command -nargs=0 Sudow w !sudo tee % >/dev/null
+
 "---------------------
 " Plugin configuration
 "---------------------

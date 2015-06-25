@@ -1,6 +1,7 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.agignore: agignore
     ~/.axelrc: axelrc
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig

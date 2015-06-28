@@ -27,6 +27,7 @@
 	fa = fetch --all
 	deleted = remote prune --dry-run
 	prunable = ! "pr() { git remote | xargs -L 1 git deleted; }; pr"
+	pruneall = ! "pa() { git remote | xargs -L 1 git remote prune; }; pa"
 	pullff = pull --ff-only
 	pullrb = pull --rebase
 	mirror-remote = ! "mr() { git push \"${2}\" \"refs/remotes/${1}/*:refs/heads/*\" && git remote set-head \"${2}\" -a; }; mr"

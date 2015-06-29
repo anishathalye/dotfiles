@@ -114,7 +114,7 @@ command -nargs=0 Sudow w !sudo tee % >/dev/null
 "---------------------
 
 " tagbar
-nnoremap <C-\> :TagbarToggle<CR>
+nnoremap <Leader>t :TagbarToggle<CR>
 
 " gundo
 nnoremap <Leader>u :GundoToggle<CR>

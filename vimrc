@@ -144,6 +144,7 @@ let g:syntastic_mode_map = {
 nnoremap <Leader>s :SyntasticCheck<CR>
 nnoremap <Leader>r :SyntasticReset<CR>
 nnoremap <Leader>i :SyntasticInfo<CR>
+nnoremap <Leader>m :SyntasticToggleMode<CR>
 
 "---------------------
 " Local customizations

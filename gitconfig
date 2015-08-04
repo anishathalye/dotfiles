@@ -12,15 +12,12 @@
 	di = diff
 	dis = diff --stat
 	diw = diff --color-words
-	dic = diff --color-words=.
 	dc = diff --cached
 	dcs = diff --cached --stat
 	dcw = diff --cached --color-words
-	dcc = diff --cached --color-words=.
 	dh = diff HEAD~
 	dhs = diff HEAD~ --stat
 	dhw = diff HEAD~ --color-words
-	dhc = diff HEAD~ --color-words=.
 	du = diff @{u}...
 	grp = grep -C 1
 	ff = merge --ff-only
@@ -56,6 +53,10 @@
 	tar = ! "tar() { git archive --format tar --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; tar"
 	targz = ! "targz() { git archive --format tar.gz --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; targz"
 	zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; zip"
+
+[diff]
+	mnemonicPrefix = true
+	wordRegex = "[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
 
 [color]
 	ui = auto

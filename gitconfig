@@ -22,7 +22,7 @@
 	grp = grep -C 1
 	ff = merge --ff-only
 	noff = merge --no-ff
-	fa = fetch --all
+	fa = fetch --all --tags
 	deleted = remote prune --dry-run
 	prunable = ! "pr() { git remote | xargs -L 1 git deleted; }; pr"
 	pruneall = ! "pa() { git remote | xargs -L 1 git remote prune; }; pa"

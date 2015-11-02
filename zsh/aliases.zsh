@@ -85,5 +85,11 @@ function nonascii() {
     LC_ALL=C grep -n '[^[:print:][:space:]]' ${1}
 }
 
+# Fetch pull request
+
+function fpr() {
+    git fetch "git@github.com:${1}/${2}" "${3}:${1}/${3}"
+}
+
 # Mirror a website
 alias mirrorsite='wget -m -k -K -E -e robots=off'

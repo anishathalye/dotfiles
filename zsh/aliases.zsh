@@ -91,5 +91,11 @@ function fpr() {
     git fetch "git@github.com:${1}/${2}" "${3}:${1}/${3}"
 }
 
+# Serve current directory
+
+function serve() {
+    ruby -run -e httpd . -p "${1:-8080}"
+}
+
 # Mirror a website
 alias mirrorsite='wget -m -k -K -E -e robots=off'

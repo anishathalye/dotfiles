@@ -19,6 +19,8 @@
 	dhs = diff HEAD~ --stat
 	dhw = diff HEAD~ --color-words
 	du = diff @{u}...
+	dus = diff @{u}... --stat
+	duw = diff @{u}... --color-words
 	grp = grep -C 1
 	ff = merge --ff-only
 	noff = merge --no-ff

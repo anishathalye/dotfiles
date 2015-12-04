@@ -241,7 +241,12 @@ function RCMD() {
 }
 
 ASYNC_PROC=0
+FIRST_PRECMD=1
 function precmd() {
+    if [[ "$FIRST_PRECMD" == 1 ]]; then
+        FIRST_PRECMD=0
+        return
+    fi
     function async() {
         # save to temp file
         printf "%s" "$(RCMD)" > "${HOME}/.zsh_tmp_prompt"

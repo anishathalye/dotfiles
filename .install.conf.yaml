@@ -7,6 +7,7 @@
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.hgrc: hgrc
+    ~/.inputrc: inputrc
     ~/.rtorrent.rc: rtorrent.rc
     ~/.sbt/0.13/build.sbt:
       create: true

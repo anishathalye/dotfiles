@@ -6,6 +6,9 @@
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
+    ~/.gnupg/gpg.conf:
+      create: true
+      path: gpg.conf
     ~/.hgrc: hgrc
     ~/.inputrc: inputrc
     ~/.rtorrent.rc: rtorrent.rc

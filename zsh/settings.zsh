@@ -1,5 +1,6 @@
 # Initialize completion
 autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select=20
 
 # Initialize editing command line
 autoload -U edit-command-line && zle -N edit-command-line

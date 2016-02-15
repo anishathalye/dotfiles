@@ -115,6 +115,7 @@ command -nargs=0 Sudow w !sudo tee % >/dev/null
 
 " nerdtree
 nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
 
 " tagbar
 nnoremap <Leader>t :TagbarToggle<CR>

@@ -20,9 +20,9 @@
       path: sbt/0.13/plugins/plugins.sbt
     ~/.screenrc: screenrc
     ~/.tmux.conf: tmux.conf
-    ~/.vim: vim/
+    ~/.vim: vim
     ~/.vimrc: vimrc
-    ~/.zsh: zsh/
+    ~/.zsh: zsh
     ~/.zshrc: zshrc
 
 - shell:

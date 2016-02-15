@@ -113,6 +113,9 @@ command -nargs=0 Sudow w !sudo tee % >/dev/null
 " Plugin configuration
 "---------------------
 
+" nerdtree
+nnoremap <Leader>n :NERDTreeToggle<CR>
+
 " tagbar
 nnoremap <Leader>t :TagbarToggle<CR>
 

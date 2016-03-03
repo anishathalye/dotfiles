@@ -1,3 +1,8 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - clean: ['~', '~/.config']
 
 - link:
@@ -6,18 +11,12 @@
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
-    ~/.gnupg/gpg.conf:
-      create: true
-      path: gpg.conf
+    ~/.gnupg/gpg.conf: gpg.conf
     ~/.hgrc: hgrc
     ~/.inputrc: inputrc
     ~/.rtorrent.rc: rtorrent.rc
-    ~/.sbt/0.13/build.sbt:
-      create: true
-      path: sbt/0.13/build.sbt
-    ~/.sbt/0.13/plugins/plugins.sbt:
-      create: true
-      path: sbt/0.13/plugins/plugins.sbt
+    ~/.sbt/0.13/build.sbt: sbt/0.13/build.sbt
+    ~/.sbt/0.13/plugins/plugins.sbt: sbt/0.13/plugins/plugins.sbt
     ~/.screenrc: screenrc
     ~/.tmux.conf: tmux.conf
     ~/.vim: vim

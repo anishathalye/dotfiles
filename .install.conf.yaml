@@ -8,9 +8,6 @@
 - link:
     ~/.agignore: agignore
     ~/.axelrc: axelrc
-    ~/.config/nvim/bundle: vim/bundle
-    ~/.config/nvim/ftplugin: vim/ftplugin
-    ~/.config/nvim/init.vim: vimrc
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global

@@ -136,7 +136,7 @@
 	ignore = untracked
 [submodule "vim/bundle/haskell-vim"]
 	path = vim/bundle/haskell-vim
-	url = https://github.com/raichoo/haskell-vim
+	url = https://github.com/neovimhaskell/haskell-vim
 	ignore = untracked
 [submodule "vim/bundle/ag.vim"]
 	path = vim/bundle/ag.vim

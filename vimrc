@@ -54,7 +54,7 @@ set nu " number lines
 set rnu " relative line numbering
 set incsearch " incremental search (as string is being typed)
 set hls " highlight search
-exec "set listchars=tab:>>,nbsp:~"
+set listchars=tab:>>,nbsp:~ " set list to see tabs and non-breakable spaces
 set lbr " line break
 set ruler " show current position in file
 set scrolloff=5 " show lines above and below cursor (when possible)

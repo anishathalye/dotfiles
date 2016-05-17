@@ -158,6 +158,10 @@
 	path = vim/bundle/incsearch.vim
 	url = https://github.com/haya14busa/incsearch.vim
 	ignore = untracked
+[submodule "vim/bundle/vim-easymotion"]
+	path = vim/bundle/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

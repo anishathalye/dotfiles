@@ -150,6 +150,11 @@ nnoremap <Leader>r :SyntasticReset<CR>
 nnoremap <Leader>i :SyntasticInfo<CR>
 nnoremap <Leader>m :SyntasticToggleMode<CR>
 
+" incsearch
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
 "---------------------
 " Local customizations
 "---------------------

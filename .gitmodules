@@ -35,7 +35,7 @@
 	ignore = untracked
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
+	url = https://github.com/ctrlpvim/ctrlp.vim
 	ignore = untracked
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby

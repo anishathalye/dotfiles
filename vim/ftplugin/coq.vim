@@ -9,14 +9,14 @@ inoremap <buffer> <Up> <C-o>:CoqUndo<CR>
 inoremap <buffer> <Down> <C-o>:CoqNext<CR>
 
 " this is hacky, but it works
-let s:coq_running = 0
+let b:coq_running = 0
 function! CoqToggle()
-    if s:coq_running == 1
+    if b:coq_running == 1
         execute "CoqKill"
-        let s:coq_running = 0
+        let b:coq_running = 0
     else
         execute "CoqLaunch"
-        let s:coq_running = 1
+        let b:coq_running = 1
     endif
 endfunction
 nnoremap <buffer> <Leader>c :call CoqToggle()<CR>

@@ -16,14 +16,15 @@ autoload -U colors && colors
 if [[ "$(tput colors)" == "256" ]]; then
     source ~/.zsh/plugins/spectrum.zsh
     # change default colors
-    fg[green]=$FG[064]
-    fg[cyan]=$FG[037]
-    fg[blue]=$FG[033]
-    fg[teal]=$FG[041]
     fg[red]=$FG[160]
-    fg[orange]=$FG[166]
+    fg[green]=$FG[064]
     fg[yellow]=$FG[136]
+    fg[blue]=$FG[033]
     fg[magenta]=$FG[125]
+    fg[cyan]=$FG[037]
+
+    fg[teal]=$FG[041]
+    fg[orange]=$FG[166]
     fg[violet]=$FG[061]
     fg[brown]=$FG[094]
     fg[neon]=$FG[112]

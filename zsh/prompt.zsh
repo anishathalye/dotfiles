@@ -26,18 +26,14 @@ if [[ "$(tput colors)" == "256" ]]; then
     fg[teal]=$FG[041]
     fg[orange]=$FG[166]
     fg[violet]=$FG[061]
-    fg[brown]=$FG[094]
     fg[neon]=$FG[112]
     fg[pink]=$FG[183]
-    fg[darkred]=$FG[088]
 else
     fg[teal]=$fg[blue]
     fg[orange]=$fg[yellow]
     fg[violet]=$fg[magenta]
-    fg[brown]=$fg[orange]
     fg[neon]=$fg[green]
     fg[pink]=$fg[magenta]
-    fg[darkred]=$fg[red]
 fi
 
 # Current directory, truncated to 3 path elements (or 4 when one of them is "~")
@@ -101,8 +97,16 @@ function RPR_USER() {
 RPR_SHOW_HOST=true # Set to false to disable host in rhs prompt
 function RPR_HOST() {
     local colors
-    colors=(yellow pink darkred brown neon teal)
-    local index=$(python -c "print(hash('$(hostname)') % ${#colors} + 1)")
+    colors=(cyan green yellow red pink)
+    local index=$(python <<EOF
+import hashlib
+
+hash = int(hashlib.sha1('$(hostname)').hexdigest(), 16)
+index = hash % ${#colors} + 1
+
+print(index)
+EOF
+    )
     local color=$colors[index]
     if [[ "${RPR_SHOW_HOST}" == "true" ]]; then
         echo "%{$fg[$color]%}%m%{$reset_color%}"

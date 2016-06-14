@@ -24,6 +24,7 @@
 	grp = grep -C 1
 	ff = merge --ff-only
 	noff = merge --no-ff
+	f = fetch --tags --prune
 	fa = fetch --all --tags --prune
 	pullff = pull --ff-only
 	pullrb = pull --rebase

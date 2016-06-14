@@ -57,6 +57,7 @@
 [diff]
 	mnemonicPrefix = true
 	wordRegex = "[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
+	compactionHeuristic = true
 
 [color]
 	ui = auto

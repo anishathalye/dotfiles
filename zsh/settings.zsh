@@ -41,3 +41,6 @@ bindkey '^H' backward-delete-char
 
 # Use incremental search
 bindkey "^R" history-incremental-search-backward
+
+# Disable shell builtins
+disable r

@@ -26,6 +26,10 @@ function syspip() {
     PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
+function syspip3() {
+    PIP_REQUIRE_VIRTUALENV="" pip3 "$@@"
+}
+
 # cd to git root directory
 alias cdgr='cd "$(git root)"'
 

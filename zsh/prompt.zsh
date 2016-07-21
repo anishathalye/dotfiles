@@ -249,7 +249,7 @@ ASYNC_PROC=0
 function precmd() {
     function async() {
         # save to temp file
-        printf "%s" "$(RCMD)" > "${HOME}/.zsh_tmp_prompt"
+        printf "%s" "$(RCMD)" > "/tmp/zsh_prompt_$$"
 
         # signal parent
         kill -s USR1 $$
@@ -269,7 +269,7 @@ function precmd() {
 
 function TRAPUSR1() {
     # read from temp file
-    RPROMPT="$(cat ${HOME}/.zsh_tmp_prompt)"
+    RPROMPT="$(cat /tmp/zsh_prompt_$$)"
 
     # reset proc number
     ASYNC_PROC=0

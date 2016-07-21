@@ -161,6 +161,9 @@ map zg/ <Plug>(incsearch-easymotion-stay)
 " argwrap
 nnoremap <Leader>w :ArgWrap<CR>
 
+" pencil
+nnoremap <Leader>p :TogglePencil<CR>
+
 "---------------------
 " Local customizations
 "---------------------

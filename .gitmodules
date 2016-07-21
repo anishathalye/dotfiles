@@ -170,6 +170,10 @@
 	path = vim/bundle/vim-argwrap
 	url = https://github.com/FooSoft/vim-argwrap
 	ignore = untracked
+[submodule "vim/bundle/vim-pencil"]
+	path = vim/bundle/vim-pencil
+	url = https://github.com/reedes/vim-pencil
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

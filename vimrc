@@ -162,6 +162,7 @@ map zg/ <Plug>(incsearch-easymotion-stay)
 nnoremap <Leader>w :ArgWrap<CR>
 
 " pencil
+let g:pencil#textwidth = 79 " to match vim
 nnoremap <Leader>p :TogglePencil<CR>
 
 "---------------------

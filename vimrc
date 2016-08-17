@@ -66,7 +66,6 @@ set autochdir " automatically set current directory to directory of last opened 
 set hidden " allow auto-hiding of edited buffers
 set history=8192 " more history
 set nojoinspaces " suppress inserting two spaces between sentences
-set nowrap " don't wrap text by default
 " use 4 spaces instead of tabs during formatting
 set expandtab
 set tabstop=4

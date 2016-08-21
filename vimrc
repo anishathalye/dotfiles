@@ -164,6 +164,19 @@ nnoremap <Leader>w :ArgWrap<CR>
 let g:pencil#textwidth = 79 " to match vim
 nnoremap <Leader>p :TogglePencil<CR>
 
+" markdown
+let g:markdown_fenced_languages = [
+    \ 'bash=sh',
+    \ 'c',
+    \ 'erb=eruby',
+    \ 'javascript',
+    \ 'json',
+    \ 'perl',
+    \ 'python',
+    \ 'ruby',
+    \ 'yaml',
+\]
+
 "---------------------
 " Local customizations
 "---------------------

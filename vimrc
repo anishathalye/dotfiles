@@ -168,6 +168,7 @@ nnoremap <Leader>p :TogglePencil<CR>
 let g:markdown_fenced_languages = [
     \ 'bash=sh',
     \ 'c',
+    \ 'coffee',
     \ 'erb=eruby',
     \ 'javascript',
     \ 'json',

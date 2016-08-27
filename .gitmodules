@@ -37,14 +37,6 @@
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
 	ignore = untracked
-[submodule "vim/bundle/vim-ruby"]
-	path = vim/bundle/vim-ruby
-	url = https://github.com/vim-ruby/vim-ruby.git
-	ignore = untracked
-[submodule "vim/bundle/vim-rdoc"]
-	path = vim/bundle/vim-rdoc
-	url = https://github.com/depuracao/vim-rdoc.git
-	ignore = untracked
 [submodule "vim/bundle/vim-bundler"]
 	path = vim/bundle/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
@@ -56,10 +48,6 @@
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script
-	ignore = untracked
-[submodule "vim/bundle/vim-slim"]
-	path = vim/bundle/vim-slim
-	url = https://github.com/slim-template/vim-slim.git
 	ignore = untracked
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
@@ -104,14 +92,6 @@
 [submodule "vim/bundle/vim-jade"]
 	path = vim/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade
-	ignore = untracked
-[submodule "vim/bundle/vim-stylus"]
-	path = vim/bundle/vim-stylus
-	url = https://github.com/wavded/vim-stylus
-	ignore = untracked
-[submodule "vim/bundle/vim-fireplace"]
-	path = vim/bundle/vim-fireplace
-	url = https://github.com/tpope/vim-fireplace
 	ignore = untracked
 [submodule "vim/bundle/vimbufsync"]
 	path = vim/bundle/vimbufsync

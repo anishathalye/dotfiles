@@ -245,35 +245,23 @@ function RCMD() {
     fi
 }
 
-ASYNC_PROC=0
-function precmd() {
-    function async() {
-        # save to temp file
-        printf "%s" "$(RCMD)" > "/tmp/zsh_prompt_$$"
-
-        # signal parent
-        kill -s USR1 $$
-    }
-
-    # do not clear RPROMPT, let it persist
-
-    # kill child if necessary
-    if [[ "${ASYNC_PROC}" != 0 ]]; then
-        kill -s HUP $ASYNC_PROC >/dev/null 2>&1 || :
-    fi
-
-    # start background computation
-    async &!
-    ASYNC_PROC=$!
-}
-
-function TRAPUSR1() {
-    # read from temp file
-    RPROMPT="$(cat /tmp/zsh_prompt_$$)"
-
-    # reset proc number
-    ASYNC_PROC=0
-
+function update_prompt_callback() {
+    RPROMPT="$3"
     # redisplay
     zle && zle reset-prompt
+}
+
+function precmd() {
+    # do not clear RPROMPT, let it persist
+
+    # restart worker so it has the right $PWD
+    #
+    # this is necessary because we can't pass "$(pwd)" as an argument to the
+    # async job because it doesn't work when the directory has spaces in it
+    async_stop_worker 'prompt'
+    async_start_worker 'prompt' -n
+    async_register_callback 'prompt' update_prompt_callback
+
+    # start background computation
+    async_job 'prompt' RCMD
 }

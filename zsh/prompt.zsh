@@ -236,6 +236,7 @@ RPROMPT='' # set asynchronously and dynamically
 
 # Right-hand prompt
 function RCMD() {
+    cd "$(echo "$1" | base64 -d)"
     if [[ "${PROMPT_MODE}" == 0 ]]; then
         echo "$(RPR_INFO)$(git_prompt_string)"
     elif [[ "${PROMPT_MODE}" == 1 ]]; then
@@ -251,17 +252,20 @@ function update_prompt_callback() {
     zle && zle reset-prompt
 }
 
+# this worker needs to be started after all functions that it needs to call
+# have been defined
+async_start_worker 'prompt' -n
+async_register_callback 'prompt' update_prompt_callback
+
 function precmd() {
     # do not clear RPROMPT, let it persist
 
-    # restart worker so it has the right $PWD
-    #
-    # this is necessary because we can't pass "$(pwd)" as an argument to the
-    # async job because it doesn't work when the directory has spaces in it
-    async_stop_worker 'prompt'
-    async_start_worker 'prompt' -n
-    async_register_callback 'prompt' update_prompt_callback
+    # flush pending jobs
+    async_flush_jobs 'prompt'
 
     # start background computation
-    async_job 'prompt' RCMD
+    #
+    # the directory is base64 encoded before passing it through because
+    # directory names with spaces don't work properly
+    async_job 'prompt' RCMD "$(pwd | base64 -w 0)"
 }

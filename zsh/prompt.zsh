@@ -236,7 +236,7 @@ RPROMPT='' # set asynchronously and dynamically
 
 # Right-hand prompt
 function RCMD() {
-    cd "$1"
+    cd "$(echo "$1" | base64 -d)"
     if [[ "${PROMPT_MODE}" == 0 ]]; then
         echo "$(RPR_INFO)$(git_prompt_string)"
     elif [[ "${PROMPT_MODE}" == 1 ]]; then
@@ -264,5 +264,8 @@ function precmd() {
     async_flush_jobs 'prompt'
 
     # start background computation
-    async_job 'prompt' RCMD "$(pwd)"
+    #
+    # the directory is base64 encoded before passing it through because
+    # directory names with spaces don't work properly
+    async_job 'prompt' RCMD "$(pwd | base64 -w 0)"
 }

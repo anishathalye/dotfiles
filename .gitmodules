@@ -166,6 +166,3 @@
 [submodule "zsh/plugins/zsh-completions"]
 	path = zsh/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
-[submodule "zsh/plugins/zsh-async"]
-	path = zsh/plugins/zsh-async
-	url = https://github.com/mafredri/zsh-async

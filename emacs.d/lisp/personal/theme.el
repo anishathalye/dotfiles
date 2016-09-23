@@ -1,0 +1,5 @@
+(add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
+(setf solarized-termcolors 256)
+(set-frame-parameter nil 'background-mode 'dark)
+(set-terminal-parameter nil 'background-mode 'dark)
+(load-theme 'solarized t)

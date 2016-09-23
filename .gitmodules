@@ -154,6 +154,48 @@
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
 	ignore = untracked
+[submodule "emacs.d/vendor/use-package"]
+	path = emacs.d/vendor/use-package
+	url = https://github.com/jwiegley/use-package
+[submodule "emacs.d/vendor/PG"]
+	path = emacs.d/vendor/PG
+	url = https://github.com/ProofGeneral/PG
+[submodule "emacs.d/vendor/evil"]
+	path = emacs.d/vendor/evil
+	url = https://github.com/anishathalye/evil
+[submodule "emacs.d/vendor/editorconfig-emacs"]
+	path = emacs.d/vendor/editorconfig-emacs
+	url = https://github.com/editorconfig/editorconfig-emacs
+[submodule "emacs.d/vendor/emacs-color-theme-solarized"]
+	path = emacs.d/vendor/emacs-color-theme-solarized
+	url = https://github.com/sellout/emacs-color-theme-solarized
+[submodule "emacs.d/vendor/fiplr"]
+	path = emacs.d/vendor/fiplr
+	url = https://github.com/grizzl/fiplr
+[submodule "emacs.d/vendor/grizzl"]
+	path = emacs.d/vendor/grizzl
+	url = https://github.com/grizzl/grizzl
+[submodule "emacs.d/vendor/packed"]
+	path = emacs.d/vendor/packed
+	url = https://github.com/tarsius/packed
+[submodule "emacs.d/vendor/dash.el"]
+	path = emacs.d/vendor/dash.el
+	url = https://github.com/magnars/dash.el
+[submodule "emacs.d/vendor/auto-compile"]
+	path = emacs.d/vendor/auto-compile
+	url = https://github.com/tarsius/auto-compile
+[submodule "emacs.d/vendor/emacs-neotree"]
+	path = emacs.d/vendor/emacs-neotree
+	url = https://github.com/jaypei/emacs-neotree
+[submodule "emacs.d/vendor/evil-leader"]
+	path = emacs.d/vendor/evil-leader
+	url = https://github.com/cofi/evil-leader
+[submodule "emacs.d/vendor/undo-tree"]
+	path = emacs.d/vendor/undo-tree
+	url = https://github.com/emacsmirror/undo-tree
+[submodule "emacs.d/vendor/company-mode"]
+	path = emacs.d/vendor/company-mode
+	url = https://github.com/company-mode/company-mode
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

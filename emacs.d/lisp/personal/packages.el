@@ -68,7 +68,8 @@
   (setf overlay-arrow-string "")
   (setf proof-splash-enable nil)
 
-  ;; electric terminator
+  ;; Coq specific
+  (setf coq-compile-before-require t)
   (setf coq-one-command-per-line nil) ; results in better behavior in Coq
   (setf proof-electric-terminator-enable t))
 

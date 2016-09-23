@@ -67,11 +67,11 @@
   (setf proof-colour-locked t)
   (setf overlay-arrow-string "")
   (setf proof-splash-enable nil)
+  (setf proof-electric-terminator-enable t)
 
   ;; Coq specific
   (setf coq-compile-before-require t)
-  (setf coq-one-command-per-line nil) ; results in better behavior in Coq
-  (setf proof-electric-terminator-enable t))
+  (setf coq-one-command-per-line nil)) ; results in better behavior for electric terminator
 
 (use-package editorconfig
   :load-path "vendor/editorconfig-emacs"

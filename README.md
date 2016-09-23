@@ -13,6 +13,7 @@ Making Local Customizations
 You can make local customizations for some programs by editing these files:
 
 * `vim` : `~/.vimrc_local`
+* `emacs` : `~/.emacs_local`
 * `zsh` : `~/.zshrc_local_before` run before `.zshrc`
 * `zsh` : `~/.zshrc_local_after` run after `.zshrc`
 * `git` : `~/.gitconfig_local`

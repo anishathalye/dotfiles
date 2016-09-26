@@ -67,7 +67,6 @@
   (setf proof-colour-locked t)
   (setf overlay-arrow-string "")
   (setf proof-splash-enable nil)
-  (setf proof-electric-terminator-enable t)
 
   ;; Coq specific
   (setf coq-compile-before-require t)
@@ -107,6 +106,7 @@
   (global-evil-leader-mode)
   (evil-leader/set-leader ",")
   (evil-leader/set-key
+    "e" 'proof-electric-terminator-toggle
     "m" 'menu-bar-open
     "n" 'neotree-toggle
     "f" 'neotree-find))

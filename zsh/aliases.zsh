@@ -92,7 +92,7 @@ function nonascii() {
 # Fetch pull request
 
 function fpr() {
-    git fetch "git@github.com:${1}/${2}" "${3}:${1}/${3}"
+    git fetch "git@github.com:${2}/${1}" "${3}:${2}/${3}"
 }
 
 # Serve current directory

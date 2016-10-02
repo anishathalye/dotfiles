@@ -45,6 +45,8 @@
 	sfs = show --format=fuller --stat
 	info = ! "inf() { if git rev-parse ${1} >/dev/null 2>&1; then git cat-file -p $(git rev-parse ${1}); else echo Invalid object; fi }; inf"
 	cleanall = clean -fdx # this is dangerous, so it's intentionally long to type
+	stsh = stash --keep-index
+	staash = stash --include-untracked
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule update --init --remote
 	empty-tree-hash = hash-object -t tree /dev/null

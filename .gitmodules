@@ -149,6 +149,10 @@
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
 	ignore = untracked
+[submodule "vim/bundle/vim-vagrant"]
+	path = vim/bundle/vim-vagrant
+	url = https://github.com/hashivim/vim-vagrant
+	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

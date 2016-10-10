@@ -135,4 +135,5 @@
 
   :config
   (linum-relative-on)
-  (setf linum-relative-format "%3s "))
+  (setf linum-relative-format "%3s "
+        linum-relative-current-symbol ""))

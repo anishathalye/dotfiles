@@ -195,6 +195,9 @@
 [submodule "emacs.d/vendor/company-mode"]
 	path = emacs.d/vendor/company-mode
 	url = https://github.com/company-mode/company-mode
+[submodule "emacs.d/vendor/linum-relative"]
+	path = emacs.d/vendor/linum-relative
+	url = https://github.com/coldnew/linum-relative
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = zsh/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

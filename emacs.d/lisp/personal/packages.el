@@ -116,3 +116,23 @@
 
   :config
   (global-company-mode))
+
+(use-package linum-relative
+  :load-path "vendor/linum-relative"
+
+  :init
+  (global-linum-mode t)
+  ;; add padding next to line number
+  (setf linum-format
+        (lambda (line)
+          (propertize
+           (format
+            (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
+              (concat "%" (number-to-string w) "d "))
+            line)
+           'face
+           'linum)))
+
+  :config
+  (linum-relative-on)
+  (setf linum-relative-format "%3s "))

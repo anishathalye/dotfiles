@@ -27,7 +27,7 @@ function syspip() {
 }
 
 function syspip3() {
-    PIP_REQUIRE_VIRTUALENV="" pip3 "$@@"
+    PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 
 # cd to git root directory

@@ -6,26 +6,25 @@
 - clean: ['~', '~/.config']
 
 - link:
-    ~/.agignore: agignore
-    ~/.aria2/aria2.conf: aria2.conf
-    ~/.axelrc: axelrc
+    ~/.agignore:
+    ~/.aria2/aria2.conf:
+    ~/.axelrc:
     ~/.dotfiles: ''
-    ~/.emacs.d: emacs.d
-    ~/.emacs: emacs
+    ~/.emacs.d:
+    ~/.emacs:
     ~/.ipython/profile_default/ipython_kernel_config.py:
-      ipython/profile_default/ipython_kernel_config.py
-    ~/.gitconfig: gitconfig
-    ~/.gitignore_global: gitignore_global
-    ~/.gnupg/gpg.conf: gpg.conf
-    ~/.hgrc: hgrc
-    ~/.inputrc: inputrc
-    ~/.rtorrent.rc: rtorrent.rc
-    ~/.screenrc: screenrc
-    ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
-    ~/.vimrc: vimrc
-    ~/.zsh: zsh
-    ~/.zshrc: zshrc
+    ~/.gitconfig:
+    ~/.gitignore_global:
+    ~/.gnupg/gpg.conf:
+    ~/.hgrc:
+    ~/.inputrc:
+    ~/.rtorrent.rc:
+    ~/.screenrc:
+    ~/.tmux.conf:
+    ~/.vim:
+    ~/.vimrc:
+    ~/.zsh:
+    ~/.zshrc:
 
 - shell:
   - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads

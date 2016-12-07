@@ -23,7 +23,9 @@ augroup END
 " vim can autodetect this based on $TERM (e.g. 'xterm-256color')
 " but it can be set to force 256 colors
 " set t_Co=256
-if &t_Co < 256
+if has('gui_running')
+    colorscheme solarized
+elseif &t_Co < 256
     colorscheme default
     set nocursorline " looks bad in this mode
 else

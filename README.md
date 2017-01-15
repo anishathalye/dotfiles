@@ -27,7 +27,7 @@ You can make local customizations for some programs by editing these files:
 License
 -------
 
-Copyright (c) 2013-2016 Anish Athalye. Released under the MIT License. See
+Copyright (c) 2013-2017 Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [dotfiles-local]: https://github.com/anishathalye/dotfiles-local

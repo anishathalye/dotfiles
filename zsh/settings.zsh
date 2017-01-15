@@ -1,6 +1,12 @@
 # Initialize completion
 autoload -Uz compinit && compinit -i
 zstyle ':completion:*' menu select=4
+zmodload zsh/complist
+# Use vim style navigation keys in menu completion
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Initialize editing command line
 autoload -U edit-command-line && zle -N edit-command-line

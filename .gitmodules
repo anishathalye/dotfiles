@@ -161,7 +161,7 @@
 	url = https://github.com/ProofGeneral/PG
 [submodule "emacs.d/vendor/evil"]
 	path = emacs.d/vendor/evil
-	url = https://github.com/anishathalye/evil
+	url = https://github.com/emacs-evil/evil
 [submodule "emacs.d/vendor/editorconfig-emacs"]
 	path = emacs.d/vendor/editorconfig-emacs
 	url = https://github.com/editorconfig/editorconfig-emacs

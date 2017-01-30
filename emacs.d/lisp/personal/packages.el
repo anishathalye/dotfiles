@@ -107,6 +107,7 @@
   (evil-leader/set-leader ",")
   (evil-leader/set-key
     "e" 'proof-electric-terminator-toggle
+    "c" 'proof-interrupt-process
     "m" 'menu-bar-open
     "n" 'neotree-toggle
     "f" 'neotree-find))

@@ -40,6 +40,7 @@
 	gra = log --graph --format=compact --all # graph all
 	gral = log --graph --format=line --all # graph all line
 	grad = log --graph --format=detail --all # graph all in detail
+	g = grad
 	sf = show --format=fuller
 	sfw = show --format=fuller --color-words
 	sfs = show --format=fuller --stat

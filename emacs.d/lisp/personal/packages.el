@@ -104,7 +104,6 @@
 
   :config
   (global-evil-leader-mode)
-  (evil-leader/set-leader ",")
   (evil-leader/set-key
     "e" 'proof-electric-terminator-toggle
     "c" 'proof-interrupt-process

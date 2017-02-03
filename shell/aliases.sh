@@ -15,18 +15,18 @@ alias mv='mv -i'
 alias gag='git exec ag'
 
 # Update dotfiles
-function dfu() {
+dfu() {
     (
         cd ~/.dotfiles && git pull --ff-only && ./install -q
     )
 }
 
 # Use pip without requiring virtualenv
-function syspip() {
+syspip() {
     PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
-function syspip3() {
+syspip3() {
     PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 
@@ -34,20 +34,20 @@ function syspip3() {
 alias cdgr='cd "$(git root)"'
 
 # Create a directory and cd into it
-function mcd() {
+mcd() {
     mkdir "${1}" && cd "${1}"
 }
 
 # Jump to directory containing file
-function jump() {
+jump() {
     cd "$(dirname ${1})"
 }
 
 # cd replacement for screen to track cwd (like tmux)
-function scr_cd()
+scr_cd()
 {
-    builtin cd $1
-    screen -X chdir $PWD
+    builtin cd "$1"
+    screen -X chdir "$PWD"
 }
 
 if [[ -n $STY ]]; then
@@ -55,7 +55,7 @@ if [[ -n $STY ]]; then
 fi
 
 # Go up [n] directories
-function up()
+up()
 {
     local cdir="$(pwd)"
     if [[ "${1}" == "" ]]; then
@@ -65,7 +65,7 @@ function up()
     elif ! [[ "${1}" -gt "0" ]]; then
         echo "Error: argument must be positive"
     else
-        for i in {1..${1}}; do
+        for ((i=0; i<${1}; i++)); do
             local ncdir="$(dirname "${cdir}")"
             if [[ "${cdir}" == "${ncdir}" ]]; then
                 break
@@ -78,20 +78,20 @@ function up()
 }
 
 # Execute a command in a specific directory
-function in() {
+xin() {
     (
-        cd ${1} && shift && ${@}
+        cd "${1}" && shift && ${@}
     )
 }
 
 # Check if a file contains non-ascii characters
-function nonascii() {
-    LC_ALL=C grep -n '[^[:print:][:space:]]' ${1}
+nonascii() {
+    LC_ALL=C grep -n '[^[:print:][:space:]]' "${1}"
 }
 
 # Fetch pull request
 
-function fpr() {
+fpr() {
     if ! git rev-parse --git-dir > /dev/null 2>&1; then
         echo "error: fpr must be executed from within a git repository"
         return 1
@@ -117,7 +117,7 @@ function fpr() {
 
 # Serve current directory
 
-function serve() {
+serve() {
     ruby -run -e httpd . -p "${1:-8080}"
 }
 

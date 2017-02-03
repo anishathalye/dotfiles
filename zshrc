@@ -10,13 +10,13 @@ source ~/.zsh/plugins_before.zsh
 source ~/.zsh/settings.zsh
 
 # Bootstrap
-source ~/.zsh/bootstrap.zsh
+source ~/.shell/bootstrap.sh
 
 # External settings
-source ~/.zsh/external.zsh
+source ~/.shell/external.sh
 
 # Aliases
-source ~/.zsh/aliases.zsh
+source ~/.shell/aliases.sh
 
 # Custom prompt
 source ~/.zsh/prompt.zsh

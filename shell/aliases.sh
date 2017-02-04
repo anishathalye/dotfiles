@@ -46,7 +46,7 @@ jump() {
 # cd replacement for screen to track cwd (like tmux)
 scr_cd()
 {
-    builtin cd "$1"
+    builtin cd $1
     screen -X chdir "$PWD"
 }
 

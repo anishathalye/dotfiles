@@ -199,7 +199,7 @@
 	path = emacs.d/vendor/linum-relative
 	url = https://github.com/coldnew/linum-relative
 [submodule "zsh/plugins/dircolors-solarized"]
-	path = zsh/plugins/dircolors-solarized
+	path = shell/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git
 [submodule "zsh/zsh-syntax-highlighting"]
 	path = zsh/zsh-syntax-highlighting

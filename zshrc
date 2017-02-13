@@ -21,9 +21,6 @@ source ~/.shell/aliases.sh
 # Custom prompt
 source ~/.zsh/prompt.zsh
 
-# Syntax highlighting
-source ~/.zsh/syntax.zsh
-
 # External plugins (initialized after)
 source ~/.zsh/plugins_after.zsh
 

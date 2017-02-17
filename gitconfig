@@ -100,6 +100,9 @@
 [advice]
 	detachedHead = false
 
+[user]
+	useConfigOnly = true
+
 [core]
 	excludesfile = ~/.gitignore_global
 

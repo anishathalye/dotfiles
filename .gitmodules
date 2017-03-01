@@ -198,6 +198,18 @@
 [submodule "emacs.d/vendor/linum-relative"]
 	path = emacs.d/vendor/linum-relative
 	url = https://github.com/coldnew/linum-relative
+[submodule "emacs.d/vendor/company-coq"]
+	path = emacs.d/vendor/company-coq
+	url = https://github.com/cpitclaudel/company-coq
+[submodule "emacs.d/vendor/company-math"]
+	path = emacs.d/vendor/company-math
+	url = https://github.com/vspinu/company-math
+[submodule "emacs.d/vendor/math-symbol-lists"]
+	path = emacs.d/vendor/math-symbol-lists
+	url = https://github.com/vspinu/math-symbol-lists
+[submodule "emacs.d/vendor/yasnippet"]
+	path = emacs.d/vendor/yasnippet
+	url = https://github.com/joaotavora/yasnippet
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = shell/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

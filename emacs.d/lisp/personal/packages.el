@@ -64,6 +64,8 @@
   (add-hook 'proof-mode-hook (lambda ()
                                (setq-local global-hl-line-mode
                                            (null global-hl-line-mode))))
+  (add-hook 'coq-mode-hook #'company-coq-mode)
+
   (setf proof-colour-locked t)
   (setf overlay-arrow-string "")
   (setf proof-splash-enable nil)
@@ -116,6 +118,20 @@
 
   :config
   (global-company-mode))
+
+(use-package math-symbol-lists
+  :load-path "vendor/math-symbol-lists")
+
+;; this needs to be loaded after company and math-symbol-lists
+(use-package company-math
+  :load-path "vendor/company-math")
+
+(use-package yasnippet
+  :load-path "vendor/yasnippet")
+
+;; this needs to be loaded after company-math and yasnippet
+(use-package company-coq
+  :load-path "vendor/company-coq")
 
 (use-package linum-relative
   :load-path "vendor/linum-relative"

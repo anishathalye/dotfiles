@@ -131,7 +131,10 @@
 
 ;; this needs to be loaded after company-math and yasnippet
 (use-package company-coq
-  :load-path "vendor/company-coq")
+  :load-path "vendor/company-coq"
+
+  :config
+  (setf company-coq-disabled-features '(unicode-math-backend)))
 
 (use-package linum-relative
   :load-path "vendor/linum-relative"

@@ -58,9 +58,17 @@
 
   :config
   ;; colors and display
-  (custom-set-faces
-   '(proof-locked-face ((t (:background "#262626"))))
-   '(proof-queue-face ((t (:background "#00005f")))))
+  (if (display-graphic-p)
+      ;; GUI
+      ; red: #fec1c2, green: #e1fec1, blue: #c1fefc
+      (custom-set-faces
+       '(proof-locked-face ((t (:background "#e1fec1"))))
+       '(proof-queue-face ((t (:background "#c1fefc")))))
+      ;; CLI
+      (custom-set-faces
+       '(proof-locked-face ((t (:background "#262626")))) ; terminal
+       '(proof-queue-face ((t (:background "#00005f"))))))
+
   (add-hook 'proof-mode-hook (lambda ()
                                (setq-local global-hl-line-mode
                                            (null global-hl-line-mode))))

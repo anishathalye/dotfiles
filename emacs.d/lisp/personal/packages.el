@@ -142,7 +142,8 @@
   :load-path "vendor/company-coq"
 
   :config
-  (setf company-coq-disabled-features '(unicode-math-backend)))
+  (setf company-coq-disabled-features
+        '(unicode-math-backend prettify-symbols smart-subscripts)))
 
 (use-package linum-relative
   :load-path "vendor/linum-relative"

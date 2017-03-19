@@ -1,6 +1,7 @@
 (setf inhibit-startup-screen t) ; disable welcome screen
 
-(menu-bar-mode -1) ; disable menu bar
+(when (not (display-graphic-p))
+  (menu-bar-mode -1)) ; disable menu bar in CLI
 
 ;; improve scrolling
 (setf scroll-margin 5

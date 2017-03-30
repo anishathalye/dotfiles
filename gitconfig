@@ -1,6 +1,7 @@
 [alias]
 	exec = ! "exec"
 	st = status -sb
+	versions = tag -l --sort=version:refname
 	br = branch -vv
 	bra = branch -vv --all
 	bed = branch --edit-description

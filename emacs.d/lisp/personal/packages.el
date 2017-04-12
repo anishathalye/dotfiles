@@ -97,7 +97,10 @@
   :load-path "vendor/fiplr"
 
   :config
-  (define-key evil-normal-state-map (kbd "C-p") 'fiplr-find-file))
+  (define-key evil-normal-state-map (kbd "C-p") 'fiplr-find-file)
+  ;; the fiplr-keymap may not be part of the public API, but this seems to work
+  ;; for now
+  (define-key *fiplr-keymap* (kbd "<f5>") 'fiplr-reload-list))
 
 ;; this needs to be loaded after evil
 (use-package neotree

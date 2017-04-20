@@ -1,0 +1,1 @@
+../vendor/irssi-smartfilter/smartfilter.pl

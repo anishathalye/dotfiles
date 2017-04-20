@@ -42,8 +42,8 @@ foreach my $network (keys $config) {
     my $user_name = $value->{'user_name'};
     my $nick = $value->{'nick'};
     my $password = $value->{'password'};
-    Irssi::command("network add -user $user_name -realname \"$real_name\" -nick $nick $network");
-    Irssi::command("network add -autosendcmd \"msg nickserv identify $password; wait 10000\" $network");
+    Irssi::command("network add -user $user_name -realname \"$real_name\" " .
+        "-nick $nick -autosendcmd \"msg nickserv identify $password; wait 5000\" $network");
 
     # server
     my $server = $value->{'server'};

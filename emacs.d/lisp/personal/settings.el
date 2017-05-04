@@ -1,5 +1,7 @@
 (setf inhibit-startup-screen t) ; disable welcome screen
 
+(setf ring-bell-function 'ignore) ; disable alarm bell
+
 (when (not (display-graphic-p))
   (menu-bar-mode -1)) ; disable menu bar in CLI
 

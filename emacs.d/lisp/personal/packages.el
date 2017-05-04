@@ -88,6 +88,40 @@
   :config
   (editorconfig-mode 1))
 
+(use-package avy
+  :load-path "vendor/avy"
+
+  :config
+  (setf avy-background t)
+  (setf avy-all-windows nil)
+  (setf avy-keys (append "asdghklqwertyuiopzxcvbnmfj;" nil)) ; same as vim-easymotion
+  (if (display-graphic-p)
+      ;; GUI
+      (custom-set-faces
+       '(avy-lead-face ((t (:foreground "#dc322f" :weight bold)))) ; red
+       '(avy-lead-face-0 ((t (:foreground "#268bd2" :weight bold)))) ; blue
+       '(avy-lead-face-2 ((t (:foreground "#268bd2" :weight bold))))) ; blue
+      ;; CLI
+      (custom-set-faces
+       '(avy-lead-face ((t (:foreground "#d70000" :weight bold)))) ; red
+       '(avy-lead-face-0 ((t (:foreground "#af8700" :weight bold)))) ; yellow
+       '(avy-lead-face-2 ((t (:foreground "#af8700" :weight bold))))))) ; yellow
+
+;; this needs to be loaded after avy
+(use-package evil-easymotion
+  :load-path "vendor/evil-easymotion"
+
+  :config
+  (let ((prefix "SPC"))
+    (evilem-default-keybindings prefix)
+    ;; redefine certain macros to allow matching across lines
+    (evilem-define (kbd (concat prefix " w")) #'evil-forward-word-begin)
+    (evilem-define (kbd (concat prefix " W")) #'evil-forward-WORD-begin)
+    (evilem-define (kbd (concat prefix " e")) #'evil-forward-word-end)
+    (evilem-define (kbd (concat prefix " E")) #'evil-forward-WORD-end)
+    (evilem-define (kbd (concat prefix " b")) #'evil-backward-word-begin)
+    (evilem-define (kbd (concat prefix " B")) #'evil-backward-WORD-begin)))
+
 ;; this needs to be loaded before fiplr
 (use-package grizzl
   :load-path "vendor/grizzl")

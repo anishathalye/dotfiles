@@ -210,6 +210,12 @@
 [submodule "emacs.d/vendor/yasnippet"]
 	path = emacs.d/vendor/yasnippet
 	url = https://github.com/joaotavora/yasnippet
+[submodule "emacs.d/vendor/avy"]
+	path = emacs.d/vendor/avy
+	url = https://github.com/abo-abo/avy
+[submodule "emacs.d/vendor/evil-easymotion"]
+	path = emacs.d/vendor/evil-easymotion
+	url = https://github.com/PythonNut/evil-easymotion
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = shell/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git

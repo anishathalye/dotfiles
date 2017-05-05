@@ -91,6 +91,9 @@ endif
 " Misc configurations
 "--------------------
 
+" disable audible bell
+set noerrorbells visualbell t_vb=
+
 " open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright

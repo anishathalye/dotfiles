@@ -179,6 +179,7 @@ let g:markdown_fenced_languages = [
     \ 'python',
     \ 'ruby',
     \ 'yaml',
+    \ 'go',
 \]
 
 "---------------------

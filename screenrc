@@ -3,3 +3,6 @@ hardstatus string '%{= g}[ %H %{= g}][ %= %{= w}%-w%{= b}%n*%t%{= w}%+w %= %{= g
 defscrollback 1000
 startup_message off
 term screen-256color
+
+bind x
+bind ^x

@@ -3,6 +3,8 @@
 # RPR_SHOW_USER=(true, false) - show username in rhs prompt
 # RPR_SHOW_HOST=(true, false) - show host in rhs prompt
 # RPR_SHOW_GIT=(true, false) - show git status in rhs prompt
+# PR_EXTRA="[stuff]" - extra content to add to prompt
+# RPR_EXTRA="[stuff]" - extra content to add to rhs prompt
 
 # Set custom prompt
 
@@ -220,28 +222,36 @@ function tog() {
     fi
 }
 
+function PR_EXTRA() {
+    # do nothing by default
+}
+
 # Prompt
 function PCMD() {
     if [[ "${PROMPT_MODE}" == 0 ]]; then
-        echo "$(PR_DIR) $(PR_ERROR)$(PR_ARROW) " # space at the end
+        echo "$(PR_EXTRA)$(PR_DIR) $(PR_ERROR)$(PR_ARROW) " # space at the end
     elif [[ "${PROMPT_MODE}" == 1 ]]; then
-        echo "$(PR_DIR 1) $(PR_ERROR)$(PR_ARROW) " # space at the end
+        echo "$(PR_EXTRA)$(PR_DIR 1) $(PR_ERROR)$(PR_ARROW) " # space at the end
     else
-        echo "$(PR_ERROR)$(PR_ARROW) " # space at the end
+        echo "$(PR_EXTRA)$(PR_ERROR)$(PR_ARROW) " # space at the end
     fi
 }
 
 PROMPT='$(PCMD)' # single quotes to prevent immediate execution
 RPROMPT='' # set asynchronously and dynamically
 
+function RPR_EXTRA() {
+    # do nothing by default
+}
+
 # Right-hand prompt
 function RCMD() {
     if [[ "${PROMPT_MODE}" == 0 ]]; then
-        echo "$(RPR_INFO)$(git_prompt_string)"
+        echo "$(RPR_INFO)$(git_prompt_string)$(RPR_EXTRA)"
     elif [[ "${PROMPT_MODE}" == 1 ]]; then
-        echo "$(git_prompt_string)"
+        echo "$(git_prompt_string)$(RPR_EXTRA)"
     else
-        echo ""
+        echo "$(RPR_EXTRA)"
     fi
 }
 

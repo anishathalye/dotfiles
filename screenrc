@@ -1,8 +1,65 @@
 hardstatus alwayslastline
 hardstatus string '%{= g}[ %H %{= g}][ %= %{= w}%-w%{= b}%n*%t%{= w}%+w %= %{= g}][ %m-%d %c %{= g}]'
-defscrollback 1000
+defscrollback 10000
 startup_message off
 term screen-256color
 
+# unbind keys
 bind x
 bind ^x
+bind C
+bind b
+bind ^b
+bind ^v
+bind .
+bind F
+bind f
+bind ^f
+bind h
+bind {
+bind }
+bind i
+bind m
+bind ^m
+bind ,
+bind H
+bind M
+bind N
+bind B
+bind D
+bind <
+bind >
+bind =
+bind _
+bind z
+bind ^z
+bind t
+bind ^t
+bind ^g
+bind v
+bind W
+bind ^w
+bind r
+bind ^r
+bind s
+bind ^s
+bind q
+bind ^q
+
+# rebind keys
+bind k
+bind ^k
+bind x kill
+bind A
+bind , title
+bind S
+bind " split
+bind w windowlist -b
+bind |
+bind % split -v
+
+# start numbering from 1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1

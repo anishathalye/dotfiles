@@ -58,6 +58,13 @@ bind w windowlist -b
 bind |
 bind % split -v
 
+# new keybindings
+bind h focus
+bind j focus
+bind k focus
+bind l focus
+bind ; focus
+
 # start numbering from 1
 bind c screen 1
 bind ^c screen 1

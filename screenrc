@@ -64,9 +64,3 @@ bind j focus
 bind k focus
 bind l focus
 bind ; focus
-
-# start numbering from 1
-bind c screen 1
-bind ^c screen 1
-bind 0 select 10
-screen 1

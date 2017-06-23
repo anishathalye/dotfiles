@@ -224,3 +224,6 @@
 [submodule "irssi/scripts/vendor/irssi-smartfilter"]
 	path = irssi/scripts/vendor/irssi-smartfilter
 	url = https://github.com/lifeforms/irssi-smartfilter
+[submodule "jupyter/nbextensions/jupyter-vim-binding"]
+	path = jupyter/nbextensions/jupyter-vim-binding
+	url = https://github.com/lambdalisue/jupyter-vim-binding

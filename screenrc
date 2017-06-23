@@ -53,7 +53,7 @@ bind x kill
 bind A
 bind , title
 bind S
-bind " split
+bind '"' split
 bind w windowlist -b
 bind |
 bind % split -v

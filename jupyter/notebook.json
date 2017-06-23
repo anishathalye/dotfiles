@@ -1,5 +1,10 @@
 {
   "load_extensions": {
     "jupyter-vim-binding/vim_binding": true
+  },
+  "CodeCell": {
+    "cm_config": {
+      "lineNumbers": true
+    }
   }
 }

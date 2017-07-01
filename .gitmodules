@@ -145,6 +145,10 @@
 	path = vim/bundle/vim-vagrant
 	url = https://github.com/hashivim/vim-vagrant
 	ignore = untracked
+[submodule "vim/bundle/typescript-vim"]
+	path = vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
+	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

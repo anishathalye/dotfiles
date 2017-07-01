@@ -145,10 +145,6 @@
 	path = vim/bundle/vim-vagrant
 	url = https://github.com/hashivim/vim-vagrant
 	ignore = untracked
-[submodule "vim/bundle/vim-go"]
-	path = vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go
-	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

@@ -1,5 +1,6 @@
 hardstatus alwayslastline
 hardstatus string '%{= g}[ %H %{= g}][ %= %{= w}%-w%{= b}%n*%t%{= w}%+w %= %{= g}][ %m-%d %c %{= g}]'
+caption splitonly '%?%F%{.g}%:%{}%?[%n %t]'
 defscrollback 10000
 startup_message off
 term screen-256color

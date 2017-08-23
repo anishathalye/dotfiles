@@ -5,10 +5,6 @@
 	path = vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
 	ignore = untracked
-[submodule "vim/bundle/vim-neatstatus"]
-	path = vim/bundle/vim-neatstatus
-	url = https://github.com/maciakl/vim-neatstatus.git
-	ignore = untracked
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
@@ -156,6 +152,10 @@
 [submodule "vim/bundle/vim-solidity"]
 	path = vim/bundle/vim-solidity
 	url = https://github.com/tomlion/vim-solidity
+	ignore = untracked
+[submodule "vim/bundle/lightline.vim"]
+	path = vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
 	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package

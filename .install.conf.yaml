@@ -36,4 +36,13 @@
 
 - shell:
   - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads
-  - git update-submodules # after linking ~/.gitconfig
+  # the following have to run after linking ~/.gitconfig
+  - git update-submodules
+  - >
+    git cleanall -f
+    emacs.d/vendor/
+    irssi/scripts/vendor/
+    jupyter/nbextensions/
+    shell/plugins/
+    vim/bundle/
+    zsh/plugins/

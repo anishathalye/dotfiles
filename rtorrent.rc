@@ -51,3 +51,6 @@ peer_exchange = yes
 
 # Encoding
 encoding_list = UTF-8
+
+# Max file size
+set_max_file_size = 500G

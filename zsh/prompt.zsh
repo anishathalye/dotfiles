@@ -95,6 +95,14 @@ function RPR_USER() {
     fi
 }
 
+function machine_name() {
+    if [[ -f $HOME/.name ]]; then
+        cat $HOME/.name
+    else
+        hostname
+    fi
+}
+
 # Host in a deterministically chosen color
 RPR_SHOW_HOST=true # Set to false to disable host in rhs prompt
 function RPR_HOST() {
@@ -103,7 +111,7 @@ function RPR_HOST() {
     local index=$(python <<EOF
 import hashlib
 
-hash = int(hashlib.sha1('$(hostname)'.encode('utf8')).hexdigest(), 16)
+hash = int(hashlib.sha1('$(machine_name)'.encode('utf8')).hexdigest(), 16)
 index = hash % ${#colors} + 1
 
 print(index)
@@ -111,7 +119,7 @@ EOF
     )
     local color=$colors[index]
     if [[ "${RPR_SHOW_HOST}" == "true" ]]; then
-        echo "%{$fg[$color]%}%m%{$reset_color%}"
+        echo "%{$fg[$color]%}$(machine_name)%{$reset_color%}"
     fi
 }
 

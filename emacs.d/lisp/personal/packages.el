@@ -11,6 +11,7 @@
   :init
   (setf evil-want-C-u-scroll t)
   (setf evil-want-fine-undo t)
+  (setf evil-want-abbrev-expand-on-insert-exit nil)
 
   :config
   ;; enable evil mode

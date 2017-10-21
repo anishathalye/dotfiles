@@ -82,3 +82,7 @@ Host mordor
 Host valinor
     User anish
     HostName valinor.freedns.anish.io
+
+Host moria
+    User anish
+    HostName moria.freedns.anish.io

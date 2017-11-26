@@ -29,7 +29,6 @@
     ~/.rtorrent.rc:
     ~/.screenrc:
     ~/.shell:
-    ~/.ssh/config: ssh/config
     ~/.tmux.conf:
     ~/.vim:
     ~/.vimrc:

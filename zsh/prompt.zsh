@@ -218,16 +218,11 @@ function git_prompt_string() {
 }
 
 PROMPT_MODE=0
+PROMPT_MODES=4
 
 # Function to toggle between prompt modes
 function tog() {
-    if [[ "${PROMPT_MODE}" == 0 ]]; then
-        PROMPT_MODE=1
-    elif [[ "${PROMPT_MODE}" == 1 ]]; then
-        PROMPT_MODE=2
-    else
-        PROMPT_MODE=0
-    fi
+    PROMPT_MODE=$(( (PROMPT_MODE + 1) % PROMPT_MODES))
 }
 
 function PR_EXTRA() {
@@ -236,9 +231,9 @@ function PR_EXTRA() {
 
 # Prompt
 function PCMD() {
-    if [[ "${PROMPT_MODE}" == 0 ]]; then
+    if (( PROMPT_MODE == 0 )); then
         echo "$(PR_EXTRA)$(PR_DIR) $(PR_ERROR)$(PR_ARROW) " # space at the end
-    elif [[ "${PROMPT_MODE}" == 1 ]]; then
+    elif (( PROMPT_MODE == 1 )); then
         echo "$(PR_EXTRA)$(PR_DIR 1) $(PR_ERROR)$(PR_ARROW) " # space at the end
     else
         echo "$(PR_EXTRA)$(PR_ERROR)$(PR_ARROW) " # space at the end
@@ -254,9 +249,9 @@ function RPR_EXTRA() {
 
 # Right-hand prompt
 function RCMD() {
-    if [[ "${PROMPT_MODE}" == 0 ]]; then
+    if (( PROMPT_MODE == 0 )); then
         echo "$(RPR_INFO)$(git_prompt_string)$(RPR_EXTRA)"
-    elif [[ "${PROMPT_MODE}" == 1 ]]; then
+    elif (( PROMPT_MODE <= 2 )); then
         echo "$(git_prompt_string)$(RPR_EXTRA)"
     else
         echo "$(RPR_EXTRA)"

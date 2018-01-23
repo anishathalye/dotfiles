@@ -38,6 +38,7 @@ else
     highlight StatusLine cterm=bold ctermfg=245 ctermbg=235
     highlight StatusLineNC cterm=bold ctermfg=245 ctermbg=235
     let g:lightline = {'colorscheme': 'dark'}
+    highlight SpellBad cterm=underline
 endif
 
 filetype plugin indent on " enable file type detection

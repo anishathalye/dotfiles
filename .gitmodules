@@ -157,6 +157,10 @@
 	path = vim/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
 	ignore = untracked
+[submodule "vim/bundle/vim-over"]
+	path = vim/bundle/vim-over
+	url = https://github.com/osyo-manga/vim-over
+	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

@@ -166,6 +166,8 @@ map zg/ <Plug>(incsearch-easymotion-stay)
 " argwrap
 nnoremap <Leader>w :ArgWrap<CR>
 
+nnoremap <Leader>x :OverCommandLine<CR>
+
 " markdown
 let g:markdown_fenced_languages = [
     \ 'bash=sh',

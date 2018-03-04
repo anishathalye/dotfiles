@@ -22,6 +22,10 @@ dfu() {
 }
 
 # Use pip without requiring virtualenv
+syspip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
 syspip2() {
     PIP_REQUIRE_VIRTUALENV="" pip2 "$@"
 }

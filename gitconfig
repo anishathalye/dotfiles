@@ -100,6 +100,7 @@
 
 [advice]
 	detachedHead = false
+	waitingForEditor = false
 
 [user]
 	useConfigOnly = true

@@ -81,6 +81,7 @@
 
   ;; Coq specific
   (setf coq-compile-before-require t)
+  (setf coq-double-hit-enable t)
   (setf coq-one-command-per-line nil)) ; results in better behavior for electric terminator
 
 (use-package editorconfig

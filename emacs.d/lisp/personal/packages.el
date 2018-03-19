@@ -153,7 +153,7 @@
   :config
   (global-evil-leader-mode)
   (evil-leader/set-key
-    "e" 'proof-electric-terminator-toggle
+    "e" 'coq-double-hit-toggle
     "c" 'proof-interrupt-process
     "m" 'menu-bar-open
     "n" 'neotree-toggle

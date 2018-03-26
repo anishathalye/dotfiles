@@ -30,15 +30,11 @@ schedule = watch_directory,10,10,load_start=~/.rtorrent/watch/*.torrent
 schedule = tied_directory,10,10,start_tied=
 schedule = untied_directory,10,10,close_untied=
 
-
 # Close torrents when disk space is low
 schedule = low_diskspace,5,60,close_low_diskspace=5120M
 
 # Use UDP trackers
 use_udp_trackers = yes
-
-# Use peer exchange (on torrents not marked as private)
-peer_exchange = yes
 
 # Enable DHT support for trackerless torrents or when all trackers are down.
 # May be set to "disable" (completely disable DHT), "off" (do not start DHT),

@@ -218,6 +218,7 @@
 [submodule "emacs.d/vendor/yasnippet"]
 	path = emacs.d/vendor/yasnippet
 	url = https://github.com/joaotavora/yasnippet
+	ignore = untracked
 [submodule "emacs.d/vendor/avy"]
 	path = emacs.d/vendor/avy
 	url = https://github.com/abo-abo/avy

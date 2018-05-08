@@ -6,3 +6,6 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 # Python startup file
 export PYTHONSTARTUP=$HOME/.pythonrc
+
+# Vagrant
+VAGRANT_DISABLE_VBOXSYMLINKCREATE=1

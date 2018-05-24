@@ -39,6 +39,7 @@
 
 - shell:
   - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads
+  - git submodule sync --recursive
   # the following have to run after linking ~/.gitconfig
   - git update-submodules
   - >

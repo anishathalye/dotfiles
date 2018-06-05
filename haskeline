@@ -1,0 +1,3 @@
+editMode: Vi
+completionType: ListCompletion
+maxHistorySize: Just 10000

@@ -161,6 +161,10 @@
 	path = vim/bundle/vim-over
 	url = https://github.com/osyo-manga/vim-over
 	ignore = untracked
+[submodule "vim/bundle/smarty.vim"]
+	path = vim/bundle/smarty.vim
+	url = https://github.com/blueyed/smarty.vim
+	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

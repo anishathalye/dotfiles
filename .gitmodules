@@ -169,6 +169,10 @@
 	path = vim/bundle/vim-slash
 	url = https://github.com/junegunn/vim-slash
 	ignore = untracked
+[submodule "vim/bundle/vim-multiple-cursors"]
+	path = vim/bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
+	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

@@ -130,6 +130,7 @@ endif
 nnoremap ; :CtrlPBuffer<CR>
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_regexp = 1
 
 " ag
 let g:ag_mapping_message=0

@@ -165,10 +165,6 @@
 	path = vim/bundle/smarty.vim
 	url = https://github.com/blueyed/smarty.vim
 	ignore = untracked
-[submodule "vim/bundle/vim-slash"]
-	path = vim/bundle/vim-slash
-	url = https://github.com/junegunn/vim-slash
-	ignore = untracked
 [submodule "vim/bundle/vim-multiple-cursors"]
 	path = vim/bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors

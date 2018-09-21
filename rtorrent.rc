@@ -13,7 +13,7 @@ max_uploads = 15
 # download_rate = ?
 # upload_rate = ?
 
-# encryption settings
+# Encryption settings
 encryption = require,require_RC4,allow_incoming,try_outgoing,enable_retry
 
 # Default directory to save the downloaded torrents
@@ -50,3 +50,28 @@ encoding_list = UTF-8
 
 # Max file size
 set_max_file_size = 500G
+
+# Sorting/filtering views
+# main: by upload
+view.sort_current = main,greater=d.get_up_total=
+view.sort_new = main,less=d.get_up_total=
+view.sort = main
+# seeding: by upload rate, only show torrents with peers
+view.sort_current = seeding,greater=d.get_up_rate=
+view.filter = seeding,"and=d.get_complete=,d.get_peers_connected="
+view.sort_new = seeding,less=d.get_up_rate=
+view.sort = seeding
+# leeching: by name
+view.sort_current = leeching,greater=d.get_name=
+view.sort_new = leeching,greater=d.get_name=
+view.sort = leeching
+# active: by name, only show torrents with peers
+view.sort_current = active,less=d.get_name=
+view.sort_new = leeching,less=d.get_name=
+view.filter = active,d.get_peers_connected=
+view.sort = active
+# maintain sorting
+schedule = sort_main,11,5,view.sort=main
+schedule = sort_seeding,12,5,view.sort=seeding
+schedule = sort_leeching,13,5,view.sort=leeching
+schedule = sort_active,14,5,view.sort=active

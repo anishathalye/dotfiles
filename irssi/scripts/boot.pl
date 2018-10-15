@@ -34,7 +34,7 @@ my $config_str = do {
 };
 
 my $config = decode_json($config_str);
-foreach my $network (keys $config) {
+foreach my $network (keys %{$config}) {
     my $value = $config->{$network};
 
     # network

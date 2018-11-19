@@ -59,5 +59,5 @@ foreach my $network (keys %{$config}) {
     }
 
     # connect
-    Irssi::command("server connect $network");
+    Irssi::command("connect $network");
 }

@@ -106,6 +106,9 @@
 [user]
 	useConfigOnly = true
 
+[http]
+	cookieFile = ~/.gitcookies
+
 [core]
 	excludesfile = ~/.gitignore_global
 

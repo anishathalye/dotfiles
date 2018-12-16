@@ -117,6 +117,10 @@ command -nargs=0 Sudow w !sudo tee % >/dev/null
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
 
+" buffergator
+let g:buffergator_suppress_keymaps = 1
+nnoremap <Leader>b :BuffergatorOpen<CR>
+
 " tagbar
 nnoremap <Leader>t :TagbarToggle<CR>
 

@@ -119,7 +119,7 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 
 " buffergator
 let g:buffergator_suppress_keymaps = 1
-nnoremap <Leader>b :BuffergatorOpen<CR>
+nnoremap <Leader>b :BuffergatorToggle<CR>
 
 " tagbar
 nnoremap <Leader>t :TagbarToggle<CR>

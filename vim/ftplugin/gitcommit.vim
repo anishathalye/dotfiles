@@ -1,1 +1,2 @@
 set spell
+set expandtab

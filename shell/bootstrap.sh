@@ -1,1 +1,1 @@
-PATH=~/.dotfiles/bin:${PATH}
+path_prepend '~/.dotfiles/bin'

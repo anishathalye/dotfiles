@@ -1,1 +1,1 @@
-path_prepend '~/.dotfiles/bin'
+path_prepend "$HOME/.dotfiles/bin"

@@ -101,9 +101,9 @@
 	path = vim/bundle/haskell-vim
 	url = https://github.com/neovimhaskell/haskell-vim
 	ignore = untracked
-[submodule "vim/bundle/ag.vim"]
-	path = vim/bundle/ag.vim
-	url = https://github.com/rking/ag.vim
+[submodule "vim/bundle/ack.vim"]
+	path = vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim
 	ignore = untracked
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic

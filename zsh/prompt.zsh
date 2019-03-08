@@ -253,10 +253,30 @@ function PR_VARS() {
     local i
     for ((i=1; i <= ${#_pr_var_list}; i++)) do
         local v=${_pr_var_list[i]}
-        if export | grep -Eq "^${v}="; then
-            echo -n " ${v}=${(P)${v}}"
+        if [[ -v "${v}" ]]; then
+            # if variable is set
+            if export | grep -Eq "^${v}="; then
+                # if exported, show regularly
+                echo -n " ${v}=${(P)${v}}"
+            else
+                # if not exported, show in red
+                echo -n " %{$fg[red]%}${v}=${(P)${v}}%{$reset_color%}"
+            fi
         fi
     done
+    # show project-specific vars
+    while read v; do
+        if [[ "${v}" =~ '[A-Z_]+' ]]; then
+            # valid environment variable
+            if [[ ${_pr_var_list[(i)${v}]} -gt ${#_pr_var_list} ]]; then
+                # not shown yet
+                if export | grep -Eq "^${v}="; then
+                    # exported
+                    echo -n " ${v}=${(P)${v}}"
+                fi
+            fi
+        fi
+    done < <(git exec cat .showvars 2>/dev/null)
 }
 
 # Prompt

@@ -257,7 +257,7 @@ function PR_VARS() {
             # if variable is set
             if export | grep -Eq "^${v}="; then
                 # if exported, show regularly
-                echo -n " ${v}=${(P)${v}}"
+                echo -n " %{$fg[cyan]%}${v}=${(P)${v}}%{$reset_color%}"
             else
                 # if not exported, show in red
                 echo -n " %{$fg[red]%}${v}=${(P)${v}}%{$reset_color%}"
@@ -272,7 +272,7 @@ function PR_VARS() {
                 # not shown yet
                 if export | grep -Eq "^${v}="; then
                     # exported
-                    echo -n " ${v}=${(P)${v}}"
+                    echo -n " %{$fg[cyan]%}${v}=${(P)${v}}%{$reset_color%}"
                 fi
             fi
         fi

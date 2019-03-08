@@ -229,10 +229,40 @@ function PR_EXTRA() {
     # do nothing by default
 }
 
+# Show select exported environment variables
+
+_pr_var_list=()
+
+function vshow() {
+    for v in "$@"; do
+        if [[ "${v}" =~ '[A-Z_]+' ]]; then
+            if [[ ${_pr_var_list[(i)${v}]} -gt ${#_pr_var_list} ]]; then
+                _pr_var_list+=("${v}")
+            fi
+        fi
+    done
+}
+
+function vhide() {
+    for v in "$@"; do
+        _pr_var_list[${_pr_var_list[(i)${v}]}]=()
+    done
+}
+
+function PR_VARS() {
+    local i
+    for ((i=1; i <= ${#_pr_var_list}; i++)) do
+        local v=${_pr_var_list[i]}
+        if export | grep -Eq "^${v}="; then
+            echo -n " ${v}=${(P)${v}}"
+        fi
+    done
+}
+
 # Prompt
 function PCMD() {
     if (( PROMPT_MODE == 0 )); then
-        echo "$(PR_EXTRA)$(PR_DIR) $(PR_ERROR)$(PR_ARROW) " # space at the end
+        echo "$(PR_EXTRA)$(PR_DIR)$(PR_VARS) $(PR_ERROR)$(PR_ARROW) " # space at the end
     elif (( PROMPT_MODE == 1 )); then
         echo "$(PR_EXTRA)$(PR_DIR 1) $(PR_ERROR)$(PR_ARROW) " # space at the end
     else

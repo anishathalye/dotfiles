@@ -162,7 +162,7 @@ function parse_git_detached() {
 # Show different symbols as appropriate for various Git repository states
 function parse_git_state() {
     # Compose this value via multiple conditional appends.
-    local GIT_STATE=""
+    local GIT_STATE="" GIT_DIFF=""
 
     local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
     if [ "$NUM_AHEAD" -gt 0 ]; then
@@ -234,6 +234,7 @@ function PR_EXTRA() {
 _pr_var_list=()
 
 function vshow() {
+    local v
     for v in "$@"; do
         if [[ "${v}" =~ '[A-Z_]+' ]]; then
             if [[ ${_pr_var_list[(i)${v}]} -gt ${#_pr_var_list} ]]; then
@@ -244,13 +245,14 @@ function vshow() {
 }
 
 function vhide() {
+    local v
     for v in "$@"; do
         _pr_var_list[${_pr_var_list[(i)${v}]}]=()
     done
 }
 
 function PR_VARS() {
-    local i
+    local i v
     for ((i=1; i <= ${#_pr_var_list}; i++)) do
         local v=${_pr_var_list[i]}
         if [[ -v "${v}" ]]; then

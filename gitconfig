@@ -35,11 +35,9 @@
 	cc = rev-list HEAD --count
 	cca = rev-list --all --count
 	lg = log -p
-	gr = log --graph --format=compact # graph
-	grl = log --graph --format=line # graph line
+	gr = log --graph --format=line # graph
 	grd = log --graph --format=detail # graph detail
-	gra = log --graph --format=compact --all # graph all
-	gral = log --graph --format=line --all # graph all line
+	gra = log --graph --format=line --all # graph all
 	grad = log --graph --format=detail --all # graph all in detail
 	sf = show --format=fuller --show-signature
 	sfw = show --format=fuller --color-words
@@ -76,8 +74,7 @@
 	function = blue
 
 [pretty]
-	line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ad"
-	compact = "%C(auto)%h %s %C(green)%ad%n %C(auto)%d%n"
+	line = "%C(auto)%h %<|(60,trunc)%s %C(green)%ad%C(auto)%d"
 	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ad%n %C(auto)%d%n"
 
 [merge]

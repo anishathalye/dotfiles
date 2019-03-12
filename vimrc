@@ -47,7 +47,7 @@ set autoindent
 "---------------------
 " Basic editing config
 "---------------------
-set shortmess=I " disable startup message
+set shortmess+=I " disable startup message
 set nu " number lines
 set rnu " relative line numbering
 set incsearch " incremental search (as string is being typed)

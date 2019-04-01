@@ -232,6 +232,7 @@ function PR_EXTRA() {
 # Show select exported environment variables
 
 _pr_var_list=()
+_vars_multiline=false
 
 function vshow() {
     local v
@@ -251,18 +252,33 @@ function vhide() {
     done
 }
 
+function vmultiline() {
+    if $_vars_multiline; then
+        _vars_multiline=false
+    else
+        _vars_multiline=true
+    fi
+}
+
 function PR_VARS() {
-    local i v
+    local i v spc nl
+    if $_vars_multiline; then
+        spc=""
+        nl="\n"
+    else
+        spc=" "
+        nl=""
+    fi
     for ((i=1; i <= ${#_pr_var_list}; i++)) do
         local v=${_pr_var_list[i]}
         if [[ -v "${v}" ]]; then
             # if variable is set
             if export | grep -Eq "^${v}="; then
                 # if exported, show regularly
-                echo -n " %{$fg[cyan]%}${v}=${(P)${v}}%{$reset_color%}"
+                printf '%s' "$spc%{$fg[cyan]%}${v}=${(P)${v}}%{$reset_color%}$nl"
             else
                 # if not exported, show in red
-                echo -n " %{$fg[red]%}${v}=${(P)${v}}%{$reset_color%}"
+                printf '%s' "$spc%{$fg[red]%}${v}=${(P)${v}}%{$reset_color%}$nl"
             fi
         fi
     done
@@ -274,7 +290,7 @@ function PR_VARS() {
                 # not shown yet
                 if export | grep -Eq "^${v}="; then
                     # exported
-                    echo -n " %{$fg[cyan]%}${v}=${(P)${v}}%{$reset_color%}"
+                    printf '%s' "$spc%{$fg[cyan]%}${v}=${(P)${v}}%{$reset_color%}$nl"
                 fi
             fi
         fi
@@ -284,7 +300,11 @@ function PR_VARS() {
 # Prompt
 function PCMD() {
     if (( PROMPT_MODE == 0 )); then
-        echo "$(PR_EXTRA)$(PR_DIR)$(PR_VARS) $(PR_ERROR)$(PR_ARROW) " # space at the end
+        if $_vars_multiline; then
+            echo "$(PR_VARS)$(PR_EXTRA)$(PR_DIR) $(PR_ERROR)$(PR_ARROW) " # space at the end
+        else
+            echo "$(PR_EXTRA)$(PR_DIR)$(PR_VARS) $(PR_ERROR)$(PR_ARROW) " # space at the end
+        fi
     elif (( PROMPT_MODE == 1 )); then
         echo "$(PR_EXTRA)$(PR_DIR 1) $(PR_ERROR)$(PR_ARROW) " # space at the end
     else

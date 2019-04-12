@@ -165,6 +165,10 @@
 	path = vim/bundle/smarty.vim
 	url = https://github.com/blueyed/smarty.vim
 	ignore = untracked
+[submodule "vim/bundle/vim-smt2"]
+	path = vim/bundle/vim-smt2
+	url = https://github.com/bohlender/vim-smt2
+	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

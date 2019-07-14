@@ -169,6 +169,10 @@
 	path = vim/bundle/vim-smt2
 	url = https://github.com/bohlender/vim-smt2
 	ignore = untracked
+[submodule "vim/bundle/vim-racket"]
+	path = vim/bundle/vim-racket
+	url = https://github.com/wlangstroth/vim-racket
+	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

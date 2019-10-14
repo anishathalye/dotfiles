@@ -191,6 +191,7 @@ let g:markdown_fenced_languages = [
     \ 'yaml',
     \ 'go',
 \]
+let g:markdown_syntax_conceal = 0
 
 "---------------------
 " Local customizations

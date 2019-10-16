@@ -13,6 +13,7 @@
 [._]*.sw[a-p]
 [._]*.s[a-v][a-z]
 *~
+~*
 \#*\#
 \.#*
 .ipynb_checkpoints/

@@ -23,6 +23,4 @@ here() {
     echo "here -> $(readlink $HOME/.shell.here)"
 }
 
-there() {
-    echo "$HOME/.shell.here"
-}
+there="$HOME/.shell.here"

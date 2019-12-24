@@ -110,21 +110,24 @@ nnoremap <silent> <Leader>d :call ToggleMovementByDisplayLines()<CR>
 function SetMovementByDisplayLines()
     noremap <buffer> <silent> <expr> k v:count ? 'k' : 'gk'
     noremap <buffer> <silent> <expr> j v:count ? 'j' : 'gj'
+    noremap <buffer> <silent> 0 g0
+    noremap <buffer> <silent> $ g$
 endfunction
 function ToggleMovementByDisplayLines()
     if !exists('b:movement_by_display_lines')
-        let b:movement_by_display_lines = 1
+        let b:movement_by_display_lines = 0
     endif
     if b:movement_by_display_lines
         let b:movement_by_display_lines = 0
         silent! nunmap <buffer> k
         silent! nunmap <buffer> j
+        silent! nunmap <buffer> 0
+        silent! nunmap <buffer> $
     else
         let b:movement_by_display_lines = 1
         call SetMovementByDisplayLines()
     endif
 endfunction
-autocmd BufEnter * call SetMovementByDisplayLines()
 
 " toggle relative numbering
 nnoremap <C-n> :set rnu!<CR>

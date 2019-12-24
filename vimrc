@@ -217,6 +217,9 @@ let g:markdown_fenced_languages = [
 \]
 let g:markdown_syntax_conceal = 0
 
+" fugitive
+set tags^=.git/tags;~
+
 "---------------------
 " Local customizations
 "---------------------

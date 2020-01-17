@@ -26,7 +26,7 @@ session = ~/.rtorrent/session
 # Watch a directory for new torrents, restart torrents that have been
 # copied back and stop those that have been deleted.
 
-schedule = watch_directory,10,10,load_start=~/.rtorrent/watch/*.torrent
+schedule = watch_directory,10,10,load.start=~/.rtorrent/watch/*.torrent
 schedule = tied_directory,10,10,start_tied=
 schedule = untied_directory,10,10,close_untied=
 
@@ -34,7 +34,7 @@ schedule = untied_directory,10,10,close_untied=
 schedule = low_diskspace,5,60,close_low_diskspace=5120M
 
 # Use UDP trackers
-use_udp_trackers = yes
+trackers.use_udp.set = yes
 
 # Enable DHT support for trackerless torrents or when all trackers are down.
 # May be set to "disable" (completely disable DHT), "off" (do not start DHT),
@@ -43,32 +43,32 @@ use_udp_trackers = yes
 dht = auto
 
 # Enable peer exchange (for torrents not marked private)
-peer_exchange = yes
+protocol.pex = yes
 
 # Encoding
 encoding_list = UTF-8
 
 # Max file size
-set_max_file_size = 500G
+system.file.max_size.set = 500G
 
 # Sorting/filtering views
 # main: by upload
-view.sort_current = main,greater=d.get_up_total=
-view.sort_new = main,less=d.get_up_total=
+view.sort_current = main,greater=d.up.total=
+view.sort_new = main,less=d.up.total=
 view.sort = main
 # seeding: by upload rate, only show torrents with peers
-view.sort_current = seeding,greater=d.get_up_rate=
-view.filter = seeding,"and=d.get_complete=,d.get_peers_connected="
-view.sort_new = seeding,less=d.get_up_rate=
+view.sort_current = seeding,greater=d.up.rate=
+view.filter = seeding,"and=d.complete=,d.peers_connected="
+view.sort_new = seeding,less=d.up.rate=
 view.sort = seeding
 # leeching: by name
-view.sort_current = leeching,greater=d.get_name=
-view.sort_new = leeching,greater=d.get_name=
+view.sort_current = leeching,greater=d.name=
+view.sort_new = leeching,greater=d.name=
 view.sort = leeching
 # active: by name, only show torrents with peers
-view.sort_current = active,less=d.get_name=
-view.sort_new = leeching,less=d.get_name=
-view.filter = active,d.get_peers_connected=
+view.sort_current = active,less=d.name=
+view.sort_new = leeching,less=d.name=
+view.filter = active,d.peers_connected=
 view.sort = active
 # maintain sorting
 schedule = sort_main,11,5,view.sort=main

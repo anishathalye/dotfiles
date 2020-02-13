@@ -17,3 +17,5 @@
 (global-hl-line-mode 1) ; highlight current line
 
 (setq-default indent-tabs-mode nil) ; use spaces instead of tabs
+
+(xterm-mouse-mode 1) ; enable mouse support in terminal

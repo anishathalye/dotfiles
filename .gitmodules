@@ -34,17 +34,9 @@
 	path = vim/pack/vendor/start/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
 	ignore = untracked
-[submodule "vim/bundle/vim-haml"]
-	path = vim/pack/vendor/start/vim-haml
-	url = https://github.com/tpope/vim-haml
-	ignore = untracked
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/pack/vendor/start/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script
-	ignore = untracked
-[submodule "vim/bundle/tagbar"]
-	path = vim/pack/vendor/start/tagbar
-	url = https://github.com/majutsushi/tagbar.git
 	ignore = untracked
 [submodule "vim/bundle/vim-surround"]
 	path = vim/pack/vendor/start/vim-surround
@@ -82,17 +74,9 @@
 	path = vim/pack/vendor/start/rust.vim
 	url = https://github.com/wting/rust.vim
 	ignore = untracked
-[submodule "vim/bundle/vim-jade"]
-	path = vim/pack/vendor/start/vim-jade
-	url = https://github.com/digitaltoad/vim-jade
-	ignore = untracked
 [submodule "vim/bundle/vim-tmux"]
 	path = vim/pack/vendor/start/vim-tmux
 	url = https://github.com/tmux-plugins/vim-tmux
-	ignore = untracked
-[submodule "vim/bundle/vim-less"]
-	path = vim/pack/vendor/start/vim-less
-	url = https://github.com/groenewege/vim-less
 	ignore = untracked
 [submodule "vim/bundle/haskell-vim"]
 	path = vim/pack/vendor/start/haskell-vim

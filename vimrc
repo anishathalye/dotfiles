@@ -140,9 +140,6 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 let g:buffergator_suppress_keymaps = 1
 nnoremap <Leader>b :BuffergatorToggle<CR>
 
-" tagbar
-nnoremap <Leader>t :TagbarToggle<CR>
-
 " gundo
 nnoremap <Leader>u :GundoToggle<CR>
 if has('python3')

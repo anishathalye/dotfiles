@@ -249,3 +249,9 @@
 [submodule "jupyter/nbextensions/jupyter-vim-binding"]
 	path = jupyter/nbextensions/jupyter-vim-binding
 	url = https://github.com/lambdalisue/jupyter-vim-binding
+[submodule "emacs.d/vendor/racket-mode"]
+	path = emacs.d/vendor/racket-mode
+	url = https://github.com/greghendershott/racket-mode
+[submodule "emacs.d/vendor/evil-surround"]
+	path = emacs.d/vendor/evil-surround
+	url = https://github.com/emacs-evil/evil-surround

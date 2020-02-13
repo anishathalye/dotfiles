@@ -154,11 +154,17 @@
   :config
   (global-evil-leader-mode)
   (evil-leader/set-key
-    "e" 'coq-double-hit-toggle
-    "c" 'proof-interrupt-process
     "m" 'menu-bar-open
     "n" 'neotree-toggle
-    "f" 'neotree-find))
+    "f" 'neotree-find)
+
+  (evil-leader/set-key-for-mode 'coq-mode
+    "e" 'coq-double-hit-toggle
+    "c" 'proof-interrupt-process)
+
+  (evil-leader/set-key-for-mode 'racket-mode
+    "r" 'racket-run
+    "t" 'racket-test))
 
 (use-package company
   :load-path "vendor/company-mode"
@@ -204,3 +210,12 @@
   (linum-relative-on)
   (setf linum-relative-format "%3s "
         linum-relative-current-symbol ""))
+
+(use-package racket-mode
+  :load-path "vendor/racket-mode")
+
+;; this needs to be loaded after evil
+(use-package evil-surround
+  :load-path "vendor/evil-surround"
+  :config
+  (global-evil-surround-mode 1))

@@ -19,3 +19,5 @@
 (setq-default indent-tabs-mode nil) ; use spaces instead of tabs
 
 (xterm-mouse-mode 1) ; enable mouse support in terminal
+
+(setq tab-always-indent 'complete) ; make tab complete as well as indent

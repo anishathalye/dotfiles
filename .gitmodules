@@ -190,9 +190,6 @@
 [submodule "emacs.d/vendor/evil-leader"]
 	path = emacs.d/vendor/evil-leader
 	url = https://github.com/cofi/evil-leader
-[submodule "emacs.d/vendor/undo-tree"]
-	path = emacs.d/vendor/undo-tree
-	url = https://github.com/emacsmirror/undo-tree
 [submodule "emacs.d/vendor/company-mode"]
 	path = emacs.d/vendor/company-mode
 	url = https://github.com/company-mode/company-mode

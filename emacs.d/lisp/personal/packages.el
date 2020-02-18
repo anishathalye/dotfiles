@@ -1,10 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/use-package")
 (require 'use-package)
 
-;; this needs to be loaded before evil
-(use-package undo-tree
-  :load-path "vendor/undo-tree")
-
 (use-package evil
   :load-path "vendor/evil"
 

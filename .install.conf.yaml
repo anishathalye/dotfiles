@@ -53,5 +53,5 @@
     irssi/scripts/vendor/
     jupyter/nbextensions/
     shell/plugins/
-    vim/bundle/
+    vim/pack/vendor/start/
     zsh/plugins/

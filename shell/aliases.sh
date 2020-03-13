@@ -102,7 +102,11 @@ fpr() {
     fi
     (
         cdgr
-        if [ "$#" -eq 2 ]; then
+        if [ "$#" -eq 1 ]; then
+            local repo="${PWD##*/}"
+            local user="${1%%:*}"
+            local branch="${1#*:}"
+        elif [ "$#" -eq 2 ]; then
             local repo="${PWD##*/}"
             local user="${1}"
             local branch="${2}"

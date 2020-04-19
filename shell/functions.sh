@@ -24,3 +24,7 @@ here() {
 }
 
 there="$HOME/.shell.here"
+
+there() {
+    cd "$(readlink "${there}")"
+}

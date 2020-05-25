@@ -180,11 +180,7 @@
 
 ;; this needs to be loaded after company-math and yasnippet
 (use-package company-coq
-  :load-path "vendor/company-coq"
-
-  :config
-  (setf company-coq-disabled-features
-        '(unicode-math-backend prettify-symbols smart-subscripts)))
+  :load-path "vendor/company-coq")
 
 (use-package linum-relative
   :load-path "vendor/linum-relative"

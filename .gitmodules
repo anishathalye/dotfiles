@@ -154,6 +154,14 @@
 	path = vim/pack/vendor/start/vim-racket
 	url = https://github.com/wlangstroth/vim-racket
 	ignore = untracked
+[submodule "vim/pack/vendor/start/vim-jsx-pretty"]
+	path = vim/pack/vendor/start/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty
+	ignore = untracked
+[submodule "vim/pack/vendor/start/vim-js"]
+	path = vim/pack/vendor/start/vim-js
+	url = https://github.com/yuezk/vim-js
+	ignore = untracked
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

@@ -204,6 +204,7 @@ let g:markdown_fenced_languages = [
     \ 'ruby',
     \ 'yaml',
     \ 'go',
+    \ 'racket',
 \]
 let g:markdown_syntax_conceal = 0
 

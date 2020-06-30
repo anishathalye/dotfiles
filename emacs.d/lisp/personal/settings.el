@@ -21,3 +21,5 @@
 (xterm-mouse-mode 1) ; enable mouse support in terminal
 
 (setq tab-always-indent 'complete) ; make tab complete as well as indent
+
+(setq ns-pop-up-frames nil) ; open files in existing frame

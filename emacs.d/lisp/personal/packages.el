@@ -1,6 +1,14 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/use-package")
 (require 'use-package)
 
+;; this needs to be loaded before evil
+(use-package undo-tree
+  :load-path "vendor/evil/lib"
+
+  :config
+  (setf undo-tree-visualizer-diff t)
+  (setf undo-tree-visualizer-timestamps t))
+
 (use-package evil
   :load-path "vendor/evil"
 
@@ -153,6 +161,14 @@
     "m" 'menu-bar-open
     "n" 'neotree-toggle
     "f" 'neotree-find)
+
+  ;; undo
+  (defun undo-tree-visualizer-toggle ()
+    (interactive)
+    (if (get-buffer undo-tree-visualizer-buffer-name)
+        (undo-tree-visualizer-quit)
+      (undo-tree-visualize)))
+  (evil-leader/set-key "u" 'undo-tree-visualizer-toggle)
 
   (evil-leader/set-key-for-mode 'coq-mode
     "e" 'coq-double-hit-toggle

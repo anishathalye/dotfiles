@@ -9,6 +9,10 @@
   (setf undo-tree-visualizer-diff t)
   (setf undo-tree-visualizer-timestamps t))
 
+;; this needs to be loaded before evil
+(use-package goto-chg
+  :load-path "vendor/goto-chg")
+
 (use-package evil
   :load-path "vendor/evil"
 

@@ -244,3 +244,6 @@
 [submodule "emacs.d/vendor/evil-surround"]
 	path = emacs.d/vendor/evil-surround
 	url = https://github.com/emacs-evil/evil-surround
+[submodule "emacs.d/vendor/goto-chg"]
+	path = emacs.d/vendor/goto-chg
+	url = https://github.com/emacs-evil/goto-chg

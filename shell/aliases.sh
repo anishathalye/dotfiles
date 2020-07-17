@@ -84,7 +84,7 @@ up()
 # Execute a command in a specific directory
 xin() {
     (
-        cd "${1}" && shift && ${@}
+        cd "${1}" && shift && "${@}"
     )
 }
 

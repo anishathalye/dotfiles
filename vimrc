@@ -75,6 +75,7 @@ if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
 endif
+set nofoldenable " disable folding by default
 
 "--------------------
 " Misc configurations
@@ -207,6 +208,7 @@ let g:markdown_fenced_languages = [
     \ 'racket',
 \]
 let g:markdown_syntax_conceal = 0
+let g:markdown_folding = 1
 
 " fugitive
 set tags^=.git/tags;~

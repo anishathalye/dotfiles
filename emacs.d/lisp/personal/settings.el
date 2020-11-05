@@ -23,3 +23,10 @@
 (setq tab-always-indent 'complete) ; make tab complete as well as indent
 
 (setq ns-pop-up-frames nil) ; open files in existing frame
+
+;; store all backup and autosave files outside the working directory,
+;; in the temporary-file-directory
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))

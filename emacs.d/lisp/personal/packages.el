@@ -2,14 +2,6 @@
 (require 'use-package)
 
 ;; this needs to be loaded before evil
-(use-package undo-tree
-  :load-path "vendor/evil/lib"
-
-  :config
-  (setf undo-tree-visualizer-diff t)
-  (setf undo-tree-visualizer-timestamps t))
-
-;; this needs to be loaded before evil
 (use-package goto-chg
   :load-path "vendor/goto-chg")
 
@@ -222,6 +214,10 @@
   (linum-relative-on)
   (setf linum-relative-format "%3s "
         linum-relative-current-symbol ""))
+
+;; this needs to be loaded before racket-mode
+(use-package pos-tip
+  :load-path "vendor/pos-tip")
 
 (use-package racket-mode
   :load-path "vendor/racket-mode")

@@ -247,3 +247,6 @@
 [submodule "emacs.d/vendor/goto-chg"]
 	path = emacs.d/vendor/goto-chg
 	url = https://github.com/emacs-evil/goto-chg
+[submodule "emacs.d/vendor/pos-tip"]
+	path = emacs.d/vendor/pos-tip
+	url = https://github.com/pitkali/pos-tip

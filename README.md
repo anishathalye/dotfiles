@@ -1,4 +1,4 @@
-# Dotfiles [[![Build Status](https://travis-ci.com/anishathalye/dotfiles.svg?branch=master)](https://travis-ci.com/anishathalye/dotfiles)]
+# Dotfiles [![Build Status](https://github.com/anishathalye/dotfiles/workflows/CI/badge.svg)](https://github.com/anishathalye/dotfiles/actions?query=workflow%3ACI)
 
 After cloning this repo, run `install` to automatically set up the development
 environment. Note that the install script is idempotent: it can safely be run

@@ -1,3 +1,6 @@
+# Port range
+network.port_range.set = 49164-49164
+
 # Maximum and minimum number of peers to connect to per torrent
 min_peers = 40
 max_peers = 300

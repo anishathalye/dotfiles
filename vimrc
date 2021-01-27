@@ -206,6 +206,7 @@ let g:markdown_fenced_languages = [
     \ 'yaml',
     \ 'go',
     \ 'racket',
+    \ 'haskell',
 \]
 let g:markdown_syntax_conceal = 0
 let g:markdown_folding = 1

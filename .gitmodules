@@ -162,6 +162,9 @@
 	path = vim/pack/vendor/start/vim-js
 	url = https://github.com/yuezk/vim-js
 	ignore = untracked
+[submodule "vim/pack/vendor/start/vim-toml"]
+	path = vim/pack/vendor/start/vim-toml
+	url = https://github.com/cespare/vim-toml
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package

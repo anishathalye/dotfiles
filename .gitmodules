@@ -250,3 +250,15 @@
 [submodule "emacs.d/vendor/pos-tip"]
 	path = emacs.d/vendor/pos-tip
 	url = https://github.com/pitkali/pos-tip
+[submodule "emacs.d/vendor/fstar-mode.el"]
+	path = emacs.d/vendor/fstar-mode.el
+	url = https://github.com/fstarlang/fstar-mode.el
+[submodule "emacs.d/vendor/quick-peek"]
+	path = emacs.d/vendor/quick-peek
+	url = https://github.com/cpitclaudel/quick-peek
+[submodule "emacs.d/vendor/flycheck"]
+	path = emacs.d/vendor/flycheck
+	url = https://github.com/flycheck/flycheck
+[submodule "emacs.d/vendor/company-quickhelp"]
+	path = emacs.d/vendor/company-quickhelp
+	url = https://github.com/company-mode/company-quickhelp

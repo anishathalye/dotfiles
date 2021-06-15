@@ -218,3 +218,20 @@
   :load-path "vendor/evil-surround"
   :config
   (global-evil-surround-mode 1))
+
+(use-package quick-peek
+  :load-path "vendor/quick-peek")
+
+(use-package flycheck
+  :load-path "vendor/flycheck")
+
+(use-package company-quickhelp
+  :load-path "vendor/company-quickhelp")
+
+(use-package dash
+  :load-path "vendor/dash.el")
+
+;; this depends on quick-peek, flycheck, company-quickhelp, dash
+(use-package fstar-mode
+  :load-path "vendor/fstar-mode.el"
+  :mode ("\\.fst\\'" . fstar-mode))

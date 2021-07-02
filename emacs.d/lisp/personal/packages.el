@@ -52,7 +52,22 @@
     (kbd "<right>") 'proof-goto-point
     (kbd "<up>") 'proof-undo-last-successful-command
     (kbd "<down>") 'proof-assert-next-command-interactive
-    (kbd "<left>") 'proof-goto-end-of-locked))
+    (kbd "<left>") 'proof-goto-end-of-locked)
+
+  ;; leader keys
+  (evil-set-leader 'normal (kbd "\\"))
+  (evil-define-key 'normal 'global
+    (kbd "<leader>m") 'menu-bar-open
+    (kbd "<leader>n") 'neotree-toggle
+    (kbd "<leader>f") 'neotree-find)
+  ;; Coq
+  (evil-define-key 'normal coq-mode-map
+    (kbd "<leader>e") 'coq-double-hit-toggle
+    (kbd "<leader>c") 'proof-interrupt-process)
+  ;; Racket
+  (evil-define-key 'normal racket-mode-map
+    (kbd "<leader>r") 'racket-run
+    (kbd "<leader>t") 'racket-test))
 
 (use-package proof-site
   :load-path "vendor/PG/generic"
@@ -146,33 +161,6 @@
   (add-hook 'neotree-mode-hook
             (lambda ()
               (define-key evil-motion-state-local-map (kbd "RET") 'neotree-enter))))
-
-;; this needs to be loaded after evil and neotree
-(use-package evil-leader
-  :load-path "vendor/evil-leader"
-
-  :config
-  (global-evil-leader-mode)
-  (evil-leader/set-key
-    "m" 'menu-bar-open
-    "n" 'neotree-toggle
-    "f" 'neotree-find)
-
-  ;; undo
-  (defun undo-tree-visualizer-toggle ()
-    (interactive)
-    (if (get-buffer undo-tree-visualizer-buffer-name)
-        (undo-tree-visualizer-quit)
-      (undo-tree-visualize)))
-  (evil-leader/set-key "u" 'undo-tree-visualizer-toggle)
-
-  (evil-leader/set-key-for-mode 'coq-mode
-    "e" 'coq-double-hit-toggle
-    "c" 'proof-interrupt-process)
-
-  (evil-leader/set-key-for-mode 'racket-mode
-    "r" 'racket-run
-    "t" 'racket-test))
 
 (use-package company
   :load-path "vendor/company-mode"

@@ -198,9 +198,6 @@
 [submodule "emacs.d/vendor/emacs-neotree"]
 	path = emacs.d/vendor/emacs-neotree
 	url = https://github.com/jaypei/emacs-neotree
-[submodule "emacs.d/vendor/evil-leader"]
-	path = emacs.d/vendor/evil-leader
-	url = https://github.com/cofi/evil-leader
 [submodule "emacs.d/vendor/company-mode"]
 	path = emacs.d/vendor/company-mode
 	url = https://github.com/company-mode/company-mode

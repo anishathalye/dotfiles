@@ -67,7 +67,10 @@
   ;; Racket
   (evil-define-key 'normal racket-mode-map
     (kbd "<leader>r") 'racket-run
-    (kbd "<leader>t") 'racket-test))
+    (kbd "<leader>t") 'racket-test
+    (kbd "<leader>k") 'racket-repl-clear-leaving-last-prompt)
+  (evil-define-key 'normal racket-repl-mode-map
+    (kbd "<leader>k") 'racket-repl-clear-leaving-last-prompt))
 
 (use-package proof-site
   :load-path "vendor/PG/generic"

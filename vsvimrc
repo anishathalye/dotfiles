@@ -1,0 +1,81 @@
+" 显示当前模式
+set showmode
+" 共享系统粘贴板
+set clipboard+=unnamed
+" 打开行号
+set number
+" 打开相对行号
+" set relativenumber
+" 设置命令历史记录条数
+set history=2000
+" 关闭兼容vi
+set nocompatible
+" 开启语法高亮功能
+syntax enable
+" 允许用指定语法高亮配色方案替换默认方案
+syntax on
+" 模式搜索实时预览,增量搜索
+set incsearch
+" 设置搜索高亮
+set hlsearch
+" 忽略大小写 (该命令配合smartcase使用较好，否则不要开启)
+set ignorecase
+" 模式查找时智能忽略大小写
+set smartcase
+" vim自身命令行模式智能补全
+set wildmenu
+" 总是显示状态栏
+set laststatus=2
+" 显示光标当前位置
+set ruler
+" 高亮显示当前行/列
+set cursorline
+"set cursorcolumn
+" 禁止折行
+set nowrap
+" 将制表符扩展为空格
+set expandtab
+" 设置编辑时制表符占用空格数
+set tabstop=8
+" 设置格式化时制表符占用空格数
+set shiftwidth=4
+" 让 vim 把连续数量的空格视为一个制表符
+set softtabstop=4
+" 基于缩进或语法进行代码折叠
+set foldmethod=indent
+set foldmethod=syntax
+" 启动 vim 时关闭折叠代码
+set nofoldenable
+
+" 设置前导键
+let mapleader=";"
+" 暂时取消搜索高亮快捷键
+nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
+
+" 移动相关
+" 前一个缓冲区
+nnoremap <silent> [b :w<CR>:bprevious<CR>
+" 后一个缓冲区
+nnoremap <silent> ]b :w<CR>:bnext<CR>
+" 定义快捷键到行首和行尾
+map H ^
+map L $
+" 定义快速跳转
+nmap <Leader>t <C-]>
+" 定义快速跳转回退
+nmap <Leader>T <C-t>
+" 标签页后退 ---标签页前进是gt
+nmap R gt
+nmap E gT
+
+" 文件操作相关
+" 定义快捷键关闭当前分割窗口
+nmap <Leader>q :q<CR>
+" 定义快捷键保存当前窗口内容
+nmap <Leader>w :w<CR>
+
+" 窗口操作相关
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l

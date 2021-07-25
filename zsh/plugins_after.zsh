@@ -1,8 +1,9 @@
 # External plugins (initialized after)
 
 # Syntax highlighting
-
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Auto suggestion
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 

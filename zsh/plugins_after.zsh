@@ -37,6 +37,6 @@ if [[ "$(tput colors)" == "256" ]]; then
     eval $(dircolors =(cat ~/.shell/plugins/dircolors-solarized/dircolors.256dark ~/.shell/dircolors.extra))
 fi
 
-# Choose spaceship prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+# Choose spaceship prompt -- remain this for spaceship promt
+# autoload -U promptinit; promptinit
+# prompt spaceship

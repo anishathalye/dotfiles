@@ -3,4 +3,4 @@
 # zsh-completions
 fpath=(~/.zsh/plugins/zsh-completions/src $fpath)
 # Spaceship prompt
-fpath=("${HOME}/.zfunctions" $fpath)
+# fpath=("${HOME}/.zfunctions" $fpath)

@@ -1,7 +1,23 @@
-" map H to line head, L to line tail
+" Copy contents into system clipboard
+set clipboard+=unnamed
+
+
+"================================
+"        Movement
+"================================
+" Map H to line head, L to line tail
 nnoremap H ^
 nnoremap L $
 
-" cancel hightlight
+
+"================================
+"        Misc
+"================================
+" Cancel hightlight
 nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
+
+" Close current buffer
+nmap <Leader>q :q<CR>
+" Save current buffer
+nmap <Leader>w :w<CR>
 

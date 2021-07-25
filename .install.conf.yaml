@@ -33,6 +33,7 @@
     ~/.vsvimrc:
     ~/.zsh:
     ~/.zshrc:
+    ~/.zfunctions/prompt_spaceship_setup: zsh/prompt/spaceship-prompt/spaceship.zsh
 
 - create:
   - ~/.rtorrent/session

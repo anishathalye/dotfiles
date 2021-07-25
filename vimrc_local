@@ -1,0 +1,4 @@
+" map H to line head, L to line tail
+nnoremap H ^
+nnoremap L $
+

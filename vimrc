@@ -99,6 +99,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" set leader key
+let mapleader=";"
+
 " movement relative to display lines
 nnoremap <silent> <Leader>d :call ToggleMovementByDisplayLines()<CR>
 function SetMovementByDisplayLines()

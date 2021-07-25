@@ -2,3 +2,6 @@
 nnoremap H ^
 nnoremap L $
 
+" cancel hightlight
+nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
+

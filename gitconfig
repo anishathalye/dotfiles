@@ -106,6 +106,8 @@
 
 [user]
 	useConfigOnly = true
+	email = zhang.xingrui@foxmail.com
+	name = ravenxrz
 
 [http]
 	cookieFile = ~/.gitcookies

@@ -4,6 +4,8 @@
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Auto suggestion
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# z quick jump plugin
+source ~/.zsh/plugins/zsh-z.plugin.zsh
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 

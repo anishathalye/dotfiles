@@ -111,10 +111,31 @@
 
 [http]
 	cookieFile = ~/.gitcookies
+	postBuffer = 655360000
 
 [core]
 	excludesfile = ~/.gitignore_global
+	quotepath = false
+	longpaths = true
+	autocrlf = input
+	trustctime = false
+	attributesfile = ~/.attributes_global
 
 # Allow local customizations in the .gitconfig_local file
 [include]
 	path = ~/.gitconfig_local
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[diff "text"]
+	textconv = cat
+[lfs]
+	concurrenttransfers = 32
+	fetchrecentrefsdays = 0
+	pruneoffsetdays = 0
+[rebase]
+	backend = apply
+[protocol]
+	version = 1

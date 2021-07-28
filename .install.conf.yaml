@@ -15,6 +15,7 @@
     ~/.dotfiles: ''
     ~/.gdbinit:
     ~/.gitconfig:
+    ~/.cgdb:
     ~/.gitignore_global:
     ~/.haskeline:
     ~/.hgrc:

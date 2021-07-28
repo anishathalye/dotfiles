@@ -1,0 +1,4 @@
+ hi SelectedLineNr ctermfg=0 ctermbg=10 cterm=bold,underline,reverse
+set winsplitorientation=vertical
+set print pretty on
+set hlsearch

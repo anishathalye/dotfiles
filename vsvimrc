@@ -85,13 +85,6 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
 
-" break undo sequence
-inoremap , ,<C-g>u
-inoremap . .<C-g>u
-inoremap [ [<C-g>u
-inoremap ! !<C-g>u
-inoremap ? ?<C-g>u
-
 " Moving text
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv

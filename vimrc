@@ -176,7 +176,7 @@ map z? <Plug>(incsearch-easymotion-?)
 map zg/ <Plug>(incsearch-easymotion-stay)
 
 " argwrap
-nnoremap <Leader>w :ArgWrap<CR>
+nnoremap <Leader>a :ArgWrap<CR>
 
 noremap <Leader>x :OverCommandLine<CR>
 

@@ -140,3 +140,11 @@ nnoremap <leader>U :call VSCodeNotify('references-view.find')<CR>
 
 
 
+"==========================
+"	Plugin
+"==========================
+call plug#begin()
+Plug 'asvetliakov/vim-easymotion', { 'as': 'vsc-easymotion' }
+call plug#end()
+
+

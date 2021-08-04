@@ -29,7 +29,7 @@
     ~/.tmux.conf:
     ~/.vim:
     ~/.vimrc:
-    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim: nvim
     ~/.vimrc_local:
     ~/.ideavimrc:
     ~/.vsvimrc:

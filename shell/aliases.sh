@@ -1,7 +1,6 @@
 # Use colors in coreutils utilities output
 if ls --help 2>&1 | grep -q -- --color
-then
-    alias ls='ls --color=auto -F'
+then alias ls='ls --color=auto -F'
 else
     alias ls='ls -FG'
 fi
@@ -18,6 +17,9 @@ alias mv='mv -i'
 
 # git related aliases
 alias gag='git exec ag'
+
+# g++ aliases
+alias g++='g++ -std=c++11'
 
 # Update dotfiles
 dfu() {

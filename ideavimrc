@@ -106,6 +106,8 @@ nnoremap <Leader>f :action ReformatCode<CR>
 nnoremap <Leader>n :action NewFile<CR>
 " 找到usage
 nnoremap <Leader>u :action FindUsages<CR>
+" find operation
+nnoremap ?  :action Find<CR>
 " 调用idea的replace操作
 nnoremap <Leader>; :action Replace<CR>
 " go to class

@@ -2,3 +2,4 @@
 set winsplitorientation=vertical
 set print pretty on
 set hlsearch
+set history save on

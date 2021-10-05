@@ -89,3 +89,7 @@ nnoremap J mzJ`z
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" map esc to jk in insert mode
+inoremap jk <ESC>
+
+

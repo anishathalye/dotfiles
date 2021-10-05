@@ -34,3 +34,7 @@ nnoremap <Leader>q :q<CR>
 " Save current buffer
 nnoremap <Leader>w :w<CR>
 
+" map esc to jk in insert mode
+inoremap jk <ESC>
+
+

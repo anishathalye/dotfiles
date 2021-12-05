@@ -35,6 +35,7 @@
     ~/.vsvimrc:
     ~/.zsh:
     ~/.zshrc:
+    ~/.shell_local_before:
     # ~/.zfunctions/prompt_spaceship_setup: zsh/prompt/spaceship-prompt/spaceship.zsh
 
 - create:

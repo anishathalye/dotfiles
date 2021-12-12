@@ -318,8 +318,10 @@ PROMPT='$(PCMD)' # single quotes to prevent immediate execution
 RPROMPT='' # set asynchronously and dynamically
 
 function RPR_EXTRA() {
-    # do nothing by default
+    # show time date
+    echo " %{$fg[yellow]%}[%*]"
 }
+
 
 # Right-hand prompt
 function RCMD() {

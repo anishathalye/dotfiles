@@ -84,8 +84,8 @@ map <C-l> <C-W>l
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
-:nnoremap j jzz
-:nnoremap k kzz
+nnoremap j jzz
+nnoremap k kzz
 
 " Moving text
 vnoremap J :m '>+1<CR>gv=gv

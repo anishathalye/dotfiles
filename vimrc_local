@@ -12,6 +12,8 @@ nnoremap L $
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
+:nnoremap j jzz
+:nnoremap k kzz
 
 " break undo sequence
 inoremap , ,<C-g>u

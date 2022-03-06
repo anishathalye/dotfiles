@@ -3,10 +3,9 @@
 " execute 'luafile ' . stdpath('config') . '/lua/settings.lua'
 
 function! s:manageEditorSize(...)
-    let count = a:1
     let to = a:2
-    for i in range(1, count ? count : 1)
-        call VSCodeNotify(to == 'increase' ? 'workbench.action.increaseViewSize' : 'workbench.action.decreaseViewSize')
+    let count = a:1
+    for i in range(1, count ? count : 1) call VSCodeNotify(to == 'increase' ? 'workbench.action.increaseViewSize' : 'workbench.action.decreaseViewSize')
     endfor
 endfunction
 
@@ -82,9 +81,14 @@ nmap gcc <Plug>VSCodeCommentaryLine
 nmap <Tab> :Tabnext<CR>
 nmap <S-Tab> :Tabprev<CR>
 
+"
+" ==========================
 " Custom config
+" ==========================
+"
+
 " 共享系统粘贴板
-set clipboard+=unnamed
+set clipboard=unnamedplus
 " 设置前导键
 let mapleader=";"
 " 暂时取消搜索高亮快捷键
@@ -141,12 +145,11 @@ nnoremap <leader>u :call VSCodeNotify('editor.action.goToReferences')<CR>
 nnoremap <leader>U :call VSCodeNotify('references-view.find')<CR>
 
 
-
 "==========================
 "	Plugin
 "==========================
 call plug#begin()
-" Plug 'asvetliakov/vim-easymotion', { 'as': 'vsc-easymotion' }
+ Plug 'asvetliakov/vim-easymotion', { 'as': 'vsc-easymotion' }
 call plug#end()
 
 

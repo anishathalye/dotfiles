@@ -1,5 +1,5 @@
 " Copy contents into system clipboard
-set clipboard+=unnamed
+set clipboard=unnamedplus
 
 
 "================================
@@ -12,15 +12,15 @@ nnoremap L $
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
-:nnoremap j jzz
-:nnoremap k kzz
+nnoremap j jzz
+nnoremap k kzz
 
 " break undo sequence
 inoremap , ,<C-g>u
 inoremap . .<C-g>u
 inoremap [ [<C-g>u
-inoremap ! !<C-g>u
 inoremap ? ?<C-g>u
+inoremap ! !<C-g>u
 
 " Moving text
 vnoremap J :m '>+1<CR>gv=gv

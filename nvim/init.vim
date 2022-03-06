@@ -50,6 +50,12 @@ function! s:openWhichKeyInVisualMode()
     endif
 endfunction
 
+function! Cond(Cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:Cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
+
 " Better Navigation
 nnoremap <silent> <C-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
 xnoremap <silent> <C-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
@@ -149,7 +155,11 @@ nnoremap <leader>U :call VSCodeNotify('references-view.find')<CR>
 "	Plugin
 "==========================
 call plug#begin()
- Plug 'asvetliakov/vim-easymotion', { 'as': 'vsc-easymotion' }
+" inside plug#begin:
+" use normal easymotion when in vim mode
+Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+" " use vscode easymotion when in vscode mode
+Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 call plug#end()
 
 

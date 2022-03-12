@@ -47,6 +47,7 @@ return packer.startup(function(use)
 
   -- Editor enhace
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "terrortylor/nvim-comment"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out

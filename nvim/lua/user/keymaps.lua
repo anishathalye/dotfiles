@@ -10,8 +10,7 @@ keymap("", ";", "<Nop>", opts)
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
 
--- Modes
---   normal_mode = "n",
+-- Modes normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
 --   visual_block_mode = "x",
@@ -32,7 +31,7 @@ keymap("n", "<leader>l", ":nohl<cr>", opts)
 -- save buffer
 keymap("n", "<leader>w", ":w<cr>", opts)
 -- quite buffer
-keymap("n", "<leader>q", ":q<cr>", opts)
+keymap("n", "<leader>q", ":quit<cr>", opts)
 
 
 -- Resize with arrows

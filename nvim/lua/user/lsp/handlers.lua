@@ -83,7 +83,7 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-  if client.name == "tsserver" then
+  if client.name == "tsserver" or client.name == "clangd" then
     client.resolved_capabilities.document_formatting = false
   end
   lsp_keymaps(bufnr)
@@ -98,5 +98,5 @@ if not status_ok then
 end
 
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
-
+capabilities.offsetEncoding = { "utf-16" }
 return M

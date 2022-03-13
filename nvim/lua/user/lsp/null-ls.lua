@@ -9,15 +9,26 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
 
+local completion = null_ls.builtins.completion
+
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.stylua,
-    -- diagnostics.flake8
+		formatting.autopep8, -- for python
+		formatting.stylua,     -- for lua
+    formatting.clang_format, -- for cpp
+
+    -- diagnostics.flake8,
+
+    completion.spell,
 	},
   -- you can reuse a shared lspconfig on_attach callback here
   on_attach = function(client)
+      -- NOTE: 如果想要禁止某种语言在save时format，可以添加判定
+      -- if client.name == "xxx" then
+      --
+      -- end
+      -- auto format when save file
     if client.resolved_capabilities.document_formatting then
       vim.cmd([[
             augroup LspFormatting

@@ -64,6 +64,8 @@ return packer.startup(function(use)
   use 'lewis6991/impatient.nvim'
   -- indent blankline
   use "lukas-reineke/indent-blankline.nvim"
+  -- which  key
+  use "folke/which-key.nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

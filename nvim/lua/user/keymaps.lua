@@ -47,6 +47,8 @@ keymap("n", "E", ":bprevious<CR>", opts)
 -- Navigate line
 keymap("n", "H", "^", opts)
 keymap("n", "L", "$", opts)
+keymap("v", "H", "^", opts)
+keymap("v", "L", "$", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)

@@ -60,6 +60,10 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   -- project manager
   use "ahmedkhalf/project.nvim"
+  -- Speed up loading Lua modules
+  use 'lewis6991/impatient.nvim'
+  -- indent blankline
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -92,10 +96,9 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
-  use {
-    'nvim-lualine/lualine.nvim',
-    inactive=true
-  }
+  use 'nvim-lualine/lualine.nvim'
+  use 'goolord/alpha-nvim'
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
 
   -- Automatically set up your configuration after cloning packer.nvim

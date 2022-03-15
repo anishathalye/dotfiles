@@ -91,22 +91,22 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
-
-  -- toggle terminal
-  use "akinsho/toggleterm.nvim"
-  -- project manager
-  use "ahmedkhalf/project.nvim"
-  -- Speed up loading Lua modules
-  use 'lewis6991/impatient.nvim'
-  -- indent blankline
-  use "lukas-reineke/indent-blankline.nvim"
-  -- which  key
-  use "folke/which-key.nvim"
+  use "ethanholz/nvim-lastplace" -- auto return back to the last modified positon when open a file
+  use "rmagatti/auto-session"   -- auto restore session(constains layout, window etc..)
+  use "BurntSushi/ripgrep" -- ripgrep
+  
+  use "akinsho/toggleterm.nvim" -- toggle terminal
+  use "ahmedkhalf/project.nvim" -- project manager
+  use 'lewis6991/impatient.nvim' -- Speed up loading Lua modules
+  use "lukas-reineke/indent-blankline.nvim" -- indent blankline
+  use "folke/which-key.nvim" -- which  key
   use {
-    'phaazon/hop.nvim',
+    'phaazon/hop.nvim',   -- like easymotion, but more powerful
     branch = 'v1', -- optional but strongly recommended
   }
 
+  -- todo tree
+  use "folke/todo-comments.nvim" -- todo comments
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -137,22 +137,25 @@ return packer.startup(function(use)
   use { 'jbyuki/one-small-step-for-vimkind', module = 'osv' } -- debug any Lua code running in a Neovim instance
 
    -- Git
-  use "lewis6991/gitsigns.nvim"
+  use "lewis6991/gitsigns.nvim" 
 
   -- UI
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out 
   use "lunarvim/darkplus.nvim"
   use 'navarasu/onedark.nvim'
-  -- use 'folke/tokyonight.nvim'
+  use 'folke/tokyonight.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
-  use "akinsho/bufferline.nvim"
+  use 'kyazdani42/nvim-tree.lua'     -- file explore
+  use "akinsho/bufferline.nvim"      -- tab
   use "moll/vim-bbye"
-  use 'nvim-lualine/lualine.nvim'
-  use 'goolord/alpha-nvim'
+  use 'nvim-lualine/lualine.nvim'    -- status line
+  use 'goolord/alpha-nvim'           -- welcome page
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "kevinhwang91/nvim-hlslens"
+  use "kevinhwang91/nvim-hlslens" -- highlight search
+  use 'kevinhwang91/nvim-bqf'     -- better quick fix
+  use "RRethy/vim-illuminate"     -- highlight undercursor word
+  use "lewis6991/spellsitter.nvim" -- spell checker
 
 
   -- Automatically set up your configuration after cloning packer.nvim

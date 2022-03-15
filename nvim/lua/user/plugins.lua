@@ -105,9 +105,6 @@ return packer.startup(function(use)
     branch = 'v1', -- optional but strongly recommended
   }
 
-  -- todo tree
-  use "folke/todo-comments.nvim" -- todo comments
-
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
@@ -156,6 +153,9 @@ return packer.startup(function(use)
   use 'kevinhwang91/nvim-bqf'     -- better quick fix
   use "RRethy/vim-illuminate"     -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker
+  use "folke/todo-comments.nvim" -- todo comments
+  use  "liuchengxu/vista.vim"     -- outline 
+
 
 
   -- Automatically set up your configuration after cloning packer.nvim

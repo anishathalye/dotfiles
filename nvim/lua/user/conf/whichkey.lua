@@ -89,7 +89,7 @@ local mappings = {
   -- ["w"] = { "<cmd>w!<CR>", "Save" },
   -- ["q"] = { "<cmd>q!<CR>", "Quit" },
   -- ["/"] = { "<cmd>lua require('Comment').toggle()<CR>", "Comment" },
-  ["c"] = { "<cmd>Bdelete! %d<CR>", "Close Buffer" },
+  -- ["c"] = { "<cmd>Bdelete! %d<CR>", "Close Buffer" },
   -- ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     -- "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -97,6 +97,14 @@ local mappings = {
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+  ["s"] = {
+    "<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>",
+    "Find Document Symbols",
+  },
+  ["S"] = {
+    "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>",
+    "Find files",
+  },
   ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
   p = {
@@ -162,13 +170,13 @@ local mappings = {
       "Workspace Symbols",
     },
   },
-  s = {
-    name = "Search",
-    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+  h = {
+    name = "Help",
+    -- b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    -- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },

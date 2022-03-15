@@ -91,6 +91,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+
   -- toggle terminal
   use "akinsho/toggleterm.nvim"
   -- project manager
@@ -101,6 +102,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   -- which  key
   use "folke/which-key.nvim"
+
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

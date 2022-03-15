@@ -114,11 +114,21 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
-  -- Treesitter
+  -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+
+  -- Debugger
+  use 'Pocco81/DAPInstall.nvim'   -- help us install several debuggers
+  use 'mfussenegger/nvim-dap'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'rcarriga/nvim-dap-ui'
+  use 'nvim-telescope/telescope-dap.nvim'
+  use 'mfussenegger/nvim-dap-python'    -- debug python
+  use { 'leoluz/nvim-dap-go', module = 'dap-go' } -- debug golang
+  use { 'jbyuki/one-small-step-for-vimkind', module = 'osv' } -- debug any Lua code running in a Neovim instance
 
    -- Git
   use "lewis6991/gitsigns.nvim"

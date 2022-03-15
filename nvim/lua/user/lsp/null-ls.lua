@@ -17,6 +17,7 @@ null_ls.setup({
 		formatting.autopep8, -- for python
 		formatting.stylua,     -- for lua
     formatting.clang_format, -- for cpp
+    formatting.gofmt,       -- for golang
 
     -- diagnostics.flake8,
 

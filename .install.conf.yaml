@@ -30,6 +30,7 @@
     ~/.vim:
     ~/.vimrc:
     ~/.config/nvim: nvim
+    ~/.config/clash: clash
     ~/.vimrc_local:
     ~/.ideavimrc:
     ~/.vsvimrc:

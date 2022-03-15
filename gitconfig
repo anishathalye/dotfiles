@@ -112,10 +112,10 @@
 [http]
 	cookieFile = ~/.gitcookies
 	postBuffer = 655360000
-	proxy = socks5://127.0.0.1:7890
+  proxy = socks5://127.0.0.1:7890
 
 [https]
-	proxy = socks5://127.0.0.1:7890
+  proxy = socks5://127.0.0.1:7890
 
 [core]
 	excludesfile = ~/.gitignore_global

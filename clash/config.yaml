@@ -1,7 +1,8 @@
-port: 7890
-socks-port: 7891
+# port: 7890
+# socks-port: 7891
+mixed-port: 7890
 allow-lan: true
-mode: rule
+mode: global
 log-level: info
 external-controller: '127.0.0.1:9090'
 proxies:

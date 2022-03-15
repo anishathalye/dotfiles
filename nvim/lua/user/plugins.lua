@@ -102,6 +102,10 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   -- which  key
   use "folke/which-key.nvim"
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1', -- optional but strongly recommended
+  }
 
 
   -- snippets

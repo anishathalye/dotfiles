@@ -110,6 +110,9 @@ local mappings = {
   ["t"] = {
     "<cmd>TodoQuickFix<CR>", "Todo"
   },
+  ["o"] = {
+    "<cmd>Vista<CR>", "Outline"
+  },
 
   p = {
     name = "Packer",

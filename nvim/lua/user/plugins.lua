@@ -133,6 +133,8 @@ return packer.startup(function(use)
     "nvim-telescope/telescope-frecency.nvim",
     requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
   }
+ use 'nvim-telescope/telescope-ui-select.nvim'
+
   -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",

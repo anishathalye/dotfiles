@@ -105,7 +105,7 @@ local mappings = {
     "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>",
     "Find files",
   },
-  ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
+  ["p"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
   ["t"] = {
     "<cmd>TodoQuickFix<CR>", "Todo"
@@ -114,7 +114,7 @@ local mappings = {
     "<cmd>Vista<CR>", "Outline"
   },
 
-  p = {
+  P = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
     i = { "<cmd>PackerInstall<cr>", "Install" },

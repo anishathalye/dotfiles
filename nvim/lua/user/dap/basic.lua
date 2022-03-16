@@ -33,10 +33,6 @@ local function configure()
 end
 
 local function configure_exts()
-  require("nvim-dap-virtual-text").setup {
-    commented = true,
-  }
-
   local dap, dapui = require "dap", require "dapui"
   dapui.setup {} -- use default
   dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -45,22 +41,22 @@ local function configure_exts()
   dap.listeners.before.event_terminated["dapui_config"] = function()
     dapui.close()
   end
+  dapui.close()
   dap.listeners.before.event_exited["dapui_config"] = function()
-    dapui.close()
   end
 end
 
 local function configure_debuggers()
-  require("user.dap.lua").setup()
-  require("user.dap.python").setup()
-  -- require("user.dap.go").setup()
+  require("user.dap.dap-cpp")
+  -- require("config.dap.python").setup()
+  -- require("config.dap.rust").setup()
+  -- require("config.dap.go").setup()
 end
 
 function M.setup()
   configure() -- Configuration
   configure_exts() -- Extensions
   configure_debuggers() -- Debugger
-  require("user.dap.keymaps").setup() -- Keymaps
 end
 
 configure_debuggers()

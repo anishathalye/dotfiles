@@ -171,4 +171,5 @@ telescope.setup {
 telescope.load_extension('fzf')
 telescope.load_extension("frecency")
 telescope.load_extension("ui-select")
+require('telescope').load_extension('dap')
 -- load project extension. see project.lua file

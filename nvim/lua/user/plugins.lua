@@ -107,6 +107,9 @@ return packer.startup(function(use)
   use { "rhysd/accelerated-jk", opt = true, event = "BufReadPost" }
   use 'famiu/bufdelete.nvim'
 
+  -- Lua
+  use 'abecodes/tabout.nvim'
+
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
@@ -118,6 +121,10 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    run = "make",
+  }
 
   -- Treesittetr
   use {
@@ -155,7 +162,10 @@ return packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'    -- status line
   use 'goolord/alpha-nvim'           -- welcome page
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "kevinhwang91/nvim-hlslens" -- highlight search
+  use {
+    "kevinhwang91/nvim-hlslens", -- highlight search
+    disable = true,
+  }
   use 'kevinhwang91/nvim-bqf'     -- better quick fix
   use "RRethy/vim-illuminate"     -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker

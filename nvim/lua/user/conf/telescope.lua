@@ -106,7 +106,8 @@ telescope.setup {
     find_files = {
       theme = "dropdown",
       previewer = false,
-      find_command = { "find", "-type", "f" },
+      -- find_command = { "find", "-type", "f" },
+      find_command = {"fd"},
     },
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
@@ -121,6 +122,24 @@ telescope.setup {
     -- extension_name = {
     --   extension_config_key = value,
     -- }
-    -- please take a look at the readme of the extension you want to configure
+
+    -- fzf syntax
+    -- Token	Match type	Description
+    -- sbtrkt	fuzzy-match	Items that match sbtrkt
+    -- 'wild	exact-match (quoted)	Items that include wild
+    -- ^music	prefix-exact-match	Items that start with music
+    -- .mp3$	suffix-exact-match	Items that end with .mp3
+    -- !fire	inverse-exact-match	Items that do not include fire
+    -- !^music	inverse-prefix-exact-match	Items that do not start with music
+    -- !.mp3$	inverse-suffix-exact-match	Items that do not end with .mp3
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+      -- the default case_mode is "smart_case"
+    }
   },
 }
+
+telescope.load_extension('fzf')

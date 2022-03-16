@@ -32,7 +32,7 @@ keymap("n", "<leader>l", ":nohl<cr>", opts)
 keymap("n", "<leader>w", ":w<cr>", opts)
 -- quite buffer
 -- TODO: fix this
-keymap("n", "<leader>q", ":quit<cr>", opts)
+keymap("n", "<leader>q", ":bd<cr>", opts)
 
 
 -- Resize with arrows
@@ -86,6 +86,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<Space>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<Space>F", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>u", "<cmd>Telescope lsp_references<cr>", opts)
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
 

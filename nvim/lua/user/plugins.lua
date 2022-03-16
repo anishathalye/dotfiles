@@ -122,6 +122,9 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
+  use 'romgrk/nvim-treesitter-context'
+  use "SmiteshP/nvim-gps"
 
   -- Debugger
   use 'Pocco81/DAPInstall.nvim'   -- help us install several debuggers

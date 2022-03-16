@@ -107,8 +107,8 @@ return packer.startup(function(use)
   use { "rhysd/accelerated-jk", opt = true, event = "BufReadPost" }
   use 'famiu/bufdelete.nvim'
 
-  -- Lua
-  use 'abecodes/tabout.nvim'
+  use 'abecodes/tabout.nvim' -- TODO: I don't know how to use this
+  use "nathom/filetype.nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -118,6 +118,10 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use 'RishabhRD/popfix'
+  -- use "RishabhRD/nvim-lsputils"
+  use 'kosayoda/nvim-lightbulb'  -- code action
+  use "ray-x/lsp_signature.nvim"  -- show function signature when typing
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -169,13 +173,15 @@ return packer.startup(function(use)
     "kevinhwang91/nvim-hlslens", -- highlight search
     disable = true,
   }
-  use 'kevinhwang91/nvim-bqf'     -- better quick fix
+  -- use 'kevinhwang91/nvim-bqf'     -- better quick fix, use trouble instead
   use "RRethy/vim-illuminate"     -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
   use "liuchengxu/vista.vim"     -- outline
+  -- use "stevearc/aerial.nvim"
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"
+  use "arkav/lualine-lsp-progress" -- show lsp progress
 
 
   -- Automatically set up your configuration after cloning packer.nvim

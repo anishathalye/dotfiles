@@ -134,6 +134,7 @@ return packer.startup(function(use)
     requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
   }
  use 'nvim-telescope/telescope-ui-select.nvim'
+ use 'nvim-telescope/telescope-live-grep-raw.nvim'
 
   -- Treesittetr
   use {
@@ -175,7 +176,7 @@ return packer.startup(function(use)
     "kevinhwang91/nvim-hlslens", -- highlight search
     disable = true,
   }
-  -- use 'kevinhwang91/nvim-bqf'     -- better quick fix, use trouble instead
+  use 'kevinhwang91/nvim-bqf'     -- better quick fix, use trouble instead
   use "RRethy/vim-illuminate"     -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments

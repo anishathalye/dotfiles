@@ -94,6 +94,7 @@ return packer.startup(function(use)
   use "ethanholz/nvim-lastplace" -- auto return back to the last modified positon when open a file
   use "rmagatti/auto-session"   -- auto restore session(constains layout, window etc..)
   use "BurntSushi/ripgrep" -- ripgrep
+  use "nvim-pack/nvim-spectre" -- search and replace pane
   
   use "akinsho/toggleterm.nvim" -- toggle terminal
   use "ahmedkhalf/project.nvim" -- project manager

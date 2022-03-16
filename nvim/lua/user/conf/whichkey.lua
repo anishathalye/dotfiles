@@ -157,6 +157,18 @@ local mappings = {
     },
   },
 
+  R = {
+    f = { "<cmd>lua require('spectre').open_file_search()<CR>", "Replace File" },
+    p = { "<cmd>lua require('spectre').open()<CR>", "Replace Project" },
+    s = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search" },
+    -- -- 全项目替换
+    -- vim.keybinds.gmap("n", "<leader>rp", "", vim.keybinds.opts)
+    -- -- 只替换当前文件
+    -- vim.keybinds.gmap("n", "<leader>rf", , vim.keybinds.opts)
+    -- -- 全项目中搜索当前单词
+    -- vim.keybinds.gmap("n", "<leader>rw", , vim.keybinds.opts)
+  },
+
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },

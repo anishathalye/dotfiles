@@ -35,7 +35,16 @@ telescope.setup {
 
     prompt_prefix = " ",
     selection_caret = " ",
-    path_display = { "smart" },
+    path_display = {
+      shorten= {
+        -- e.g. for a path like
+        --   `alpha/beta/gamma/delta.txt`
+        -- setting `path_display.shorten = { len = 1, exclude = {1, -1} }`
+        -- will give a path like:
+        --   `alpha/b/g/delta.txt`
+        len = 1, exclude = {1, -1}
+      },
+    },
 
     mappings = {
       i = {
@@ -109,6 +118,7 @@ telescope.setup {
       -- find_command = { "find", "-type", "f" },
       find_command = {"fd"},
     },
+
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,

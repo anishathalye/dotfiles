@@ -104,6 +104,8 @@ return packer.startup(function(use)
     'phaazon/hop.nvim',   -- like easymotion, but more powerful
     branch = 'v1', -- optional but strongly recommended
   }
+  use { "rhysd/accelerated-jk", opt = true, event = "BufReadPost" }
+  use 'famiu/bufdelete.nvim'
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -122,9 +124,10 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use 'romgrk/nvim-treesitter-context'
-  use "SmiteshP/nvim-gps"
+  use 'nvim-treesitter/nvim-treesitter-textobjects'  -- enhance texetobject selection
+  use 'romgrk/nvim-treesitter-context'  -- show class/function at the top
+  use "SmiteshP/nvim-gps"   -- statusline show class structure
+  use 'andymass/vim-matchup'
 
   -- Debugger
   use 'Pocco81/DAPInstall.nvim'   -- help us install several debuggers
@@ -137,11 +140,11 @@ return packer.startup(function(use)
   use { 'jbyuki/one-small-step-for-vimkind', module = 'osv' } -- debug any Lua code running in a Neovim instance
 
    -- Git
-  use "lewis6991/gitsigns.nvim" 
+  use "lewis6991/gitsigns.nvim"
 
   -- UI
   -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out 
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use 'navarasu/onedark.nvim'
   use 'folke/tokyonight.nvim'
@@ -157,8 +160,8 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"     -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
-  use  "liuchengxu/vista.vim"     -- outline 
-
+  use  "liuchengxu/vista.vim"     -- outline
+  use "norcalli/nvim-colorizer.lua" -- show color
 
 
   -- Automatically set up your configuration after cloning packer.nvim

@@ -32,7 +32,7 @@ keymap("n", "<leader>l", ":nohl<cr>", opts)
 keymap("n", "<leader>w", ":w<cr>", opts)
 -- quite buffer
 -- TODO: fix this
-keymap("n", "<leader>q", ":bd<cr>", opts)
+keymap("n", "<leader>q", ":Bdelete<cr>", opts)
 
 
 -- Resize with arrows

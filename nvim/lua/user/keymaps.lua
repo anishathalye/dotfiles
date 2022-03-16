@@ -84,7 +84,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<Space>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<Space>F", "<cmd>Telescope live_grep<cr>", opts)
+-- keymap("n", "<Space>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+-- keymap("n", "<Space>f", "<cmd>lua require('telescope').extensions.frecency.frecency(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+-- keymap("n", "<Space>F", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
 

@@ -187,6 +187,9 @@ return packer.startup(function(use)
   use "folke/trouble.nvim"
   use "arkav/lualine-lsp-progress" -- show lsp progress
 
+  -- tools
+  use 'cdelledonne/vim-cmake'
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

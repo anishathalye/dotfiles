@@ -89,7 +89,7 @@ local mappings = {
   -- ["w"] = { "<cmd>w!<CR>", "Save" },
   -- ["q"] = { "<cmd>q!<CR>", "Quit" },
   -- ["/"] = { "<cmd>lua require('Comment').toggle()<CR>", "Comment" },
-  ["c"] = { "<cmd>%bd|e#<CR>", "Close Other Buffers" },
+  ["C"] = { "<cmd>%bd|e#<CR>", "Close Other Buffers" },
   -- ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files()<cr>",
@@ -115,6 +115,13 @@ local mappings = {
   ["o"] = {
     "<cmd>Vista<CR>", "Outline"
   },
+
+  c = {
+    name = "CMake",
+    g = {"<cmd>CMakeGenerate<CR>", "Generate"},
+    b = {"<cmd>CMakeBuild<CR>", "Build"},
+  },
+
 
   t = {
     name = "Trouble",

@@ -9,11 +9,11 @@ onedark.setup {
   -- Main options --
   style = 'light', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
   transparent = false,  -- Show/hide background
-  term_colors = true, -- Change terminal color as per the selected theme style
+  term_colors = false, -- Change terminal color as per the selected theme style
   ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
   -- toggle theme style ---
-  toggle_style_key = '<leader>ts', -- Default keybinding to toggle
   toggle_style_list = {'light', 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer'}, -- List of styles to toggle between
+  toggle_style_key = '<leader>ts', -- Default keybinding to toggle
 
   -- Change code style ---
   -- Options are italic, bold, underline, none
@@ -32,3 +32,16 @@ onedark.setup {
 }
 
 onedark.load()
+
+-- vim.cmd [[
+-- let g:onedark_config = {
+--   \ 'style': 'light',
+--   \ 'toggle_style_key': '<leader>ts',
+--   \ 'ending_tildes': v:true,
+--   \ 'diagnostics': {
+--     \ 'darker': v:false,
+--     \ 'background': v:false,
+--   \ },
+-- \ }
+-- colorscheme onedark
+-- ]]

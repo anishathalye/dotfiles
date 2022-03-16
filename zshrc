@@ -46,3 +46,5 @@ fi
 if [ -f ~/.shell_private ]; then
     source ~/.shell_private
 fi
+
+export PATH=$PATH:$HOME/go/bin

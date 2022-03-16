@@ -173,8 +173,9 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"     -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
-  use  "liuchengxu/vista.vim"     -- outline
+  use "liuchengxu/vista.vim"     -- outline
   use "norcalli/nvim-colorizer.lua" -- show color
+  use "folke/trouble.nvim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

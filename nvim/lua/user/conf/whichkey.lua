@@ -107,11 +107,20 @@ local mappings = {
   },
   ["p"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
-  ["t"] = {
-    "<cmd>TodoQuickFix<CR>", "Todo"
+  ["T"] = {
+    "<cmd>TodoTrouble<CR>", "Todo"
   },
   ["o"] = {
     "<cmd>Vista<CR>", "Outline"
+  },
+
+  t = {
+    name = "Trouble",
+    t = { "<cmd>Trouble<cr>", "ToggleTrouble" },
+    d = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostics"},
+    w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics"},
+    q = { "<cmd>Trouble quickfix<cr>", "Quick Fix"},
+    u = { "<cmd>Trouble lsp_references<cr>", "Usage"},
   },
 
   P = {

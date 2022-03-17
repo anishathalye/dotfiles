@@ -186,9 +186,11 @@ return packer.startup(function(use)
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"
   use "arkav/lualine-lsp-progress" -- show lsp progress
+  use 'sindrets/winshift.nvim'    -- rerange window layout
 
   -- tools
   use 'cdelledonne/vim-cmake'
+  use 'mtdl10/vim-log-highlighting'
 
 
   -- Automatically set up your configuration after cloning packer.nvim

@@ -4,6 +4,9 @@ if not status_ok then
   vim.notify("onedark theme not found!")
   return
 end
+
+-- NOTE: if use 'light' theme, you  should change backgournd and style to 'light' 
+vim.o.background='light'
 onedark.setup {
   -- Main options --
   style = 'light', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'

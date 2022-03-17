@@ -23,9 +23,11 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+-- NOTE: require winshit plugin
+keymap("n", "<C-W>m", ":WinShift<cr>", opts)
 
 -- FileExpolre
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<Space>e", ":NvimTreeToggle<cr>", opts)
 -- no highlight
 keymap("n", "<leader>l", ":nohl<cr>", opts)
 -- save buffer
@@ -35,6 +37,12 @@ keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader>q", ":Bdelete<cr>", opts)
 keymap("n", "<leader>d", ":Bdelete<cr>", opts)
 
+-- center cursor
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+keymap("n", "J", "mzJ`z", opts)
+keymap("n", "j", "jzz", opts)
+keymap("n", "k", "kzz", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)

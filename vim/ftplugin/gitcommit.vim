@@ -1,2 +1,0 @@
-set spell
-set expandtab

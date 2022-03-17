@@ -190,7 +190,8 @@ return packer.startup(function(use)
 
   -- tools
   use 'cdelledonne/vim-cmake'
-  use 'mtdl10/vim-log-highlighting'
+  use 'mtdl9/vim-log-highlighting'
+  use "Pocco81/HighStr.nvim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

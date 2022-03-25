@@ -1,1 +1,5 @@
 logs/*
+
+clash/Country.mmdb
+clash/cache.db
+

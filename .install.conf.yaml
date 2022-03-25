@@ -32,6 +32,7 @@
     ~/.config/lazygit: lazygit
     ~/.config/nvim: nvim
     ~/.config/clash: clash
+    ~/.config/zellij: zellij
     ~/.vimrc_local:
     ~/.ideavimrc:
     ~/.vsvimrc:

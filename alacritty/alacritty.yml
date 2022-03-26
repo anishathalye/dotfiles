@@ -1,0 +1,125 @@
+# Colors (One Darker)
+# Note I am using alacritty-ligatures until ligatures make it upstream
+colors:
+  # Default colors
+  primary:
+    # background: "#232731"
+    background: "#1f2227"
+    foreground: "#abb2bf"
+
+  # Normal colors
+  # Nord
+  normal:
+    black: "#4C566A"
+    red: "#bf616a"
+    green: "#A3BE8C"
+    yellow: "#D7BA7D"
+    blue: "#5e81ac"
+    magenta: "#B48EAD"
+    cyan: "#88c0d0"
+    white: "#abb2bf"
+
+  # Bright colors
+  bright:
+    black: "#4C566A"
+    red: "#bf616a"
+    green: "#A3BE8C"
+    yellow: "#D7BA7D"
+    blue: "#5e81ac"
+    magenta: "#B48EAD"
+    cyan: "#88c0d0"
+    white: "#abb2bf"
+
+#   normal:
+#     black: "#4b5263"
+#     red: "#e06c75"
+#     green: "#98C379"
+#     yellow: "#E5C07B"
+#     blue: "#61AFEF"
+#     magenta: "#C678DD"
+#     cyan: "#56B6C2"
+#     white: "#abb2bf"
+# 
+#   # Bright colors
+#   bright:
+#     black: "#4b5263"
+#     red: "#e06c75"
+#     green: "#98C379"
+#     yellow: "#E5C07B"
+#     blue: "#61AFEF"
+#     magenta: "#C678DD"
+#     cyan: "#56B6C2"
+#     white: "#abb2bf"
+
+  # background_opacity: 1.0
+
+  # Change cursor colors
+  cursor:
+    text: "#3B4252"
+    cursor: "#ECEFF4"
+
+cursor:
+  style:
+    blinking: Never
+
+font:
+  # The normal (roman) font face to use.
+  normal:
+    family: JetBrainsMono Nerd Font Mono
+    # Style can be specified to pick a specific face.
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: JetBrainsMono Nerd Font Mono
+    # Style can be specified to pick a specific face.
+    style: Bold
+
+  # The italic font face
+  italic:
+    family: JetBrainsMono Nerd Font Mono
+    # Style can be specified to pick a specific face.
+    style: Italic
+
+  size: 12.0
+
+  ligatures: true
+
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+window:
+  padding:
+    x: 2
+    y: 2
+  # scrolling:
+  #   # Maximum number of lines in the scrollback buffer.
+  #   # Specifying '0' will disable scrolling.
+  history: 10000
+  #   # Number of lines the viewport will move for every line scrolled when
+  #   # scrollback is enabled (history > 0).
+  #   multiplier: 10
+
+# Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
+
+  # # If `true`, bold text is drawn using the bright color variants.
+  # draw_bold_text_with_bright_colors: true
+
+  # selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: true
+  live_config_reload: true
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  # - { key: Add, mods: Control, action: IncreaseFontSize }
+  # - { key: Subtract, mods: Control, action: DecreaseFontSize }
+  # - { key: N, mods: Control, action: SpawnNewInstance }
+

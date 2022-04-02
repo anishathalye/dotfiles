@@ -108,7 +108,7 @@ return packer.startup(function(use)
   use { "rhysd/accelerated-jk", opt = true, event = "BufReadPost" }
   use 'famiu/bufdelete.nvim'
 
-  use 'abecodes/tabout.nvim' -- TODO: I don't know how to use this
+  -- use 'abecodes/tabout.nvim' -- TODO: I don't know how to use this
   use "nathom/filetype.nvim"
 
   -- snippets
@@ -130,10 +130,10 @@ return packer.startup(function(use)
     "nvim-telescope/telescope-fzf-native.nvim",
     run = "make",
   }
-  use {
-    "nvim-telescope/telescope-frecency.nvim",
-    requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
-  }
+  -- use {
+  --   "nvim-telescope/telescope-frecency.nvim",
+  --   requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
+  -- }
  use 'nvim-telescope/telescope-ui-select.nvim'
  use 'nvim-telescope/telescope-live-grep-raw.nvim'
 
@@ -171,7 +171,9 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"      -- tab
   use "moll/vim-bbye"
   use 'nvim-lualine/lualine.nvim'    -- status line
-  use 'goolord/alpha-nvim'           -- welcome page
+  -- use 'goolord/alpha-nvim'           -- welcome page
+  use 'startup-nvim/startup.nvim'     -- welcome page
+
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use {
     "kevinhwang91/nvim-hlslens", -- highlight search
@@ -189,9 +191,14 @@ return packer.startup(function(use)
   use 'sindrets/winshift.nvim'    -- rerange window layout
 
   -- tools
-  use 'cdelledonne/vim-cmake'
+  use {
+    'cdelledonne/vim-cmake',
+    branch = "44-weird-project-root-path",    -- NOTE: may change to main branch in the further
+  }
   use 'mtdl9/vim-log-highlighting'
   use "Pocco81/HighStr.nvim"
+  use "dstein64/vim-startuptime"
+  -- use 'henriquehbr/nvim-startup.lua'
 
 
   -- Automatically set up your configuration after cloning packer.nvim

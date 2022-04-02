@@ -27,7 +27,8 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<C-W>m", ":WinShift<cr>", opts)
 
 -- FileExpolre
-keymap("n", "<Space>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", ";e", ":NvimTreeToggle<cr>", opts)
+keymap("n", ";f", ":NvimTreeFindFile<cr>", opts)
 -- no highlight
 keymap("n", "<leader>l", ":nohl<cr>", opts)
 -- save buffer
@@ -108,4 +109,5 @@ keymap("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
 keymap("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
 

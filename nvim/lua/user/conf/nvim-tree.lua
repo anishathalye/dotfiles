@@ -80,11 +80,12 @@ nvim_tree.setup {
     "startify",
     "dashboard",
     "alpha",
+    "startup",
   },
-  auto_close = true,
+  -- auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
-  update_cwd = false,
+  update_cwd = true,
   diagnostics = {
     enable = true,
     icons = {
@@ -95,8 +96,8 @@ nvim_tree.setup {
     },
   },
   update_focused_file = {
-    enable = true,
-    update_cwd = true,
+    enable = false,
+    update_cwd = false,
     ignore_list = {},
   },
   git = {

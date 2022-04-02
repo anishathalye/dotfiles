@@ -7,5 +7,5 @@ end
 
 spellsitter.setup(
 {
-    enable = true
+    -- enable = true
 })

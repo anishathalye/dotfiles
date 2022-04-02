@@ -84,11 +84,7 @@ nvim_tree.setup {
   auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
-  update_cwd = true,
-  update_to_buf_dir = {
-    enable = true,
-    auto_open = true,
-  },
+  update_cwd = false,
   diagnostics = {
     enable = true,
     icons = {
@@ -129,7 +125,7 @@ nvim_tree.setup {
   quit_on_open = 0,
   git_hl = 1,
   disable_window_picker = 0,
-  root_folder_modifier = ":t",
+  -- root_folder_modifier = ":t",
   show_icons = {
     git = 1,
     folders = 1,

@@ -53,7 +53,7 @@ telescope.setup {
         -- setting `path_display.shorten = { len = 1, exclude = {1, -1} }`
         -- will give a path like:
         --   `alpha/b/g/delta.txt`
-        len = 1, exclude = {1, -1}
+        len = 3, exclude = {1, -1}
       },
     },
 
@@ -126,8 +126,8 @@ telescope.setup {
     find_files = {
       theme = "dropdown",
       previewer = false,
-      -- find_command = { "find", "-type", "f" },
-      find_command = {"fd"},
+      find_command = { "find", "-type", "f" },
+      -- find_command = {"fd"},
     },
 
     -- Default configuration for builtin pickers goes here:
@@ -168,8 +168,8 @@ telescope.setup {
   },
 }
 
-telescope.load_extension('fzf')
-telescope.load_extension("frecency")
+-- telescope.load_extension('fzf')
+-- telescope.load_extension("frecency")
 telescope.load_extension("ui-select")
 require('telescope').load_extension('dap')
 -- load project extension. see project.lua file

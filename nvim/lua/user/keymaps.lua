@@ -41,8 +41,8 @@ keymap("n", "<leader>d", ":Bdelete<cr>", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 keymap("n", "J", "mzJ`z", opts)
-keymap("n", "j", "jzz", opts)
-keymap("n", "k", "kzz", opts)
+-- keymap("n", "j", "jzz", opts)
+-- keymap("n", "k", "kzz", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)

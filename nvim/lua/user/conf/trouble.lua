@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 trouble.setup({
-		position = "bottom", -- position of the list can be: bottom, top, left, right
+		position = "right", -- position of the list can be: bottom, top, left, right
 		height = 10, -- height of the trouble list when position is top or bottom
 		width = 50, -- width of the list when position is left or right
 		icons = true, -- use devicons for filenames
@@ -19,15 +19,15 @@ trouble.setup({
 			close = "q", -- close the list
 			cancel = "<esc>", -- cancel the preview and get back to your last window / buffer / cursor
 			refresh = "r", -- manually refresh
-			jump = { "<o>", "<tab>" }, -- jump to the diagnostic or open / close folds
+			jump = { "o", "<tab>" }, -- jump to the diagnostic or open / close folds
 			open_split = { "<c-x>" }, -- open buffer in new split
 			open_vsplit = { "<c-v>" }, -- open buffer in new vsplit
 			open_tab = { "<c-t>" }, -- open buffer in new tab
 			jump_close = { "<cr>" }, -- jump to the diagnostic and close the list
 			toggle_mode = "m", -- toggle between "workspace" and "document" diagnostics mode
-			toggle_preview = "P", -- toggle auto_preview
+			toggle_preview = "p", -- toggle auto_preview
 			hover = "K", -- opens a small popup with the full multiline message
-			preview = "p", -- preview the diagnostic location
+			preview = "P", -- preview the diagnostic location
 			close_folds = { "zM", "zm" }, -- close all folds
 			open_folds = { "zR", "zr" }, -- open all folds
 			toggle_fold = { "zA", "zo", "zc" }, -- toggle fold of current file

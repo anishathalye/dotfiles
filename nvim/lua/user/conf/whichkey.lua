@@ -113,7 +113,7 @@ local mappings = {
     "<cmd>TodoTrouble<CR>", "Todo"
   },
   ["o"] = {
-    "<cmd>Vista<CR>", "Outline"
+    "<cmd>AerialToggle<CR>", "Outline"
   },
 
   c = {

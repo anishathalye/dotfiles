@@ -183,7 +183,9 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"     -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
-  use "liuchengxu/vista.vim"     -- outline
+  -- use "liuchengxu/vista.vim"     -- outline
+  -- use 'simrat39/symbols-outline.nvim' -- outline
+  use 'stevearc/aerial.nvim'
   -- use "stevearc/aerial.nvim"
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"

@@ -39,3 +39,4 @@ require "user.conf.winshift"
 require "user.conf.high-str"
 -- require "user.conf.startup"  -- welcome page
 require "user.conf.nvim-neoclip" -- clipboard manager
+require "user.conf.nvim-biscuits" -- clipboard manager

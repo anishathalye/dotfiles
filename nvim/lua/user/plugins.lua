@@ -80,50 +80,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "rcarriga/nvim-notify"  -- notify
-
-  -- Editor enhace
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "terrortylor/nvim-comment"
-  -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-nvim-lua"
-  use "ethanholz/nvim-lastplace" -- auto return back to the last modified positon when open a file
-  use "rmagatti/auto-session"   -- auto restore session(constains layout, window etc..)
-  use "BurntSushi/ripgrep" -- ripgrep
-  use "nvim-pack/nvim-spectre" -- search and replace pane
-  
-  use "akinsho/toggleterm.nvim" -- toggle terminal
-  use "ahmedkhalf/project.nvim" -- project manager
   use 'lewis6991/impatient.nvim' -- Speed up loading Lua modules
-  use "lukas-reineke/indent-blankline.nvim" -- indent blankline
-  use "folke/which-key.nvim" -- which  key
-  use {
-    'phaazon/hop.nvim',   -- like easymotion, but more powerful
-    branch = 'v1', -- optional but strongly recommended
-  }
-  use { "rhysd/accelerated-jk", opt = true, event = "BufReadPost" }
-  use 'famiu/bufdelete.nvim'
-
-  -- use 'abecodes/tabout.nvim' -- TODO: I don't know how to use this
-  use "nathom/filetype.nvim"
-
-  -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-
-  -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use 'RishabhRD/popfix'
-  -- use "RishabhRD/nvim-lsputils"
-  use 'kosayoda/nvim-lightbulb'  -- code action
-  use "ray-x/lsp_signature.nvim"  -- show function signature when typing
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -148,6 +105,50 @@ return packer.startup(function(use)
   use "SmiteshP/nvim-gps"   -- statusline show class structure
   use 'andymass/vim-matchup'
 
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use 'RishabhRD/popfix'
+  -- use "RishabhRD/nvim-lsputils"
+  use 'kosayoda/nvim-lightbulb'  -- code action
+  use "ray-x/lsp_signature.nvim"  -- show function signature when typing
+
+  -- Editor enhace
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "terrortylor/nvim-comment"
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
+  use "ethanholz/nvim-lastplace" -- auto return back to the last modified positon when open a file
+  use "rmagatti/auto-session"   -- auto restore session(constains layout, window etc..)
+  use "BurntSushi/ripgrep" -- ripgrep
+  use "nvim-pack/nvim-spectre" -- search and replace pane
+  use 'code-biscuits/nvim-biscuits' -- AST enhace, require treesitter
+  
+  use "akinsho/toggleterm.nvim" -- toggle terminal
+  use "ahmedkhalf/project.nvim" -- project manager
+  use "lukas-reineke/indent-blankline.nvim" -- indent blankline
+  use "folke/which-key.nvim" -- which  key
+  use {
+    'phaazon/hop.nvim',   -- like easymotion, but more powerful
+    branch = 'v1', -- optional but strongly recommended
+  }
+  use { "rhysd/accelerated-jk", opt = true, event = "BufReadPost" }
+  use 'famiu/bufdelete.nvim'
+
+  -- use 'abecodes/tabout.nvim' -- TODO: I don't know how to use this
+  use "nathom/filetype.nvim"
+
+  -- snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
   -- Debugger
   use 'Pocco81/DAPInstall.nvim'   -- help us install several debuggers
   use 'mfussenegger/nvim-dap'
@@ -158,7 +159,7 @@ return packer.startup(function(use)
   use { 'leoluz/nvim-dap-go', module = 'dap-go' } -- debug golang
   use { 'jbyuki/one-small-step-for-vimkind', module = 'osv' } -- debug any Lua code running in a Neovim instance
 
-   -- Git
+  -- Git
   use "lewis6991/gitsigns.nvim"
 
   -- UI
@@ -200,7 +201,6 @@ return packer.startup(function(use)
   use "dstein64/vim-startuptime"
   -- use 'henriquehbr/nvim-startup.lua'
   use "AckslD/nvim-neoclip.lua"
-
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -83,7 +83,7 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-  client.resolved_capabilities.document_formatting = false -- disable all server formating capabilities, use null-ls instead
+  -- client.resolved_capabilities.document_formatting = false -- disable all server formating capabilities, use null-ls instead
   -- if client.name == "tsserver" or client.name == "clangd" then
   -- end
   lsp_keymaps(bufnr)

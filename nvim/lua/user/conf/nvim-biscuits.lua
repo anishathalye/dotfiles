@@ -6,7 +6,8 @@ end
 
 biscuit.setup({
   toggle_keybind = "<leader>cb",
-  show_on_start = true, -- defaults to false
+  show_on_start = false, -- defaults to false
+  cursor_line_only = true,
   default_config = {
     max_length = 12,
     min_distance = 5,

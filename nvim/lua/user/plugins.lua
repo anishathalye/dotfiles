@@ -117,6 +117,7 @@ return packer.startup(function(use)
   -- Editor enhace
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "terrortylor/nvim-comment"
+  use "rmagatti/auto-session"   -- auto restore session(constains layout, window etc..)
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -126,7 +127,6 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   use "ethanholz/nvim-lastplace" -- auto return back to the last modified positon when open a file
-  use "rmagatti/auto-session"   -- auto restore session(constains layout, window etc..)
   use "BurntSushi/ripgrep" -- ripgrep
   use "nvim-pack/nvim-spectre" -- search and replace pane
   use "code-biscuits/nvim-biscuits" -- AST enhace, require treesitter

@@ -35,7 +35,7 @@ keymap("n", "<leader>l", ":nohl<cr>", opts)
 keymap("n", "<leader>w", ":w<cr>", opts)
 -- quite buffer
 -- TODO: fix this
-keymap("n", "<leader>q", ":Bdelete<cr>", opts)
+keymap("n", "<leader>q", ":q<cr>", opts)
 keymap("n", "<leader>d", ":Bdelete<cr>", opts)
 
 -- center cursor

@@ -1,34 +1,47 @@
+# File Path:
+# Windows: C:\Users\Raven\AppData\Roaming\alacritty\alacritty.yml
+# Others: $HOME/.config/alacritty/alacritty.yml
 # Colors (One Darker)
 # Note I am using alacritty-ligatures until ligatures make it upstream
 colors:
   # Default colors
   primary:
-    # background: "#232731"
-    background: "#1f2227"
-    foreground: "#abb2bf"
+    background: "0x1e2127"
+    foreground: "0xabb2bf"
 
-  # Normal colors
-  # Nord
+      # Normal colors
+      # Nord
   normal:
-    black: "#4C566A"
-    red: "#bf616a"
-    green: "#A3BE8C"
-    yellow: "#D7BA7D"
-    blue: "#5e81ac"
-    magenta: "#B48EAD"
-    cyan: "#88c0d0"
-    white: "#abb2bf"
+    black:   "0x1e2127"
+    red:     "0xe06c75"
+    green:   "0x98c379"
+    yellow:  "0xd19a66"
+    blue:    "0x61afef"
+    magenta: "0xc678dd"
+    cyan:    "0x56b6c2"
+    white:   "0x828791"
 
-  # Bright colors
+      # Bright colors
   bright:
-    black: "#4C566A"
-    red: "#bf616a"
-    green: "#A3BE8C"
-    yellow: "#D7BA7D"
-    blue: "#5e81ac"
-    magenta: "#B48EAD"
-    cyan: "#88c0d0"
-    white: "#abb2bf"
+    black:   "0x5c6370"
+    red:     "0xe06c75"
+    green:   "0x98c379"
+    yellow:  "0xd19a66"
+    blue:    "0x61afef"
+    magenta: "0xc678dd"
+    cyan:    "0x56b6c2"
+    white:   "0xe6efff"
+
+  dim:
+    black:   "0x1e2127"
+    red:     "0xe06c75"
+    green:   "0x98c379"
+    yellow:  "0xd19a66"
+    blue:    "0x61afef"
+    magenta: "0xc678dd"
+    cyan:    "0x56b6c2"
+    white:   "0x828791"
+
 
 #   normal:
 #     black: "#4b5263"
@@ -65,23 +78,23 @@ cursor:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono NF
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: JetBrainsMono Nerd Font Mono
-    # Style can be specified to pick a specific face.
+  #   family: Noto Sans Mono
+  #   # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: JetBrainsMono Nerd Font Mono
-    # Style can be specified to pick a specific face.
+  #   family: Noto Sans Mono
+  #   # Style can be specified to pick a specific face.
     style: Italic
 
-  size: 12.0
+  size: 10.0
 
   ligatures: true
 
@@ -97,7 +110,7 @@ window:
     y: 2
   # scrolling:
   #   # Maximum number of lines in the scrollback buffer.
-  #   # Specifying '0' will disable scrolling.
+  #   # Specifying "0" will disable scrolling.
   history: 10000
   #   # Number of lines the viewport will move for every line scrolled when
   #   # scrollback is enabled (history > 0).
@@ -110,7 +123,7 @@ window:
   # draw_bold_text_with_bright_colors: true
 
   # selection:
-  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  semantic_escape_chars: ",│`|:""" ()[]{}<>"
   save_to_clipboard: true
   live_config_reload: true
 key_bindings:
@@ -122,4 +135,3 @@ key_bindings:
   # - { key: Add, mods: Control, action: IncreaseFontSize }
   # - { key: Subtract, mods: Control, action: DecreaseFontSize }
   # - { key: N, mods: Control, action: SpawnNewInstance }
-

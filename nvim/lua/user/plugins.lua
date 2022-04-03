@@ -41,7 +41,7 @@ packer.init {
 
 --  useage
 -- use {
---   'myusername/example',        -- The plugin location string
+--   "myusername/example",        -- The plugin location string
 --   -- The following keys are all optional
 --   disable = boolean,           -- Mark a plugin as inactive
 --   as = string,                 -- Specifies an alias under which to install the plugin
@@ -51,7 +51,7 @@ packer.init {
 --   rtp = string,                -- Specifies a subdirectory of the plugin to add to runtimepath.
 --   opt = boolean,               -- Manually marks a plugin as optional.
 --   branch = string,             -- Specifies a git branch to use
---   tag = string,                -- Specifies a git tag to use. Supports '*' for "latest tag"
+--   tag = string,                -- Specifies a git tag to use. Supports "*" for "latest tag"
 --   commit = string,             -- Specifies a git commit to use
 --   lock = boolean,              -- Skip updating this plugin in updates/syncs. Still cleans.
 --   run = string, function, or table, -- Post-update/install hook. See "update/install hooks".
@@ -80,7 +80,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "rcarriga/nvim-notify"  -- notify
-  use 'lewis6991/impatient.nvim' -- Speed up loading Lua modules
+  use "lewis6991/impatient.nvim" -- Speed up loading Lua modules
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -92,26 +92,26 @@ return packer.startup(function(use)
   --   "nvim-telescope/telescope-frecency.nvim",
   --   requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
   -- }
- use 'nvim-telescope/telescope-ui-select.nvim'
- use 'nvim-telescope/telescope-live-grep-raw.nvim'
+ use "nvim-telescope/telescope-ui-select.nvim"
+ use "nvim-telescope/telescope-live-grep-raw.nvim"
 
   -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use 'nvim-treesitter/nvim-treesitter-textobjects'  -- enhance texetobject selection
-  use 'romgrk/nvim-treesitter-context'  -- show class/function at the top
+  use "nvim-treesitter/nvim-treesitter-textobjects"  -- enhance texetobject selection
+  use "romgrk/nvim-treesitter-context"  -- show class/function at the top
   use "SmiteshP/nvim-gps"   -- statusline show class structure
-  use 'andymass/vim-matchup'
+  use "andymass/vim-matchup"
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  -- use 'RishabhRD/popfix'
+  -- use "RishabhRD/popfix"
   -- use "RishabhRD/nvim-lsputils"
-  use 'kosayoda/nvim-lightbulb'  -- code action
+  use "kosayoda/nvim-lightbulb"  -- code action
   use "ray-x/lsp_signature.nvim"  -- show function signature when typing
 
   -- Editor enhace
@@ -129,20 +129,22 @@ return packer.startup(function(use)
   use "rmagatti/auto-session"   -- auto restore session(constains layout, window etc..)
   use "BurntSushi/ripgrep" -- ripgrep
   use "nvim-pack/nvim-spectre" -- search and replace pane
-  use 'code-biscuits/nvim-biscuits' -- AST enhace, require treesitter
+  use "code-biscuits/nvim-biscuits" -- AST enhace, require treesitter
+  use "tpope/vim-repeat"    --  . command enhace
+  use "tpope/vim-surround"  -- vim surround
   
   use "akinsho/toggleterm.nvim" -- toggle terminal
   use "ahmedkhalf/project.nvim" -- project manager
   use "lukas-reineke/indent-blankline.nvim" -- indent blankline
   use "folke/which-key.nvim" -- which  key
   use {
-    'phaazon/hop.nvim',   -- like easymotion, but more powerful
-    branch = 'v1', -- optional but strongly recommended
+    "phaazon/hop.nvim",   -- like easymotion, but more powerful
+    branch = "v1", -- optional but strongly recommended
   }
   use { "rhysd/accelerated-jk", opt = true, event = "BufReadPost" }
-  use 'famiu/bufdelete.nvim'
+  use "famiu/bufdelete.nvim"
 
-  -- use 'abecodes/tabout.nvim' -- TODO: I don't know how to use this
+  -- use "abecodes/tabout.nvim" -- TODO: I don't know how to use this
   use "nathom/filetype.nvim"
 
   -- snippets
@@ -150,60 +152,60 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- Debugger
-  use 'Pocco81/DAPInstall.nvim'   -- help us install several debuggers
-  use 'mfussenegger/nvim-dap'
-  use 'theHamsta/nvim-dap-virtual-text'
-  use 'rcarriga/nvim-dap-ui'
-  use 'nvim-telescope/telescope-dap.nvim'
-  use 'mfussenegger/nvim-dap-python'    -- debug python
-  use { 'leoluz/nvim-dap-go', module = 'dap-go' } -- debug golang
-  use { 'jbyuki/one-small-step-for-vimkind', module = 'osv' } -- debug any Lua code running in a Neovim instance
+  use "Pocco81/DAPInstall.nvim"   -- help us install several debuggers
+  use "mfussenegger/nvim-dap"
+  use "theHamsta/nvim-dap-virtual-text"
+  use "rcarriga/nvim-dap-ui"
+  use "nvim-telescope/telescope-dap.nvim"
+  use "mfussenegger/nvim-dap-python"    -- debug python
+  use { "leoluz/nvim-dap-go", module = "dap-go" } -- debug golang
+  use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-  use 'tanvirtin/vgit.nvim'
+  use "tanvirtin/vgit.nvim"
 
   -- UI
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
-  use 'navarasu/onedark.nvim'
-  use 'folke/tokyonight.nvim'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'     -- file explore
+  use "navarasu/onedark.nvim"
+  use "folke/tokyonight.nvim"
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"     -- file explore
   use "akinsho/bufferline.nvim"      -- tab
   use "moll/vim-bbye"
-  use 'nvim-lualine/lualine.nvim'    -- status line
-  use 'goolord/alpha-nvim'           -- welcome page
-  -- use 'startup-nvim/startup.nvim'     -- welcome page
+  use "nvim-lualine/lualine.nvim"    -- status line
+  use "goolord/alpha-nvim"           -- welcome page
+  -- use "startup-nvim/startup.nvim"     -- welcome page
 
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use {
     "kevinhwang91/nvim-hlslens", -- highlight search
     disable = true,
   }
-  use 'kevinhwang91/nvim-bqf'     -- better quick fix, use trouble instead
+  use "kevinhwang91/nvim-bqf"     -- better quick fix, use trouble instead
   use "RRethy/vim-illuminate"     -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
   -- use "liuchengxu/vista.vim"     -- outline
-  -- use 'simrat39/symbols-outline.nvim' -- outline
-  use 'stevearc/aerial.nvim'
+  -- use "simrat39/symbols-outline.nvim" -- outline
+  use "stevearc/aerial.nvim"
   -- use "stevearc/aerial.nvim"
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"
   use "arkav/lualine-lsp-progress" -- show lsp progress
-  use 'sindrets/winshift.nvim'    -- rerange window layout
+  use "sindrets/winshift.nvim"    -- rerange window layout
   -- litee family
-  use 'ldelossa/litee.nvim'
-  use 'ldelossa/litee-calltree.nvim'
+  use "ldelossa/litee.nvim"
+  use "ldelossa/litee-calltree.nvim"
 
   -- tools
-  use 'cdelledonne/vim-cmake'
-  use 'mtdl9/vim-log-highlighting'
+  use "cdelledonne/vim-cmake"
+  use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"
   use "dstein64/vim-startuptime"
-  -- use 'henriquehbr/nvim-startup.lua'
+  -- use "henriquehbr/nvim-startup.lua"
   use "AckslD/nvim-neoclip.lua"
 
   -- Automatically set up your configuration after cloning packer.nvim

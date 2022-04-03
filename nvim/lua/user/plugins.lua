@@ -171,8 +171,8 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"      -- tab
   use "moll/vim-bbye"
   use 'nvim-lualine/lualine.nvim'    -- status line
-  -- use 'goolord/alpha-nvim'           -- welcome page
-  use 'startup-nvim/startup.nvim'     -- welcome page
+  use 'goolord/alpha-nvim'           -- welcome page
+  -- use 'startup-nvim/startup.nvim'     -- welcome page
 
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use {
@@ -195,7 +195,6 @@ return packer.startup(function(use)
   -- tools
   use {
     'cdelledonne/vim-cmake',
-    branch = "44-weird-project-root-path",    -- NOTE: may change to main branch in the further
   }
   use 'mtdl9/vim-log-highlighting'
   use "Pocco81/HighStr.nvim"

@@ -36,5 +36,5 @@ require "user.conf.nvim-spectre"
 require "user.conf.vim-cmake"
 require "user.conf.winshift"
 require "user.conf.high-str"
--- require "user.conf.nvim-startup"
-require "user.conf.startup"
+require "user.conf.nvim-startup" -- startup time calc
+-- require "user.conf.startup"  -- welcome page

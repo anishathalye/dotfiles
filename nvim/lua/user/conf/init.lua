@@ -41,3 +41,4 @@ require "user.conf.high-str"
 require "user.conf.nvim-neoclip" -- clipboard manager
 require "user.conf.nvim-biscuits" -- clipboard manager
 require "user.conf.litee-family"
+require "user.conf.vgit"

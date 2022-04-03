@@ -176,7 +176,7 @@ return packer.startup(function(use)
   use 'goolord/alpha-nvim'           -- welcome page
   -- use 'startup-nvim/startup.nvim'     -- welcome page
 
-  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+  -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use {
     "kevinhwang91/nvim-hlslens", -- highlight search
     disable = true,

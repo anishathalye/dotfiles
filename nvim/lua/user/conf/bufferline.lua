@@ -7,7 +7,7 @@ end
 bufferline.setup ({
     options = {
     mode = "buffers", -- set to "tabs" to only show tabpages instead
-    numbers = "buffer_id", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+    numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
     --- @deprecated, please specify numbers as a function to customize the styling
     -- number_style = "superscript", --| "subscript" | "" | { "none", "subscript" }, -- buffer_id at index 1, ordinal at index 2
     close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"

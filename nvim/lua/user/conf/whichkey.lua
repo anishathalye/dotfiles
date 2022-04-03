@@ -176,6 +176,7 @@ local mappings = {
     s = { "<cmd>VGit buffer_stage<cr>", "Stage File" },
     u = { "<cmd>VGit buffer_unstage<cr>", "Unstage File" },
     r = { "<cmd>VGit buffer_reset<cr>", "Reset File" },
+    f = { "<cmd>VGit buffer_history_preview <cr>", "Reset File" },
 
     B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },

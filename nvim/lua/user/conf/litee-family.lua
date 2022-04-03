@@ -9,7 +9,8 @@ require('litee.lib').setup({
 -- configure litee-calltree.nvim
 require('litee.calltree').setup({
    -- NOTE: the plugin is in-progressing
-  on_open = "pannel", -- or pannel
+  on_open = "pannel", -- pannel | popout
+  hide_cursor = false,
   keymaps = {
     expand = "o",
     collapse = "zc",

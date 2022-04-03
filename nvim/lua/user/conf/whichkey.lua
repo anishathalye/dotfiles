@@ -115,6 +115,10 @@ local mappings = {
   ["o"] = {
     "<cmd>AerialToggle<CR>", "Outline"
   },
+  ["v"] = {
+    "<cmd>lua require('telescope').extensions.neoclip.default(require('telescope.themes').get_ivy())<cr>",
+    "Clipboard Manager"
+  },
 
   c = {
     name = "CMake",

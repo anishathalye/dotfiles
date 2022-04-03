@@ -193,13 +193,12 @@ return packer.startup(function(use)
   use 'sindrets/winshift.nvim'    -- rerange window layout
 
   -- tools
-  use {
-    'cdelledonne/vim-cmake',
-  }
+  use 'cdelledonne/vim-cmake'
   use 'mtdl9/vim-log-highlighting'
   use "Pocco81/HighStr.nvim"
   use "dstein64/vim-startuptime"
   -- use 'henriquehbr/nvim-startup.lua'
+  use "AckslD/nvim-neoclip.lua"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

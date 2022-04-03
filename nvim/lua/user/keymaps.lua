@@ -104,6 +104,9 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
 keymap("n", "<leader>u", "<cmd>TroubleToggle lsp_references<cr>", opts)
 
+-- calltree
+keymap("n", "<leader>in", "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", opts)
+
 -- debug
 keymap("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
 keymap("n", "<leader>cb", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", opts)
@@ -113,5 +116,6 @@ keymap("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
 keymap("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
 
 

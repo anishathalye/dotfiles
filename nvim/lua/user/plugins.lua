@@ -109,7 +109,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use 'RishabhRD/popfix'
+  -- use 'RishabhRD/popfix'
   -- use "RishabhRD/nvim-lsputils"
   use 'kosayoda/nvim-lightbulb'  -- code action
   use "ray-x/lsp_signature.nvim"  -- show function signature when typing
@@ -193,6 +193,9 @@ return packer.startup(function(use)
   use "folke/trouble.nvim"
   use "arkav/lualine-lsp-progress" -- show lsp progress
   use 'sindrets/winshift.nvim'    -- rerange window layout
+  -- litee family
+  use 'ldelossa/litee.nvim'
+  use 'ldelossa/litee-calltree.nvim'
 
   -- tools
   use 'cdelledonne/vim-cmake'

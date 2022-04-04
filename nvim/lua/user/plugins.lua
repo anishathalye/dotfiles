@@ -114,7 +114,7 @@ return packer.startup(function(use)
   use "kosayoda/nvim-lightbulb"  -- code action
   use "ray-x/lsp_signature.nvim"  -- show function signature when typing
 
-  -- Editor enhace
+  -- Editor enhance
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "terrortylor/nvim-comment"
   use "rmagatti/auto-session"   -- auto restore session(constains layout, window etc..)
@@ -130,9 +130,10 @@ return packer.startup(function(use)
   use "BurntSushi/ripgrep" -- ripgrep
   use "nvim-pack/nvim-spectre" -- search and replace pane
   use "haringsrob/nvim_context_vt" -- show if, for, function... end as virtual text
-  -- use "code-biscuits/nvim-biscuits" -- AST enhace, require treesitter
-  use "tpope/vim-repeat"    --  . command enhace
+  -- use "code-biscuits/nvim-biscuits" -- AST enhance, require treesitter
+  use "tpope/vim-repeat"    --  . command enhance
   use "tpope/vim-surround"  -- vim surround
+  use "terryma/vim-expand-region"  -- expand/shrink region by +/-
   
   use "akinsho/toggleterm.nvim" -- toggle terminal
   use "ahmedkhalf/project.nvim" -- project manager

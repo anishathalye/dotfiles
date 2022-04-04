@@ -1,7 +1,7 @@
 require('vgit').setup({
   keymaps = {
-    ['n <C-k>'] = 'hunk_up',
-    ['n <C-j>'] = 'hunk_down',
+    ['n <leader>hk'] = 'hunk_up',
+    ['n <leader>hj'] = 'hunk_down',
     ['n <leader>hs'] = 'buffer_hunk_stage',
     ['n <leader>hr'] = 'buffer_hunk_reset',
     ['n <leader>hp'] = 'buffer_hunk_preview',

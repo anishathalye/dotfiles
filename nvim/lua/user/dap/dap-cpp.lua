@@ -2,14 +2,14 @@ local dap = require('dap')
 
 dap.adapters.cppdbg = {
   id = 'cppdbg',
-  type = 'executable',
-  -- TODO: automatically check path
-  command = '/home/raven/.config/nvim/lua/user/dap/debugger/ms-vscode.cpptools-1.7.1/debugAdapters/bin/OpenDebugAD7',
+  type = "executable",
+  command = os.getenv('HOME') .. '/.config/nvim/lua/user/dap/debugger/ms-vscode.cpptools-1.7.1/debugAdapters/bin/OpenDebugAD7',
 }
 dap.configurations.cpp = {
 -- launch exe
 {
-    name = "Launch file", type = "cppdbg",
+    name = "Launch file",
+    type = "cppdbg",
     request = "launch",
     program = function()
       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')

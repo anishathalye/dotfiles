@@ -8,7 +8,7 @@ local function configure()
 
   local dap_breakpoint = {
     error = {
-      text = "🟥",
+      text = "🛑",
       texthl = "LspDiagnosticsSignError",
       linehl = "",
       numhl = "",
@@ -30,24 +30,30 @@ local function configure()
   vim.fn.sign_define("DapBreakpoint", dap_breakpoint.error)
   vim.fn.sign_define("DapStopped", dap_breakpoint.stopped)
   vim.fn.sign_define("DapBreakpointRejected", dap_breakpoint.rejected)
+
 end
 
-local function configure_exts()
+local function configure_ui()
+  -- dapui config
   local dap, dapui = require "dap", require "dapui"
   dapui.setup {} -- use default
   dap.listeners.after.event_initialized["dapui_config"] = function()
     dapui.open()
+    dapui.close("tray")
   end
   dap.listeners.before.event_terminated["dapui_config"] = function()
     dapui.close()
   end
-  dapui.close()
   dap.listeners.before.event_exited["dapui_config"] = function()
+    dapui.close()
   end
+  dap.defaults.fallback.terminal_win_cmd = '30vsplit new' -- this will be override by dapui
 end
+
 
 local function configure_debuggers()
   require("user.dap.dap-cpp")
+  require ("user.dap.di-python")
   -- require("config.dap.python").setup()
   -- require("config.dap.rust").setup()
   -- require("config.dap.go").setup()
@@ -55,10 +61,8 @@ end
 
 function M.setup()
   configure() -- Configuration
-  configure_exts() -- Extensions
+  configure_ui() -- config ui
   configure_debuggers() -- Debugger
 end
-
-configure_debuggers()
 
 return M

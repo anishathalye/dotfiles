@@ -66,6 +66,7 @@ local function configure_debuggers()
   
   -- config per launage
   require("user.dap.di-cpp")
+  require("user.dap.di-go")
   -- require("user.dap.dap-cpp")
   require ("user.dap.di-python")
   -- require("config.dap.python").setup()

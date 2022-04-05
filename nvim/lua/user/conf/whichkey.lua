@@ -168,19 +168,42 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
-  g = {
-    name = "Git",
-    b = { "<cmd>VGit buffer_gutter_blame_preview<cr>", "File Blame" },
-    d = { "<cmd>VGit buffer_diff_preview<cr>", "Diff File" },
-    D = { "<cmd>VGit project_diff_preview<cr>", "Diff Project" },
-    s = { "<cmd>VGit buffer_stage<cr>", "Stage File" },
-    u = { "<cmd>VGit buffer_unstage<cr>", "Unstage File" },
-    r = { "<cmd>VGit buffer_reset<cr>", "Reset File" },
-    f = { "<cmd>VGit buffer_history_preview <cr>", "Reset File" },
+  -- g = {
+  --   name = "Git",
+  --   b = { "<cmd>VGit buffer_gutter_blame_preview<cr>", "File Blame" },
+  --   d = { "<cmd>VGit buffer_diff_preview<cr>", "Diff File" },
+  --   D = { "<cmd>VGit project_diff_preview<cr>", "Diff Project" },
+  --   s = { "<cmd>VGit buffer_stage<cr>", "Stage File" },
+  --   u = { "<cmd>VGit buffer_unstage<cr>", "Unstage File" },
+  --   r = { "<cmd>VGit buffer_reset<cr>", "Reset File" },
+  --   f = { "<cmd>VGit buffer_history_preview <cr>", "Reset File" },
+  --
+  --   B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+  --   c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+  -- },
 
-    B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-  },
+  g = {                                                                    
+     name = "Git",                                                         
+     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },                  
+     n = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },   
+     N = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },   
+     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },      
+     p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+     r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" }, 
+     R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+     s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" }, 
+     u = {                                                                
+       "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",               
+       "Undo Stage Hunk",                                                 
+     },                                                                   
+     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },        
+     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },        
+     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },         
+     d = {                                                                
+       "<cmd>Gitsigns diffthis HEAD<cr>",                                 
+       "Diff",                                                            
+     },                                                                   
+   },
 
   R = {
     f = { "<cmd>lua require('spectre').open_file_search()<CR>", "Replace File" },

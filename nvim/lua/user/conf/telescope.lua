@@ -1,8 +1,9 @@
 -- NOTE: install ripgrep for live_grep picker
+
 -- live_grep:
 -- for rp usage: reference: https://segmentfault.com/a/1190000016170184
--- -i ignore cased
--- -w match w_word
+-- -i ignore case
+-- -w match word
 -- -t match file type
 -- -T exlucde file type
 -- -F 原生字符串，不需要转义，默认是正则表达式

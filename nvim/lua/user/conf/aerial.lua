@@ -226,3 +226,4 @@ aerial.setup({
     update_delay = 300,
   },
 })
+

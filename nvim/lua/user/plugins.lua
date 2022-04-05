@@ -154,8 +154,8 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- Debugger
-  use "Pocco81/DAPInstall.nvim"   -- help us install several debuggers
-  use "mfussenegger/nvim-dap"
+  use "ravenxrz/DAPInstall.nvim"   -- help us install several debuggers
+  use "ravenxrz/nvim-dap"
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
   use "nvim-telescope/telescope-dap.nvim"

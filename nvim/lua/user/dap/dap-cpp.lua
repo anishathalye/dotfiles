@@ -41,7 +41,7 @@ dap.configurations.cpp = {
         ignoreFailures = false
       },
     },
-  },
+},
 -- attach server
 {
     name = 'Attach to gdbserver :1234',

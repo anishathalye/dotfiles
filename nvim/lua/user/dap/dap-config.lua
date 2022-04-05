@@ -37,17 +37,21 @@ local function config_dapui()
   local dap, dapui = require "dap", require "dapui"
   dap.listeners.after.event_initialized["dapui_config"] = function()
     dapui.open()
+    vim.api.nvim_command("DapVirtualTextEnable")
     dapui.close("tray")
     -- dap.repl.close()
   end
   dap.listeners.before.event_terminated["dapui_config"] = function()
+    vim.api.nvim_command("DapVirtualTextDisable")
     dapui.close()
   end
   dap.listeners.before.event_exited["dapui_config"] = function()
+    vim.api.nvim_command("DapVirtualTextDisable")
     dapui.close()
   end
   -- for some debug adapter, terminate or exit events will no fire, use disconnect reuest instead
   dap.listeners.before.disconnect["dapui_config"] = function()
+    vim.api.nvim_command("DapVirtualTextDisable")
     dapui.close()
   end
   -- TODO: wait dap-ui for fix temrinal layout

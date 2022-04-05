@@ -47,6 +47,12 @@ local function configure_ui()
   dap.listeners.before.event_exited["dapui_config"] = function()
     dapui.close()
   end
+  -- for some debug adapter, terminate or exit events will no fire, use disconnect reuest instead
+  dap.listeners.before.disconnect["dapui_config"] = function()
+    dapui.close()
+  end
+  -- TODO: wait dap-ui for fix temrinal layout
+  -- the "30" of "30vsplit: doesn't work
   dap.defaults.fallback.terminal_win_cmd = '30vsplit new' -- this will be override by dapui
 end
 

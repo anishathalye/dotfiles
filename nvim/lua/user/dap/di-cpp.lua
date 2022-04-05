@@ -4,8 +4,8 @@ dap_install.config(
 {  
     adapters = {
       type = "executable",
-      -- command = os.getenv('HOME') .. '/.config/nvim/lua/user/dap/debugger/ms-vscode.cpptools-1.7.1/debugAdapters/bin/OpenDebugAD7',
-      command = "/home/raven/.local/share/nvim/dapinstall/ccppr_vsc/extension/debugAdapters/bin/OpenDebugAD7",
+      command = os.getenv('HOME') .. '/.config/nvim/lua/user/dap/debugger/ms-vscode.cpptools-1.7.1/debugAdapters/bin/OpenDebugAD7',
+      -- command = "/home/raven/.local/share/nvim/dapinstall/ccppr_vsc/extension/debugAdapters/bin/OpenDebugAD7",
     },
     configurations = {
     {
@@ -18,7 +18,19 @@ dap_install.config(
         end,
         cwd = "${workspaceFolder}",
         stopOnEntry = true,
-      },
+    },
+    {
+        name = "Attach process",
+        type = "cpptools",
+        request = "attach",
+        miDebuggerPath = "/usr/bin/gdb",
+        program = function()
+          return require("dap.utils.pick_process").pick_process()
+        end,
+        cwd = "${workspaceFolder}",
+        stopOnEntry = true,
+
+    },
     {
         name = "Attach to gdbserver :1234",
         type = "cppdbg",

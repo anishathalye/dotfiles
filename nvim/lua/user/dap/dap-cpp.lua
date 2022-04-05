@@ -17,7 +17,7 @@ dap.configurations.cpp = {
     cwd = '${workspaceFolder}',
     stopOnEntry = true,
     setupCommands = {
-      {
+    {
         description =  'enable pretty printing',
         text = '-enable-pretty-printing',
         ignoreFailures = false
@@ -25,6 +25,24 @@ dap.configurations.cpp = {
     },
 },
 -- attach process
+{
+    name = "Attach process",
+    type = "cppdbg",
+    request = "attach",
+    processId = require('dap.utils').pick_process,
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = "${workspaceFolder}",
+    setupCommands = {
+    {
+        description =  'enable pretty printing',
+        text = '-enable-pretty-printing',
+        ignoreFailures = false
+      },
+    },
+  },
+-- attach server
 {
     name = 'Attach to gdbserver :1234',
     type = 'cppdbg',

@@ -3,7 +3,7 @@
     "prefix": "dheader",
     "body": [
       "{",
-      "\"version\": \"0.2.0\"",
+      "\"version\": \"0.2.0\",",
       "\"configurations\": [",
       "{}",
       "]",
@@ -27,7 +27,7 @@
       "{",
       "\"description\": \"Enable pretty-printing for gdb\",",
       "\"text\": \"-enable-pretty-printing\",",
-      "\"ignoreFailures\": true,",
+      "\"ignoreFailures\": true",
       "}",
       "]"
     ],

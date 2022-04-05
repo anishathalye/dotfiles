@@ -1,0 +1,36 @@
+{
+  "debug-config-header": {
+    "prefix": "dheader",
+    "body": [
+      "{",
+      "\"version\": \"0.2.0\"",
+      "\"configurations\": [",
+      "{}",
+      "]",
+      "}"
+    ],
+    "description": "Debug config header"
+  },
+  "debug-config-launch": {
+    "prefix": "dlaunch",
+    "body": [
+      "\"name\": \"launch\"",
+      "\"type\": \"cppdbg\"",
+      "\"request\": \"launch\"",
+      "\"program\": \"\"",
+      "\"args\": []",
+      "\"stopAtEntry\": false",
+      "\"cwd\": \"${workspaceFolder}\"",
+      "\"environment\": []",
+      "\"MIMode\": \"gdb\"",
+      "\"setupCommands\": [",
+      "{",
+      "\"description\": \"Enable pretty-printing for gdb\"",
+      "\"text\": \"-enable-pretty-printing\"",
+      "\"ignoreFailures\": true",
+      "}",
+      "]"
+    ],
+    "description": "Debug config header"
+  }
+}

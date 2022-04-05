@@ -1,0 +1,14 @@
+{
+  "name": "friendly-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "json",
+        "path": "./debug_config.json"
+      }
+    ]
+  }
+}

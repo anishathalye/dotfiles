@@ -1,6 +1,6 @@
 local M = {}
 
-local function configure()
+local function config_dapi_and_sign()
   local dap_install = require "dap-install"
   dap_install.setup {
     installation_path = vim.fn.stdpath "data" .. "/dapinstall/",
@@ -30,16 +30,15 @@ local function configure()
   vim.fn.sign_define("DapBreakpoint", dap_breakpoint.error)
   vim.fn.sign_define("DapStopped", dap_breakpoint.stopped)
   vim.fn.sign_define("DapBreakpointRejected", dap_breakpoint.rejected)
-
 end
 
-local function configure_ui()
+local function config_dapui()
   -- dapui config
   local dap, dapui = require "dap", require "dapui"
-  dapui.setup {} -- use default
   dap.listeners.after.event_initialized["dapui_config"] = function()
     dapui.open()
     dapui.close("tray")
+    -- dap.repl.close()
   end
   dap.listeners.before.event_terminated["dapui_config"] = function()
     dapui.close()
@@ -58,6 +57,10 @@ end
 
 
 local function configure_debuggers()
+  -- load from json file
+  require('dap.ext.vscode').load_launchjs(nil, {cppdbg = {'cpp'}})
+  
+  -- config per launage
   require("user.dap.dap-cpp")
   require ("user.dap.di-python")
   -- require("config.dap.python").setup()
@@ -66,8 +69,8 @@ local function configure_debuggers()
 end
 
 function M.setup()
-  configure() -- Configuration
-  configure_ui() -- config ui
+  config_dapi_and_sign()
+  config_dapui()
   configure_debuggers() -- Debugger
 end
 

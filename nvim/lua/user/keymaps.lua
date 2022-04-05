@@ -14,8 +14,7 @@ vim.g.maplocalleader = ";"
 --   insert_mode = "i",
 --   visual_mode = "v",
 --   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
+--   term_mode = "t", command_mode = "c",
 
 -- Normal --
 -- Better window navigation
@@ -112,6 +111,7 @@ keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
 keymap("n", "<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", opts)
 keymap("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opts)
 keymap("n", "<leader>dl", "lua require'dap'.run_last()<cr>", opts)
+keymap('n', '<F10>', '<cmd>lua require"user.dap.dap-util".reload_continue()<CR>', opts)
 keymap("n", "<F4>", "<cmd>lua require'dap'.terminate()<cr>", opts)
 keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
 keymap("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", opts)

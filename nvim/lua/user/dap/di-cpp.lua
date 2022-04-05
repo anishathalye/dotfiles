@@ -1,7 +1,7 @@
 local dap_install = require("dap-install")
 dap_install.config(
   "ccppr_vsc",
-{  
+{
     adapters = {
       type = "executable",
       command = os.getenv('HOME') .. '/.config/nvim/lua/user/dap/debugger/ms-vscode.cpptools-1.7.1/debugAdapters/bin/OpenDebugAD7',

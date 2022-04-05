@@ -6,11 +6,11 @@ if not status_ok then
 end
 
 -- NOTE: if use 'light' theme, you  should change backgournd and style to 'light' 
-vim.o.background='dark'
--- vim.o.background='light'
+-- vim.o.background='dark'
+vim.o.background='light'
 onedark.setup {
   -- Main options --
-  style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+  style = 'light', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
   transparent = false,  -- Show/hide background
   term_colors = true, -- Change terminal color as per the selected theme style
   ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden

@@ -112,13 +112,13 @@
 [http]
 	cookieFile = ~/.gitcookies
 	postBuffer = 655360000
-  # proxy = socks5://127.0.0.1:7890
+  proxy = socks5://127.0.0.1:7890
 
 [https]
-  # proxy = socks5://127.0.0.1:7890
+  proxy = socks5://127.0.0.1:7890
 
-[url "https://gitclone.com/github.com/"]
-  insteadOf = https://github.com/
+; [url "https://gitclone.com/github.com/"]
+;   insteadOf = https://github.com/
 
 [core]
 	excludesfile = ~/.gitignore_global

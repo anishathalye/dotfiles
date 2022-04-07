@@ -41,21 +41,21 @@ configs.setup {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
-        ["jf"] = "@function.outer",
-        ["]]"] = "@class.outer",
+        ["]]"] = "@function.outer",
+        -- ["]]"] = "@class.outer",
       },
-      goto_next_end = {
-        ["jF"] = "@function.outer",
-        ["]["] = "@class.outer",
-      },
+      -- goto_next_end = {
+      --   ["jF"] = "@function.outer",
+      --   ["]["] = "@class.outer",
+      -- },
       goto_previous_start = {
-        ["kf"] = "@function.outer",
-        ["[["] = "@class.outer",
+        ["[["] = "@function.outer",
+        -- ["[["] = "@class.outer",
       },
-      goto_previous_end = {
-        ["kF"] = "@function.outer",
-        ["[]"] = "@class.outer",
-      },
+      -- goto_previous_end = {
+      --   ["kF"] = "@function.outer",
+      --   ["[]"] = "@class.outer",
+      -- },
     },
     lsp_interop = {
       enable = true,

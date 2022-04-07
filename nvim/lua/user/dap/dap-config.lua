@@ -38,7 +38,7 @@ local function config_dapui()
   dap.listeners.after.event_initialized["dapui_config"] = function()
     dapui.open()
     vim.api.nvim_command("DapVirtualTextEnable")
-    dapui.close("tray")
+    -- dapui.close("tray")
   end
   dap.listeners.before.event_terminated["dapui_config"] = function()
     vim.api.nvim_command("DapVirtualTextDisable")
@@ -64,7 +64,9 @@ local function configure_debuggers()
   require('dap.ext.vscode').load_launchjs(nil, {cppdbg = {'cpp'}})
   
   -- config per launage
+  -- require("user.dap.dap-cpp")
   require("user.dap.di-cpp")
+  -- require("user.dap.dap-go")
   require("user.dap.di-go")
   require ("user.dap.di-python")
   -- require("user.dap.dap-cpp")

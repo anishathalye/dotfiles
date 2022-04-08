@@ -204,6 +204,7 @@ return packer.startup(function(use)
 
   -- tools
   use "cdelledonne/vim-cmake"
+  use "voldikss/vim-translator"
   use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"
   use "dstein64/vim-startuptime"

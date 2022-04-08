@@ -44,3 +44,4 @@ require "user.conf.nvim-neoclip" -- clipboard manager
 require "user.conf.nvim_context_vt"
 require "user.conf.litee-family"
 require "user.conf.vgit"
+require "user.conf.vim-translator"

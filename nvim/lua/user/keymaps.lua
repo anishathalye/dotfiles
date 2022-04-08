@@ -36,6 +36,7 @@ keymap("n", "<leader>w", ":w<cr>", opts)
 -- TODO: fix this
 keymap("n", "<leader>q", ":q<cr>", opts)
 keymap("n", "<leader>d", ":Bdelete<cr>", opts)
+keymap("n", "ZZ", ":wqa<cr>", opts)
 keymap("n", "Q", "q", opts)
 keymap("n", "q", "<Nop>", opts)
 

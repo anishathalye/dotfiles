@@ -32,16 +32,15 @@ keymap("n", ";f", ":NvimTreeFindFile<cr>", opts)
 keymap("n", "<leader>l", ":nohl<cr>", opts)
 -- save buffer
 keymap("n", "<leader>w", ":w<cr>", opts)
--- quite buffer
-
-
 -- exit cur window
 keymap("n", "<leader>q", ":q<cr>", opts)
 -- delete cur buffer
 keymap("n", "<leader>d", ":Bdelete<cr>", opts)
 -- exit whole program 
 keymap("n", "ZZ", ":lua require('user.utils').SaveAndExit()<cr>", opts)
+-- remap macro record key
 keymap("n", "Q", "q", opts)
+-- cancel q
 keymap("n", "q", "<Nop>", opts)
 
 -- center cursor

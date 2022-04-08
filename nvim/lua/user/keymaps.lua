@@ -33,10 +33,14 @@ keymap("n", "<leader>l", ":nohl<cr>", opts)
 -- save buffer
 keymap("n", "<leader>w", ":w<cr>", opts)
 -- quite buffer
--- TODO: fix this
+
+
+-- exit cur window
 keymap("n", "<leader>q", ":q<cr>", opts)
+-- delete cur buffer
 keymap("n", "<leader>d", ":Bdelete<cr>", opts)
-keymap("n", "ZZ", ":wqa<cr>", opts)
+-- exit whole program 
+keymap("n", "ZZ", ":lua require('user.utils').SaveAndExit()<cr>", opts)
 keymap("n", "Q", "q", opts)
 keymap("n", "q", "<Nop>", opts)
 

@@ -210,6 +210,12 @@ return packer.startup(function(use)
   use "dstein64/vim-startuptime"
   -- use "henriquehbr/nvim-startup.lua"
   use "AckslD/nvim-neoclip.lua"
+  use "vim-test/vim-test"
+  use {
+    "rcarriga/vim-ultest",
+    run = ":UpdateRemotePlugins"
+  }
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

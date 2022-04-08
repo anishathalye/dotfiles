@@ -1,10 +1,10 @@
 require('vgit').setup({
   keymaps = {
-    ['n <leader>hk'] = 'hunk_up',
-    ['n <leader>hj'] = 'hunk_down',
-    ['n <leader>hs'] = 'buffer_hunk_stage',
-    ['n <leader>hr'] = 'buffer_hunk_reset',
-    ['n <leader>hp'] = 'buffer_hunk_preview',
+    -- ['n <leader>hk'] = 'hunk_up',
+    -- ['n <leader>hj'] = 'hunk_down',
+    -- ['n <leader>hs'] = 'buffer_hunk_stage',
+    -- ['n <leader>hr'] = 'buffer_hunk_reset',
+    -- ['n <leader>hp'] = 'buffer_hunk_preview',
 
     -- Other keybinds see whichkey.lua
     -- ['n <leader>gb'] = 'buffer_blame_preview',

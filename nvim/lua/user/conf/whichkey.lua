@@ -109,9 +109,10 @@ local mappings = {
   },
   ["p"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
-  ["T"] = {
-    "<cmd>TodoTrouble<CR>", "Todo"
+  ["t"] = {
+    "<cmd>UltestSummary<CR>", "Todo"
   },
+
   ["o"] = {
     "<cmd>AerialToggle<CR>", "Outline"
   },
@@ -150,7 +151,7 @@ local mappings = {
     -- u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
   },
 
-  t = {
+  T = {
     name = "Trouble",
     t = { "<cmd>Trouble<cr>", "ToggleTrouble" },
     d = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostics"},
@@ -182,27 +183,27 @@ local mappings = {
   --   c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
   -- },
 
-  g = {                                                                    
-     name = "Git",                                                         
-     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },                  
-     n = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },   
-     N = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },   
-     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },      
+  g = {
+     name = "Git",
+     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+     n = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+     N = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
      p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-     r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" }, 
+     r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
      R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-     s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" }, 
-     u = {                                                                
-       "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",               
-       "Undo Stage Hunk",                                                 
-     },                                                                   
-     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },        
-     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },        
-     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },         
-     d = {                                                                
-       "<cmd>Gitsigns diffthis HEAD<cr>",                                 
-       "Diff",                                                            
-     },                                                                   
+     s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+     u = {
+       "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+       "Undo Stage Hunk",
+     },
+     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+     d = {
+       "<cmd>Gitsigns diffthis HEAD<cr>",
+       "Diff",
+     },
    },
 
   R = {

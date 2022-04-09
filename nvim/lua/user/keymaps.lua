@@ -128,5 +128,8 @@ keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
 -- keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 
+-- unit test
+keymap("n", "<leader>rr", "<cmd>UltestNearest<cr>", opts)
+keymap("n", "<leader>rd", "<cmd>UltestDebugNearest<cr>", opts)
 
 

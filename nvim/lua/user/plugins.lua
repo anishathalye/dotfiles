@@ -80,7 +80,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "rcarriga/nvim-notify"  -- notify
-  use "lewis6991/impatient.nvim" -- Speed up loading Lua modules
+  use "lewis6991/impatient.nvim" -- Speed up loading Lua modules    TODO: figure out how to use this
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -204,6 +204,7 @@ return packer.startup(function(use)
 
   -- tools
   use "cdelledonne/vim-cmake"
+  use "skanehira/preview-markdown.vim"    -- NOTE:: glow required : https://github.com/charmbracelet/glow
   use "voldikss/vim-translator"
   use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"

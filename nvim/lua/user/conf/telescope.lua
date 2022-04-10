@@ -3,11 +3,11 @@
 -- live_grep:
 -- for rp usage: reference: https://segmentfault.com/a/1190000016170184
 -- -i ignore case
+-- -s 大小写敏感
 -- -w match word
--- -t match file type
--- -T exlucde file type
--- -F 原生字符串，不需要转义，默认是正则表达式
-
+-- -e 正则表达式匹配
+-- -v 反转匹配
+-- -g 通配符文件或文件夹，可以用!来取反
 
 
 
@@ -127,8 +127,8 @@ telescope.setup {
     find_files = {
       theme = "dropdown",
       previewer = false,
-      find_command = { "find", "-type", "f" },
-      -- find_command = {"fd"},
+      -- find_command = { "find", "-type", "f" },
+      find_command = {"fd"},
     },
 
     -- Default configuration for builtin pickers goes here:
@@ -148,7 +148,7 @@ telescope.setup {
     -- fzf syntax
     -- Token	Match type	Description
     -- sbtrkt	fuzzy-match	Items that match sbtrkt
-    -- 'wild	exact-match (quoted)	Items that include wild
+    -- 'wild'	exact-match (quoted)	Items that include wild
     -- ^music	prefix-exact-match	Items that start with music
     -- .mp3$	suffix-exact-match	Items that end with .mp3
     -- !fire	inverse-exact-match	Items that do not include fire
@@ -169,8 +169,8 @@ telescope.setup {
   },
 }
 
--- telescope.load_extension('fzf')
 -- telescope.load_extension("frecency")
+telescope.load_extension('fzf')
 telescope.load_extension("ui-select")
 telescope.load_extension('dap')
 -- load project extension. see project.lua file

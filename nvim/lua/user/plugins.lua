@@ -216,6 +216,7 @@ return packer.startup(function(use)
     "rcarriga/vim-ultest",
     run = ":UpdateRemotePlugins"
   }
+  use "ravenxrz/DoxygenToolkit.vim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

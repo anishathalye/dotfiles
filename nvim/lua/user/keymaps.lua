@@ -36,7 +36,7 @@ keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader>q", ":q<cr>", opts)
 -- delete cur buffer
 keymap("n", "<leader>d", ":Bdelete<cr>", opts)
--- exit whole program 
+-- exit whole program
 keymap("n", "ZZ", ":lua require('user.utils').SaveAndExit()<cr>", opts)
 -- remap macro record key
 keymap("n", "Q", "q", opts)
@@ -131,5 +131,9 @@ keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
 -- unit test
 keymap("n", "<leader>rr", "<cmd>UltestNearest<cr>", opts)
 keymap("n", "<leader>rd", "<cmd>UltestDebugNearest<cr>", opts)
+
+-- comment
+-- comment function
+keymap("n", "gcf", "<cmd>Dox<cr>", opts)
 
 

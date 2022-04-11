@@ -10,7 +10,7 @@ if not snip_status_ok then
   return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load()    -- load freindly-snippets
+require("luasnip.loaders.from_vscode").lazy_load()    -- load freindly-snippets
 require("luasnip.loaders.from_vscode").load({ paths = { -- load custom snippets
   vim.fn.stdpath("config") .. "/my-snippets"
 } }) -- Load snippets from my-snippets folder
@@ -62,7 +62,6 @@ cmp.setup {
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
     ["<C-e>"] = cmp.mapping {
       i = cmp.mapping.abort(),

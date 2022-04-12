@@ -20,7 +20,7 @@ local function config_dapi_and_sign()
       numhl = "",
     },
     stopped = {
-      text = "⭐️",
+      text = "⭐️", 
       texthl = "LspDiagnosticsSignInformation",
       linehl = "DiagnosticUnderlineInfo",
       numhl = "LspDiagnosticsSignInformation",
@@ -53,13 +53,13 @@ local function config_dapui()
     vim.api.nvim_command("DapVirtualTextDisable")
     dapui.close()
   end
-  -- TODO: wait dap-ui for fix temrinal layout
+  -- TODO: wait dap-ui for fixing temrinal layout
   -- the "30" of "30vsplit: doesn't work
-  dap.defaults.fallback.terminal_win_cmd = '30vsplit new' -- this will be override by dapui
+  dap.defaults.fallback.terminal_win_cmd = '30vsplit new' -- this will be overrided by dapui
 end
 
 
-local function configure_debuggers()
+local function config_debuggers()
   -- load from json file
   require('dap.ext.vscode').load_launchjs(nil, {cppdbg = {'cpp'}})
   
@@ -78,7 +78,7 @@ end
 function M.setup()
   config_dapi_and_sign()
   config_dapui()
-  configure_debuggers() -- Debugger
+  config_debuggers() -- Debugger
 end
 
 return M

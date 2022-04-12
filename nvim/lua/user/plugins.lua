@@ -220,6 +220,7 @@ return packer.startup(function(use)
     "rcarriga/vim-ultest",
     run = ":UpdateRemotePlugins"
   }
+  use { 'michaelb/sniprun', run = 'bash ./install.sh' }
   use "ravenxrz/DoxygenToolkit.vim"
 
 

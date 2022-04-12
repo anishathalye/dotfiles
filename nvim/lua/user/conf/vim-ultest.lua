@@ -1,7 +1,7 @@
 vim.cmd [[
   let g:ultest_virtual_text = 1
-  let g:ultest_pass_sign = "✔"
-  let g:ultest_fail_sign = "✖"
+  let g:ultest_pass_sign = ""
+  let g:ultest_fail_sign = ""
   let g:ultest_running_sign = ""
   let g:ultest_not_run_sign = "?"
   let g:ultest_max_threads = 8

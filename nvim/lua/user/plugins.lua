@@ -104,6 +104,10 @@ return packer.startup(function(use)
   use "romgrk/nvim-treesitter-context"  -- show class/function at the top
   use "SmiteshP/nvim-gps"   -- statusline show class structure
   use "andymass/vim-matchup"
+  use { 
+    "abecodes/tabout.nvim",
+  	wants = {'vim-treesitter'}, -- or require if not used so far
+  }
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
@@ -146,7 +150,6 @@ return packer.startup(function(use)
   use { "rhysd/accelerated-jk", opt = true, event = "BufReadPost" }
   use "famiu/bufdelete.nvim"
 
-  -- use "abecodes/tabout.nvim" -- TODO: I don't know how to use this
   use "nathom/filetype.nvim"
 
   -- snippets

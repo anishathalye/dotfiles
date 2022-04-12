@@ -79,7 +79,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use "rcarriga/nvim-notify"  -- notify
+  use "rcarriga/nvim-notify" -- notify
   use "lewis6991/impatient.nvim" -- Speed up loading Lua modules    TODO: figure out how to use this
 
   -- Telescope
@@ -92,21 +92,21 @@ return packer.startup(function(use)
   --   "nvim-telescope/telescope-frecency.nvim",
   --   requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
   -- }
- use "nvim-telescope/telescope-ui-select.nvim"
- use "nvim-telescope/telescope-live-grep-raw.nvim"
+  use "nvim-telescope/telescope-ui-select.nvim"
+  use "nvim-telescope/telescope-live-grep-raw.nvim"
 
   -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "nvim-treesitter/nvim-treesitter-textobjects"  -- enhance texetobject selection
-  use "romgrk/nvim-treesitter-context"  -- show class/function at the top
-  use "SmiteshP/nvim-gps"   -- statusline show class structure
+  use "nvim-treesitter/nvim-treesitter-textobjects" -- enhance texetobject selection
+  use "romgrk/nvim-treesitter-context" -- show class/function at the top
+  use "SmiteshP/nvim-gps" -- statusline show class structure
   use "andymass/vim-matchup"
-  use { 
+  use {
     "abecodes/tabout.nvim",
-  	wants = {'vim-treesitter'}, -- or require if not used so far
+    wants = { 'vim-treesitter' }, -- or require if not used so far
   }
 
   -- LSP
@@ -115,13 +115,13 @@ return packer.startup(function(use)
   -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   -- use "RishabhRD/popfix"
   -- use "RishabhRD/nvim-lsputils"
-  use "kosayoda/nvim-lightbulb"  -- code action
-  use "ray-x/lsp_signature.nvim"  -- show function signature when typing
+  use "kosayoda/nvim-lightbulb" -- code action
+  use "ray-x/lsp_signature.nvim" -- show function signature when typing
 
   -- Editor enhance
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "terrortylor/nvim-comment"
-  use "rmagatti/auto-session"   -- auto restore session(constains layout, window etc..)
+  use "rmagatti/auto-session" -- auto restore session(constains layout, window etc..)
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -135,19 +135,20 @@ return packer.startup(function(use)
   use "nvim-pack/nvim-spectre" -- search and replace pane
   use "haringsrob/nvim_context_vt" -- show if, for, function... end as virtual text
   -- use "code-biscuits/nvim-biscuits" -- AST enhance, require treesitter
-  use "tpope/vim-repeat"    --  . command enhance
-  use "tpope/vim-surround"  -- vim surround
-  use "terryma/vim-expand-region"  -- expand/shrink region by +/-
-  
+  use "tpope/vim-repeat" --  . command enhance
+  use "tpope/vim-surround" -- vim surround
+  use "terryma/vim-expand-region" -- expand/shrink region by +/-
+  use "meain/vim-printer"
+
   use "akinsho/toggleterm.nvim" -- toggle terminal
   use "ahmedkhalf/project.nvim" -- project manager
   use "lukas-reineke/indent-blankline.nvim" -- indent blankline
   use "folke/which-key.nvim" -- which  key
   use {
-    "phaazon/hop.nvim",   -- like easymotion, but more powerful
+    "phaazon/hop.nvim", -- like easymotion, but more powerful
     branch = "v1", -- optional but strongly recommended
   }
-  use { "rhysd/accelerated-jk", opt = true, event = "BufReadPost" }
+  use { "rhysd/accelerated-jk", event = "BufReadPost" }
   use "famiu/bufdelete.nvim"
 
   use "nathom/filetype.nvim"
@@ -157,7 +158,7 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- Debugger
-  use "ravenxrz/DAPInstall.nvim"   -- help us install several debuggers
+  use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
   use "ravenxrz/nvim-dap"
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
@@ -177,11 +178,11 @@ return packer.startup(function(use)
   use "navarasu/onedark.nvim"
   use "folke/tokyonight.nvim"
   use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"     -- file explore
-  use "akinsho/bufferline.nvim"      -- tab
+  use "kyazdani42/nvim-tree.lua" -- file explore
+  use "akinsho/bufferline.nvim" -- tab
   use "moll/vim-bbye"
-  use "nvim-lualine/lualine.nvim"    -- status line
-  use "goolord/alpha-nvim"           -- welcome page
+  use "nvim-lualine/lualine.nvim" -- status line
+  use "goolord/alpha-nvim" -- welcome page
   -- use "startup-nvim/startup.nvim"     -- welcome page
 
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
@@ -189,8 +190,8 @@ return packer.startup(function(use)
     "kevinhwang91/nvim-hlslens", -- highlight search
     disable = true,
   }
-  use "kevinhwang91/nvim-bqf"     -- better quick fix, use trouble instead
-  use "RRethy/vim-illuminate"     -- highlight undercursor word
+  use "kevinhwang91/nvim-bqf" -- better quick fix, use trouble instead
+  use "RRethy/vim-illuminate" -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
   -- use "liuchengxu/vista.vim"     -- outline
@@ -200,14 +201,14 @@ return packer.startup(function(use)
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"
   use "arkav/lualine-lsp-progress" -- show lsp progress
-  use "sindrets/winshift.nvim"    -- rerange window layout
+  use "sindrets/winshift.nvim" -- rerange window layout
   -- litee family
   use "ldelossa/litee.nvim"
   use "ldelossa/litee-calltree.nvim"
 
   -- tools
   use "cdelledonne/vim-cmake"
-  use "skanehira/preview-markdown.vim"    -- NOTE:: glow required : https://github.com/charmbracelet/glow
+  use "skanehira/preview-markdown.vim" -- NOTE:: glow required : https://github.com/charmbracelet/glow
   use "voldikss/vim-translator"
   use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"

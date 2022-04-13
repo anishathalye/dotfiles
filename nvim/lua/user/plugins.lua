@@ -75,12 +75,12 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
+  use "lewis6991/impatient.nvim" -- Speed up loading Lua modules    TODO: figure out how to use this
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "rcarriga/nvim-notify" -- notify
-  use "lewis6991/impatient.nvim" -- Speed up loading Lua modules    TODO: figure out how to use this
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -121,7 +121,7 @@ return packer.startup(function(use)
   -- Editor enhance
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "terrortylor/nvim-comment"
-  use "rmagatti/auto-session" -- auto restore session(constains layout, window etc..)
+  -- use "rmagatti/auto-session" -- auto restore session(constains layout, window etc..)
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions

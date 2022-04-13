@@ -27,7 +27,6 @@
     ~/.rtorrent.rc:
     ~/.shell:
     ~/.tmux.conf:
-    ~/.vim:
     ~/.vimrc:
     ~/.config/lazygit: lazygit
     ~/.config/nvim: nvim
@@ -54,5 +53,4 @@
   - >
     git cleanall -f
     shell/plugins/
-    vim/pack/vendor/start/
     zsh/plugins/

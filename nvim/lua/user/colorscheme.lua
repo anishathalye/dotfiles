@@ -1,4 +1,5 @@
-local colorscheme = "vscode"
+local colorscheme = "catppuccin"
+-- require "user.conf.github-nvim-theme"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

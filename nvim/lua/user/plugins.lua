@@ -102,6 +102,7 @@ return packer.startup(function(use)
   }
   use "nvim-treesitter/nvim-treesitter-textobjects" -- enhance texetobject selection
   use "romgrk/nvim-treesitter-context" -- show class/function at the top
+  use "m-demare/hlargs.nvim"
   use "SmiteshP/nvim-gps" -- statusline show class structure
   use "andymass/vim-matchup"
   use {
@@ -178,9 +179,14 @@ return packer.startup(function(use)
   -- UI
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  use "martinsione/darkplus.nvim"
   use "navarasu/onedark.nvim"
-  use 'Mofiqul/vscode.nvim'
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin"
+  })
+  use "projekt0n/github-nvim-theme"
+
   use "folke/tokyonight.nvim"
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua" -- file explore

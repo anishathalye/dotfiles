@@ -1,5 +1,7 @@
 -- \ 'cpp': 'std::cout << "{$}: " << {$} << std::endl;',
 vim.cmd [[
+let g:vim_printer_print_below_keybinding = '<leader>p'
+let g:vim_printer_print_above_keybinding = '<leader>P'
 let g:vim_printer_items  = { 
             \ 'python': 'print("{$}:", {$})', 
             \ 'javascript': 'console.log("{$}:", {$})',
@@ -15,8 +17,8 @@ let g:vim_printer_items  = {
             \ 'zsh': 'echo "{$}: ${$}"',
             \ 'java': 'System.out.println("{$}: " + {$});',
             \ 'lua': 'print("{$}: " .. {$})',
-            \ 'c': 'printf("{$}:%d", {$});',
-            \ 'cpp': 'printf("{$}:%d", {$});',
+            \ 'c': 'printf("{$}:%d\n", {$});',
+            \ 'cpp': 'printf("{$}:%d\n", {$});',
             \ 'f77': 'write(6,*)"{$}: ", {$}',
             \ 'f90': 'write(6,*)"{$}: ", {$}' 
             \ }

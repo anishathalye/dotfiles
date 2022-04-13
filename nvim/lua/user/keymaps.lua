@@ -133,7 +133,9 @@ keymap("n", "<leader>rr", "<cmd>UltestNearest<cr>", opts)
 keymap("n", "<leader>rd", "<cmd>UltestDebugNearest<cr>", opts)
 
 -- comment
--- comment function
 keymap("n", "gcf", "<cmd>Dox<cr>", opts)
 
+-- sniprun
+keymap("n", "<leader>rf", ":%SnipRun<cr>", opts)
+keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
 

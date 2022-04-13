@@ -168,8 +168,12 @@ return packer.startup(function(use)
   -- use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
 
   -- Git
-  use "lewis6991/gitsigns.nvim"
-  use "tanvirtin/vgit.nvim"
+  use {
+    "lewis6991/gitsigns.nvim",
+    tag = "v0.4",
+  }
+  -- use "tanvirtin/vgit.nvim"
+  -- use "tpope/vim-fugitive"
 
   -- UI
   -- Colorschemes

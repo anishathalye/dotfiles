@@ -25,6 +25,11 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- NOTE: require winshit plugin
 keymap("n", "<C-W>m", ":WinShift<cr>", opts)
 
+-- i j remap to gi gj to get the consistent behaviour in wrap content mode (i.e. set wrap)
+keymap("n", "j", "gj", opts)
+keymap("n", "k", "gk", opts)
+
+
 -- FileExpolre
 keymap("n", ";e", ":NvimTreeToggle<cr>", opts)
 keymap("n", ";f", ":NvimTreeFindFile<cr>", opts)

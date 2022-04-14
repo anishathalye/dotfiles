@@ -218,7 +218,8 @@ return packer.startup(function(use)
   use "ldelossa/litee-calltree.nvim"
 
   -- tools
-  use "cdelledonne/vim-cmake"
+  -- use "cdelledonne/vim-cmake"
+  use "Shatur/neovim-cmake"
   use "skanehira/preview-markdown.vim" -- NOTE:: glow required : https://github.com/charmbracelet/glow
   use "voldikss/vim-translator"
   use "mtdl9/vim-log-highlighting"

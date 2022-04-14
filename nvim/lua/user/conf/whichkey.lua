@@ -123,8 +123,16 @@ local mappings = {
 
   c = {
     name = "CMake",
-    g = {"<cmd>CMakeGenerate<CR>", "Generate"},
-    b = {"<cmd>CMakeBuild<CR>", "Build"},
+    g = {"<cmd>CMake configure<CR>", "Configure"},
+    t = {"<cmd>CMake select_target<CR>", "SelectTarget"},
+    T = {"<cmd>CMake select_build_type<CR>", "SelectBuildType"},
+    b = {"<cmd>CMake build<CR>", "BuildTarget"},
+
+    a = {"<cmd>CMake build_all<CR>", "BuildAll"},
+    d = {"<cmd>CMake debug<CR>", "DebugTarget"},
+    c = {"<cmd>CMake cancel<CR>", "Cancel"},
+    r = {"<cmd>CMake run<CR>", "Run"},
+    s = {"<cmd>CMake set_target_args<CR>", "SetArg"},
   },
 
   d = {

@@ -257,7 +257,7 @@ local mappings = {
     },
   },
 
-  h = {
+  H = {
     a = { "<cmd>HSHighlight 1<cr>", "Hightlight 1" },
     b = { "<cmd>HSHighlight 2<cr>", "Hightlight 2" },
     c = { "<cmd>HSHighlight 3<cr>", "Hightlight 3" },

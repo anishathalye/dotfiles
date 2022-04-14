@@ -124,7 +124,10 @@ return packer.startup(function(use)
   use "terrortylor/nvim-comment"
   -- use "rmagatti/auto-session" -- auto restore session(constains layout, window etc..)
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use {
+    "hrsh7th/nvim-cmp",
+    commit = "4f1358e659d51c69055ac935e618b684cf4f1429",
+  } -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions

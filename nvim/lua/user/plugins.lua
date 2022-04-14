@@ -222,7 +222,7 @@ return packer.startup(function(use)
 
   -- tools
   -- use "cdelledonne/vim-cmake"
-  use "Shatur/neovim-cmake"
+  use "ravenxrz/neovim-cmake"
   use "skanehira/preview-markdown.vim" -- NOTE:: glow required : https://github.com/charmbracelet/glow
   use "voldikss/vim-translator"
   use "mtdl9/vim-log-highlighting"

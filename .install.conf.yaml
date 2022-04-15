@@ -26,7 +26,8 @@
     ~/.pythonrc:
     ~/.rtorrent.rc:
     ~/.shell:
-    ~/.tmux.conf:
+    ~/.config/tmux: tmux
+    ~/.tmux.conf: tmux/tmux.conf
     ~/.vimrc:
     ~/.config/lazygit: lazygit
     ~/.config/nvim: nvim

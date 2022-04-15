@@ -110,7 +110,7 @@ local mappings = {
   ["p"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
   ["t"] = {
-    "<cmd>UltestSummary<CR>", "Todo"
+    "<cmd>UltestSummary<CR>", "Unit Test"
   },
 
   ["o"] = {
@@ -215,6 +215,7 @@ local mappings = {
    },
 
   R = {
+    name = "Replace",
     f = { "<cmd>lua require('spectre').open_file_search()<CR>", "Replace File" },
     p = { "<cmd>lua require('spectre').open()<CR>", "Replace Project" },
     s = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search" },
@@ -257,7 +258,7 @@ local mappings = {
     },
   },
 
-  H = {
+  h = {
     a = { "<cmd>HSHighlight 1<cr>", "Hightlight 1" },
     b = { "<cmd>HSHighlight 2<cr>", "Hightlight 2" },
     c = { "<cmd>HSHighlight 3<cr>", "Hightlight 3" },

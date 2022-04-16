@@ -176,14 +176,15 @@ return packer.startup(function(use)
     "lewis6991/gitsigns.nvim",
     tag = "v0.4",
   }
+  use 'sindrets/diffview.nvim'
   -- use "tanvirtin/vgit.nvim"
   -- use "tpope/vim-fugitive"
 
   -- UI
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "martinsione/darkplus.nvim"
-  use "navarasu/onedark.nvim"
+  -- use "martinsione/darkplus.nvim"
+  -- use "navarasu/onedark.nvim"
   use({
     "catppuccin/nvim",
     as = "catppuccin"
@@ -193,20 +194,23 @@ return packer.startup(function(use)
     tag = "v0.0.4",
   }
 
-  use "folke/tokyonight.nvim"
+  -- use "folke/tokyonight.nvim"
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua" -- file explore
-  use "akinsho/bufferline.nvim" -- tab
+  use {
+    "akinsho/bufferline.nvim", -- tab
+    tag = "v1.2.0",
+  }
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim" -- status line
   use "goolord/alpha-nvim" -- welcome page
   -- use "startup-nvim/startup.nvim"     -- welcome page
 
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use {
-    "kevinhwang91/nvim-hlslens", -- highlight search
-    disable = true,
-  }
+  -- use {
+  --   "kevinhwang91/nvim-hlslens", -- highlight search
+  --   disable = true,
+  -- }
   use "kevinhwang91/nvim-bqf" -- better quick fix, use trouble instead
   use "RRethy/vim-illuminate" -- highlight undercursor word
   use "lewis6991/spellsitter.nvim" -- spell checker
@@ -217,7 +221,7 @@ return packer.startup(function(use)
   -- use "stevearc/aerial.nvim"
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"
-  use "arkav/lualine-lsp-progress" -- show lsp progress
+  -- use "arkav/lualine-lsp-progress" -- show lsp progress
   use "sindrets/winshift.nvim" -- rerange window layout
   -- litee family
   use "ldelossa/litee.nvim"
@@ -232,7 +236,7 @@ return packer.startup(function(use)
   use "Pocco81/HighStr.nvim"
   use "dstein64/vim-startuptime"
   -- use "henriquehbr/nvim-startup.lua"
-  use "AckslD/nvim-neoclip.lua"
+  -- use "AckslD/nvim-neoclip.lua"
   use "vim-test/vim-test"
   use {
     "rcarriga/vim-ultest",

@@ -163,7 +163,10 @@ return packer.startup(function(use)
 
   -- Debugger
   use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
-  use "ravenxrz/nvim-dap"
+  use {
+    "ravenxrz/nvim-dap",
+    commit = "f9480362549e2b50a8616fe4530deaabbc4f889b",
+  }
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
   use "nvim-telescope/telescope-dap.nvim"

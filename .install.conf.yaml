@@ -27,7 +27,7 @@
     ~/.rtorrent.rc:
     ~/.shell:
     ~/.config/tmux: tmux
-    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux.conf: tmux.conf
     ~/.vimrc:
     ~/.config/lazygit: lazygit
     ~/.config/nvim: nvim

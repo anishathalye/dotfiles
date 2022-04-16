@@ -30,9 +30,9 @@ keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 
 
--- FileExpolre
-keymap("n", ";e", ":NvimTreeToggle<cr>", opts)
-keymap("n", ";f", ":NvimTreeFindFile<cr>", opts)
+-- FileExpoler
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>f", ":NvimTreeFindFile<cr>", opts)
 -- no highlight
 keymap("n", "<leader>l", ":nohl<cr>", opts)
 -- save buffer

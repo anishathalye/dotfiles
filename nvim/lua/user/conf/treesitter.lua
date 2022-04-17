@@ -42,7 +42,7 @@ configs.setup {
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
         ["]]"] = "@function.outer",
-        -- ["]]"] = "@class.outer",
+        ["]["] = "@class.outer",
       },
       -- goto_next_end = {
       --   ["jF"] = "@function.outer",
@@ -50,7 +50,7 @@ configs.setup {
       -- },
       goto_previous_start = {
         ["[["] = "@function.outer",
-        -- ["[["] = "@class.outer",
+        ["[]"] = "@class.outer",
       },
       -- goto_previous_end = {
       --   ["kF"] = "@function.outer",

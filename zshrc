@@ -17,6 +17,11 @@ source ~/.zsh/plugins_before.zsh
 # Settings
 source ~/.zsh/settings.zsh
 
+# Custom prompt
+source ~/.zsh/prompt.zsh
+
+# External plugins (initialized after)
+source ~/.zsh/plugins_after.zsh
 # Bootstrap
 source ~/.shell/bootstrap.sh
 
@@ -26,11 +31,11 @@ source ~/.shell/external.sh
 # Aliases
 source ~/.shell/aliases.sh
 
-# Custom prompt
-source ~/.zsh/prompt.zsh
+# language enviroment
+source ~/.shell/language.sh
 
-# External plugins (initialized after)
-source ~/.zsh/plugins_after.zsh
+# auto commands
+source ~/.shell/autocommands.sh
 
 # Allow local customizations in the ~/.shell_local_after file
 if [ -f ~/.shell_local_after ]; then
@@ -47,4 +52,3 @@ if [ -f ~/.shell_private ]; then
     source ~/.shell_private
 fi
 
-export PATH=$PATH:$HOME/go/bin

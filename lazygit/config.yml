@@ -16,8 +16,10 @@ gui:
     optionsTextColor:
       - blue
     selectedLineBgColor:
+      - reverse
       - '#007acc'
     selectedRangeBgColor:
+      - reverse
       - '#007acc'
     cherryPickedCommitBgColor:
       - blue
@@ -28,7 +30,7 @@ gui:
   commitLength:
     show: true
   mouseEvents: true
-  skipUnstageLineWarning: false
+  skipUnstageLineWarning: true
   skipStashWarning: false
   showFileTree: true # for rendering changes files in a tree format
   showListFooter: true # for seeing the '5 of 20' message in list panels
@@ -82,9 +84,9 @@ notARepository: 'prompt' # one of: 'prompt' | 'create' | 'skip'
 promptToReturnFromSubprocess: true # display confirmation when subprocess terminates
 keybinding:
   universal:
-    quit: 'q'
+    quit: 'Q'
     ; quit-alt1: '<c-c>' # alternative/alias of quit
-    return: '<c-c>' # return to previous menu, will quit if there's nowhere to return
+    return: 'q' # return to previous menu, will quit if there's nowhere to return
     quitWithoutChangingDirectory: 'Q'
     togglePanel: '<tab>' # goto the next panel
     prevItem: '<up>' # go one line up

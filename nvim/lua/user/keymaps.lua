@@ -112,7 +112,7 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("n", "<Space>f", "<cmd>lua require('telescope').extensions.frecency.frecency(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 -- keymap("n", "<Space>F", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
-keymap("n", "<leader>u", "<cmd>TroubleToggle lsp_references<cr>", opts)
+keymap("n", "<leader>u", "<cmd>Trouble lsp_references<cr>", opts)
 
 -- calltree
 keymap("n", "<leader>in", "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", opts)
@@ -131,6 +131,10 @@ keymap("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opts)
 keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
 -- keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 -- keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- git diff view
+keymap('n', '<leader>hj', ']c', opts)
+keymap('n', '<leader>hk','[c', opts)
 
 
 -- unit test

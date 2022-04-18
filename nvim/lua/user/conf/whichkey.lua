@@ -259,18 +259,18 @@ local mappings = {
     },
   },
 
-  h = {
-    a = { "<cmd>HSHighlight 1<cr>", "Hightlight 1" },
-    b = { "<cmd>HSHighlight 2<cr>", "Hightlight 2" },
-    c = { "<cmd>HSHighlight 3<cr>", "Hightlight 3" },
-    d = { "<cmd>HSHighlight 4<cr>", "Hightlight 4" },
-    e = { "<cmd>HSHighlight 5<cr>", "Hightlight 5" },
-    f = { "<cmd>HSHighlight 6<cr>", "Hightlight 6" },
-    u = { "<cmd>HSRmHighlight<cr>", "RemoveHighlight" },
-    U = { "<cmd>HSRmHighlight rm_all<cr>", "RemoveAllHighlight" },
-  },
+  -- h = {
+  --   a = { "<cmd>HSHighlight 1<cr>", "Hightlight 1" },
+  --   b = { "<cmd>HSHighlight 2<cr>", "Hightlight 2" },
+  --   c = { "<cmd>HSHighlight 3<cr>", "Hightlight 3" },
+  --   d = { "<cmd>HSHighlight 4<cr>", "Hightlight 4" },
+  --   e = { "<cmd>HSHighlight 5<cr>", "Hightlight 5" },
+  --   f = { "<cmd>HSHighlight 6<cr>", "Hightlight 6" },
+  --   u = { "<cmd>HSRmHighlight<cr>", "RemoveHighlight" },
+  --   U = { "<cmd>HSRmHighlight rm_all<cr>", "RemoveAllHighlight" },
+  -- },
 
-  H = {
+  h = {
     name = "Help",
     -- b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },

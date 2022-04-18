@@ -65,7 +65,7 @@ require'diffview'.setup {
       ["<Space>"]       = cb("toggle_stage_entry"),   -- Stage / unstage the selected entry.
       ["S"]             = cb("stage_all"),            -- Stage all entries.
       ["U"]             = cb("unstage_all"),          -- Unstage all entries.
-      ["X"]             = cb("restore_entry"),        -- Restore entry to the state on the left side.
+      ["r"]             = cb("restore_entry"),        -- Restore entry to the state on the left side.
       ["R"]             = cb("refresh_files"),        -- Update stats and entries in the file list.
       ["<tab>"]         = cb("select_next_entry"),
       ["<s-tab>"]       = cb("select_prev_entry"),

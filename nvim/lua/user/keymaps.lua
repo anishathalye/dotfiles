@@ -133,8 +133,8 @@ keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
 -- keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- git diff view
-keymap('n', '<leader>hj', ']c', opts)
-keymap('n', '<leader>hk','[c', opts)
+keymap('n', '<leader>j', ']c', opts)
+keymap('n', '<leader>k','[c', opts)
 
 
 -- unit test

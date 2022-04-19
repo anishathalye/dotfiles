@@ -1,7 +1,7 @@
 -- https://github.com/rmagatti/auto-session
 local status_ok, auto_session = pcall(require, "auto-session")
 if not status_ok then
-  vim.notify("autosession not found!")
+  vim.notify("autos-ession not found!")
   return
 end
 

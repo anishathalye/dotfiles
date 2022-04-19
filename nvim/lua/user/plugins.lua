@@ -98,12 +98,16 @@ return packer.startup(function(use)
   -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
+    commit = "668de0951a36ef17016074f1120b6aacbe6c4515",
     run = ":TSUpdate",
   }
-  use "nvim-treesitter/nvim-treesitter-textobjects" -- enhance texetobject selection
+  use {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    commit = "c81382328ad47c154261d1528d7c921acad5eae5",
+  } -- enhance texetobject selection
   use "romgrk/nvim-treesitter-context" -- show class/function at the top
   use "m-demare/hlargs.nvim"
-  use "SmiteshP/nvim-gps" -- statusline show class structure
+  -- use "SmiteshP/nvim-gps" -- statusline show class structure
   use "andymass/vim-matchup"
   use {
     "abecodes/tabout.nvim",
@@ -122,7 +126,7 @@ return packer.startup(function(use)
   -- Editor enhance
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "terrortylor/nvim-comment"
-  -- use "rmagatti/auto-session" -- auto restore session(constains layout, window etc..)
+  use "rmagatti/auto-session" -- auto restore session(constains layout, window etc..)
   -- cmp plugins
   use {
     "hrsh7th/nvim-cmp",

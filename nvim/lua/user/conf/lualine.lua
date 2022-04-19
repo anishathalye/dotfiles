@@ -66,7 +66,7 @@ end
 
 
 -- add gps module to get the position information
-local gps = require("nvim-gps")
+-- local gps = require("nvim-gps")
 
 lualine.setup({
 	options = {
@@ -80,9 +80,9 @@ lualine.setup({
 	sections = {
 		lualine_a = { branch, diagnostics },
 		lualine_b = { mode },
-		lualine_c = {
-        { gps.get_location, cond = gps.is_available },
-    },
+		-- lualine_c = {
+		--         { gps.get_location, cond = gps.is_available },
+		--     },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { location },

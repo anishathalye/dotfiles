@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = {"cpp", "c", "python", "go", "markdown", }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = { "cpp", "c", "python", "go", "markdown", }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
   autopairs = {
@@ -42,20 +42,20 @@ configs.setup {
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
         ["]]"] = "@function.outer",
-        ["]["] = "@class.outer",
+        -- ["]["] = "@function.outer",
       },
-      -- goto_next_end = {
-      --   ["jF"] = "@function.outer",
-      --   ["]["] = "@class.outer",
-      -- },
+      goto_next_end = {
+        ["]["] = "@function.outer",
+        -- ["]["] = "@class.outer",
+      },
       goto_previous_start = {
         ["[["] = "@function.outer",
-        ["[]"] = "@class.outer",
+        -- ["[]"] = "@function.outer",
       },
-      -- goto_previous_end = {
-      --   ["kF"] = "@function.outer",
-      --   ["[]"] = "@class.outer",
-      -- },
+      goto_previous_end = {
+        ["[]"] = "@function.outer",
+        -- ["[]"] = "@class.outer",
+      },
     },
     lsp_interop = {
       enable = true,
@@ -69,7 +69,7 @@ configs.setup {
   -- matchup plugins
   -- https://github.com/andymass/vim-matchup
   matchup = {
-    enable = true,              -- mandatory, false will disable the whole extension
+    enable = true, -- mandatory, false will disable the whole extension
     -- disable = { "c", "ruby" },  -- optional, list of language that will be disabled
     -- [options]
   },

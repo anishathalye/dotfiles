@@ -5,7 +5,7 @@ vim.cmd [[
   let g:ultest_running_sign = ""
   let g:ultest_not_run_sign = "?"
   let g:ultest_max_threads = 12
-  let g:ultest_output_on_line = 1
+  let g:ultest_output_on_line = 0
   let g:ultest_use_pty = 1
 ]]
 

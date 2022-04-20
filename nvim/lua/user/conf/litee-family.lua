@@ -7,6 +7,7 @@ require('litee.lib').setup({
 })
 
 -- configure litee-calltree.nvim
+-- commands: LTOpenToCalltree to open calltree
 require('litee.calltree').setup({
    -- NOTE: the plugin is in-progressing
   on_open = "pannel", -- pannel | popout

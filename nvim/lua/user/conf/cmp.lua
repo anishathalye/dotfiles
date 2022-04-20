@@ -110,6 +110,7 @@ cmp.setup {
         nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
+        spell = "[Spell]",
         path = "[Path]",
       })[entry.source.name]
       return vim_item
@@ -120,6 +121,7 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "buffer" },
+    { name = "spell" },
     { name = "path" },
   },
   confirm_opts = {

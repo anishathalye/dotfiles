@@ -35,9 +35,11 @@ local options = {
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   foldmethod = "expr",                     -- fold with nvim_treesitter
-  foldexpr = "nvim_treesitter#foldexpr()", 
+  foldexpr = "nvim_treesitter#foldexpr()",
   foldenable = false,                      -- no fold to be applied when open a file
   foldlevel = 99,                          -- if not set this, fold will be everywhere
+  spell = true,                            -- add spell support
+  spelllang = { 'en_us' },                 -- support which languages?
 }
 
 vim.opt.shortmess:append "c"

@@ -94,6 +94,8 @@ return packer.startup(function(use)
   -- }
   use "nvim-telescope/telescope-ui-select.nvim"
   use "nvim-telescope/telescope-live-grep-raw.nvim"
+  use "MattesGroeger/vim-bookmarks"
+  use "tom-anders/telescope-vim-bookmarks.nvim"
 
   -- Treesittetr
   use {

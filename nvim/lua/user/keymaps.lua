@@ -112,6 +112,12 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("n", "<Space>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 -- keymap("n", "<Space>f", "<cmd>lua require('telescope').extensions.frecency.frecency(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 -- keymap("n", "<Space>F", "<cmd>Telescope live_grep<cr>", opts)
+
+-- bookmark's
+keymap("n", "ma", "<cmd>Telescope vim_bookmarks current_file<cr>", opts)
+keymap("n", "mA", "<cmd>Telescope vim_bookmarks current_file<cr>", opts)
+
+
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
 keymap("n", "<leader>u", "<cmd>Trouble lsp_references<cr>", opts)
 
@@ -149,9 +155,9 @@ keymap("n", "gcf", "<cmd>Dox<cr>", opts)
 keymap("n", "<leader>rf", ":%SnipRun<cr>", opts)
 keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
 
-
 -- for spell check
 vim.cmd(
 [[
   nnoremap <leader>s :call search('\w\>', 'c')<CR>a<C-X><C-S>
 ]])
+

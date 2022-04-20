@@ -148,3 +148,9 @@ keymap("n", "gcf", "<cmd>Dox<cr>", opts)
 keymap("n", "<leader>rf", ":%SnipRun<cr>", opts)
 keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
 
+
+-- for spell check
+vim.cmd(
+[[
+  nnoremap <leader>s :call search('\w\>', 'c')<CR>a<C-X><C-S>
+]])

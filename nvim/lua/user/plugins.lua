@@ -138,7 +138,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
-  use "f3fora/cmp-spell"
+  use "f3fora/cmp-spell"      -- spell check
   use "ethanholz/nvim-lastplace" -- auto return back to the last modified positon when open a file
   use "BurntSushi/ripgrep" -- ripgrep
   use "nvim-pack/nvim-spectre" -- search and replace pane

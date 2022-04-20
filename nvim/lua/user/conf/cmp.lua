@@ -10,7 +10,7 @@ if not snip_status_ok then
   return
 end
 
-require("luasnip.loaders.from_vscode").lazy_load()    -- load freindly-snippets
+require("luasnip.loaders.from_vscode").lazy_load() -- load freindly-snippets
 require("luasnip.loaders.from_vscode").load({ paths = { -- load custom snippets
   vim.fn.stdpath("config") .. "/my-snippets"
 } }) -- Load snippets from my-snippets folder
@@ -58,7 +58,7 @@ cmp.setup {
   },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
@@ -107,6 +107,7 @@ cmp.setup {
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
+        cmp_tabnine = "[TabNine]",
         nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
@@ -118,6 +119,7 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp" },
+    { name = "cmp_tabnine" },
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "buffer" },

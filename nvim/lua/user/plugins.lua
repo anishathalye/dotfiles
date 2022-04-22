@@ -81,10 +81,13 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "rcarriga/nvim-notify" -- notify
-  use "kyazdani42/nvim-web-devicons"  -- icons
+  use "kyazdani42/nvim-web-devicons" -- icons
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
+  use {
+    "nvim-telescope/telescope.nvim",
+    tag="nvim-0.6",
+  }
   use {
     "nvim-telescope/telescope-fzf-native.nvim",
     run = "make",
@@ -125,6 +128,11 @@ return packer.startup(function(use)
   -- use "RishabhRD/nvim-lsputils"
   use "kosayoda/nvim-lightbulb" -- code action
   use "ray-x/lsp_signature.nvim" -- show function signature when typing
+  -- use {
+  --   "ray-x/guihua.lua",
+  --   run = 'cd lua/fzy && make'
+  -- }
+  -- use { 'ray-x/navigator.lua' } -- super powerful plugin  for code navigation 
 
   -- Editor enhance
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter

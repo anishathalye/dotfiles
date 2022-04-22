@@ -52,4 +52,6 @@ require "user.conf.neovim-cmake"
 require "user.conf.autosave"
 require "user.conf.catppcuccin"
 require "user.conf.spellsitter"
+require "user.conf.fidget"
 require "user.conf.tabnine"
+

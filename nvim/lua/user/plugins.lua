@@ -81,6 +81,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "rcarriga/nvim-notify" -- notify
+  use "kyazdani42/nvim-web-devicons"  -- icons
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -142,7 +143,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lua"
   use "f3fora/cmp-spell" -- spell check
   use {
-    "tzachar/cmp-tabnine",    -- use ":CmpTabnineHub" command to login
+    "tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
     after = "nvim-cmp",
     run = 'bash ./install.sh',
   }
@@ -182,6 +183,7 @@ return packer.startup(function(use)
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
   use "nvim-telescope/telescope-dap.nvim"
+  -- use "nvim-telescope/telescope-file-browser.nvim"
   -- use "mfussenegger/nvim-dap-python"    -- debug python
   -- use { "leoluz/nvim-dap-go", module = "dap-go" } -- debug golang
   -- use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
@@ -210,7 +212,6 @@ return packer.startup(function(use)
   }
 
   -- use "folke/tokyonight.nvim"
-  use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua" -- file explore
   use {
     "akinsho/bufferline.nvim", -- tab
@@ -236,7 +237,7 @@ return packer.startup(function(use)
   -- use "stevearc/aerial.nvim"
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"
-  -- use "arkav/lualine-lsp-progress" -- show lsp progress
+  use "j-hui/fidget.nvim" -- show lsp progress
   use "sindrets/winshift.nvim" -- rerange window layout
   -- litee family
   use "ldelossa/litee.nvim"

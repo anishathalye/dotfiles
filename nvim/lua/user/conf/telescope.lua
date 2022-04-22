@@ -1,6 +1,6 @@
 -- NOTE: install ripgrep for live_grep picker
 
--- live_grep:
+-- ====for live_grep raw====:
 -- for rp usage: reference: https://segmentfault.com/a/1190000016170184
 -- -i ignore case
 -- -s 大小写敏感
@@ -31,6 +31,19 @@
 -- rg --count-matches	Show the number of matchings in a file
 -- rg neovim --stats	Show the searching stat (how many matches, how many files searched etc.)
 
+-- ====for fzf search=====
+-- Token	Match type	Description
+-- sbtrkt	fuzzy-match	Items that match sbtrkt
+-- 'wild	exact-match (quoted)	Items that include wild
+-- ^music	prefix-exact-match	Items that start with music
+-- .mp3$	suffix-exact-match	Items that end with .mp3
+-- !fire	inverse-exact-match	Items that do not include fire
+-- !^music	inverse-prefix-exact-match	Items that do not start with music
+-- !.mp3$	inverse-suffix-exact-match	Items that do not end with .mp3
+
+-- A single bar character term acts as an OR operator.
+-- For example, the following query matches entries that start with core and end with either go, rb, or py.
+-- ^core go$ | rb$ | py$
 
 
 local status_ok, telescope = pcall(require, "telescope")

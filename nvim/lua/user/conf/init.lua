@@ -54,4 +54,5 @@ require "user.conf.catppcuccin"
 require "user.conf.spellsitter"
 require "user.conf.fidget"
 require "user.conf.tabnine"
+require "user.conf.vim-local-history"
 

@@ -86,7 +86,7 @@ return packer.startup(function(use)
   -- Telescope
   use {
     "nvim-telescope/telescope.nvim",
-    tag="nvim-0.6",
+    tag = "nvim-0.6",
   }
   use {
     "nvim-telescope/telescope-fzf-native.nvim",
@@ -132,7 +132,7 @@ return packer.startup(function(use)
   --   "ray-x/guihua.lua",
   --   run = 'cd lua/fzy && make'
   -- }
-  -- use { 'ray-x/navigator.lua' } -- super powerful plugin  for code navigation 
+  -- use { 'ray-x/navigator.lua' } -- super powerful plugin  for code navigation
 
   -- Editor enhance
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
@@ -259,6 +259,7 @@ return packer.startup(function(use)
   use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"
   use "dstein64/vim-startuptime"
+  use "ravenxrz/vim-local-history"
   -- use "henriquehbr/nvim-startup.lua"
   -- use "AckslD/nvim-neoclip.lua"
   use "vim-test/vim-test"

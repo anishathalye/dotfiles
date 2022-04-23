@@ -32,3 +32,6 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# nvim
+.local_history/

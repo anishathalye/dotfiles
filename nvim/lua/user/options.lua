@@ -40,6 +40,7 @@ local options = {
   foldlevel = 99,                          -- if not set this, fold will be everywhere
   spell = true,                            -- add spell support
   spelllang = { 'en_us' },                 -- support which languages?
+  diffopt="vertical,filler,internal,context:4",                      -- vertical diff split view
 }
 
 vim.opt.shortmess:append "c"

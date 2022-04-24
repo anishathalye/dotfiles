@@ -105,7 +105,7 @@ return packer.startup(function(use)
   -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
-    -- commit = "668de0951a36ef17016074f1120b6aacbe6c4515",
+    commit = "668de0951a36ef17016074f1120b6aacbe6c4515",
     run = ":TSUpdate",
   }
   use {
@@ -151,6 +151,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   use "f3fora/cmp-spell" -- spell check
+  -- use "github/copilot.vim"  -- Copilot setup, 
   -- use {
   --   "tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
   --   after = "nvim-cmp",

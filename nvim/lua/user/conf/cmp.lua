@@ -190,6 +190,7 @@ cmp_config = {
       vsnip = "(Snippet)",
       luasnip = "(Snippet)",
       buffer = "(Buffer)",
+      spell = "(Spell)",
     },
     duplicates = {
       buffer = 1,
@@ -226,6 +227,7 @@ cmp_config = {
     { name = "cmp_tabnine" },
     { name = "nvim_lua" },
     { name = "buffer" },
+    { name = "spell" },
     { name = "calc" },
     { name = "emoji" },
     { name = "treesitter" },

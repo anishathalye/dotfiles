@@ -100,11 +100,12 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-live-grep-raw.nvim"
   use "MattesGroeger/vim-bookmarks"
   use "tom-anders/telescope-vim-bookmarks.nvim"
+  use "nvim-telescope/telescope-dap.nvim"
 
   -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "668de0951a36ef17016074f1120b6aacbe6c4515",
+    -- commit = "668de0951a36ef17016074f1120b6aacbe6c4515",
     run = ":TSUpdate",
   }
   use {
@@ -112,13 +113,13 @@ return packer.startup(function(use)
     commit = "c81382328ad47c154261d1528d7c921acad5eae5",
   } -- enhance texetobject selection
   use "romgrk/nvim-treesitter-context" -- show class/function at the top
-  use "m-demare/hlargs.nvim"
-  -- use "SmiteshP/nvim-gps" -- statusline show class structure
-  use "andymass/vim-matchup"
-  use {
-    "abecodes/tabout.nvim",
-    wants = { 'vim-treesitter' }, -- or require if not used so far
-  }
+  -- -- use "m-demare/hlargs.nvim"
+  -- -- use "SmiteshP/nvim-gps" -- statusline shows class structure
+  -- use "andymass/vim-matchup"
+  -- use {
+  --   "abecodes/tabout.nvim",
+  --   wants = { 'vim-treesitter' }, -- or require if not used so far
+  -- }
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
@@ -137,11 +138,11 @@ return packer.startup(function(use)
   -- Editor enhance
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "terrortylor/nvim-comment"
-  use "rmagatti/auto-session" -- auto restore session(constains layout, window etc..)
+  -- use "rmagatti/auto-session" -- auto restore session(constains layout, window etc..)
   -- cmp plugins
   use {
     "hrsh7th/nvim-cmp",
-    commit = "4f1358e659d51c69055ac935e618b684cf4f1429",
+    -- commit = "4f1358e659d51c69055ac935e618b684cf4f1429",
   } -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
@@ -150,20 +151,20 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   use "f3fora/cmp-spell" -- spell check
-  use {
-    "tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
-    after = "nvim-cmp",
-    run = 'bash ./install.sh',
-  }
+  -- use {
+  --   "tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
+  --   after = "nvim-cmp",
+  --   run = 'bash ./install.sh',
+  -- }
   use "ethanholz/nvim-lastplace" -- auto return back to the last modified positon when open a file
-  use "BurntSushi/ripgrep" -- ripgrep
+  -- use "BurntSushi/ripgrep" -- ripgrep
   use "nvim-pack/nvim-spectre" -- search and replace pane
-  use "haringsrob/nvim_context_vt" -- show if, for, function... end as virtual text
+  -- use "haringsrob/nvim_context_vt" -- show if, for, function... end as virtual text
   -- use "code-biscuits/nvim-biscuits" -- AST enhance, require treesitter
   use "tpope/vim-repeat" --  . command enhance
   use "tpope/vim-surround" -- vim surround
-  use "terryma/vim-expand-region" -- expand/shrink region by +/-
-  use "meain/vim-printer"
+  -- use "terryma/vim-expand-region" -- expand/shrink region by +/-
+  -- use "meain/vim-printer"
 
   use "akinsho/toggleterm.nvim" -- toggle terminal
   use "ahmedkhalf/project.nvim" -- project manager
@@ -173,7 +174,7 @@ return packer.startup(function(use)
     "phaazon/hop.nvim", -- like easymotion, but more powerful
     branch = "v1", -- optional but strongly recommended
   }
-  use { "rhysd/accelerated-jk", event = "BufReadPost" }
+  -- use { "rhysd/accelerated-jk", event = "BufReadPost" }
   use "famiu/bufdelete.nvim"
 
   use "nathom/filetype.nvim"
@@ -190,7 +191,6 @@ return packer.startup(function(use)
   }
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
-  use "nvim-telescope/telescope-dap.nvim"
   -- use "nvim-telescope/telescope-file-browser.nvim"
   -- use "mfussenegger/nvim-dap-python"    -- debug python
   -- use { "leoluz/nvim-dap-go", module = "dap-go" } -- debug golang
@@ -225,7 +225,7 @@ return packer.startup(function(use)
     "akinsho/bufferline.nvim", -- tab
     tag = "v1.2.0",
   }
-  use "moll/vim-bbye"
+  -- use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim" -- status line
   use "goolord/alpha-nvim" -- welcome page
   -- use "startup-nvim/startup.nvim"     -- welcome page
@@ -235,9 +235,9 @@ return packer.startup(function(use)
   --   "kevinhwang91/nvim-hlslens", -- highlight search
   --   disable = true,
   -- }
-  use "kevinhwang91/nvim-bqf" -- better quick fix, use trouble instead
-  use "RRethy/vim-illuminate" -- highlight undercursor word
-  use "lewis6991/spellsitter.nvim" -- spell checker
+  -- use "kevinhwang91/nvim-bqf" -- better quick fix, use trouble instead
+  -- use "RRethy/vim-illuminate" -- highlight undercursor word
+  -- use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
   -- use "liuchengxu/vista.vim"     -- outline
   -- use "simrat39/symbols-outline.nvim" -- outline
@@ -254,11 +254,11 @@ return packer.startup(function(use)
   -- tools
   -- use "cdelledonne/vim-cmake"
   use "ravenxrz/neovim-cmake"
-  use "skanehira/preview-markdown.vim" -- NOTE:: glow required : https://github.com/charmbracelet/glow
+  -- use "skanehira/preview-markdown.vim" -- NOTE:: glow required : https://github.com/charmbracelet/glow
   use "voldikss/vim-translator"
   use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"
-  use "dstein64/vim-startuptime"
+  -- use "dstein64/vim-startuptime"
   use "ravenxrz/vim-local-history"
   -- use "henriquehbr/nvim-startup.lua"
   -- use "AckslD/nvim-neoclip.lua"
@@ -268,7 +268,7 @@ return packer.startup(function(use)
     run = ":UpdateRemotePlugins"
   }
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
-  use "ravenxrz/DoxygenToolkit.vim"
+  -- use "ravenxrz/DoxygenToolkit.vim"
   use "Pocco81/AutoSave.nvim"
 
 

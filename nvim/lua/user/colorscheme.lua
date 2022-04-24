@@ -1,4 +1,7 @@
-local colorscheme = "catppuccin"
+-- cursor color: #61AFEF
+-- local colorscheme = "catppuccin"
+-- local colorscheme = "darkplus"
+local colorscheme = "github_light"
 -- require "user.conf.github-nvim-theme"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

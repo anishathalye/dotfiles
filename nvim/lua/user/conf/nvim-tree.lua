@@ -1,11 +1,11 @@
 -- https://github.com/kyazdani42/nvim-tree.lua
--- 
+--
 -- <CR> or o on the root folder will cd in the above directory
 -- <C-]> will cd in the directory under the cursor
 -- <BS> will close current opened directory or parent
 -- type a to add a file. Adding a directory requires leaving a leading / at the end of the path.
 -- you can add multiple directories by doing foo/bar/baz/f and it will add foo bar and baz directories and f as a file
--- 
+--
 -- type r to rename a file
 -- type <C-r> to rename a file and omit the filename on input
 -- type x to add/remove file/directory to cut clipboard
@@ -110,14 +110,14 @@ nvim_tree.setup {
     height = 30,
     hide_root_folder = false,
     side = "left",
-    auto_resize = true,
+    -- auto_resize = true,
     mappings = {
       custom_only = false,
       list = {
         { key = { "l", "<CR>", "o" }, action = "edit" },
-        { key = "h", action ="close_node" },
-        { key = "v", action ="vsplit" },
-        { key = "O", action ="cd" },
+        { key = "h", action = "close_node" },
+        { key = "v", action = "vsplit" },
+        { key = "O", action = "cd" },
       },
     },
     number = false,
@@ -136,13 +136,19 @@ nvim_tree.setup {
   },
   actions = {
     open_file = {
-        resize_window = true    -- close half-screen usage when open a new file
+      resize_window = true -- close half-screen usage when open a new file
     }
   }
 }
 
 -- with relative path
-require"nvim-tree.events".on_file_created(function(file) vim.cmd("edit "..file.fname) end)
+require "nvim-tree.events".on_file_created(function(file) vim.cmd("edit " .. file.fname) end)
 -- with absolute path
 -- require"nvim-tree.events".on_file_created(function(file) vim.cmd("edit "..vim.fn.fnamemodify(file.fname, ":p")) end)
 
+-- auto close feature
+vim.cmd(
+  [[
+    autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+]]
+)

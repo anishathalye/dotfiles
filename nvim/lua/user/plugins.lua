@@ -255,7 +255,7 @@ return packer.startup(function(use)
   -- tools
   -- use "cdelledonne/vim-cmake"
   use "ravenxrz/neovim-cmake"
-  -- use "skanehira/preview-markdown.vim" -- NOTE:: glow required : https://github.com/charmbracelet/glow
+  use "skanehira/preview-markdown.vim" -- NOTE:: glow required : https://github.com/charmbracelet/glow
   use "voldikss/vim-translator"
   use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"
@@ -270,7 +270,7 @@ return packer.startup(function(use)
   }
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
   -- use "ravenxrz/DoxygenToolkit.vim"
-  use "Pocco81/AutoSave.nvim"
+  -- use "Pocco81/AutoSave.nvim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

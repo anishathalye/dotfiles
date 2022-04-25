@@ -165,6 +165,7 @@ local mappings = {
     w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics"},
     q = { "<cmd>Trouble quickfix<cr>", "Quick Fix"},
     u = { "<cmd>Trouble lsp_references<cr>", "Usage"},
+    g = { "<cmd>Gitsigns setloclist<cr>", "Open changed hunk" },
   },
 
   P = {
@@ -204,7 +205,6 @@ local mappings = {
      S = { "<cmd>lua require 'gitsigns'.stage_buffer()<cr>", "Stage Hunk" },
      u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk", },
      U = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk", },
-     t = { "<cmd>Gitsigns setloclist<cr>", "Open changed file" },
      o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
      b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
      c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },

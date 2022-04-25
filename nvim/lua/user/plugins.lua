@@ -176,7 +176,7 @@ return packer.startup(function(use)
     branch = "v1", -- optional but strongly recommended
   }
   -- use { "rhysd/accelerated-jk", event = "BufReadPost" }
-  use "famiu/bufdelete.nvim"
+  -- use "famiu/bufdelete.nvim"
 
   use "nathom/filetype.nvim"
 

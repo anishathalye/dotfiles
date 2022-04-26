@@ -269,6 +269,7 @@ return packer.startup(function(use)
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
   -- use "ravenxrz/DoxygenToolkit.vim"
   use "Pocco81/AutoSave.nvim"
+  use "djoshea/vim-autoread"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

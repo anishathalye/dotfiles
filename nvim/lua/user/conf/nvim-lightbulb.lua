@@ -1,7 +1,8 @@
-
-vim.cmd([[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]])
-
-local lightbulb = require'nvim-lightbulb'
+local status_ok, lightbulb = pcall(require, "nvim-lightbulb")
+if not status_ok then
+  vim.notify("status_ok not found!")
+	return
+end
 -- Showing defaults
 lightbulb.setup {
     -- LSP client names to ignore
@@ -47,3 +48,5 @@ lightbulb.setup {
         text_unavailable = ""
     }
 }
+
+vim.cmd([[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]])

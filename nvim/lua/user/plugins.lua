@@ -105,7 +105,6 @@ return packer.startup(function(use)
   -- Treesittetr
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "668de0951a36ef17016074f1120b6aacbe6c4515",
     run = ":TSUpdate",
   }
   use {
@@ -113,9 +112,9 @@ return packer.startup(function(use)
     commit = "c81382328ad47c154261d1528d7c921acad5eae5",
   } -- enhance texetobject selection
   use "romgrk/nvim-treesitter-context" -- show class/function at the top
-  -- -- use "m-demare/hlargs.nvim"
-  -- -- use "SmiteshP/nvim-gps" -- statusline shows class structure
-  -- use "andymass/vim-matchup"
+  -- use "m-demare/hlargs.nvim"
+  -- use "SmiteshP/nvim-gps" -- statusline shows class structure
+  use "andymass/vim-matchup"
   -- use {
   --   "abecodes/tabout.nvim",
   --   wants = { 'vim-treesitter' }, -- or require if not used so far
@@ -151,7 +150,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   use "f3fora/cmp-spell" -- spell check
-  -- use "github/copilot.vim"  -- Copilot setup, 
+  -- use "github/copilot.vim"  -- Copilot setup,
   -- use {
   --   "tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
   --   after = "nvim-cmp",
@@ -243,7 +242,6 @@ return packer.startup(function(use)
   -- use "liuchengxu/vista.vim"     -- outline
   -- use "simrat39/symbols-outline.nvim" -- outline
   use "stevearc/aerial.nvim"
-  -- use "stevearc/aerial.nvim"
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"
   use "j-hui/fidget.nvim" -- show lsp progress
@@ -270,7 +268,7 @@ return packer.startup(function(use)
   }
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
   -- use "ravenxrz/DoxygenToolkit.vim"
-  -- use "Pocco81/AutoSave.nvim"
+  use "Pocco81/AutoSave.nvim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

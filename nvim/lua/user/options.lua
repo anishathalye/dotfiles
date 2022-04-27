@@ -38,7 +38,7 @@ local options = {
   foldexpr = "nvim_treesitter#foldexpr()",
   foldenable = false,                      -- no fold to be applied when open a file
   foldlevel = 99,                          -- if not set this, fold will be everywhere
-  spell = true,                            -- add spell support
+  spell = false,                            -- add spell support
   spelllang = { 'en_us' },                 -- support which languages?
   diffopt="vertical,filler,internal,context:4",                      -- vertical diff split view
 }

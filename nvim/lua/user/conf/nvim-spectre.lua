@@ -2,7 +2,13 @@
 -- WARN: spectre 手动安装依赖项 sed 和 ripgrep
 -- sed 命令（自行安装，如果已有则忽略）
 -- repgrep： https://github.com/BurntSushi/ripgrep
-require("spectre").setup(
+local status_ok, spectre = pcall(require, "spectre")
+if not status_ok then
+  vim.notify("spectre not found!")
+	return
+end
+
+spectre.setup(
     {
         mapping = {
             -- 删除选中

@@ -17,7 +17,13 @@
 -- cancel	Cancel current running CMake action like build or run.
 
 local Path = require('plenary.path')
-require('cmake').setup({
+local status_ok, cmake = pcall(require, "cmake")
+if not status_ok then
+  vim.notify("cmake not found!")
+  return
+end
+
+cmake.setup({
   cmake_executable = 'cmake', -- CMake executable to run.
   parameters_file = 'neovim.json', -- JSON file to store information about selected target, run arguments and build type.
   build_dir = tostring(Path:new('{cwd}', 'build', '{os}-{build_type}')), -- Build directory. The expressions `{cwd}`, `{os}` and `{build_type}` will be expanded with the corresponding text values.

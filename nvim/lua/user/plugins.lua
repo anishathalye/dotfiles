@@ -177,7 +177,7 @@ return packer.startup(function(use)
   -- use { "rhysd/accelerated-jk", event = "BufReadPost" }
   -- use "famiu/bufdelete.nvim"
 
-  use "nathom/filetype.nvim"
+  -- use "nathom/filetype.nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -252,8 +252,16 @@ return packer.startup(function(use)
 
   -- tools
   -- use "cdelledonne/vim-cmake"
-  use "ravenxrz/neovim-cmake"
-  use "skanehira/preview-markdown.vim" -- NOTE:: glow required : https://github.com/charmbracelet/glow
+  use {
+    "ravenxrz/neovim-cmake",
+    opt = true,
+    cmd = "CMake",
+  }
+  use {
+    "skanehira/preview-markdown.vim",
+    opt = true,
+    cmd = "PreviewMarkdown",
+} -- NOTE:: glow required : https://github.com/charmbracelet/glow
   use "voldikss/vim-translator"
   use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"
@@ -270,6 +278,7 @@ return packer.startup(function(use)
   -- use "ravenxrz/DoxygenToolkit.vim"
   use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
+  use "rhysd/accelerated-jk"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

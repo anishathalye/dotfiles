@@ -20,8 +20,13 @@ local diagnostics = {
 
 local diff = {
   "diff",
-  colored = false,
-  symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
+  colored = true,
+  symbols = { added = "  ", modified = " ", removed = " " },
+  diff_color = {
+    added = { fg = "#98be65" },
+    modified = { fg = "#ecbe7b" },
+    removed = { fg = "#ec5f67" },
+  },
   cond = hide_in_width
 }
 
@@ -88,8 +93,10 @@ lualine.setup({
   options = {
     icons_enabled = true,
     theme = "auto",
-    component_separators = { left = "", right = "" },
-    section_separators = { left = "", right = "" },
+    component_separators = { left = "", right = "" },
+    section_separators = { left = "", right = "" },
+    -- component_separators = { left = "", right = "" },
+    -- section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
     always_divide_middle = true,
   },

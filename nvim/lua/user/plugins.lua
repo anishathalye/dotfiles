@@ -75,9 +75,9 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  use "lewis6991/impatient.nvim" -- Speed up loading Lua modules    TODO: figure out how to use this
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
+  use "lewis6991/impatient.nvim" -- Speed up loading Lua modules    TODO: figure out how to use this
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "rcarriga/nvim-notify" -- notify
@@ -261,7 +261,7 @@ return packer.startup(function(use)
     "skanehira/preview-markdown.vim",
     opt = true,
     cmd = "PreviewMarkdown",
-} -- NOTE:: glow required : https://github.com/charmbracelet/glow
+  } -- NOTE:: glow required : https://github.com/charmbracelet/glow
   use "voldikss/vim-translator"
   use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"
@@ -278,7 +278,6 @@ return packer.startup(function(use)
   -- use "ravenxrz/DoxygenToolkit.vim"
   use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
-  use "rhysd/accelerated-jk"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

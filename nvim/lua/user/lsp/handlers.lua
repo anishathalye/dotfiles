@@ -96,5 +96,5 @@ if not status_ok then
 end
 
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
-capabilities.offsetEncoding = { "utf-16" }
+capabilities.offsetEncoding = { "utf-8" }
 return M

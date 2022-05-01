@@ -34,7 +34,7 @@ configs.setup {
       enable = false,
     },
     select = {
-      enable = false,
+      enable = true,
       -- Automatically jump forward to textobj, similar to targets.vim
       lookahead = true,
       keymaps = {

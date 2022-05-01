@@ -22,6 +22,7 @@
 - lazygit     -- git操作
 - rg          -- telescope 依赖
 
+QQ交流群:728502470
 
 
 

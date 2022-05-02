@@ -16,6 +16,7 @@ M.setup = function()
     "init", -- we don't need to load init again
     "vgit",
     "nvim-hlslens",
+    "auto-session",
     "vim-illuminate",
     "vista",
     "symbols-outline",

@@ -109,7 +109,7 @@ local mappings = {
   },
   ["p"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
-  ["P"] = { "<cmd>Telescope session-lens search_session<cr>", "Projects" },
+  ["P"] = { "<cmd>SessionManager load_session<cr>", "Projects" },
 
   ["t"] = {
     "<cmd>UltestSummary<CR>", "Unit Test"

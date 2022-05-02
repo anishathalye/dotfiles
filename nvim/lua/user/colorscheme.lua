@@ -12,4 +12,6 @@ end
 
 if colorscheme == "onedark" then
   require "user.themes.onedark"
+elseif colorscheme == "catppuccin" then
+  require "user.themes.catppuccin"
 end

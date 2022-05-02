@@ -1,8 +1,12 @@
 # Neovim 配置
 
+**neovim 版本： 建议大于等于0.6.1，但是小于0.8**
+
+>建议：除了arch系linux，其余linux发行版通过neovim github release下载可执行文件。 通过类似 `apt` 的方式安装往往都是旧版本。
+
 使用方法：
 
-1.在 `~/.config` 目录下建立nvim的软链接
+1. clone本仓库，并在 `~/.config` 目录下建立nvim的软链接
   ```shell
   git clone https://github.com/ravenxrz/dotfiles.git ~/.config/dotfiles
   ln -s ~/.config/dotfiles/nvim ~/.config

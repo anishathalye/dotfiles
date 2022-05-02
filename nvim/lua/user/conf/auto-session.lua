@@ -19,3 +19,8 @@ auto_session.setup({
   pre_save_cmds = { "tabdo NvimTreeClose", },
   post_restore_cmds = { "NvimTreeFindFile" },
 })
+
+vim.cmd([[
+    autocmd VimLeavePre * silent! :SaveSession
+]])
+

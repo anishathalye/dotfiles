@@ -20,7 +20,7 @@ local function config_dapi_and_sign()
       numhl = "",
     },
     stopped = {
-      text = "⭐️", 
+      text = "⭐️",
       texthl = "LspDiagnosticsSignInformation",
       linehl = "DiagnosticUnderlineInfo",
       numhl = "LspDiagnosticsSignInformation",
@@ -33,28 +33,32 @@ local function config_dapi_and_sign()
 end
 
 local function config_dapui()
-  -- dapui config
   local dap, dapui = require "dap", require "dapui"
-  dap.listeners.after.event_initialized["dapui_config"] = function()
+
+  local debug_open = function()
     dapui.open()
     vim.api.nvim_command("DapVirtualTextEnable")
-    -- dapui.close("tray")
+  end
+  local debug_close = function()
+    dap.repl.close()
+    dapui.close()
+    vim.api.nvim_command("DapVirtualTextDisable")
+    vim.api.nvim_command("bdelete! term:")   -- close debug temrinal
+  end
+
+  dap.listeners.after.event_initialized["dapui_config"] = function()
+    debug_open()
   end
   dap.listeners.before.event_terminated["dapui_config"] = function()
-    vim.api.nvim_command("DapVirtualTextDisable")
-    dapui.close()
+    debug_close()
   end
-  dap.listeners.before.event_exited["dapui_config"] = function()
-    vim.api.nvim_command("DapVirtualTextDisable")
-    dapui.close()
+  dap.listeners.before.event_exited["dapui_config"]     = function()
+    debug_close()
   end
-  -- for some debug adapter, terminate or exit events will no fire, use disconnect reuest instead
-  dap.listeners.before.disconnect["dapui_config"] = function()
-    vim.api.nvim_command("DapVirtualTextDisable")
-    dapui.close()
- end
+  dap.listeners.before.disconnect["dapui_config"]       = function()
+    debug_close()
+  end
 end
-
 
 local function config_debuggers()
   local dap = require "dap"
@@ -64,13 +68,13 @@ local function config_debuggers()
   dap.set_log_level("DEBUG")
 
   -- load from json file
-  require('dap.ext.vscode').load_launchjs(nil, {cppdbg = {'cpp'}})
+  require('dap.ext.vscode').load_launchjs(nil, { cppdbg = { 'cpp' } })
   -- config per launage
   -- require("user.dap.dap-cpp")
   require("user.dap.di-cpp")
   -- require("user.dap.dap-go")
   require("user.dap.di-go")
-  require ("user.dap.di-python")
+  require("user.dap.di-python")
   -- require("user.dap.dap-cpp")
   -- require("config.dap.python").setup()
   -- require("config.dap.rust").setup()

@@ -253,11 +253,7 @@ return packer.startup(function(use)
 
   -- tools
   -- use "cdelledonne/vim-cmake"
-  use {
-    "ravenxrz/neovim-cmake",
-    opt = true,
-    cmd = "CMake",
-  }
+  use "ravenxrz/neovim-cmake"
   use {
     "skanehira/preview-markdown.vim",
     opt = true,

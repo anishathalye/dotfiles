@@ -244,7 +244,7 @@ cmp_config = {
         cmp.select_next_item()
       elseif luasnip.expandable() then
         luasnip.expand()
-      elseif jumpable() then
+      elseif jumpable(1) then
         luasnip.jump(1)
       elseif check_backspace() then
         fallback()
@@ -274,13 +274,13 @@ cmp_config = {
     ["<C-e>"] = cmp.mapping.abort(),
     ["<CR>"] = cmp.mapping(function(fallback)
       if cmp.visible() and cmp.confirm(cmp_config.confirm_opts) then
-        if jumpable() then
+        if jumpable(1) then
           luasnip.jump(1)
         end
         return
       end
 
-      if jumpable() then
+      if jumpable(1) then
         if not luasnip.jump(1) then
           fallback()
         end

@@ -109,6 +109,8 @@ local mappings = {
   },
   ["p"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
+  ["P"] = { "<cmd>Telescope session-lens search_session<cr>", "Projects" },
+
   ["t"] = {
     "<cmd>UltestSummary<CR>", "Unit Test"
   },
@@ -166,15 +168,6 @@ local mappings = {
     q = { "<cmd>Trouble quickfix<cr>", "Quick Fix"},
     u = { "<cmd>Trouble lsp_references<cr>", "Usage"},
     g = { "<cmd>Gitsigns setloclist<cr>", "Open changed hunk" },
-  },
-
-  P = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>", "Compile" },
-    i = { "<cmd>PackerInstall<cr>", "Install" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    S = { "<cmd>PackerStatus<cr>", "Status" },
-    u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
   -- g = {

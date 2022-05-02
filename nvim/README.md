@@ -4,8 +4,10 @@
 
 1.在 `~/.config` 目录下建立nvim的软链接
   ```shell
-  ln -s 此仓库的克隆地址/nvim ~/.config/nvim
+  git clone https://github.com/ravenxrz/dotfiles.git ~/.config/dotfiles
+  ln -s ~/.config/dotfiles/nvim ~/.config
   ```
+
 2.执行 `nvim +PackerSync` 命令， 根据网络条件的不同，可能需要多次执行本命令，直到所有插件下载完成
 
 3.通过`LspInstallInfo`命令安装对应lsp svr, 接着选中对应语言的server，如cpp为clangd， 按i执行安装

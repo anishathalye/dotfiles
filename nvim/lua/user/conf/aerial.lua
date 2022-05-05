@@ -1,14 +1,14 @@
 local status_ok, aerial = pcall(require, "aerial")
 if not status_ok then
   vim.notify("aerial not found")
-	return
+  return
 end
 
 -- Call the setup function to change the default behavior
 aerial.setup({
   -- Priority list of preferred backends for aerial.
   -- This can be a filetype map (see :help aerial-filetype-map)
-  backends = { "treesitter", "lsp", "markdown" },
+  backends = { "lsp", "treesitter", "markdown" },
 
   -- Enum: persist, close, auto, global
   --   persist - aerial window will stay open until closed
@@ -226,4 +226,3 @@ aerial.setup({
     update_delay = 300,
   },
 })
-

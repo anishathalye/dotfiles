@@ -12,6 +12,77 @@
 		"**/.settings": true,
 		"**/.factorypath": true
 	},
+	/* which key bindings */
+	"whichkey.bindings": [
+		{
+			"key": "e",
+			"name": "Show tree/explorer view",
+			"type": "conditional",
+			"bindings": [
+				{
+					"key": "",
+					"name": "default",
+					"type": "command",
+					"command": "workbench.view.explorer"
+				},
+				{
+					"key": "when:sideBarVisible && explorerViewletVisible",
+					"name": "Hide explorer",
+					"type": "command",
+					"command": "workbench.action.toggleSidebarVisibility"
+				}
+			]
+		},
+		{
+			"key": "o",
+			"name": "Outline",
+			"type": "command",
+			"command": "extension.multiCommand.execute",
+			"args": {
+				"sequence": [
+					"workbench.action.focusAuxiliaryBar",
+					"outline.focus",
+					"outline.focus", // focus twice intentionly
+				],
+			},
+		},
+		{
+			"key": "f",
+			"name": "Find file",
+			"type": "command",
+			"command": "workbench.action.quickOpen",
+		},
+		{
+			"key": "w",
+			"name": "Search Word",
+			"type": "command",
+			"command": "workbench.view.search",
+		},
+		{
+			"key": "F",
+			"name": "New Search Editor",
+			"type": "command",
+			"command": "search.action.openEditor",
+		},
+		{
+			"key": "s",
+			"name": "Search document symbol",
+			"type": "command",
+			"command": "workbench.action.gotoSymbol",
+		},
+		{
+			"key": "S",
+			"name": "Search project symbol",
+			"type": "command",
+			"command": "workbench.action.showAllSymbols",
+		},
+		{
+			"key": "g",
+			"name": "Source control",
+			"type": "command",
+			"command": "workbench.view.scm",
+		},
+	],
 	/* vim settings start */
 	"vim.easymotion": true,
 	"vim.sneak": false,
@@ -34,6 +105,14 @@
 		"<C-v>": true
 	},
 	"vim.visualModeKeyBindings": [
+		{ // which key
+			"before": [
+				"<space>"
+			],
+			"commands": [
+				"whichkey.show"
+			]
+		},
 		// repeatly indent in visual mode
 		{
 			"before": [
@@ -52,9 +131,18 @@
 			]
 		},
 	],
+	"vim.normalModeKeyBindings": [
+		{ // which key
+			"before": [
+				"<space>"
+			],
+			"commands": [
+				"whichkey.show"
+			]
+		},
+	],
 	"vim.normalModeKeyBindingsNonRecursive": [
-		// ---------------editor--------------------
-		{ // format
+		{
 			"before": [
 				"<leader>",
 				"f"
@@ -63,10 +151,9 @@
 				"editor.action.formatDocument"
 			]
 		},
-		// -------------------enhace & ui-----------------
-		{ //  paste without overriding the current register:
+		{
 			"before": [
-				"p",
+				"p"
 			],
 			"after": [
 				"mp",
@@ -76,44 +163,7 @@
 				"`p"
 			]
 		},
-		// -----------------code-------------------------
-		{ // search file
-			"before": [
-				"<space>",
-				"f"
-			],
-			"commands": [
-				"workbench.action.quickOpen",
-			]
-		},
-		{ // search string
-			"before": [
-				"<space>",
-				"F"
-			],
-			"commands": [
-				"workbench.view.search",
-			]
-		},
-		{ // search document symbal
-			"before": [
-				"<space>",
-				"s"
-			],
-			"commands": [
-				"workbench.action.gotoSymbol",
-			]
-		},
-		{ // search workspace symbal
-			"before": [
-				"<space>",
-				"S"
-			],
-			"commands": [
-				"workbench.action.showAllSymbols",
-			]
-		},
-		{ // reference -- float window
+		{
 			"before": [
 				"<leader>",
 				"u"
@@ -122,7 +172,7 @@
 				"editor.action.referenceSearch.trigger"
 			]
 		},
-		{ // reference -- seperate window
+		{
 			"before": [
 				"<leader>",
 				"U"
@@ -131,17 +181,7 @@
 				"references-view.findReferences"
 			]
 		},
-		{ // outline
-			"before": [
-				"<space>",
-				"o",
-			],
-			"commands": [
-				"workbench.action.focusAuxiliaryBar",
-				"outline.focus"
-			]
-		},
-		{ // reference -- show call hierarchy
+		{
 			"before": [
 				"<leader>",
 				"i",
@@ -151,17 +191,18 @@
 				"references-view.showCallHierarchy"
 			]
 		},
-		{ // run
+		// -- run
+		{
 			"before": [
 				"<leader>",
 				"r"
 			],
 			"commands": [
 				"workbench.action.files.save",
-				"workbench.action.debug.run",
+				"workbench.action.debug.run"
 			]
 		},
-		{ // run-debug
+		{
 			"before": [
 				"<leader>",
 				"d",
@@ -170,6 +211,17 @@
 			"commands": [
 				"workbench.action.files.save",
 				"workbench.action.debug.start"
+			]
+		},
+		// -- debug
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"b"
+			],
+			"commands": [
+				"editor.debug.action.toggleBreakpoint",
 			]
 		},
 	],
@@ -239,6 +291,12 @@
 	"remote.SSH.configFile": "~/.ssh/config",
 	"remote.SSH.showLoginTerminal": true,
 	"remote.SSH.useLocalServer": false,
+	"remote.SSH.remotePlatform": {
+		"192.168.3.26": "linux",
+		"cxy": "linux",
+		"192.168.209.128": "linux",
+		"ubuntu18": "linux"
+	},
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.python",
 		"editor.insertSpaces": true,

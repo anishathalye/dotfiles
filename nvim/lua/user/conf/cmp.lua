@@ -183,6 +183,7 @@ cmp_config = {
     },
     source_names = {
       nvim_lsp = "(LSP)",
+      treesitter = "(TS)",
       emoji = "(Emoji)",
       path = "(Path)",
       calc = "(Calc)",
@@ -270,7 +271,7 @@ cmp_config = {
       "s",
     }),
 
-    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<C-p>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.abort(),
     ["<CR>"] = cmp.mapping(function(fallback)
       if cmp.visible() and cmp.confirm(cmp_config.confirm_opts) then

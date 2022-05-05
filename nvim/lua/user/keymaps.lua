@@ -161,3 +161,9 @@ vim.cmd(
   nnoremap <leader>s :call search('\w\>', 'c')<CR>a<C-X><C-S>
 ]])
 
+
+-- for gtags
+-- find functions calling this function
+keymap("n", "<leader>U", ":cs find c <C-R>=expand('<cword>')<CR><CR>", opts)
+-- find definition
+keymap("n", "<leader>T", ":cs find g <C-R>=expand('<cword>')<CR><CR>", opts)

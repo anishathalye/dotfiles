@@ -150,6 +150,9 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+  -- use "quangnguyen30192/cmp-nvim-tags"
+  use "jsfaint/gen_tags.vim"
+  use "ray-x/cmp-treesitter"
   use "f3fora/cmp-spell" -- spell check
   -- use "github/copilot.vim"  -- Copilot setup,
   -- use {
@@ -275,6 +278,7 @@ return packer.startup(function(use)
   -- use "ravenxrz/DoxygenToolkit.vim"
   use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
+  use "jonstoler/werewolf.vim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

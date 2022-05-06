@@ -1,4 +1,3 @@
-// 将键绑定放在此文件中以覆盖默认值auto[]
 [
 	{ // make cursor back to editor
 		"key": "ctrl+c",
@@ -68,6 +67,15 @@
 			"when": "sideBarVisible && explorerViewletVisible"
 		},
 	},
+	{ // open file expoler use which key
+		"key": "o",
+		"command": "whichkey.triggerKey",
+		"when": "whichkeyVisible && outlinerExplorerView.active && view.outline.visible",
+		"args": {
+			"key": "o",
+			"when": "outlinerExplorerView.active && view.outline.visible"
+		},
+	},
 	{ // rename file
 		"key": "r",
 		"command": "renameFile",
@@ -108,6 +116,16 @@
 		"command": "workbench.action.quickOpenNavigatePrevious",
 		"when": "inQuickOpen"
 	},
+	{ // move down at problem open
+		"key": "ctrl+shift+j",
+		"command": "list.focusDown",
+		"when": "panelFocus && activePanel == 'workbench.panel.markers' "
+	},
+	{ // move up at problem open
+		"key": "ctrl+shift+k",
+		"command": "list.focusUp",
+		"when": "panelFocus && activePanel == 'workbench.panel.markers' "
+	},
 	{
 		"key": "tab",
 		"command": "selectNextSuggestion",
@@ -128,12 +146,50 @@
 		"command": "workbench.action.quickOpenNavigatePrevious",
 		"when": "inQuickOpen"
 	},
-	{ // select item to open
+	{ // open selected explorer item 
 		"key": "enter",
 		"command": "list.select",
 		"when": "explorerViewletVisible && filesExplorerFocus"
 	},
-	{
+	{ // open reference localtion without quit reference view
+		"key": "o",
+		"command": "revealReference",
+		"when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+	},
+	{ // preview reference
+		"key": "j",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"list.focusDown",
+				// "list.toggleExpand",	// TODO: this will coallse the tree node
+			]
+		},
+		"when": "listFocus && !inputFocus && panelFocus && !inDebugRepl && references-view.canNavigate"
+	},
+	{ // preview reference
+		"key": "k",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"list.focusUp",
+				// "list.toggleExpand", // TODO: this will coallse the tree node
+			]
+		},
+		"when": "listFocus && !inputFocus && panelFocus && !inDebugRepl && references-view.canNavigate"
+	},
+	{ // open reference location with quit reference view
+		"key": "enter",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"revealReference",
+				"closeReferenceSearch"
+			]
+		},
+		"when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+	},
+	{ // do not close debug view when press enter
 		"key": "enter",
 		"command": "extension.multiCommand.execute",
 		"args": {
@@ -142,7 +198,7 @@
 				"workbench.action.togglePanel"
 			]
 		},
-		"when": "panelFocus && activePanel"
+		"when": "panelFocus && !inDebugRepl && activePanel!='workbench.panel.markers'"
 	},
 	{ // select file to open
 		"key": "l",
@@ -422,5 +478,27 @@
 		"key": "f4",
 		"command": "workbench.action.debug.stop",
 		"when": "inDebugMode && !focusedSessionIsAttach"
+	},
+	{
+		"key": "ctrl+oem_plus",
+		"command": "-workbench.action.zoomIn"
+	},
+	{
+		"key": "ctrl+shift+oem_plus",
+		"command": "-workbench.action.zoomIn"
+	},
+	{
+		"key": "enter",
+		"command": "-revealReference",
+		"when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+	},
+	{
+		"key": "space",
+		"command": "whichkey.show",
+		"when": "!inputFocus"
+	},
+	{
+		"key": "alt+backspace",
+		"command": "git.stageChange"
 	}
 ]

@@ -270,6 +270,16 @@
 				"editor.debug.action.toggleBreakpoint"
 			]
 		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"c"
+			],
+			"commands": [
+				"editor.debug.action.conditionalBreakpoint"
+			]
+		},
 		// -- problem nav
 		{
 			"before": [
@@ -343,6 +353,17 @@
 			],
 			"commands": [
 				"git.revertSelectedRanges",
+			]
+		},
+		// -- rename symbol
+		{
+			"before": [
+				"<leader>",
+				"r",
+				"n"
+			],
+			"commands": [
+				"editor.action.rename",
 			]
 		},
 	],

@@ -1,5 +1,6 @@
 local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
+local nvim_lsp_ok, nvim_lsp = pcall(require, "lspconfig")
+if not status_ok or not nvim_lsp_ok then
   vim.notify("nvim-lspconfig not found!")
   return
 end
@@ -13,36 +14,78 @@ end
 
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
-lsp_installer.on_server_ready(function(server)
+lsp_installer.setup({})
+local servers_lsp = {
+  "csharp_ls",
+  "pyright",
+  "jdtls",
+  "cmake",
+  "bashls",
+  "vimls",
+  "texlab",
+  "jsonls",
+  "vuels",
+  "gopls",
+  "clangd",
+  "sumneko_lua",
+  --"r_language_server",
+  --"rust_analyzer",
+  --"julials",
+  --"pylsp",
+  --"tsserver",
+  --"omnisharp",
+  --"fsautocomplete",
+  --"hls",
+  --"dartls",
+  --"vala_ls",
+  --"volar",
+  --"kotlin_language_server",
+  --"jedi_language_server",
+  --"cssls",
+  --"lemminx",
+  --"groovyls",
+  --"graphql",
+  --"html",
+  --"yamlls",
+  --"ocamllsp",
+  --"denols",
+  --"taplo",
+}
+
+for _, lsp in ipairs(servers_lsp) do
+  local ok, server = lsp_installer.get_server(name)
+  if ok then
+    if not server:is_installed() then
+      vim.notify("Installing " .. name)
+      server:install()
+    end
+  end
   local opts = {
-    on_attach = require("user.lsp.handlers").on_attach,
-    capabilities = require("user.lsp.handlers").capabilities,
-    flags = {
-      debounce_text_changes = 150,
-    }
+    -- on_attach = my_custom_on_attach,
+    on_attach = require("aero.lsp-setup.lsp.handlers").on_attach,
+    capabilities = require("aero.lsp-setup.lsp.handlers").capabilities,
   }
 
-  if server.name == "clangd" then
-    local clangd_opts = require("user.lsp.settings.clangd")
+  if lsp == "clangd" then
+    local clangd_opts = require("aero.lsp-setup.lsp.settings.clangd")
     opts = vim.tbl_deep_extend("force", clangd_opts, opts)
   end
 
-  if server.name == "jsonls" then
-    local jsonls_opts = require("user.lsp.settings.jsonls")
+  if lsp == "jsonls" then
+    local jsonls_opts = require("aero.lsp-setup.lsp.settings.jsonls")
     opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
   end
 
-  if server.name == "sumneko_lua" then
-    local sumneko_opts = require("user.lsp.settings.sumneko_lua")
+  if lsp == "sumneko_lua" then
+    local sumneko_opts = require("aero.lsp-setup.lsp.settings.sumneko_lua")
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
-  if server.name == "pyright" then
-    local pyright_opts = require("user.lsp.settings.pyright")
+  if lsp == "pyright" then
+    local pyright_opts = require("aero.lsp-setup.lsp.settings.pyright")
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
   end
 
-  -- This setup() function is exactly the same as lspconfig's setup function.
-  -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-  server:setup(opts)
-end)
+  nvim_lsp[lsp].setup(opts)
+end
+

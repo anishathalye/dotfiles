@@ -90,7 +90,7 @@ xin() {
 
 # Check if a file contains non-ascii characters
 nonascii() {
-    LC_ALL=C grep -n '[^[:print:][:space:]]' "${1}"
+    LC_ALL=C grep -n '[^[:print:][:space:]]' "${@}"
 }
 
 # Fetch pull request

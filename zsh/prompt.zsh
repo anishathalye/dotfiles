@@ -332,34 +332,30 @@ function RCMD() {
     fi
 }
 
-ASYNC_PROC=0
 function precmd() {
-    function async() {
-        # save to temp file
-        printf "%s" "$(RCMD)" > "/tmp/zsh_prompt_$$"
+    typeset -g _PROMPT_ASYNC_FD
 
-        # signal parent
-        kill -s USR1 $$
-    }
-
-    # do not clear RPROMPT, let it persist
-
-    # kill child if necessary
-    if [[ "${ASYNC_PROC}" != 0 ]]; then
-        kill -s HUP $ASYNC_PROC >/dev/null 2>&1 || :
+    # close last fd, we don't care about the result anymore
+    if [[ -n "$_PROMPT_ASYNC_FD" ]] && { true <&$_PROMPT_ASYNC_FD } 2>/dev/null; then
+        exec {_PROMPT_ASYNC_FD}<&-
     fi
 
-    # start background computation
-    async &!
-    ASYNC_PROC=$!
+    # compute prompt in a background process
+    exec {_PROMPT_ASYNC_FD}< <(printf "%s" "$(RCMD)")
+
+    # when fd is readable, call response handler
+    zle -F "$_PROMPT_ASYNC_FD" async_prompt_complete
+
+    # do not clear RPROMPT, let it persist
 }
 
-function TRAPUSR1() {
-    # read from temp file
-    RPROMPT="$(cat /tmp/zsh_prompt_$$)"
+function async_prompt_complete() {
+    # read from fd
+    RPROMPT="$(<&$1)"
 
-    # reset proc number
-    ASYNC_PROC=0
+    # remove the handler and close the fd
+    zle -F "$1"
+    exec {1}<&-
 
     # redisplay
     zle && zle reset-prompt

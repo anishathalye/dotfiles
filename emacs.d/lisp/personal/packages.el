@@ -54,6 +54,18 @@
     (kbd "<down>") 'proof-assert-next-command-interactive
     (kbd "<left>") 'proof-goto-end-of-locked)
 
+  ;; fstar mode bindings
+  (evil-define-key 'normal fstar-mode-map
+    (kbd "<right>") 'fstar-subp-advance-or-retract-to-point
+    (kbd "<up>") 'fstar-subp-retract-last
+    (kbd "<down>") 'fstar-subp-advance-next
+    (kbd "<left>") 'fstar-subp-goto-beginning-of-unprocessed)
+  (evil-define-key 'insert fstar-mode-map
+    (kbd "<right>") 'fstar-subp-advance-or-retract-to-point
+    (kbd "<up>") 'fstar-subp-retract-last
+    (kbd "<down>") 'fstar-subp-advance-next
+    (kbd "<left>") 'fstar-subp-goto-beginning-of-unprocessed)
+
   ;; leader keys
   (evil-set-leader 'normal (kbd "\\"))
   (evil-define-key 'normal 'global

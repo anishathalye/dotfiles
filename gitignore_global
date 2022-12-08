@@ -9,6 +9,7 @@
 
 # Editing tools and IDEs #
 ##########################
+.sw[a-p]
 [._]*.sw[a-p]
 [._]*.s[a-v][a-z]
 *~

@@ -13,6 +13,7 @@
     ~/.bash_profile:
     ~/.bashrc:
     ~/.dotfiles: ''
+    ~/.editrc:
     ~/.emacs.d:
     ~/.emacs:
     ~/.gitconfig:

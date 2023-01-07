@@ -194,6 +194,7 @@ noremap <Leader>x :OverCommandLine<CR>
 
 " markdown
 let g:markdown_fenced_languages = [
+    \ 'asm',
     \ 'bash=sh',
     \ 'c',
     \ 'coffee',

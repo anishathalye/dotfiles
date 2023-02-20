@@ -38,3 +38,8 @@ fi
 if [ -f ~/.bashrc_local_after ]; then
     source ~/.bashrc_local_after
 fi
+
+# Allow private customizations (not checked in to version control)
+if [ -f ~/.shell_private ]; then
+    source ~/.shell_private
+fi

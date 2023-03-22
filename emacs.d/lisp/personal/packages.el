@@ -246,4 +246,17 @@
 ;; this depends on quick-peek, flycheck, company-quickhelp, dash
 (use-package fstar-mode
   :load-path "vendor/fstar-mode.el"
-  :mode ("\\.fst\\'" . fstar-mode))
+  :mode ("\\.fst\\'" . fstar-mode)
+
+  :config
+  ;; from https://github.com/project-everest/mitls-fstar#configuring-emacs-mode
+  (defun my-fstar-compute-prover-args-using-make ()
+    "Construct arguments to pass to F* by calling make."
+    (with-demoted-errors "Error when constructing arg string: %S"
+      (let* ((fname (file-name-nondirectory buffer-file-name))
+             (target (concat fname "-in"))
+             (argstr (condition-case nil
+                         (car (process-lines "make" "--quiet" target))
+                       (error ""))))
+        (split-string argstr))))
+  (setq fstar-subp-prover-args #'my-fstar-compute-prover-args-using-make))

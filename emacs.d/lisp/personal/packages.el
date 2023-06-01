@@ -246,7 +246,7 @@
 ;; this depends on quick-peek, flycheck, company-quickhelp, dash
 (use-package fstar-mode
   :load-path "vendor/fstar-mode.el"
-  :mode ("\\.fst\\'" . fstar-mode)
+  :mode ("\\.fsti?\\'" . fstar-mode)
 
   :config
   ;; from https://github.com/project-everest/mitls-fstar#configuring-emacs-mode

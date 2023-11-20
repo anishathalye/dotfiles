@@ -150,10 +150,6 @@
 	path = vim/pack/vendor/start/vim-smt2
 	url = https://github.com/bohlender/vim-smt2
 	ignore = untracked
-[submodule "vim/bundle/vim-racket"]
-	path = vim/pack/vendor/start/vim-racket
-	url = https://github.com/wlangstroth/vim-racket
-	ignore = untracked
 [submodule "vim/pack/vendor/start/vim-jsx-pretty"]
 	path = vim/pack/vendor/start/vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty

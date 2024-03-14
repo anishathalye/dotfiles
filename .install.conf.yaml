@@ -18,7 +18,8 @@
     ~/.emacs:
     ~/.gitconfig:
     ~/.gitignore_global:
-    ~/.gnupg/gpg.conf:
+    ~/.gnupg/dirmngr.conf: gnupg/dirmngr.conf
+    ~/.gnupg/gpg.conf: gnupg/gpg.conf
     ~/.haskeline:
     ~/.hgrc:
     ~/.inputrc:

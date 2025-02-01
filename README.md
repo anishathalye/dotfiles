@@ -1,4 +1,4 @@
-# Dotfiles [![Build Status](https://github.com/anishathalye/dotfiles/workflows/CI/badge.svg)](https://github.com/anishathalye/dotfiles/actions?query=workflow%3ACI)
+# Dotfiles [![Build Status](https://github.com/anishathalye/dotfiles/actions/workflows/ci.yml/badge.svg)](https://github.com/anishathalye/dotfiles/actions/workflows/ci.yml)
 
 After cloning this repo, run `install` to automatically set up the development
 environment. Note that the install script is idempotent: it can safely be run

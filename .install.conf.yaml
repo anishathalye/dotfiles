@@ -2,6 +2,8 @@
     link:
       create: true
       relink: true
+    shell:
+      quiet: true
 
 - clean: ['~', '~/.config']
 
@@ -46,7 +48,7 @@
   - git submodule sync --recursive
   # the following have to run after linking ~/.gitconfig
   - git update-submodules
-  - >
+  - >-
     git cleanall -f
     emacs.d/vendor/
     irssi/scripts/vendor/

@@ -5,7 +5,7 @@
     shell:
       quiet: true
 
-- clean: ['~', '~/.config']
+- clean: ['~', '~/.config', '~/.gnupg']
 
 - link:
     ~/.agignore:
@@ -20,7 +20,6 @@
     ~/.emacs:
     ~/.gitconfig:
     ~/.gitignore_global:
-    ~/.gnupg/dirmngr.conf: gnupg/dirmngr.conf
     ~/.gnupg/gpg.conf: gnupg/gpg.conf
     ~/.haskeline:
     ~/.hgrc:

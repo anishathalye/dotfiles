@@ -13,6 +13,7 @@
     ~/.bash:
     ~/.bash_profile:
     ~/.bashrc:
+    ~/.claude/settings.json: claude/settings.json
     ~/.dotfiles: ''
     ~/.editrc:
     ~/.emacs.d:

@@ -228,9 +228,6 @@
 [submodule "zsh/plugins/zsh-completions"]
 	path = zsh/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
-[submodule "irssi/scripts/vendor/irssi-smartfilter"]
-	path = irssi/scripts/vendor/irssi-smartfilter
-	url = https://github.com/lifeforms/irssi-smartfilter
 [submodule "emacs.d/vendor/racket-mode"]
 	path = emacs.d/vendor/racket-mode
 	url = https://github.com/greghendershott/racket-mode

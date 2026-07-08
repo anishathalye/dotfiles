@@ -14,7 +14,6 @@
     ~/.bash_profile:
     ~/.bashrc:
     ~/.claude/settings.json: claude/settings.json
-    ~/.config/uv/uv.toml: uv.toml
     ~/.dotfiles: ''
     ~/.editrc:
     ~/.emacs.d:

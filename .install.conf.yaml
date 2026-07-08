@@ -5,7 +5,7 @@
     shell:
       quiet: true
 
-- clean: ['~', '~/.config', '~/.gnupg']
+- clean: ['~', '~/.config', '~/.gnupg', '~/.config/uv']
 
 - link:
     ~/.agignore:

@@ -105,23 +105,27 @@ function machine_name() {
 
 PROMPT_PYTHON="$(command -v python || command -v python3 || command -v python2)"
 
-# Host in a deterministically chosen color
-RPR_SHOW_HOST=true # Set to false to disable host in rhs prompt
-function RPR_HOST() {
+function hash_to_color() {
     local colors
     colors=(cyan green yellow red pink)
     local index=$("$PROMPT_PYTHON" <<EOF
 import hashlib
 
-hash = int(hashlib.sha1('$(machine_name)'.encode('utf8')).hexdigest(), 16)
+hash = int(hashlib.sha1('${1}'.encode('utf8')).hexdigest(), 16)
 index = hash % ${#colors} + 1
 
 print(index)
 EOF
     )
-    local color=$colors[index]
+    echo "$colors[index]"
+}
+
+# Host in a deterministically chosen color
+RPR_SHOW_HOST=true # Set to false to disable host in rhs prompt
+function RPR_HOST() {
     if [[ "${RPR_SHOW_HOST}" == "true" ]]; then
-        echo "%{$fg[$color]%}$(machine_name)%{$reset_color%}"
+        local name="$(machine_name)"
+        echo "%{$fg[$(hash_to_color ${name})]%}${name}%{$reset_color%}"
     fi
 }
 

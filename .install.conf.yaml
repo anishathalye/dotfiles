@@ -9,7 +9,6 @@
 
 - link:
     ~/.agignore:
-    ~/.aria2/aria2.conf:
     ~/.bash:
     ~/.bash_profile:
     ~/.bashrc:
@@ -28,7 +27,6 @@
     ~/.ipython/profile_default/ipython_kernel_config.py: ipython/ipython_kernel_config.py
     ~/.ipython/profile_default/startup/disable_warnings.py: ipython/disable_warnings.py
     ~/.pythonrc:
-    ~/.rtorrent.rc:
     ~/.screenrc:
     ~/.shell:
     ~/.tmux.conf:
@@ -36,11 +34,6 @@
     ~/.vimrc:
     ~/.zsh:
     ~/.zshrc:
-
-- create:
-  - ~/.rtorrent/session
-  - ~/.rtorrent/watch
-  - ~/.rtorrent/downloads
 
 - shell:
   - git submodule sync --recursive

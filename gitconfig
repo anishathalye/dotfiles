@@ -124,6 +124,8 @@
 	process = git-lfs filter-process
 	required = true
 
-# Allow local customizations in the .gitconfig_local file
 [include]
+	# Allow local customizations in the .gitconfig_local file
 	path = ~/.gitconfig_local
+	# Allow private customizations (not checked in to version control)
+	path = ~/.gitconfig_private

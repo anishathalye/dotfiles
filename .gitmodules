@@ -66,10 +66,6 @@
 	path = vim/pack/vendor/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
 	ignore = untracked
-[submodule "vim/bundle/rust.vim"]
-	path = vim/pack/vendor/start/rust.vim
-	url = https://github.com/wting/rust.vim
-	ignore = untracked
 [submodule "vim/bundle/vim-tmux"]
 	path = vim/pack/vendor/start/vim-tmux
 	url = https://github.com/tmux-plugins/vim-tmux
@@ -81,10 +77,6 @@
 [submodule "vim/bundle/ack.vim"]
 	path = vim/pack/vendor/start/ack.vim
 	url = https://github.com/mileszs/ack.vim
-	ignore = untracked
-[submodule "vim/bundle/syntastic"]
-	path = vim/pack/vendor/start/syntastic
-	url = https://github.com/scrooloose/syntastic
 	ignore = untracked
 [submodule "vim/bundle/vim-signature"]
 	path = vim/pack/vendor/start/vim-signature
@@ -113,10 +105,6 @@
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/pack/vendor/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
-	ignore = untracked
-[submodule "vim/bundle/typescript-vim"]
-	path = vim/pack/vendor/start/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim
 	ignore = untracked
 [submodule "vim/bundle/vim-buffergator"]
 	path = vim/pack/vendor/start/vim-buffergator

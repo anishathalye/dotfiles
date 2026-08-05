@@ -121,51 +121,67 @@
 [submodule "emacs.d/vendor/use-package"]
 	path = emacs.d/vendor/use-package
 	url = https://github.com/jwiegley/use-package
+	ignore = untracked
 [submodule "emacs.d/vendor/PG"]
 	path = emacs.d/vendor/PG
 	url = https://github.com/ProofGeneral/PG
+	ignore = untracked
 [submodule "emacs.d/vendor/evil"]
 	path = emacs.d/vendor/evil
 	url = https://github.com/emacs-evil/evil
+	ignore = untracked
 [submodule "emacs.d/vendor/editorconfig-emacs"]
 	path = emacs.d/vendor/editorconfig-emacs
 	url = https://github.com/editorconfig/editorconfig-emacs
+	ignore = untracked
 [submodule "emacs.d/vendor/emacs-color-theme-solarized"]
 	path = emacs.d/vendor/emacs-color-theme-solarized
 	url = https://github.com/sellout/emacs-color-theme-solarized
+	ignore = untracked
 [submodule "emacs.d/vendor/fiplr"]
 	path = emacs.d/vendor/fiplr
 	url = https://github.com/grizzl/fiplr
+	ignore = untracked
 [submodule "emacs.d/vendor/grizzl"]
 	path = emacs.d/vendor/grizzl
 	url = https://github.com/grizzl/grizzl
+	ignore = untracked
 [submodule "emacs.d/vendor/packed"]
 	path = emacs.d/vendor/packed
 	url = https://github.com/tarsius/packed
+	ignore = untracked
 [submodule "emacs.d/vendor/dash.el"]
 	path = emacs.d/vendor/dash.el
 	url = https://github.com/magnars/dash.el
+	ignore = untracked
 [submodule "emacs.d/vendor/auto-compile"]
 	path = emacs.d/vendor/auto-compile
 	url = https://github.com/tarsius/auto-compile
+	ignore = untracked
 [submodule "emacs.d/vendor/emacs-neotree"]
 	path = emacs.d/vendor/emacs-neotree
 	url = https://github.com/jaypei/emacs-neotree
+	ignore = untracked
 [submodule "emacs.d/vendor/company-mode"]
 	path = emacs.d/vendor/company-mode
 	url = https://github.com/company-mode/company-mode
+	ignore = untracked
 [submodule "emacs.d/vendor/linum-relative"]
 	path = emacs.d/vendor/linum-relative
 	url = https://github.com/coldnew/linum-relative
+	ignore = untracked
 [submodule "emacs.d/vendor/company-coq"]
 	path = emacs.d/vendor/company-coq
 	url = https://github.com/cpitclaudel/company-coq
+	ignore = untracked
 [submodule "emacs.d/vendor/company-math"]
 	path = emacs.d/vendor/company-math
 	url = https://github.com/vspinu/company-math
+	ignore = untracked
 [submodule "emacs.d/vendor/math-symbol-lists"]
 	path = emacs.d/vendor/math-symbol-lists
 	url = https://github.com/vspinu/math-symbol-lists
+	ignore = untracked
 [submodule "emacs.d/vendor/yasnippet"]
 	path = emacs.d/vendor/yasnippet
 	url = https://github.com/joaotavora/yasnippet
@@ -173,42 +189,55 @@
 [submodule "emacs.d/vendor/avy"]
 	path = emacs.d/vendor/avy
 	url = https://github.com/abo-abo/avy
+	ignore = untracked
 [submodule "emacs.d/vendor/evil-easymotion"]
 	path = emacs.d/vendor/evil-easymotion
 	url = https://github.com/PythonNut/evil-easymotion
+	ignore = untracked
 [submodule "zsh/plugins/dircolors-solarized"]
 	path = shell/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git
+	ignore = untracked
 [submodule "zsh/plugins/zsh-syntax-highlighting"]
 	path = zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+	ignore = untracked
 [submodule "zsh/plugins/zsh-completions"]
 	path = zsh/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+	ignore = untracked
 [submodule "emacs.d/vendor/racket-mode"]
 	path = emacs.d/vendor/racket-mode
 	url = https://github.com/greghendershott/racket-mode
+	ignore = untracked
 [submodule "emacs.d/vendor/evil-surround"]
 	path = emacs.d/vendor/evil-surround
 	url = https://github.com/emacs-evil/evil-surround
+	ignore = untracked
 [submodule "emacs.d/vendor/goto-chg"]
 	path = emacs.d/vendor/goto-chg
 	url = https://github.com/emacs-evil/goto-chg
+	ignore = untracked
 [submodule "emacs.d/vendor/pos-tip"]
 	path = emacs.d/vendor/pos-tip
 	url = https://github.com/pitkali/pos-tip
+	ignore = untracked
 [submodule "emacs.d/vendor/fstar-mode.el"]
 	path = emacs.d/vendor/fstar-mode.el
 	url = https://github.com/fstarlang/fstar-mode.el
+	ignore = untracked
 [submodule "emacs.d/vendor/quick-peek"]
 	path = emacs.d/vendor/quick-peek
 	url = https://github.com/cpitclaudel/quick-peek
+	ignore = untracked
 [submodule "emacs.d/vendor/flycheck"]
 	path = emacs.d/vendor/flycheck
 	url = https://github.com/flycheck/flycheck
+	ignore = untracked
 [submodule "emacs.d/vendor/company-quickhelp"]
 	path = emacs.d/vendor/company-quickhelp
 	url = https://github.com/company-mode/company-quickhelp
+	ignore = untracked
 [submodule "vim/pack/vendor/start/is.vim"]
 	path = vim/pack/vendor/start/is.vim
 	url = https://github.com/haya14busa/is.vim

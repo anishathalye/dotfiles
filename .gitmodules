@@ -61,7 +61,7 @@
 [submodule "vim/bundle/editorconfig-vim"]
 	path = vim/pack/vendor/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
-	ignore = untracked
+	ignore = dirty
 [submodule "vim/bundle/vim-tmux"]
 	path = vim/pack/vendor/start/vim-tmux
 	url = https://github.com/tmux-plugins/vim-tmux

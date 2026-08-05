@@ -34,10 +34,6 @@
 	path = vim/pack/vendor/start/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
 	ignore = untracked
-[submodule "vim/bundle/vim-coffee-script"]
-	path = vim/pack/vendor/start/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script
-	ignore = untracked
 [submodule "vim/bundle/vim-surround"]
 	path = vim/pack/vendor/start/vim-surround
 	url = https://github.com/tpope/vim-surround
@@ -118,10 +114,6 @@
 	path = vim/pack/vendor/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
 	ignore = untracked
-[submodule "vim/bundle/vim-vagrant"]
-	path = vim/pack/vendor/start/vim-vagrant
-	url = https://github.com/hashivim/vim-vagrant
-	ignore = untracked
 [submodule "vim/bundle/typescript-vim"]
 	path = vim/pack/vendor/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim
@@ -130,10 +122,6 @@
 	path = vim/pack/vendor/start/vim-buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator
 	ignore = untracked
-[submodule "vim/bundle/vim-solidity"]
-	path = vim/pack/vendor/start/vim-solidity
-	url = https://github.com/tomlion/vim-solidity
-	ignore = untracked
 [submodule "vim/bundle/lightline.vim"]
 	path = vim/pack/vendor/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
@@ -141,10 +129,6 @@
 [submodule "vim/bundle/vim-over"]
 	path = vim/pack/vendor/start/vim-over
 	url = https://github.com/osyo-manga/vim-over
-	ignore = untracked
-[submodule "vim/bundle/smarty.vim"]
-	path = vim/pack/vendor/start/smarty.vim
-	url = https://github.com/blueyed/smarty.vim
 	ignore = untracked
 [submodule "vim/bundle/vim-smt2"]
 	path = vim/pack/vendor/start/vim-smt2

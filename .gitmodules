@@ -82,17 +82,9 @@
 	path = vim/pack/vendor/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree
 	ignore = untracked
-[submodule "vim/bundle/incsearch.vim"]
-	path = vim/pack/vendor/start/incsearch.vim
-	url = https://github.com/haya14busa/incsearch.vim
-	ignore = untracked
 [submodule "vim/bundle/vim-easymotion"]
 	path = vim/pack/vendor/start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
-	ignore = untracked
-[submodule "vim/bundle/incsearch-easymotion.vim"]
-	path = vim/pack/vendor/start/incsearch-easymotion.vim
-	url = https://github.com/haya14busa/incsearch-easymotion.vim
 	ignore = untracked
 [submodule "vim/bundle/vim-argwrap"]
 	path = vim/pack/vendor/start/vim-argwrap
@@ -217,3 +209,7 @@
 [submodule "emacs.d/vendor/company-quickhelp"]
 	path = emacs.d/vendor/company-quickhelp
 	url = https://github.com/company-mode/company-quickhelp
+[submodule "vim/pack/vendor/start/is.vim"]
+	path = vim/pack/vendor/start/is.vim
+	url = https://github.com/haya14busa/is.vim
+	ignore = untracked

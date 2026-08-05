@@ -192,6 +192,9 @@ let g:markdown_folding = 1
 " fugitive
 set tags^=.git/tags;~
 
+" vim-json
+let g:vim_json_syntax_conceal = 0
+
 "---------------------
 " Local customizations
 "---------------------

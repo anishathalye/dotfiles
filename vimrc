@@ -173,7 +173,6 @@ let g:markdown_fenced_languages = [
     \ 'asm',
     \ 'bash=sh',
     \ 'c',
-    \ 'coffee',
     \ 'erb=eruby',
     \ 'javascript',
     \ 'json',

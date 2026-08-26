@@ -4,7 +4,23 @@
 
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+: ${ZSH_HIGHLIGHT_STYLES[histignorespace]:=bg=red}
+
+_zsh_highlight_highlighter_histignorespace_predicate() {
+    [[ ${zsyh_user_options[histignorespace]:-off} == on ]] &&
+        _zsh_highlight_buffer_modified
+}
+
+_zsh_highlight_highlighter_histignorespace_paint() {
+    [[ $BUFFER[1] == ' ' ]] || return
+    integer end=1
+    while [[ $BUFFER[end] == ' ' ]]; do
+        (( end++ ))
+    done
+    _zsh_highlight_add_highlight 0 $((end - 1)) histignorespace
+}
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern histignorespace)
 
 if [[ "$(tput colors)" == "256" ]]; then
     ZSH_HIGHLIGHT_STYLES[default]=none
@@ -28,6 +44,7 @@ if [[ "$(tput colors)" == "256" ]]; then
     ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=136
     ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=136
     ZSH_HIGHLIGHT_STYLES[assign]=fg=037
+    ZSH_HIGHLIGHT_STYLES[histignorespace]=bg=160
 fi
 
 # dircolors
